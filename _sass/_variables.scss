@@ -62,8 +62,12 @@
 //   "gray-dark":  $gray-800
 // ), $colors);
 
-// $primary:       $blue !default;
-// $secondary:     $gray-600 !default;
+$uxdx-purple: #7F7FF0;
+$uxdx-blue: #4DD0E1;
+
+
+$primary:       $uxdx-purple !default;
+$secondary:     $uxdx-blue !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
