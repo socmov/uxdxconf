@@ -70,6 +70,9 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
+  load_paths:
+    - _sass
+    - node_modules
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
