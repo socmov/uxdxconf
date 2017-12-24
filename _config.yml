@@ -8,28 +8,9 @@ name: UXDX Conference 2018
 # Short bio or description (displayed in the header)
 description: Enhance their process, advance your product. The latest trends in Agile, Lean, User Experience (UX), Developer Experience (DX), DevOps and more.
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://uxdxconf.com/images/logo.svg
-
 #
 # Flags below are optional
 #
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email:
-  facebook:
-  flickr:
-  github: 
-  instagram: uxdxconf
-  linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: uxdxconf
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -87,3 +68,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+include: ["_pages"]
