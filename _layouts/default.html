@@ -90,8 +90,13 @@
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     {% include analytics.html %}
+    <script type="text/javascript">
+      window.$crisp = []; 
+      window.CRISP_WEBSITE_ID = "8d39cddd-9a5c-4a2c-8b08-8b404a966a53"; 
+      (function () { d = document; s = d.createElement("script"); 
+        s.src = "https://client.crisp.chat/l.js"; s.async = 1; 
+        d.getElementsByTagName("head")[0].appendChild(s); })();
 
-    <script>
       $(document).ready(function () {
         // get current URL path and assign 'active' class
         var pathname = window.location.pathname;

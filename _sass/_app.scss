@@ -4,7 +4,8 @@ body {
   padding-top: 3.5rem;
 }
 .section {
-  padding: 3rem 0rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   // border-bottom: 2px dashed $primary;
 }
 .card {
@@ -27,7 +28,7 @@ body {
 
 // Header //
 .jumbotron {
-  background: $blue url($baseurl + '/images/home-header.jpg') no-repeat center;
+  background: $primary url($baseurl + '/images/home-header.jpg') no-repeat center;
   background-size: cover;
   color: $white;
   text-align: center;
