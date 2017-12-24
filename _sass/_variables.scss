@@ -64,10 +64,12 @@
 
 $uxdx-purple: #7F7FF0;
 $uxdx-blue: #4DD0E1;
+$uxdx-pink: #a865e1;
 
 
-$primary:       $uxdx-purple !default;
+$primary:       $uxdx-pink !default;
 $secondary:     $uxdx-blue !default;
+$action:        $uxdx-purple !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
@@ -75,14 +77,16 @@ $secondary:     $uxdx-blue !default;
 // $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
 
+$uxdx: linear-gradient(to left, $primary, $action);
+
 // $theme-colors: () !default;
 // $theme-colors: map-merge((
-//   "primary":    $primary,
-//   "secondary":  $secondary,
-//   "success":    $success,
-//   "info":       $info,
-//   "warning":    $warning,
-//   "danger":     $danger,
+  //   "primary":    $primary,
+  //   "secondary":  $secondary,
+  //   "success":    $success,
+  //   "info":       $info,
+  //   "warning":    $warning,
+  //   "danger":     $danger,
 //   "light":      $light,
 //   "dark":       $dark
 // ), $theme-colors);

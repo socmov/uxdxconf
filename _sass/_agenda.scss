@@ -1,0 +1,123 @@
+.agenda {
+  .nav {
+    padding-bottom: 2rem;
+  }
+  a {
+    color: black;
+  }
+}
+
+.schedule__grid {
+  .schedule__grid__time {
+    @extend .h4;
+    background: $gray-200;
+    padding: 1rem;
+  }
+  .schedule__grid__events {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    flex: 1
+  }
+
+  .schedule__grid__event {
+    @extend .p-4;
+    border-bottom: 1px solid $gray-200;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &:last-child {
+      border-bottom: none;
+    }
+    // &:hover {
+    //   background: $gray-200;
+    // }
+    // &:hover[data-session] {
+    //   cursor: pointer
+    // }
+    .schedule__grid__event__photos {
+      max-width: 80px;
+      min-width: 80px;
+      img.profile_picture {
+        width: 50px;
+        height: 50px;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+      }
+      img.company_logo {
+        max-width: 50px;
+        max-height: 30px;
+      }
+      .display-controllers {
+        cursor: pointer;
+        color: $cyan;
+        .show-ctrl {
+          display:none;
+        }
+        .hide-ctrl {
+          display: block;
+        }
+        &.collapsed {
+          .show-ctrl {
+            display:block;
+          }
+          .hide-ctrl {
+            display: none;
+          }
+        }
+      }
+    }
+    .schedule__grid__event__details {
+      flex-grow: 1;
+      .schedule__grid__event__title {
+        @extend .h5;
+      }
+      
+      .schedule__grid__event__speakers {
+        font-size: 1rem;
+        span.company {
+          font-weight: 700;
+        }
+      }
+      .schedule__grid__event__meta {
+        font-size: 0.9rem;
+        .badge {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+        .UX {
+          @extend .badge-primary;
+        }
+        .DX {
+          @extend .badge-secondary;
+          color: white;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    // border-top: 1px solid $gray-200;
+    .schedule__grid__section {
+      border-bottom: 1px solid $gray-200;
+      &:last-child {
+        border-bottom: none
+      }
+    }
+    .schedule__grid__content {
+      display:flex;
+      flex-flow: row nowrap;
+      margin: 0 auto;
+      padding-left: 1rem;
+    }
+    .schedule__grid__time {
+      background:none;
+      padding: 2rem 2rem 2rem 0rem;
+      white-space: nowrap;
+      width: 5rem;
+    }
+    .schedule__grid__event {
+      // border-left:1px solid $gray-200;
+    }
+  }
+}

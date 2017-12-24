@@ -8,16 +8,17 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script src='https://js.tito.io/v1' async></script>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <a href="{{ site.baseurl }}/" class="navbar-brand">
-        <img src="{{ site.avatar }}"  width="30" height="30" alt="UXDX Conf 2018"/>
+        <img src="{{ site.baseurl }}/images/UXDX-White-NoLogoText-NoText.svg"  width="30" height="30" alt="UXDX Conf 2018"/>
       </a>
       
       <a class="navbar-brand" href="{{ site.baseurl }}/">UXDX Conf 2018</a>
@@ -29,16 +30,16 @@
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/agenda">Agenda</a>
+            <a class="nav-link" href="{{ site.baseurl }}/agenda/">Agenda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/venue">Venue</a>
+            <a class="nav-link" href="{{ site.baseurl }}/venue/">Venue</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/agenda">Attendees</a>
+            <a class="nav-link" href="{{ site.baseurl }}/attendees/">Attendees</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary" href="{{ site.baseurl }}/tickets">Tickets</a>
+            <a class="btn btn-outline-light" href="{{ site.baseurl }}/tickets/">Tickets</a>
           </li>
         </ul>
       </div>
@@ -48,14 +49,55 @@
       {{ content }}
     </main>
     
-    <footer class="container">
-      <p>&copy; Company 2017</p>
-      {% include svg-icons.html %}
+    <footer class="container section">
+      <div class="footer-text">
+        <h2>UXDX</h2>
+      </div>
+      <div class="footer-social-icon">
+        <a href="https://ie.linkedin.com/company/uxdx" target="_blank">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/uxdxconf" target="_blank">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCbHlDYI3bkUa1vx_qdJ8nbg" target="_blank">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="footer-menu">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a href="{{site.baseurl}}/about/">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{site.baseurl}}/partners/">Partners</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{site.baseurl}}/terms/">Terms</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{site.baseurl}}/codeofconduct/">Code of Conduct</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Foooter Text-->
+      <div class="small text-muted">
+        <p>Copyright ©2018 Socially Motivated Ltd</p>
+      </div>
     </footer>
 
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     {% include analytics.html %}
+
+    <script>
+      $(document).ready(function () {
+        // get current URL path and assign 'active' class
+        var pathname = window.location.pathname;
+        console.log(pathname)
+        $('.navbar-nav > li > a[href="' + pathname + '"]').parent().addClass('active');
+      })
+    </script>
   </body>
 </html>

@@ -4,12 +4,22 @@ body {
   padding-top: 3.5rem;
 }
 .section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 3rem 0rem;
+  // border-bottom: 2px dashed $primary;
 }
 .card {
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+//////////////
+// NAV //
+////////////////
+.navbar {
+  background: $uxdx;
+  color: $white;
+}
+
 
 ////////////////
 // HOME PAGE //
@@ -22,6 +32,10 @@ body {
   color: $white;
   text-align: center;
   margin-bottom: 0rem;
+  .header-logo {
+    width: 250px;
+    height: 250px;
+  }
   .display-5 {
     font-size: 3rem;
     font-weight: 300;
@@ -33,7 +47,7 @@ body {
 
 // Stats
 .stats {
-  border-bottom: 1rem;
+  padding-bottom: 2rem;
   .stat {
     width: 10rem;
     text-align: center;
@@ -48,10 +62,10 @@ body {
 // Stages
 .stages {
   background-color: $gray-100;
-  border-bottom: 1px solid $primary;
+  // border-bottom: 1px solid $primary;
   .card {
-    min-width: 20rem;
-    max-width: 30rem;
+    width: 20rem;
+    // max-width: 25rem;
   }
 }
 
@@ -69,5 +83,49 @@ body {
       max-width: 1000px;
     }
   // }
+}
+
+
+/// TESTIMONIALS
+.testimonials {
+  background: $uxdx;
+  color: $white;
+  .quotes {
+    text-align: center;
+    // color: $white;
+  }
+  .carousel {
+    padding: 20px 40px;
+  }
+  ol.carousel-indicators li {
+    margin-top: 20px;
+    // background: $gray-300;
+    // &.active {
+    //   background: $primary;
+    // }
+  }
+
+  @media screen {
+    
+  }
+}
+
+
+// FOOTER
+footer {
+  text-align: center;
+  .footer-social-icon {
+    a {
+      color: $gray-400 !important;
+      padding: 0px 10px;
+    }
+  }
+  ul {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    li {
+      padding: 0px 10px;
+    }
+  }
 }
 
