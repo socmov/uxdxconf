@@ -105,11 +105,79 @@ body {
     //   background: $primary;
     // }
   }
+}
 
-  @media screen {
-    
+
+///////////////////
+// ATTENDEES /////
+//////////////////
+.attendees {
+  .card {
+    width: 15rem;
+    .card-img-top {
+      max-width:100%;
+    }
+    .company-image {
+      max-width: 5rem;
+      max-height: 3rem;
+    }
   }
 }
+///////////////////
+// PARTNERS /////
+//////////////////
+.partners {
+  .card {
+    width: 30rem;
+    .card-img-top {
+      max-width:200px;
+      margin: 2rem;
+    }
+  }
+  .display-controllers {
+    cursor: pointer;
+    color: $cyan;
+    .show-ctrl {
+      display:none;
+    }
+    .hide-ctrl {
+      display: block;
+    }
+    &.collapsed {
+      .show-ctrl {
+        display:block;
+      }
+      .hide-ctrl {
+        display: none;
+      }
+    }
+  }
+}
+
+
+////////////////////////
+/// TICKETS ////////////
+////////////////////////
+.tickets {
+  small {
+    font-size: 70%;
+  }
+  .tickets-table {
+    font-size: 1.3rem;
+    width: 100%;
+    min-width: 20rem;
+    thead tr th {
+      background-color: $secondary;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 30rem;
+    }
+  }
+  .details {
+    max-width: 30rem;
+  }
+}
+
 
 
 // FOOTER

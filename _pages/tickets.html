@@ -1,116 +1,96 @@
 --- 
-layout: default 
+layout: page 
 title: Tickets 
 permalink: /tickets/ 
 ---
 
-<div class="container-fluid section tickets">
-  <div class="container">
-    <div class="d-flex flex-row">
-      <div class="p-2">
-        
-      </div>
-      <div class="p-2">Flex item 2</div>
-      <div class="p-2">Flex item 3</div>
-    </div>
+{% assign today_date = 'now' | date: '%s' %}  
+{% assign two_for_one = 'May 3, 2018' | date: '%s' %} 
+{% assign super_early = 'June 28, 2018' | date: '%s' %} 
+{% assign early = 'August 2, 2018' | date: '%s' %} 
+{% assign regular = 'October 5, 2018' | date: '%s' %}
+
+<div class="d-flex justify-content-around flex-wrap tickets">
+  <div class="tickets-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- <th scope="col"></th> -->
+          {% if today_date < two_for_one %}
+            <th scope="col" colspan="2">
+              2 for 1
+              <small>Until 1<sup>st</sup> May 2018</small>
+            </th>
+          {% endif %} {% if today_date >= two_for_one and today_date < super_early %}
+            <th scope="col">
+              Super Early<br>
+              <small>Until 26<sup>th</sup> June 2018</small>
+            </th>
+          {% endif %} {% if today_date >= super_early and today_date < early %}
+            <th scope="col">
+              Early<br>
+              <small>Until 31<sup>st</sup> July 2018</small>
+            </th>
+          {% endif %} {% if today_date >= early %}
+            <th scope="col">Regular<br>
+              <small>Until 3<sup>rd</sup> October 2018</small></th>
+            </tr>
+          {% endif %}
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            All Inclusive<br>
+            <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
+          </th>
+          <td>€1,395</td> 
+          {% if today_date >= two_for_one and today_date < super_early %}
+          <td>€765 - €840</td>
+          {% endif %} {% if today_date >= super_early and today_date < early %}
+          <td>€925 - €1,080</td>
+          {% endif %} {% if today_date >= early %}
+          <td>€1,105 - €1,395</td>
+          {% endif %}
+        </tr>
+        <tr>
+          <th scope="row">
+            UXDX conference<br>
+            <small>4<sup>th</sup> - 5<sup>th</sup> October 2018</small>
+          </th>
+          <td>€999</td>
+          {% if today_date >= two_for_one and today_date < super_early %}
+          <td>€550 - €605</td>
+          {% endif %} {% if today_date >= super_early and today_date < early %}
+          <td>€665 - €720</td>
+          {% endif %} {% if today_date >= early %}
+          <td>€795 - €999</td>
+          {% endif %}
+        </tr>
+        <tr>
+          <th scope="row">
+            Training<br>
+            <small>3<sup>rd</sup> October 2018</small>
+          </th>
+          <td>€650</td>
+          {% if today_date >= two_for_one and today_date < super_early %}
+          <td>€350 - €385</td>
+          {% endif %} {% if today_date >= super_early and today_date < early %}
+          <td>€425 - €460</td>
+          {% endif %} {% if today_date >= early %}
+          <td>€505 - €650</td>
+          {% endif %}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details">
+    <h2>Want free tickets?</h2>
+    <p>
+      Buy any 4 tickets and you get one free!<br>
+      <small>Discounts automatically applied when you enter in the quantity of tickets</small>
+    </p>
+    <button class="btn btn-primary btn-lg">Register Now</button>
   </div>
 </div>
 
-<div class="row no-gutters">
-  <div class="col-12 col-md-6 col-lg-3">
-    <!-- Package Price  -->
-    <div class="single-price-plan text-center">
-      <!-- Package Text  -->
-      <div class="package-plan">
-        <h5>Starter Plan</h5>
-        <div class="ca-price d-flex justify-content-center">
-          <span>$</span>
-          <h4>29</h4>
-        </div>
-      </div>
-      <div class="package-description">
-        <p>Up to 10 users monthly</p>
-        <p>Unlimited updates</p>
-        <p>Free host &amp; domain</p>
-        <p>24/7 Support</p>
-        <p>10 Unique Users</p>
-      </div>
-      <!-- Plan Button  -->
-      <div class="plan-button">
-        <a href="#">Select Plan</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-3">
-    <!-- Package Price  -->
-    <div class="single-price-plan text-center">
-      <!-- Package Text  -->
-      <div class="package-plan">
-        <h5>Basic Plan</h5>
-        <div class="ca-price d-flex justify-content-center">
-          <span>$</span>
-          <h4>49</h4>
-        </div>
-      </div>
-      <div class="package-description">
-        <p>Up to 10 users monthly</p>
-        <p>Unlimited updates</p>
-        <p>Free host &amp; domain</p>
-        <p>24/7 Support</p>
-        <p>10 Unique Users</p>
-      </div>
-      <!-- Plan Button  -->
-      <div class="plan-button">
-        <a href="#">Select Plan</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-3">
-    <!-- Package Price  -->
-    <div class="single-price-plan active text-center">
-      <!-- Package Text  -->
-      <div class="package-plan">
-        <h5>Advenced Plan</h5>
-        <div class="ca-price d-flex justify-content-center">
-          <span>$</span>
-          <h4>69</h4>
-        </div>
-      </div>
-      <div class="package-description">
-        <p>Up to 10 users monthly</p>
-        <p>Unlimited updates</p>
-        <p>Free host &amp; domain</p>
-        <p>24/7 Support</p>
-        <p>10 Unique Users</p>
-      </div>
-      <!-- Plan Button  -->
-      <div class="plan-button">
-        <a href="#">Select Plan</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-md-6 col-lg-3">
-    <!-- Package Price  -->
-    <div class="single-price-plan text-center">
-      <!-- Package Text  -->
-      <div class="package-plan">
-        <h5>Community Plan</h5>
-        <div class="ca-price d-flex justify-content-center">
-          <span>$</span>
-          <h4>99</h4>
-        </div>
-      </div>
-      <div class="package-description">
-        <p>Up to 10 users monthly</p>
-        <p>Unlimited updates</p>
-        <p>Free host &amp; domain</p>
-        <p>24/7 Support</p>
-        <p>10 Unique Users</p>
-      </div>
-      <!-- Plan Button  -->
-      <div class="plan-button">
-        <a href="#">Select Plan</a>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- <tito-button event="ultimateconf/2013"></tito-button> -->
