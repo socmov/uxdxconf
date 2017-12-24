@@ -70,3 +70,10 @@ exclude:
   - CNAME
 
 include: ["_pages"]
+
+# collections:
+#   speakers:
+#     output: true
+#     scope: 
+#       path: "speakers/"
+#       type
