@@ -6,7 +6,7 @@ permalink: /partners/
 <div class="partners">
 
   <div class="partner-list d-flex justify-content-around flex-wrap">
-    {% assign partners = site.data.sponsors | sort: 'level[0].codename' %}
+    {% assign partners = site.data.sponsors | sort: 'level' %}
     {% for partner in partners %}
       <div class="partner-box card align-self-stretch">
         <img class="card-img-top partner-profile" src="{{partner.company}}" alt="{{partner.name}}">
