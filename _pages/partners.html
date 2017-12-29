@@ -9,7 +9,9 @@ permalink: /partners/
     {% assign partners = site.data.sponsors | sort: 'level' %}
     {% for partner in partners %}
       <div class="partner-box card align-self-stretch">
-        <img class="card-img-top partner-profile" src="{{partner.company}}" alt="{{partner.name}}">
+        <div class="card-img-top">
+          <img class="partner-profile" src="{{partner.company}}" alt="{{partner.name}}">
+        </div>
         <div class="card-body">
           <h4 class="card-title">{{partner.name}}</h4>
           <div class="card-text">
