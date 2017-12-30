@@ -53,7 +53,7 @@ url_slug: home
       <div class="d-flex justify-content-around flex-wrap">
           {% for card in section.cards %}
             <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
-              <img class="card-img-top" src="{{card.card_image}}" alt="{{card.title}}">
+              <img class="card-img-top" src="{{card.card_image.url}}" alt="{{card.card_image.description}}">
               <div class="card-body">
                 <h4 class="card-title">{{card.title}}</h4>
                 <p class="card-text">
@@ -83,7 +83,7 @@ url_slug: home
               </div>
               <div class="client-name text-center">
                 <p>{{testimonial.source}}</p>
-                <img src="{{testimonial.company_logo}}" alt="{{testimonial.source}}" class="testimonial-logo">
+                <img src="{{testimonial.company_logo.url}}" alt="{{testimonial.source}}" class="testimonial-logo">
               </div>
             </div>
             {% endfor %}
@@ -100,7 +100,7 @@ url_slug: home
     <div class="d-flex flex-wrap justify-content-around">
       {% assign companies = site.data.highlightedCompanies | sort: 'order' %}
       {% for company in companies %}
-        <img src="{{company.logo}}" alt="{{company.company_name}}" class="highlighted-company-logo">
+        <img src="{{company.logo.url}}" alt="{{company.company_name}}" class="highlighted-company-logo">
       {% endfor %}
     </div>
   </div>

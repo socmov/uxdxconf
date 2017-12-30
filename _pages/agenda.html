@@ -9,6 +9,57 @@ url_slug: agenda
 <div class="container-fluid section agenda">
   <div class="container">
     <h1>{{pageContent.title}}</h1>
+
+    {% for section in pageContent.sections %}
+    <div class="container-fluid section {{section.codename}}">
+      <div class="container">
+        <h1>
+          {{section.title}}
+        </h1>
+    
+        {{section.content}} {% if section.cards.size > 0 %}
+        <div class="d-flex justify-content-around flex-wrap">
+          {% for card in section.cards %}
+          <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
+            <img class="card-img-top" src="{{card.card_image.url}}" alt="{{card.card_image.description}}">
+            <div class="card-body">
+              <h4 class="card-title">{{card.title}}</h4>
+              <p class="card-text">
+                {{card.content}}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %} {% if section.testimonials.size > 0 %}
+        <div class="quotes">
+          <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
+        </div>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for tesimonial in section.testimonials %}
+            <li data-target="#testimonialCarousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner d-flex">
+            {% for testimonial in section.testimonials %}
+            <div class="carousel-item {% if forloop.first == true %}active{% endif %} align-self-stretch">
+              <div class="client-description text-center">
+                <h5>{{testimonial.quote}}</h5>
+              </div>
+              <div class="client-name text-center">
+                <p>{{testimonial.source}}</p>
+                <img src="{{testimonial.company_logo.url}}" alt="{{testimonial.source}}" class="testimonial-logo">
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
     <ul class="nav nav-pills" role="tablist" id="pills-tab">
       {% for date in site.data.conference.primary_agenda.dates %}
         <li class="nav-item">

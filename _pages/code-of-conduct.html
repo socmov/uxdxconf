@@ -23,7 +23,7 @@ url_slug: code-of-conduct
       <div class="d-flex justify-content-around flex-wrap">
         {% for card in section.cards %}
         <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
-          <img class="card-img-top" src="{{card.card_image}}" alt="{{card.title}}">
+          <img class="card-img-top" src="{{card.card_image.url}}" alt="{{card.card_image.description}}">
           <div class="card-body">
             <h4 class="card-title">{{card.title}}</h4>
             <p class="card-text">
@@ -51,7 +51,7 @@ url_slug: code-of-conduct
             </div>
             <div class="client-name text-center">
               <p>{{testimonial.source}}</p>
-              <img src="{{testimonial.company_logo}}" alt="{{testimonial.source}}" class="testimonial-logo">
+              <img src="{{testimonial.company_logo.url}}" alt="{{testimonial.source}}" class="testimonial-logo">
             </div>
           </div>
           {% endfor %}
