@@ -1,8 +1,10 @@
 --- 
-layout: page 
-title: Tickets 
+layout: default
 permalink: /tickets/ 
+url_slug: tickets
 ---
+{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %} 
+{% assign pageContent = pageContent[0] %}
 
 {% assign today_date = 'now' | date: '%s' %}  
 {% assign two_for_one = 'May 3, 2018' | date: '%s' %} 
@@ -10,86 +12,141 @@ permalink: /tickets/
 {% assign early = 'August 2, 2018' | date: '%s' %} 
 {% assign regular = 'October 5, 2018' | date: '%s' %}
 
-<div class="d-flex justify-content-around flex-wrap tickets">
-  <div class="tickets-table">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <!-- <th scope="col"></th> -->
-          {% if today_date < two_for_one %}
-            <th scope="col" colspan="2">
-              2 for 1
-              <small>Until 1<sup>st</sup> May 2018</small>
-            </th>
-          {% endif %} {% if today_date >= two_for_one and today_date < super_early %}
-            <th scope="col">
-              Super Early<br>
-              <small>Until 26<sup>th</sup> June 2018</small>
-            </th>
-          {% endif %} {% if today_date >= super_early and today_date < early %}
-            <th scope="col">
-              Early<br>
-              <small>Until 31<sup>st</sup> July 2018</small>
-            </th>
-          {% endif %} {% if today_date >= early %}
-            <th scope="col">Regular<br>
-              <small>Until 3<sup>rd</sup> October 2018</small></th>
-            </tr>
-          {% endif %}
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">
-            All Inclusive<br>
-            <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
-          </th>
-          <td>€1,395</td> 
-          {% if today_date >= two_for_one and today_date < super_early %}
-          <td>€765 - €840</td>
-          {% endif %} {% if today_date >= super_early and today_date < early %}
-          <td>€925 - €1,080</td>
-          {% endif %} {% if today_date >= early %}
-          <td>€1,105 - €1,395</td>
-          {% endif %}
-        </tr>
-        <tr>
-          <th scope="row">
-            UXDX conference<br>
-            <small>4<sup>th</sup> - 5<sup>th</sup> October 2018</small>
-          </th>
-          <td>€999</td>
-          {% if today_date >= two_for_one and today_date < super_early %}
-          <td>€550 - €605</td>
-          {% endif %} {% if today_date >= super_early and today_date < early %}
-          <td>€665 - €720</td>
-          {% endif %} {% if today_date >= early %}
-          <td>€795 - €999</td>
-          {% endif %}
-        </tr>
-        <tr>
-          <th scope="row">
-            Training<br>
-            <small>3<sup>rd</sup> October 2018</small>
-          </th>
-          <td>€650</td>
-          {% if today_date >= two_for_one and today_date < super_early %}
-          <td>€350 - €385</td>
-          {% endif %} {% if today_date >= super_early and today_date < early %}
-          <td>€425 - €460</td>
-          {% endif %} {% if today_date >= early %}
-          <td>€505 - €650</td>
-          {% endif %}
-        </tr>
-      </tbody>
-    </table>
+<div class="container section {{pageContent.codename}}">
+
+  <h1>{{ pageContent.title }}</h1>
+
+  {% for section in pageContent.sections %}
+  <div class="container-fluid section {{section.codename}}">
+    <div class="container">
+      <h1>
+        {{section.title}}
+      </h1>
+  
+      {{section.content}} {% if section.cards.size > 0 %}
+      <div class="d-flex justify-content-around flex-wrap">
+        {% for card in section.cards %}
+        <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
+          <img class="card-img-top" src="{{card.card_image}}" alt="{{card.title}}">
+          <div class="card-body">
+            <h4 class="card-title">{{card.title}}</h4>
+            <p class="card-text">
+              {{card.content}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %} {% if section.testimonials.size > 0 %}
+      <div class="quotes">
+        <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
+      </div>
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          {% for tesimonial in section.testimonials %}
+          <li data-target="#testimonialCarousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
+          {% endfor %}
+        </ol>
+        <div class="carousel-inner d-flex">
+          {% for testimonial in section.testimonials %}
+          <div class="carousel-item {% if forloop.first == true %}active{% endif %} align-self-stretch">
+            <div class="client-description text-center">
+              <h5>{{testimonial.quote}}</h5>
+            </div>
+            <div class="client-name text-center">
+              <p>{{testimonial.source}}</p>
+              <img src="{{testimonial.company_logo}}" alt="{{testimonial.source}}" class="testimonial-logo">
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </div>
-  <div class="details">
-    <h2>Want free tickets?</h2>
-    <p>
-      Buy any 4 tickets and you get one free!<br>
-      <small>Discounts automatically applied when you enter in the quantity of tickets</small>
-    </p>
-    <button class="btn btn-primary btn-lg">Register Now</button>
+  {% endfor %}
+
+  <div class="d-flex justify-content-around flex-wrap tickets section">
+    <div class="tickets-table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <!-- <th scope="col"></th> -->
+            {% if today_date < two_for_one %}
+              <th scope="col" colspan="2">
+                2 for 1
+                <small>Until 1<sup>st</sup> May 2018</small>
+              </th>
+            {% endif %} {% if today_date >= two_for_one and today_date < super_early %}
+              <th scope="col">
+                Super Early<br>
+                <small>Until 26<sup>th</sup> June 2018</small>
+              </th>
+            {% endif %} {% if today_date >= super_early and today_date < early %}
+              <th scope="col">
+                Early<br>
+                <small>Until 31<sup>st</sup> July 2018</small>
+              </th>
+            {% endif %} {% if today_date >= early %}
+              <th scope="col">Regular<br>
+                <small>Until 3<sup>rd</sup> October 2018</small></th>
+              </tr>
+            {% endif %}
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              All Inclusive<br>
+              <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
+            </th>
+            <td>€1,395</td> 
+            {% if today_date >= two_for_one and today_date < super_early %}
+            <td>€765 - €840</td>
+            {% endif %} {% if today_date >= super_early and today_date < early %}
+            <td>€925 - €1,080</td>
+            {% endif %} {% if today_date >= early %}
+            <td>€1,105 - €1,395</td>
+            {% endif %}
+          </tr>
+          <tr>
+            <th scope="row">
+              UXDX conference<br>
+              <small>4<sup>th</sup> - 5<sup>th</sup> October 2018</small>
+            </th>
+            <td>€999</td>
+            {% if today_date >= two_for_one and today_date < super_early %}
+            <td>€550 - €605</td>
+            {% endif %} {% if today_date >= super_early and today_date < early %}
+            <td>€665 - €720</td>
+            {% endif %} {% if today_date >= early %}
+            <td>€795 - €999</td>
+            {% endif %}
+          </tr>
+          <tr>
+            <th scope="row">
+              Training<br>
+              <small>3<sup>rd</sup> October 2018</small>
+            </th>
+            <td>€650</td>
+            {% if today_date >= two_for_one and today_date < super_early %}
+            <td>€350 - €385</td>
+            {% endif %} {% if today_date >= super_early and today_date < early %}
+            <td>€425 - €460</td>
+            {% endif %} {% if today_date >= early %}
+            <td>€505 - €650</td>
+            {% endif %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="details">
+      <h2>Want free tickets?</h2>
+      <p>
+        Buy any 4 tickets and you get one free!<br>
+        <small>Discounts automatically applied when you enter in the quantity of tickets</small>
+      </p>
+      <button class="btn btn-primary btn-lg">Register Now</button>
+    </div>
   </div>
 </div>
 

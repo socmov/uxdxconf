@@ -1,11 +1,14 @@
 ---
 layout: default
-title: Agenda
 permalink: /agenda/
+url_slug: agenda
 ---
+{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %} 
+{% assign pageContent = pageContent[0] %}
 
 <div class="container-fluid section agenda">
   <div class="container">
+    <h1>{{pageContent.title}}</h1>
     <ul class="nav nav-pills" role="tablist" id="pills-tab">
       {% for date in site.data.conference.primary_agenda.dates %}
         <li class="nav-item">

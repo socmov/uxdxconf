@@ -1,6 +1,10 @@
 ---
 layout: default
+url_slug: home
 ---
+
+{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %}
+{% assign pageContent = pageContent[0] %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
@@ -38,162 +42,66 @@ layout: default
   </div>
 </div>
 
-<div class="container-fluid stages section">
-  <div class="container"><h1>
-    Challenge your Assumptions
-  </h1>
-    <div class="d-flex justify-content-around flex-wrap">
-      <div class="card align-self-stretch">
-        <img class="card-img-top" src="{{site.baseurl}}/images/vision.jpg" alt="Vision">
-        <div class="card-body">
-          <h4 class="card-title">Vision</h4>
-          <p class="card-text">Best practices for mapping customer needs with business objectives and prioritising delivery.</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Defining the Problem</li>
-            <li class="list-group-item">Setting up for Success</li>
-            <li class="list-group-item">Mapping out the Product</li>
-            <li class="list-group-item">Launch Platform</li>
-          </ul>
-          <a href="{{site.baseurl}}/agenda" class="btn">View Agenda</a>
+{% for section in pageContent.sections %}
+  <div class="container-fluid section {{section.codename}}">
+    <div class="container">
+      <h1>
+        {{section.title}}
+      </h1>
+
+      {% if section.cards.size > 0 %}
+      <div class="d-flex justify-content-around flex-wrap">
+          {% for card in section.cards %}
+            <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
+              <img class="card-img-top" src="{{card.card_image}}" alt="{{card.title}}">
+              <div class="card-body">
+                <h4 class="card-title">{{card.title}}</h4>
+                <p class="card-text">
+                  {{card.content}}
+                </p>
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      </div>
-      <div class="card align-self-stretch">
-        <img class="card-img-top" src="{{site.baseurl}}/images/execution.jpg" alt="Execution">
-        <div class="card-body">
-          <h4 class="card-title">Execution</h4>
-          <p class="card-text">Case studies demonstrating continuous delivery, validating assumptions and no stop iterations.</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Integrated UX</li>
-            <li class="list-group-item">Scaling Development</li>
-            <li class="list-group-item">DevOps Deployments</li>
-            <li class="list-group-item">Monitoring</li>
-          </ul>
-          <a href="{{site.baseurl}}/agenda" class="btn">View Agenda</a>
+      {% endif %}
+      
+      {% if section.testimonials.size > 0 %}
+        <div class="quotes">
+          <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
         </div>
-      </div>
-      <div class="card align-self-stretch">
-        <img class="card-img-top" src="{{site.baseurl}}/images/training.jpg" alt="Training">
-        <div class="card-body">
-          <h4 class="card-title">Training</h4>
-          <p class="card-text">Hands on workshops digging into the details of the concepts being discussed at the conference.</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Jobs to be Done</li>
-            <li class="list-group-item">Effective Research Interviews</li>
-            <li class="list-group-item">Design Sprints</li>
-            <li class="list-group-item">Progressive Web Apps</li>
-            <li class="list-group-item">Monitoring Approaches</li>
-            <li class="list-group-item">Growth Marketing</li>
-          </ul>
-          <a href="{{site.baseurl}}/agenda" class="btn">View Agenda</a>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for tesimonial in section.testimonials %}
+            <li data-target="#testimonialCarousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner d-flex">
+            {% for testimonial in section.testimonials %}
+            <div class="carousel-item {% if forloop.first == true %}active{% endif %} align-self-stretch">
+              <div class="client-description text-center">
+                <h5>{{testimonial.quote}}</h5>
+              </div>
+              <div class="client-name text-center">
+                <p>{{testimonial.source}}</p>
+                <img src="{{testimonial.company_logo}}" alt="{{testimonial.source}}" class="testimonial-logo">
+              </div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
-      </div>
+      {% endif %}
     </div>
   </div>
-</div>
+{% endfor %}
 
-<div class="container-fluid uxdx-model section">
+<div class="container-fluid section highlighted_companies">
   <div class="container">
-    <h1>
-      The UXDX Model <br>
-      <small class="text-muted">Merging Design Thinking and DevOps</small>
-    </h1>
-    <!-- <div class="d-flex justify-content-around flex-wrap"> -->
-      <div class="card">
-        <img class="card-img-top" src="{{site.baseurl}}/images/uxdx-model-origin.jpg" alt="Design Thinking + DevOps = The UXDX Model">
-        <div class="card-body">
-          <!-- <h4 class="card-title">
-            The UXDX Model
-            <br>
-          </h4> -->
-
-          <p class="card-text">UXDX conf is based around the UXDX model which integrates UX into the Development loop by breaking down the barriers
-            between development, design and research teams.</p>
-          <a href="{{site.baseurl}}/agenda" class="btn">Find out more about the UXDX Model</a>
-        </div>
-      <!-- </div> -->
+    <h1>Some Companies From Last Year</h1>
+    <div class="d-flex flex-wrap justify-content-around">
+      {% assign companies = site.data.highlightedCompanies | sort: 'order' %}
+      {% for company in companies %}
+        <img src="{{company.logo}}" alt="{{company.company_name}}" class="highlighted-company-logo">
+      {% endfor %}
     </div>
   </div>
 </div>
-
-<div class="container-fluid testimonials section">
-  <div class="container ">
-    <div class="quotes">
-      <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
-    </div>
-    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-        <li data-target="#testimonialCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="client-description text-center">
-            <p>“ I have been using it for a number of years. I use Colorlib for usability testing. It's great for taking images and
-              making clickable image prototypes that do the job.”</p>
-          </div>
-          <div class="star-icon text-center">
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-          </div>
-          <div class="client-name text-center">
-            <h5>Helen</h5>
-            <p>Marketer</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="client-description text-center">
-            <p>“ I have been using it for a number of years. I use Colorlib for usability testing. It's great for taking images and making
-              clickable image prototypes that do the job.”</p>
-          </div>
-          <div class="star-icon text-center">
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-          </div>
-          <div class="client-name text-center">
-            <h5>Helen</h5>
-            <p>Marketer</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="client-description text-center">
-            <p>“ I have been using it for a number of years. I use Colorlib for usability testing. It's great for taking images and making
-              clickable image prototypes that do the job.”</p>
-          </div>
-          <div class="star-icon text-center">
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-            <i class="ion-ios-star"></i>
-          </div>
-          <div class="client-name text-center">
-            <h5>Helen</h5>
-            <p>Marketer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- <div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div> -->

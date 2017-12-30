@@ -30,18 +30,27 @@
     
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          {% for link in site.data.conference.primary_menu.navigation_items %}
+            <li class="nav-item">
+              {% if link.page[0].url_slug == 'tickets' %}
+                <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
+              {% else %}
+                <a class="nav-link" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{ site.baseurl }}/agenda/">Agenda</a>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="{{ site.baseurl }}/venue/">Venue</a>
-          </li> -->
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ site.baseurl }}/attendees/">Attendees</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-light" href="{{ site.baseurl }}/tickets/">Tickets</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -66,8 +75,13 @@
         </a>
       </div>
       <div class="footer-menu">
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
+        <ul class="nav justify-content-center"> 
+          {% for link in site.data.conference.secondary_menu.navigation_items %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
+            </li>
+          {% endfor %}
+          <!-- <li class="nav-item">
             <a href="{{site.baseurl}}/about/">About</a>
           </li>
           <li class="nav-item">
@@ -78,7 +92,7 @@
           </li>
           <li class="nav-item">
             <a href="{{site.baseurl}}/codeofconduct/">Code of Conduct</a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- Foooter Text-->
