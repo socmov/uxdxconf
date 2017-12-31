@@ -1,0 +1,18 @@
+<div class="speaker-box card align-self-stretch">
+  <img class="card-img-top speaker-profile" src="{{speaker.profile_picture.url}}" alt="{{speaker.first_name}} {{speaker.last_name}}">
+  <div class="card-body">
+    <h4 class="card-title">
+      <a href="{{speaker.linkedin}}" rel="noopener" target="_blank">{{speaker.first_name}} {{speaker.last_name}} </a>
+    </h4>
+    <p class="card-text">
+      <small class="text-muted">{{speaker.job_title}},
+        <strong>{{speaker.company}}</strong>
+      </small>
+    </p>
+    {% if speaker.company_logo.url.size > 10 %}
+    <div class="mt-auto">
+      <img src="{{speaker.company_logo.url}}" alt="{{speaker.company}}" class="company-logo">
+    </div>
+    {% endif %}
+  </div>
+</div>

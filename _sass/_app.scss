@@ -129,10 +129,39 @@ body {
 
 // Companies
 .highlighted-company-logo {
-  max-width: 120px;
-  max-height: 80px;
-  margin: 20px;
-  filter: saturate(5%);
+  width: 10rem;
+  height: 6rem;
+  margin: 1.2rem;
+  img {
+    filter: saturate(5%);
+    max-width: 120px;
+    max-height: 80px;
+  }
+}
+
+// Highlight Photos
+.uxdx-highlights {
+  padding:0px;
+  div {
+    flex-grow: 1;
+  }
+  .double-width: {
+    flex-grow:2;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+// SPEAKERS //
+.speaker-box {
+  width: 14rem;
+}
+.company-logo {
+  max-width: 5rem;
+  max-height: 3rem;
 }
 
 
@@ -226,3 +255,6 @@ footer {
   }
 }
 
+.model {
+  width: 200px;
+}

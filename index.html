@@ -5,6 +5,7 @@ url_slug: home
 
 {% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %}
 {% assign pageContent = pageContent[0] %}
+
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
@@ -23,15 +24,11 @@ url_slug: home
   <div class="container">
     <div class="d-flex justify-content-around flex-wrap">
       <div class="stat  align-self-stretch">
-        <h3>2</h3>
-        <p class="lead">Stages</p>
-      </div>
-      <div class="stat  align-self-stretch">
-        <h3>1400</h3>
+        <h3>1400+</h3>
         <p class="lead">Attendees</p>
       </div>
       <div class="stat  align-self-stretch">
-        <h3>33</h3>
+        <h3>70+</h3>
         <p class="lead">Speakers</p>
       </div>
       <div class="stat  align-self-stretch">
@@ -43,65 +40,81 @@ url_slug: home
 </div>
 
 {% for section in pageContent.sections %}
-  <div class="container-fluid section {{section.codename}}">
-    <div class="container">
-      <h1>
-        {{section.title}}
-      </h1>
-
-      {% if section.cards.size > 0 %}
-      <div class="d-flex justify-content-around flex-wrap">
-          {% for card in section.cards %}
-            <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
-              <img class="card-img-top" src="{{card.card_image.url}}" alt="{{card.card_image.description}}">
-              <div class="card-body">
-                <h4 class="card-title">{{card.title}}</h4>
-                <p class="card-text">
-                  {{card.content}}
-                </p>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-      
-      {% if section.testimonials.size > 0 %}
-        <div class="quotes">
-          <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
-        </div>
-        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            {% for tesimonial in section.testimonials %}
-            <li data-target="#testimonialCarousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
-            {% endfor %}
-          </ol>
-          <div class="carousel-inner d-flex">
-            {% for testimonial in section.testimonials %}
-            <div class="carousel-item {% if forloop.first == true %}active{% endif %} align-self-stretch">
-              <div class="client-description text-center">
-                <h5>{{testimonial.quote}}</h5>
-              </div>
-              <div class="client-name text-center">
-                <p>{{testimonial.source}}</p>
-                <img src="{{testimonial.company_logo.url}}" alt="{{testimonial.source}}" class="testimonial-logo">
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
-    </div>
-  </div>
+  <!-- select a particular section -->
+  {% if section.codename == 'uxdx_model_section' %}
+    {% include section.html section=section %}
+  {% endif %}
 {% endfor %}
 
-<div class="container-fluid section highlighted_companies">
+<div class="container-fluid section highlighted_speakers">
   <div class="container">
-    <h1>Some Companies From Last Year</h1>
-    <div class="d-flex flex-wrap justify-content-around">
-      {% assign companies = site.data.highlightedCompanies | sort: 'order' %}
-      {% for company in companies %}
-        <img src="{{company.logo.url}}" alt="{{company.company_name}}" class="highlighted-company-logo">
+    <h1>A Selection of our Past Speakers</h1>
+    <div class="speaker-list d-flex justify-content-around flex-wrap">
+      {% assign speakers = site.data.highlightedSpeakers | sort: 'order' %} 
+      {% for speaker in speakers %}
+        {% include speakerCard.html speaker=speaker %}
       {% endfor %}
     </div>
   </div>
 </div>
+
+{% for section in pageContent.sections %}
+<!-- select a particular section -->
+  {% if section.codename == 'testimonials_section' %} 
+    {% include section.html section=section %} 
+  {% endif %} 
+{% endfor %}
+
+
+<div class="container-fluid section highlighted_companies">
+  <div class="container">
+    <h1>Previous Attendees</h1>
+    <div class="d-flex flex-wrap justify-content-around">
+      {% assign companies = site.data.highlightedCompanies | sort: 'order' %} 
+      {% for company in companies %}
+        {% include companyLogo.html company=company%}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid uxdx-highlights">
+  <div class="d-flex">
+    <div>
+      <img src="{{site.baseurl}}/images/highlights/Hands.jpg" alt="Audience with hands raised">
+    </div>
+    <div>
+      <img src="{{site.baseurl}}/images/highlights/Speaker1.jpg" alt="UXDX Speaker">
+    </div>
+    <div>
+      <img src="{{site.baseurl}}/images/highlights/Speaker2.jpg" alt="UXDX Speaker">
+    </div>
+    <div>
+      <img src="{{site.baseurl}}/images/highlights/Laugh.jpg" alt="Laughing Audience">
+    </div>
+  </div>
+  <div class="d-flex">
+    <div class="double-width">
+      <img src="{{site.baseurl}}/images/highlights/Crowd.jpg" alt="UXDX Crowd">
+    </div>
+    <div>
+      <img src="{{site.baseurl}}/images/highlights/Training.jpg" alt="UXDX Training">
+    </div>
+    <div>
+      <img src="{{site.baseurl}}/images/highlights/Photo.jpg" alt="Audience taking photos">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid section highlighted_companies">
+  <div class="container">
+    <h1>UXDX 2017</h1>
+
+  </div>
+</div>
+
+
+<img src="{{site.baseurl}}/images/uxdx-model.1.svg" class="model">
+<img src="{{site.baseurl}}/images/uxdx-model.2.svg" class="model">
+<img src="{{site.baseurl}}/images/uxdx-model.3.svg" class="model">
