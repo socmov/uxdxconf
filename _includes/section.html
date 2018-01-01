@@ -4,10 +4,14 @@
       {{section.title}}
     </h1>
 
-    {{section.content}} {% if section.cards.size > 0 %}
+    {% if section.content.size > 12 %}
+      {{section.content}} 
+    {% endif %}
+    
+    {% if section.cards.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
       {% for card in section.cards %}
-      <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %}">
+      <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %} {{card.codename}}">
         <img class="card-img-top" src="{{card.card_image.url}}" alt="{{card.card_image.description}}">
         <div class="card-body">
           <h4 class="card-title">{{card.title}}</h4>
@@ -19,7 +23,9 @@
       </div>
       {% endfor %}
     </div>
-    {% endif %} {% if section.testimonials.size > 0 %}
+    {% endif %} 
+    
+    {% if section.testimonials.size > 0 %}
     <div class="quotes">
       <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
     </div>
@@ -43,6 +49,12 @@
         {% endfor %}
       </div>
     </div>
+    {% endif %}
+    
+    {% if section.buttons.size > 0 %}
+      {% for button in section.buttons %}
+        <a href="{{site.baseurl}}/{{button.url_link}}/" class="btn {{button.class}}">{{button.button_text}}</a>
+      {% endfor %}
     {% endif %}
   </div>
 </div>

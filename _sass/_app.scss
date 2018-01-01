@@ -76,29 +76,37 @@ body {
   }
 }
 
-// About Section
-.about_conference_section {
-  background-color: $gray-100;
-  // border-bottom: 1px solid $primary;
-  .card {
-    width: 20rem;
-    // max-width: 25rem;
-  }
-}
 
 // UXDX model
 .uxdx_model_section {
+  background-color: $gray-100;
   .card {
-    max-width: 1000px;
-    .card-img-top {
-      text-align: center;
+    color: white;
+  }
+  .card-img-top {
+    padding:20px;
+  }
+  .uxdx_model___ux_card {
+    .card-body {
+      background-color: $ux;
     }
   }
-  // @media(max-width: @screen-sm-min)) {
-    .uxdx-model-image {
-      max-width: 1000px;
+  .uxdx_model___dev_card {
+    .card-body {
+      background-color: $dev;
     }
-  // }
+  }
+  .uxdx_model___ops_card {
+    .card-body {
+      background-color: $ops;
+    }
+  }
+}
+
+// Call to Action
+.agenda_links___section {
+  background: $uxdx;
+  text-align: center;
 }
 
 
@@ -145,14 +153,26 @@ body {
 // Highlight Photos
 .uxdx-highlights {
   padding:0px;
-  div {
-    flex-grow: 1;
-  }
-  .double-width: {
-    flex-grow:2;
+  .d-flex {
+    flex-wrap:wrap;
+    div {
+      flex: 1;
+    }
+    .image-flex {
+      min-width: 20rem;
+    }
+    .double-width {
+      flex:2;
+    }
   }
   img {
     max-width: 100%;
+  }
+  @include media-breakpoint-up(md) {
+    .d-flex {
+      align-items: stretch;
+      flex-wrap: none;
+    }
   }
 }
 

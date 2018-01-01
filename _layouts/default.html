@@ -115,9 +115,53 @@
       $(document).ready(function () {
         // get current URL path and assign 'active' class
         var pathname = window.location.pathname;
-        console.log(pathname)
         $('.navbar-nav > li > a[href="' + pathname + '"]').parent().addClass('active');
       })
+    </script>
+    <script>
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {          
+n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+      }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1081444315278926');
+      fbq('track', "PageView");
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1081444315278926&ev=PageView&noscript=1"
+      />
+    </noscript>
+    
+    <!-- Google Code for Remarketing Tag -->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 876748924;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+          /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/876748924/?guid=ON&amp;script=0"
+        />
+      </div>
+    </noscript>
+    
+    <script>
+      (function (w, d, t, u, n, a, m) {
+      w['MauticTrackingObject'] = n;
+        w[n] = w[n] || function () { (w[n].q = w[n].q || []).push(arguments) }, a = d.createElement(t),
+          m = d.getElementsByTagName(t)[0]; a.async = 1; a.src = u; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://mktg.sociallymotivated.com/mtc.js', 'mt');
+
+      mt('send', 'pageview');
     </script>
   </body>
 </html>

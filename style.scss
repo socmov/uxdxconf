@@ -9,6 +9,7 @@ $baseurl: "{{ site.baseurl }}";
 @import "bootstrap/scss/bootstrap";
 @import "app";
 @import "agenda";
+@import "video";
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

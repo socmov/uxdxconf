@@ -46,6 +46,20 @@ url_slug: home
   {% endif %}
 {% endfor %}
 
+{% for section in pageContent.sections %}
+  <!-- select a particular section -->
+  {% if section.codename == 'agenda_links___section' %} 
+    {% include section.html section=section %} 
+  {% endif %} 
+{% endfor %}
+<!-- <div class="container-fluid section call-to-action">
+  <div class="container">
+    <h1></h1>
+    <a href="{{site.baseurl}}/agenda/" class="btn btn-outline-light btn-lg">View the Draft Agenda</a> 
+  </div>
+</div> -->
+
+
 <div class="container-fluid section highlighted_speakers">
   <div class="container">
     <h1>A Selection of our Past Speakers</h1>
@@ -81,35 +95,29 @@ url_slug: home
 
 <div class="container-fluid uxdx-highlights">
   <div class="d-flex">
-    <div>
-      <img src="{{site.baseurl}}/images/highlights/Hands.jpg" alt="Audience with hands raised">
-    </div>
-    <div>
-      <img src="{{site.baseurl}}/images/highlights/Speaker1.jpg" alt="UXDX Speaker">
-    </div>
-    <div>
-      <img src="{{site.baseurl}}/images/highlights/Speaker2.jpg" alt="UXDX Speaker">
-    </div>
-    <div>
-      <img src="{{site.baseurl}}/images/highlights/Laugh.jpg" alt="Laughing Audience">
-    </div>
+    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Hands.jpg" alt="Audience with hands raised"> </div>
+    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Speaker2.jpg" alt="UXDX Speaker"> </div>
+    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Laugh.jpg" alt="Laughing Audience"> </div>
+    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Training.jpg" alt="UXDX Training"> </div>
   </div>
   <div class="d-flex">
-    <div class="double-width">
-      <img src="{{site.baseurl}}/images/highlights/Crowd.jpg" alt="UXDX Crowd">
-    </div>
-    <div>
-      <img src="{{site.baseurl}}/images/highlights/Training.jpg" alt="UXDX Training">
-    </div>
-    <div>
-      <img src="{{site.baseurl}}/images/highlights/Photo.jpg" alt="Audience taking photos">
-    </div>
+    <div class="image-flex double-width"> <img src="{{site.baseurl}}/images/highlights/Crowd.jpg" alt="UXDX Crowd"> </div>
+    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Speaker1.jpg" alt="UXDX Speaker"> </div>
+    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Photo.jpg" alt="Audience taking photos"> </div>
   </div>
 </div>
 
-<div class="container-fluid section highlighted_companies">
+<div class="container-fluid section uxdx2017-videos">
   <div class="container">
     <h1>UXDX 2017</h1>
-
+    <div id="ypt_wrapper">
+      <div class="video">
+        <div id="player" data-pl="PLrcV9QFxxPbCEXx4WVX8GQNQ0Ve5vbnHJ"></div>
+      </div>
+      <ul id="ypt_thumbs"></ul>
+    </div>
   </div>
 </div>
+{% include video-script.html %}
+
+{% include signup.html %}
