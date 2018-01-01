@@ -24,6 +24,9 @@ body {
       @extend .list-group-item;
     }
   }
+  .card-sub-title {
+    @extend .text-muted;
+  }
 }
 
 //////////////
