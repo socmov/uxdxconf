@@ -4,7 +4,7 @@ permalink: /venue/
 url_slug: venue 
 --- 
 
-{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %} 
+{% assign pageContent = site.data.pages | where:"url_slug", page.url_slug %} 
 {% assign pageContent = pageContent[0] %}
 
 <div class="container section {{pageContent.codename}}">

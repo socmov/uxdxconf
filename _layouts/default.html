@@ -104,6 +104,8 @@
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+
+
     {% include analytics.html %}
     <script type="text/javascript">
       window.$crisp = []; 
@@ -162,6 +164,24 @@ n.callMethod ?
       })(window, document, 'script', 'https://mktg.sociallymotivated.com/mtc.js', 'mt');
 
       mt('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+      /** This section is only needed once per page if manually copying **/
+      if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://104.199.47.9/media/js/mautic-form.js';
+        script.onload = function () {
+          MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'http://104.199.47.9';
+        var MauticLang = {
+          'submittingMessage': "Please wait..."
+        }
+      }
     </script>
   </body>
 </html>

@@ -3,7 +3,7 @@ layout: default
 permalink: /code-of-conduct/
 url_slug: code-of-conduct
 ---
-{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %} 
+{% assign pageContent = site.data.pages | where:"url_slug", page.url_slug %} 
 {% assign pageContent = pageContent[0] %}
 
 <div class="container section {{pageContent.codename}}">

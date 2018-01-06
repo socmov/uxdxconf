@@ -3,7 +3,7 @@ layout: default
 permalink: /tickets/ 
 url_slug: tickets
 ---
-{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %} 
+{% assign pageContent = site.data.pages | where:"url_slug", page.url_slug %} 
 {% assign pageContent = pageContent[0] %}
 
 {% assign today_date = 'now' | date: '%s' %}  

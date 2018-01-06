@@ -3,7 +3,7 @@ layout: default
 url_slug: home
 ---
 
-{% assign pageContent = site.data.conference.pages | where:"url_slug", page.url_slug %}
+{% assign pageContent = site.data.pages | where:"url_slug", page.url_slug %}
 {% assign pageContent = pageContent[0] %}
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
