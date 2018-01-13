@@ -53,6 +53,9 @@ body {
   color: $white;
   text-align: center;
   margin-bottom: 0rem;
+  .header-logo-div {
+    display: none;
+  }
   .header-logo {
     width: 250px;
     height: 250px;
@@ -63,6 +66,11 @@ body {
   }
   h3 {
     padding-bottom: 20px;
+  }
+  @include media-breakpoint-up(sm) {
+    .header-logo-div {
+      display: block;
+    }
   }
 }
 
