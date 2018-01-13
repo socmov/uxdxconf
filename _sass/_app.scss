@@ -3,6 +3,9 @@
 body {
   padding-top: 3.5rem;
 }
+.header-section {
+  padding-top: 3rem;
+}
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -20,7 +23,6 @@ body {
   .card-img-top {
     // padding:20px;
     max-height: 180px;
-    border-bottom: 1px dashed $primary;
   }
   ul {
     @extend .list-group;
@@ -212,7 +214,7 @@ body {
 ///////////////////
 // ATTENDEES /////
 //////////////////
-.attendees {
+.attendees___section {
   .card {
     width: 12rem;
     .card-img-top {
@@ -228,12 +230,15 @@ body {
 ///////////////////
 // PARTNERS /////
 //////////////////
-.partners {
+.partners___section {
   .card {
     width: 30rem;
     .partner-profile {
       max-width:200px;
       margin: 2rem;
+    }
+    .card-img-top { 
+      border-bottom: 1px dashed $primary;
     }
   }
   .display-controllers {
