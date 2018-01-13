@@ -17,6 +17,11 @@ body {
   &.group2 {
     width: 30rem;
   }
+  .card-img-top {
+    // padding:20px;
+    max-height: 180px;
+    border-bottom: 1px dashed $primary;
+  }
   ul {
     @extend .list-group;
     @extend .list-group-flush;
@@ -28,6 +33,7 @@ body {
     @extend .text-muted;
   }
 }
+  
 
 //////////////
 // NAV //
@@ -44,8 +50,6 @@ body {
 
 // Header //
 .jumbotron {
-  background: $primary url($baseurl + '/images/home-header.jpg') no-repeat center;
-  background-size: cover;
   color: $white;
   text-align: center;
   margin-bottom: 0rem;
@@ -63,7 +67,7 @@ body {
 }
 
 // Stats
-.stats {
+.conference_stats_section {
   padding-bottom: 2rem;
   .stat {
     width: 10rem;
@@ -82,9 +86,6 @@ body {
   background-color: $gray-100;
   .card {
     color: white;
-  }
-  .card-img-top {
-    padding:20px;
   }
   .uxdx_model___ux_card {
     .card-body {
@@ -151,7 +152,7 @@ body {
 }
 
 // Highlight Photos
-.uxdx-highlights {
+.home_page_image_row___section {
   padding:0px;
   .d-flex {
     flex-wrap:wrap;
@@ -159,7 +160,7 @@ body {
       flex: 1;
     }
     .image-flex {
-      min-width: 20rem;
+      align-items: stretch;
     }
     .double-width {
       flex:2;
@@ -168,10 +169,13 @@ body {
   img {
     max-width: 100%;
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-down(xs) {
     .d-flex {
       align-items: stretch;
-      flex-wrap: none;
+      .image-flex {
+        min-width: 20rem;
+      }
+      // flex-wrap: none;
     }
   }
 }
@@ -187,6 +191,9 @@ body {
 // SPEAKERS //
 .speaker-box {
   width: 14rem;
+  .card-img-top {
+    max-height: 100%;
+  }
 }
 .company-logo {
   max-width: 5rem;
@@ -199,8 +206,9 @@ body {
 //////////////////
 .attendees {
   .card {
-    width: 15rem;
+    width: 12rem;
     .card-img-top {
+      max-height:100%;
       max-width:100%;
     }
     .company-image {

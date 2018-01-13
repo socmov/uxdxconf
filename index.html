@@ -7,7 +7,9 @@ url_slug: home
 {% assign pageContent = pageContent[0] %}
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<div class="jumbotron" style="
+  background: url('{{pageContent.header_image.url}}') no-repeat center;
+  background-size: cover;">
   <div class="container">
     <img src="{{site.baseurl}}/images/UXDX-White-LogoText-NoText.svg" class="header-logo" alt="UXDX">
     <h1 class="display-5">Enhance your Process</h1>
@@ -20,104 +22,7 @@ url_slug: home
 </div>
 
 
-<div class="container-fluid section stats">
-  <div class="container">
-    <div class="d-flex justify-content-around flex-wrap">
-      <div class="stat  align-self-stretch">
-        <h3>1400+</h3>
-        <p class="lead">Attendees</p>
-      </div>
-      <div class="stat  align-self-stretch">
-        <h3>70+</h3>
-        <p class="lead">Speakers</p>
-      </div>
-      <div class="stat  align-self-stretch">
-        <h3>6</h3>
-        <p class="lead">Workshops</p>
-      </div>
-    </div>
-  </div>
-</div>
+{% for section in pageContent.sections %} {% include section.html section=section %} {% endfor %}
 
-{% for section in pageContent.sections %}
-  <!-- select a particular section -->
-  {% if section.codename == 'uxdx_model_section' %}
-    {% include section.html section=section %}
-  {% endif %}
-{% endfor %}
-
-{% for section in pageContent.sections %}
-  <!-- select a particular section -->
-  {% if section.codename == 'agenda_links___section' %} 
-    {% include section.html section=section %} 
-  {% endif %} 
-{% endfor %}
-<!-- <div class="container-fluid section call-to-action">
-  <div class="container">
-    <h1></h1>
-    <a href="{{site.baseurl}}/agenda/" class="btn btn-outline-light btn-lg">View the Draft Agenda</a> 
-  </div>
-</div> -->
-
-
-<div class="container-fluid section highlighted_speakers">
-  <div class="container">
-    <h1>A Selection of our Past Speakers</h1>
-    <div class="speaker-list d-flex justify-content-around flex-wrap">
-      {% assign speakers = site.data.highlightedSpeakers | sort: 'order' %} 
-      {% for speaker in speakers %}
-        {% include speakerCard.html speaker=speaker %}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-{% for section in pageContent.sections %}
-<!-- select a particular section -->
-  {% if section.codename == 'testimonials_section' %} 
-    {% include section.html section=section %} 
-  {% endif %} 
-{% endfor %}
-
-
-<div class="container-fluid section highlighted_companies">
-  <div class="container">
-    <h1>Previous Attendees</h1>
-    <div class="d-flex flex-wrap justify-content-around">
-      {% assign companies = site.data.highlightedCompanies | sort: 'order' %} 
-      {% for company in companies %}
-        {% include companyLogo.html company=company%}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-
-<div class="container-fluid uxdx-highlights">
-  <div class="d-flex">
-    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Hands.jpg" alt="Audience with hands raised"> </div>
-    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Speaker2.jpg" alt="UXDX Speaker"> </div>
-    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Laugh.jpg" alt="Laughing Audience"> </div>
-    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Training.jpg" alt="UXDX Training"> </div>
-  </div>
-  <div class="d-flex">
-    <div class="image-flex double-width"> <img src="{{site.baseurl}}/images/highlights/Crowd.jpg" alt="UXDX Crowd"> </div>
-    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Speaker1.jpg" alt="UXDX Speaker"> </div>
-    <div class="image-flex"> <img src="{{site.baseurl}}/images/highlights/Photo.jpg" alt="Audience taking photos"> </div>
-  </div>
-</div>
-
-<div class="container-fluid section uxdx2017-videos">
-  <div class="container">
-    <h1>UXDX 2017</h1>
-    <div id="ypt_wrapper">
-      <div class="video">
-        <div id="player" data-pl="PLrcV9QFxxPbCEXx4WVX8GQNQ0Ve5vbnHJ"></div>
-      </div>
-      <ul id="ypt_thumbs"></ul>
-    </div>
-  </div>
-</div>
-{% include video-script.html %}
 
 {% include signup.html formId=1 name="newslettersignup" %}

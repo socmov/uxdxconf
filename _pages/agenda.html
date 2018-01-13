@@ -74,7 +74,7 @@ url_slug: agenda
                             {{session.session.description}}
                           <!-- </div> -->
                         </div>
-                        {% if session.location %}
+                        {% if session.location == true %}
                           <span class="badge {{session.location}}">{{session.location}}</span>
                           {{session.stream}}
                         {% endif %}

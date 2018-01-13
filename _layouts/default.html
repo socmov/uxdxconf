@@ -58,6 +58,8 @@
     <main role="main">
       {{ content }}
     </main>
+
+    {% include signup.html formId=1 name="newslettersignup" %}
     
     <footer class="container section">
       <div class="footer-text">
@@ -104,6 +106,7 @@
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+    {% include video-script.html %}
 
 
     {% include analytics.html %}

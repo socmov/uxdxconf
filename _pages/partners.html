@@ -10,44 +10,11 @@ url_slug: partners
 <div class="container section {{pageContent.codename}}">
   <h1>{{ pageContent.title }}</h1>
 
-  {% for section in pageContent.sections %}
-    {% include section.html section=section %}
-  {% endfor %}
+<div class="container section {{pageContent.codename}}">
 
-  <div class="partners">
-    <div class="partner-list d-flex justify-content-around flex-wrap">
-      {% assign partners = site.data.sponsors | sort: 'level' %}
-      {% for partner in partners %}
-        <div class="partner-box card align-self-stretch">
-          <div class="card-img-top">
-            <img class="partner-profile" src="{{partner.company}}" alt="{{partner.name}}">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">{{partner.name}}</h4>
-            <div class="card-text">
-              <div class="collapse {{partner.codename}} show" id="{{partner.codename}}1" aria-expanded="true">
-                {{partner.bio | strip_html | truncate: 200}}
-              </div>
-              <div class="collapse {{partner.codename}}" id="{{partner.codename}}2">
-                {{partner.bio}}
-              </div>
-              {% if partner.bio.size > 200 %}
-                <div class="display-controllers collapsed" data-toggle="collapse" data-target=".{{partner.codename}}" aria-expanded="false" aria-controls="{{partner.codename}}1 {{partner.codename}}2">
-                  <span class="show-ctrl">
-                    <i class="fas fa-chevron-down"></i>
-                    <small>More</small>
-                  </span>
-                  <span class="hide-ctrl">
-                    <i class="fas fa-chevron-up"></i>
-                    <small>Less</small>
-                  </span>
-                </div>
-              {% endif %}
-              <a href="{{partner.url}}" target="_blank" rel="noopener">{{partner.url}}</a>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+  <h1>{{ pageContent.title }}</h1>
+
+  {% for section in pageContent.sections %} 
+  {% include section.html section=section %} 
+  {% endfor %}
 </div>

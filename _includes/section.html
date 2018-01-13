@@ -1,13 +1,17 @@
 <div class="container-fluid section {{section.codename}}">
+  {% if section.image_rows.size == 0 %}
   <div class="container">
     <h1>
       {{section.title}}
     </h1>
+  {% endif %}
 
+    <!-- SECTION CONTENT -->
     {% if section.content.size > 12 %}
       {{section.content}} 
     {% endif %}
     
+    <!-- CARDS -->
     {% if section.cards.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
       {% for card in section.cards %}
@@ -24,7 +28,8 @@
       {% endfor %}
     </div>
     {% endif %} 
-    
+
+    <!-- TESTIMONIALS -->
     {% if section.testimonials.size > 0 %}
     <div class="quotes">
       <i class="fas fa-quote-left fa-3x" aria-hidden="true"></i>
@@ -50,11 +55,69 @@
       </div>
     </div>
     {% endif %}
-    
+
+    <!-- BUTTONS -->
     {% if section.buttons.size > 0 %}
-      {% for button in section.buttons %}
-        <a href="{{site.baseurl}}/{{button.url_link}}/" class="btn {{button.class}}">{{button.button_text}}</a>
-      {% endfor %}
+    {% for button in section.buttons %}
+    <a href="{{site.baseurl}}/{{button.url_link}}/" class="btn {{button.class}}">{{button.button_text}}</a>
+    {% endfor %}
     {% endif %}
+
+    <!-- STATS -->
+    {% if section.stats.size > 0 %}
+    <div class="d-flex justify-content-around flex-wrap">
+    {% for stat in section.stats %}
+      <div class="stat align-self-stretch">
+        <h3>{{stat.stat_number}}</h3>
+        <p class="lead">{{stat.stat_description}}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- DATA -->
+    {% if section.data.size > 0 %}
+    <div class="d-flex justify-content-around flex-wrap">
+    {% for dataType in section.data %}
+      {% assign items = site.data[dataType.data] | sort:dataType.sort %}
+      
+      {% for item in items %} 
+      {% include {{dataType.template}} item=item %} 
+      {% endfor %}
+
+    {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- IMAGE ROWS -->
+    {% if section.image_rows.size > 0 %}
+    <div class="section-fullwidth">
+      {% for imageRow in section.image_rows %}
+      <div class="d-flex">
+        {% for image in imageRow.image %}
+        <div class="image-flex {{image.class}}">
+          <img src="{{image.image.url}}" alt="{{image.image.alt}}"> 
+        </div>
+        {% endfor %}
+      </div> 
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- VIDEO PLAYLISTS -->
+    {% if section.video_playlist.size > 0 %}
+    <div class="d-flex justify-content-around flex-wrap">
+      {% for playlist in section.video_playlist %}
+      <div id="ypt_wrapper">
+        <div class="video">
+          <div id="player" data-pl="{{playlist.playlist_id}}"></div>
+        </div>
+        <ul id="ypt_thumbs"></ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {% if section.image_rows.size == 0 %}
   </div>
+  {% endif %}
 </div>

@@ -14,31 +14,4 @@ url_slug: attendees
   {% for section in pageContent.sections %}
     {% include section.html section=section %}
   {% endfor %}
-  
-  <div class="attendees">
-
-    <div class="attendee-list d-flex justify-content-around flex-wrap">
-      {% assign attendees = site.data.attendees | sort: 'order' %}
-      {% for attendee in attendees %}
-        <div class="attendee-box card align-self-stretch">
-          <img class="card-img-top attendee-profile" src="{{attendee.profile_image}}" alt="{{attendee.first_name}} {{attendee.last_name}}">
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="{{attendee.linkedin}}" rel="noopener" target="_blank">{{attendee.first_name}} {{attendee.last_name}} </a>
-            </h4>
-            <p class="card-text">
-              <small class="text-muted">{{attendee.job_title}}, 
-              <strong>{{attendee.company}}</strong>
-              </small>
-            </p>
-            {% if attendee.company_image.size > 10 %}
-              <div class="mt-auto">
-                <img src="{{attendee.company_image}}" alt="{{attendee.company}}" class="company-image">
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
 </div>

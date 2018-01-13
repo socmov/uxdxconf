@@ -1,17 +1,17 @@
 <div class="speaker-box card align-self-stretch">
-  <img class="card-img-top speaker-profile" src="{{speaker.profile_picture.url}}" alt="{{speaker.first_name}} {{speaker.last_name}}">
+  <img class="card-img-top speaker-profile" src="{{item.profile_picture.url}}" alt="{{item.first_name}} {{item.last_name}}">
   <div class="card-body">
     <h4 class="card-title">
-      {{speaker.first_name}} {{speaker.last_name}}
+      {{item.first_name}} {{item.last_name}}
     </h4>
     <p class="card-text">
-      <small class="text-muted">{{speaker.job_title}},
-        <strong>{{speaker.company}}</strong>
+      <small class="text-muted">{{item.job_title}},
+        <strong>{{item.company}}</strong>
       </small>
     </p>
-    {% if speaker.company_logo.url.size > 10 %}
+    {% if item.company_logo.url.size > 10 %}
     <div class="mt-auto">
-      <img src="{{speaker.company_logo.url}}" alt="{{speaker.company}}" class="company-logo">
+      <img src="{{item.company_logo.url}}" alt="{{item.company}}" class="company-logo">
     </div>
     {% endif %}
   </div>
