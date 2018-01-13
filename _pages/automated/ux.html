@@ -1,0 +1,10 @@
+---
+layout: default
+permalink: /ux/
+url_slug: ux
+---
+
+{% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %} {% assign pageContent = pageContent[0] %}< div class= "container section {{pageContent.codename}}" >
+<h1>{{ pageContent.title }}</h1>
+{% for section in pageContent.sections %} {% include section.html section = section %} {% endfor %}
+</div >
