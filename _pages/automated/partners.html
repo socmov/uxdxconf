@@ -6,7 +6,10 @@ url_slug: partners
 
 {% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %} {% assign pageContent = pageContent[0] %}
 
+{% include pageTitle.html pageContent=pageContent %}
+{% if pageContent.header_image.size == 0 %}
 <div class= "container section {{pageContent.codename}}" >
-<h1>{{ pageContent.title }}</h1>
-{% for section in pageContent.sections %} {% include section.html section = section %} {% endfor %}
+  <h1>{{pageContent.title}}</h1>
 </div >
+{% endif %}
+{% for section in pageContent.sections %} {% include section.html section = section %} {% endfor %}
