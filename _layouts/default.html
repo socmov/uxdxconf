@@ -3,7 +3,7 @@
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    {% include meta.html %}
+    {% include scripts/meta.html %}
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -59,7 +59,7 @@
       {{ content }}
     </main>
 
-    {% include signup.html formId=1 name="newslettersignup" %}
+    {% include components/signup.html formId=1 name="newslettersignup" %}
     
     <footer class="container section">
       <div class="footer-text">
@@ -106,10 +106,10 @@
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
-    {% include video-script.html %}
+    {% include scripts/video-script.html %}
 
 
-    {% include analytics.html %}
+    {% include scripts/analytics.html %}
     <script type="text/javascript">
       window.$crisp = []; 
       window.CRISP_WEBSITE_ID = "8d39cddd-9a5c-4a2c-8b08-8b404a966a53"; 

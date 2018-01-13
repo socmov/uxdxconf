@@ -17,7 +17,7 @@ url_slug: tickets
   <h1>{{ pageContent.title }}</h1>
 
   {% for section in pageContent.sections %}
-    {% include section.html section=section %}
+    {% include components/section.html section=section %}
   {% endfor %}
 
   <div class="d-flex justify-content-around flex-wrap tickets section">

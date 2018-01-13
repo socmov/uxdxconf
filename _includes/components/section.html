@@ -82,7 +82,7 @@
       {% assign items = site.data[dataType.data] | sort:dataType.sort %}
       
       {% for item in items %} 
-      {% include {{dataType.template}} item=item %} 
+      {% include components/{{dataType.template}} item=item %} 
       {% endfor %}
 
     {% endfor %}
