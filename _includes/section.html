@@ -16,7 +16,7 @@
     <div class="d-flex justify-content-around flex-wrap">
       {% for card in section.cards %}
       <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %} {{card.codename}}">
-        <img class="card-img-top" src="{{card.card_image.url}}" alt="{{card.card_image.description}}">
+        <img class="card-img-top" src="{{card.card_image[0].url}}" alt="{{card.card_image[0].description}}">
         <div class="card-body">
           <h4 class="card-title">{{card.title}}</h4>
           <h5 class="card-sub-title">{{card.sub_title}}</h5>
@@ -48,7 +48,7 @@
           </div>
           <div class="client-name text-center">
             <p>{{testimonial.source}}</p>
-            <img src="{{testimonial.company_logo.url}}" alt="{{testimonial.source}}" class="testimonial-logo">
+            <img src="{{testimonial.company_logo[0].url}}" alt="{{testimonial.source}}" class="testimonial-logo">
           </div>
         </div>
         {% endfor %}
@@ -96,7 +96,7 @@
       <div class="d-flex">
         {% for image in imageRow.image %}
         <div class="image-flex {{image.class}}">
-          <img src="{{image.image.url}}" alt="{{image.image.alt}}"> 
+          <img src="{{image.image[0].url}}" alt="{{image.image[0].description}}"> 
         </div>
         {% endfor %}
       </div> 

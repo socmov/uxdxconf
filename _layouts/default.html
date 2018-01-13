@@ -30,7 +30,7 @@
     
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
-          {% for link in site.data.conference.primary_menu.navigation_items %}
+          {% for link in site.data.conference.primary_menu[0].navigation_items %}
             <li class="nav-item">
               {% if link.page[0].url_slug == 'tickets' %}
                 <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
@@ -78,7 +78,7 @@
       </div>
       <div class="footer-menu">
         <ul class="nav justify-content-center"> 
-          {% for link in site.data.conference.secondary_menu.navigation_items %}
+          {% for link in site.data.conference.secondary_menu[0].navigation_items %}
             <li class="nav-item">
               <a class="nav-link" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
             </li>
