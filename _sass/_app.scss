@@ -192,8 +192,11 @@ body {
 
 // SIGNUP FORM //
 .signup-section {
-  background-color: $gray-800;
-  color: white;
+  background: $uxdx-secondary;
+  color: #444;
+  .btn-primary {
+    @extend .btn-dark;
+  }
 }
 
 
@@ -289,19 +292,35 @@ body {
 
 // FOOTER
 footer {
-  text-align: center;
-  .footer-social-icon {
+  background-color: $gray-700;
+  padding-top: 3rem;
+  // text-align: center;
+  .footer-nav {
+    border-bottom: 1px solid $gray-500;
+    .nav-column {
+      min-width: 20rem;
+    }
+    dt {
+      @extend h4;
+      color: white;
+    }
     a {
-      color: $gray-400 !important;
-      padding: 0px 10px;
+      color: $gray-500;
     }
   }
-  ul {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    li {
-      padding: 0px 10px;
+  .footer-social {
+    padding: 1.5rem 0rem;
+    color: $gray-500;
+    dt {
+      padding-right: 0.5rem;
     }
+    dd {
+      padding: 0 0.5rem;
+      svg {
+        fill: $gray-500;
+      }
+    }
+
   }
 }
 

@@ -82,6 +82,7 @@ $action:        $uxdx-purple !default;
 // $dark:          $gray-800 !default;
 
 $uxdx: linear-gradient(to left, $primary, $action);
+$uxdx-secondary: linear-gradient(to left, $primary, $secondary);
 
 // $theme-colors: () !default;
 // $theme-colors: map-merge((

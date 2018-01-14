@@ -60,8 +60,10 @@
     </main>
 
     {% include components/signup.html formId=1 name="newslettersignup" %}
+
+    {% include components/footer.html %}
     
-    <footer class="container section">
+    <!-- <footer class="container section">
       <div class="footer-text">
         <h2>UXDX</h2>
       </div>
@@ -83,7 +85,7 @@
               <a class="nav-link" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
             </li>
           {% endfor %}
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="{{site.baseurl}}/about/">About</a>
           </li>
           <li class="nav-item">
@@ -94,14 +96,13 @@
           </li>
           <li class="nav-item">
             <a href="{{site.baseurl}}/codeofconduct/">Code of Conduct</a>
-          </li> -->
+          </li>
         </ul>
       </div>
-      <!-- Foooter Text-->
       <div class="small text-muted">
         <p>Copyright ©2018 Socially Motivated Ltd</p>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
