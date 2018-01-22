@@ -81,8 +81,17 @@
     {% for dataType in section.data %}
       {% assign items = site.data[dataType.data] | sort:dataType.sort %}
       
-      {% for item in items %} 
-      {% include components/{{dataType.template}} item=item %} 
+
+      <!-- NEED TO ADD A FILTER TO THE DATA -->
+      
+      {% for item in items %}
+        {% if dataType.filter_field %}
+          {% if item[dataType.filter_field] contains dataType.filter_value %}
+            {% include components/{{dataType.template}} item=item %}
+          {% endif %}
+        {% else %}
+          {% include components/{{dataType.template}} item=item %} 
+        {% endif %}
       {% endfor %}
 
     {% endfor %}
