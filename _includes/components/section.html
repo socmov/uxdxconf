@@ -113,6 +113,13 @@
     </div>
     {% endif %}
 
+    <!-- FORMS -->
+    {% if section.form.size > 0 %} 
+      {% assign form = section.form[0].form_name | append: '.html' |prepend: 'forms/' %}
+      {% include {{form}} %}
+    {% endif %}
+      
+
     <!-- VIDEO PLAYLISTS -->
     {% if section.video_playlist.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">

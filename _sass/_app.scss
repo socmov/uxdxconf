@@ -191,11 +191,11 @@ body {
 }
 
 // SIGNUP FORM //
-.signup-section {
-  background: $uxdx-secondary;
+.signup_form___section {
+  background: $gray-300;
   color: #444;
   .btn-primary {
-    @extend .btn-dark;
+    @extend .btn-outline-dark;
   }
 }
 
@@ -280,11 +280,16 @@ body {
       background-color: $secondary;
     }
     @include media-breakpoint-up(md) {
-      max-width: 30rem;
+      // max-width: 30rem;
     }
   }
   .details {
     max-width: 30rem;
+  }
+  .tito-tickets-button {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-lg;
   }
 }
 

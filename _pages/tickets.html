@@ -7,11 +7,79 @@ title: Tickets
 {% assign pageContent = site.data.pages | where:"url_slug", page.url_slug %} 
 {% assign pageContent = pageContent[0] %}
 
+<!-- Assign Dates -->
 {% assign today_date = 'now' | date: '%s' %}  
-{% assign two_for_one = 'May 3, 2018' | date: '%s' %} 
-{% assign super_early = 'June 28, 2018' | date: '%s' %} 
-{% assign early = 'August 2, 2018' | date: '%s' %} 
-{% assign regular = 'October 5, 2018' | date: '%s' %}
+{% assign two_for_one = 'May 4, 2018' | date: '%s' %} 
+{% assign super_early = 'June 1, 2018' | date: '%s' %} 
+{% assign early = 'June 29, 2018' | date: '%s' %} 
+{% assign regular1 = 'July 06, 2018' | date: '%s' %} 
+{% assign regular2 = 'July 13, 2018' | date: '%s' %} 
+{% assign regular3 = 'July 20, 2018' | date: '%s' %} 
+{% assign regular4 = 'July 27, 2018' | date: '%s' %} 
+{% assign regular5 = 'August 03, 2018' | date: '%s' %} 
+{% assign regular6 = 'August 10, 2018' | date: '%s' %} 
+{% assign regular7 = 'August 17, 2018' | date: '%s' %} 
+{% assign regular8 = 'August 24, 2018' | date: '%s' %} 
+{% assign regular9 = 'August 31, 2018' | date: '%s' %} 
+{% assign regular10 = 'September 07, 2018' | date: '%s' %} 
+{% assign regular11 = 'September 14, 2018' | date: '%s' %} 
+{% assign regular12 = 'September 21, 2018' | date: '%s' %}
+{% assign regular13 = 'September 28, 2018' | date: '%s' %}
+{% assign late = 'October 5, 2018' | date: '%s' %}
+
+{% if today_date < two_for_one%} 
+  {% assign confTicket = 'l-y0flwqoaw' %} 
+  {% assign bundleTicket = 'ejxcbtpidzg' %}
+{% elsif today_date >= super_early and today_date < early %}
+  {% assign confTicket = 'zs-eqamk5mc' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= early and today_date < regular1 %}
+  {% assign confTicket = 'ci5wpltc-5m' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular1 and today_date < regular2 %}
+  {% assign confTicket = 'ydglcmzkk-y' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular2 and today_date < regular3 %}
+  {% assign confTicket = '6r-puiiquzw' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular3 and today_date < regular4 %}
+  {% assign confTicket = 'fc1wxhrkn-q' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular4 and today_date < regular5 %}
+  {% assign confTicket = 'n-mgi94lexw' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular5 and today_date < regular6 %}
+  {% assign confTicket = 'x52ipwhxeho' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular6 and today_date < regular7 %}
+  {% assign confTicket = 'vgel3f-awic' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular7 and today_date < regular8 %}
+  {% assign confTicket = 'fhqs8uaztts' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular8 and today_date < regular9 %}
+  {% assign confTicket = 'kwwqb-meiys' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular9 and today_date < regular10 %}
+  {% assign confTicket = 'vyiswgcnhte' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular10 and today_date < regular11 %}
+  {% assign confTicket = 'zoa0yvd0pva' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular11 and today_date < regular12 %}
+  {% assign confTicket = 'r-hmndiwfty' %}
+  {% assign bundleTicket = '' %}
+{% elsif today_date >= regular12 and today_date < regular13 %} 
+ {% assign confTicket='jt0zjjg7hhi' %} 
+ {% assign bundleTicket='' %}
+{% elsif today_date >= regular13 and today_date < late %} 
+ {% assign confTicket='gfl4k6pt7ya' %} 
+ {% assign bundleTicket='' %}
+{% elsif today_date >= late %}
+  {% assign confTicket = 'dzyxl6pbu7y' %}
+  {% assign bundleTicket = '' %}
+{% endif%}
+
 
 <div class="container section {{pageContent.codename}}">
 
@@ -26,81 +94,90 @@ title: Tickets
       <table class="table table-striped">
         <thead>
           <tr>
-            <!-- <th scope="col"></th> -->
             {% if today_date < two_for_one %}
-              <th scope="col" colspan="2">
-                2 for 1
-                <small>Until 1<sup>st</sup> May 2018</small>
+              <th scope="col">
+                <h1>2 for 1</h1>
+                <small>Until 3<sup>rd</sup> May 2018</small>
               </th>
             {% endif %} {% if today_date >= two_for_one and today_date < super_early %}
               <th scope="col">
                 Super Early<br>
-                <small>Until 26<sup>th</sup> June 2018</small>
+                <small>Until 31<sup>st</sup> May 2018</small>
               </th>
             {% endif %} {% if today_date >= super_early and today_date < early %}
               <th scope="col">
                 Early<br>
-                <small>Until 31<sup>st</sup> July 2018</small>
+                <small>Until 28<sup>th</sup> June 2018</small>
               </th>
-            {% endif %} {% if today_date >= early %}
+            {% endif %} {% if today_date >= early and today_date < late %}
               <th scope="col">Regular<br>
-                <small>Until 3<sup>rd</sup> October 2018</small></th>
-              </tr>
+                <small>Until 27<sup>th</sup> September 2018</small>
+              </th>
+            {% endif %}{% if today_date >= late %} 
+              <th scope="col">Late
+                <br>
+                <small>Until 3<sup>rd</sup> October 2018</small>
+              </th>
             {% endif %}
+            <th colspan="2">
+              Price <small>(ex. VAT)</small>
+            </th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">
-              All Inclusive<br>
-              <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
-            </th>
-            <td>€1,395</td> 
-            {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€765 - €840</td>
-            {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€925 - €1,080</td>
-            {% endif %} {% if today_date >= early %}
-            <td>€1,105 - €1,395</td>
-            {% endif %}
-          </tr>
-          <tr>
-            <th scope="row">
+            <th>
               UXDX conference<br>
               <small>4<sup>th</sup> - 5<sup>th</sup> October 2018</small>
             </th>
-            <td>€999</td>
+            <td>€850</td>
             {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€550 - €605</td>
+            <td>€450</td>
             {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€665 - €720</td>
-            {% endif %} {% if today_date >= early %}
-            <td>€795 - €999</td>
+            <td>€495</td>
+            {% endif %} {% if today_date >= early and today_date < late %}
+            <td>
+              €545 - €770<br>
+              <small class="text-muted">Prices increase each week</small>
+            </td>
+            {% endif %} {% if today_date >= late %} 
+            <td>€850</td>
             {% endif %}
+            <td>
+              <tito-button event="initiate/uxdx-2018" releases="{{confTicket}}">Book Now</tito-button>
+            </td>
           </tr>
           <tr>
             <th scope="row">
-              Training<br>
-              <small>3<sup>rd</sup> October 2018</small>
+              Conference + Training<br>
+              <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
             </th>
-            <td>€650</td>
+            <td>€1,375</td>
             {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€350 - €385</td>
+            <td>€700</td>
             {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€425 - €460</td>
-            {% endif %} {% if today_date >= early %}
-            <td>€505 - €650</td>
+            <td>€775</td>
+            {% endif %} {% if today_date >= early and today_date < late %}
+            <td>€850 - €1,250<br>
+            <small class="text-muted">Prices increase each week</small></td>
+            {% endif %} {% if today_date >= late %}
+            <td>€1,375</td>
             {% endif %}
+            <td>
+              <tito-button event="initiate/uxdx-2018" releases="{{bundleTicket}}">Book Now</tito-button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
+
     <div class="details">
       <h2>Want free tickets?</h2>
       <p>
         Buy any 4 tickets and you get one free!<br>
         <small>Discounts automatically applied when you enter in the quantity of tickets</small>
       </p>
-      <button class="btn btn-primary btn-lg">Register Now</button>
+      <!-- <a href="https://ti.to/initiate/uxdx-2018" class="btn btn-primary btn-lg">Register Now</a> -->
     </div>
   </div>
 </div>
