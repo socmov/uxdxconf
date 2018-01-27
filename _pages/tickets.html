@@ -89,7 +89,13 @@ title: Tickets
     {% include components/section.html section=section %}
   {% endfor %}
 
-  <div class="d-flex justify-content-around flex-wrap tickets section">
+  <div class="tickets section">
+    <div class="alert alert-success" role="alert">
+      <h2 class="alert-heading">Want free tickets?</h2>
+      <hr>
+      <h4>Buy any 4 tickets and you get one free!</h4>
+      <p class="mb-0">Discounts automatically applied when you enter in the quantity of tickets.</p>
+    </div>
     <div class="tickets-table">
       <table class="table table-striped">
         <thead>
@@ -119,66 +125,59 @@ title: Tickets
                 <small>Until 3<sup>rd</sup> October 2018</small>
               </th>
             {% endif %}
-            <th colspan="2">
+            <th>
               Price <small>(ex. VAT)</small>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <th scope="row">
+              UXDX Conference + Training<br>
+              <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
+            </th>
+            <td>€1,375
+            {% if today_date >= two_for_one and today_date < super_early %}
+            <td>€700
+            {% endif %} {% if today_date >= super_early and today_date < early %}
+            <td>€775
+            {% endif %} {% if today_date >= early and today_date < late %}
+            <td>€850 - €1,250<br>
+            <small class="text-muted">Prices increase each week</small>
+            {% endif %} {% if today_date >= late %}
+            <td>€1,375
+            {% endif %}
+              <tito-button event="initiate/uxdx-2018" releases="{{bundleTicket}}">Book Now</tito-button>
+            </td>
+          </tr>
+          <tr>
             <th>
               UXDX conference<br>
               <small>4<sup>th</sup> - 5<sup>th</sup> October 2018</small>
             </th>
-            <td>€850</td>
+            <td>€850
             {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€450</td>
+            <td>€450
             {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€495</td>
+            <td>€495
             {% endif %} {% if today_date >= early and today_date < late %}
             <td>
               €545 - €770<br>
               <small class="text-muted">Prices increase each week</small>
-            </td>
+            
             {% endif %} {% if today_date >= late %} 
-            <td>€850</td>
+            <td>€850
             {% endif %}
-            <td>
               <tito-button event="initiate/uxdx-2018" releases="{{confTicket}}">Book Now</tito-button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Conference + Training<br>
-              <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
-            </th>
-            <td>€1,375</td>
-            {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€700</td>
-            {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€775</td>
-            {% endif %} {% if today_date >= early and today_date < late %}
-            <td>€850 - €1,250<br>
-            <small class="text-muted">Prices increase each week</small></td>
-            {% endif %} {% if today_date >= late %}
-            <td>€1,375</td>
-            {% endif %}
-            <td>
-              <tito-button event="initiate/uxdx-2018" releases="{{bundleTicket}}">Book Now</tito-button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="details">
-      <h2>Want free tickets?</h2>
-      <p>
-        Buy any 4 tickets and you get one free!<br>
-        <small>Discounts automatically applied when you enter in the quantity of tickets</small>
-      </p>
-      <!-- <a href="https://ti.to/initiate/uxdx-2018" class="btn btn-primary btn-lg">Register Now</a> -->
-    </div>
+    <hr>
+
+    
   </div>
 </div>
 

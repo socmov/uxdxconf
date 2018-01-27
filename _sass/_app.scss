@@ -284,7 +284,8 @@ body {
     }
   }
   .details {
-    max-width: 30rem;
+    // max-width: 30rem;
+    padding-bottom: 3rem;
   }
   .tito-tickets-button {
     @extend .btn;
@@ -302,8 +303,8 @@ footer {
   // text-align: center;
   .footer-nav {
     border-bottom: 1px solid $gray-500;
-    .nav-column {
-      min-width: 20rem;
+    .footer-nav-menu-col {
+      min-width: 15rem;
     }
     dt {
       @extend h4;
