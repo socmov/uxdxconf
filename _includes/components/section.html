@@ -1,4 +1,16 @@
-<div class="section {{section.codename}}">
+<div class="section 
+  {{section.codename}}
+  
+  {% if section.cards.size > 0 %} cards-section {% endif %}
+  {% if section.testimonials.size > 0 %} testimonials-section {% endif %}
+  {% if section.buttons.size > 0 %} buttons-section {% endif %}
+  {% if section.stats.size > 0 %} stats-section {% endif %}
+  {% if section.data.size > 0 %} data-section {% endif %}
+  {% if section.image_rows.size > 0 %} image_rows-section {% endif %}
+  {% if section.form.size > 0 %} forms-section {% endif %}
+  {% if section.agenda.size > 0 %} agenda-section {% endif %}
+  {% if section.video_playlist.size > 0 %} video_playlist-section {% endif %}">
+
   {% if section.image_rows.size == 0 %}
   <div class="container">
     <h2>
