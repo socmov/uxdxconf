@@ -136,16 +136,18 @@ title: Tickets
               UXDX Conference + Training<br>
               <small>3<sup>rd</sup> - 5<sup>th</sup> October 2018</small>
             </th>
-            <td>€1,375
-            {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€700
-            {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€775
-            {% endif %} {% if today_date >= early and today_date < late %}
-            <td>€850 - €1,250<br>
+            <td class="d-flex justify-content-between">
+            {% if today_date < two_for_one %}
+            €1,375
+            {% elsif today_date >= two_for_one and today_date < super_early %}
+            €700
+            {% elsif today_date >= super_early and today_date < early %}
+            €775
+            {% elsif today_date >= early and today_date < late %}
+            €850 - €1,250<br>
             <small class="text-muted">Prices increase each week</small>
-            {% endif %} {% if today_date >= late %}
-            <td>€1,375
+            {% elsif today_date >= late %}
+            €1,375
             {% endif %}
               <tito-button event="initiate/uxdx-2018" releases="{{bundleTicket}}">Book Now</tito-button>
             </td>
@@ -155,18 +157,20 @@ title: Tickets
               UXDX conference<br>
               <small>4<sup>th</sup> - 5<sup>th</sup> October 2018</small>
             </th>
-            <td>€850
-            {% if today_date >= two_for_one and today_date < super_early %}
-            <td>€450
-            {% endif %} {% if today_date >= super_early and today_date < early %}
-            <td>€495
-            {% endif %} {% if today_date >= early and today_date < late %}
-            <td>
+            <td class="d-flex justify-content-between">
+            {% if today_date < two_for_one %}
+            €850
+            {% elsif today_date >= two_for_one and today_date < super_early %}
+            €450
+            {% elsif today_date >= super_early and today_date < early %}
+            €495
+            {% elsif today_date >= early and today_date < late %}
+            
               €545 - €770<br>
               <small class="text-muted">Prices increase each week</small>
             
-            {% endif %} {% if today_date >= late %} 
-            <td>€850
+            {% elsif today_date >= late %} 
+            €850
             {% endif %}
               <tito-button event="initiate/uxdx-2018" releases="{{confTicket}}">Book Now</tito-button>
             </td>

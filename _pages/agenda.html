@@ -9,26 +9,44 @@ title: Agenda
 
 <div class="container-fluid section agenda">
   <div class="container">
-    <h1>{{pageContent.title}}</h1>
-
+    
     {% for section in pageContent.sections %}
-      {% include components/section.html section=section %}
+    {% include components/section.html section=section %}
     {% endfor %}
-
+    
+    <h2>{{pageContent.title}}</h2>
     {% assign agenda = site.data.agendas | where:"codename",site.data.conference.primary_agenda[0].codename %}
     {% assign agenda = agenda[0] %}
 
-    <ul class="nav nav-pills" role="tablist" id="pills-tab">
-      {% for date in agenda.dates %}
-        <li class="nav-item">
-          {% if forloop.first == true %}
-            <a class="nav-link active" id="{{date | date: "%a%d%b"}}-tab" data-toggle="pill" href="#{{date | date: "%a%d%b"}}" role="tab" aria-controls="{{date | date: "%a%d%b"}}" aria-selected="true">{{date | date: "%a %d %b"}}</a>
-          {% else %}
-            <a class="nav-link" id="{{date | date: "%a%d%b"}}-tab" data-toggle="pill" href="#{{date | date: "%a%d%b"}}" role="tab" aria-controls="{{date | date: "%a%d%b"}}">{{date | date: "%a %d %b"}}</a>
-          {% endif %}  
-        </li>
-      {% endfor %}
-    </ul>
+    {% if agenda.dates.size > 0 or agenda.locations.size > 0 %}
+    <div class="nav-row d-flex flex-wrap justify-content-between">
+      {% if agenda.dates.size > 0 %}
+      <ul class="nav nav-tabs" role="tablist" id="pills-tab">
+        {% for date in agenda.dates %}
+          <li class="nav-item">
+            {% if forloop.first == true %}
+              <a class="nav-link active" id="{{date | date: "%a%d%b"}}-tab" data-toggle="pill" href="#{{date | date: "%a%d%b"}}" role="tab" aria-controls="{{date | date: "%a%d%b"}}" aria-selected="true">{{date | date: "%a %d %b"}}</a>
+            {% else %}
+              <a class="nav-link" id="{{date | date: "%a%d%b"}}-tab" data-toggle="pill" href="#{{date | date: "%a%d%b"}}" role="tab" aria-controls="{{date | date: "%a%d%b"}}">{{date | date: "%a %d %b"}}</a>
+            {% endif %}  
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}  
+
+      {% if agenda.locations.size > 0 %}
+      <div class="btn-group-toggle stage-toggles" data-toggle="buttons">
+        {% for location in agenda.locations %}
+        <label class="btn active {{location}}-toggle-button">
+          <input type="checkbox" checked autocomplete="off" id="{{location}}"> {{location}}
+        </label>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+
     <div class="schedule__content schedule__content tab-content">
       {% for date in agenda.dates %}
       <div class="tab-pane fade  {% if forloop.first == true %} show active {% endif %}" id="{{date | date: "%a%d%b"}}" role="tabpanel" aria-labelledby="{{date | date: "%a%d%b"}}-tab">
@@ -39,8 +57,9 @@ title: Agenda
             <div class="schedule__grid__content">
               <div class="schedule__grid__time">{{startTime | date: "%H:%M" }}</div>
               <div class="schedule__grid__events">
-                {% for session in agenda.start_times[startTime] %}
-                  <div class="schedule__grid__event">
+                {% assign sortedSessions = agenda.start_times[startTime] | sort: 'location' | reverse %}
+                {% for session in sortedSessions %}
+                  <div class="schedule__grid__event {{session.location}} {{session.session[0].type}}">
                     <div class="schedule__grid__event__photos">
                       {% if session.session[0].speakers.size == 1 %}
                         <img src="{{session.session[0].speakers[0].profile_picture}}" alt="{{session.session[0].speakers[0].first_name}} {{session.session[0].speakers[0].last_name}}, {{session.session[0].speakers[0].job_title}}" class="profile_picture">
@@ -78,8 +97,8 @@ title: Agenda
                             {{session.session[0].description}}
                           <!-- </div> -->
                         </div>
-                        {% if session.location.size > 0 %}
-                          <span class="badge {{session.location[0].name}}">{{session.location[0].name}}</span>
+                        {% if session.location and session.session[0].type != "Break" %}
+                          <span class="badge {{session.location}}">{{session.location}}</span>
                           {{session.stream[0].name}}
                         {% endif %}
                       </div>

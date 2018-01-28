@@ -1,14 +1,53 @@
 .agenda {
-  .nav {
-    padding-bottom: 2rem;
+  .nav-tabs {
+    border-bottom: none;
+  }
+  .nav-row {
+    // padding-bottom: 2rem;
     position: sticky;
     top: 52px;
     background-color: white;
     padding-top: 20px;
-    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    // padding-bottom: 20px;
   }
   a {
     color: black;
+  }
+  .stage-toggles {
+    padding-top: 1.5rem;
+    .btn {
+      margin-left: 1rem;
+      box-shadow:none !important;
+      &.Vision-toggle-button {
+        &.active {
+          background-color: $primary !important;
+          border-color: $primary !important;
+          &.focus {
+            background-color: $primary !important;
+            color: white !important;
+          }
+        }
+      }
+      &.Execution-toggle-button {
+        &.active {
+          background-color: $secondary !important;
+          border-color: $secondary !important;
+          &.focus {
+            background-color: $secondary !important;
+            color: white !important;
+          }
+        }
+      }
+      @extend .btn-outline-dark;
+      &.focus {
+        background-color: transparent !important;
+        color: #343a40;
+      }
+    }
+    @include media-breakpoint-up(sm) {
+      padding-top: 0px;
+    }
   }
 }
 
@@ -20,20 +59,27 @@
   }
   .schedule__grid__events {
     display: flex;
-    flex-flow: column nowrap;
+    // flex-flow: column nowrap;
     flex-grow: 1;
-    flex: 1
+    flex: 1;
+    flex-wrap: wrap;
   }
 
   .schedule__grid__event {
     @extend .p-4;
-    border-bottom: 1px solid $gray-200;
+    width: 30rem;
+    // border-bottom: 1px solid $gray-200;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    &:last-child {
-      border-bottom: none;
+    &.Break {
+      color: $gray-400;
+      font-style: italic;
     }
+    // &:last-child {
+    //   border-bottom: none;
+    // }
+
     // &:hover {
     //   background: $gray-200;
     // }
