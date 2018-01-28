@@ -86,6 +86,24 @@
     // &:hover[data-session] {
     //   cursor: pointer
     // }
+    .display-controllers {
+      cursor: pointer;
+      color: $cyan;
+      .show-ctrl {
+        display:none;
+      }
+      .hide-ctrl {
+        display: block;
+      }
+      &.collapsed {
+        .show-ctrl {
+          display:block;
+        }
+        .hide-ctrl {
+          display: none;
+        }
+      }
+    }
     .schedule__grid__event__photos {
       max-width: 80px;
       min-width: 80px;
@@ -98,24 +116,6 @@
       img.company_logo {
         max-width: 50px;
         max-height: 30px;
-      }
-      .display-controllers {
-        cursor: pointer;
-        color: $cyan;
-        .show-ctrl {
-          display:none;
-        }
-        .hide-ctrl {
-          display: block;
-        }
-        &.collapsed {
-          .show-ctrl {
-            display:block;
-          }
-          .hide-ctrl {
-            display: none;
-          }
-        }
       }
     }
     .schedule__grid__event__details {
@@ -142,6 +142,14 @@
         .Execution {
           @extend .badge-secondary;
           color: white;
+        }
+        .meta-details {
+          display: block;
+        }
+        @include media-breakpoint-up(sm) {
+          .meta-details {
+            display: inline;
+          }
         }
       }
     }
