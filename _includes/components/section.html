@@ -83,7 +83,6 @@
       
       {% for item in items %}
         {% if dataType.filter_field.size > 3 %}
-          {{dataType}}
           {% if item[dataType.filter_field] contains dataType.filter_value %}
             {% include components/{{dataType.template}} item=item %}
           {% endif %}
