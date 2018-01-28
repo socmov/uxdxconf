@@ -1,10 +1,27 @@
 <footer class="footer" id="footer" role="contentinfo">
   <div class="container">
     <nav class="footer-nav cols-row d-flex justify-content-between flex-wrap">
+      {% for menu in site.data.conference.secondary_menu[0].nested_menu %}
       <dl class="footer-nav-menu-col">
         <dt>
+          {{menu.name}}
+        </dt>
+        {% for page in menu.pages %}
+        <dd>
+          <a href="{{site.baseurl}}/{{page.url_slug}}/">
+            {% if page.menu_title.size > 3 %}
+            {{page.menu_title}}
+            {% else %}
+            {{page.url_slug | capitalize}}
+            {% endif %}
+          </a>
+        </dd>
+        {% endfor %}
+      </dl>
+      {% endfor %}
+      <!-- <dl class="footer-nav-menu-col">
+        <dt>
           UXDX Details
-          <!-- REMOVE THIS SECTION ONCE EUROPE AVAILABLE -->
         </dt>
         <dd>
           <a href="{{site.baseurl}}/training/">Training</a>
@@ -22,7 +39,7 @@
       <dl class="footer-nav-menu-col">
         <dt>
           Information
-        </dt>
+        </dt> -->
         <!-- <dd>
           <a href="{{site.baseurl}}/about/">About UXDX</a>
         </dd> -->
@@ -41,7 +58,7 @@
         <!-- <dd>
           <a href="https://latest.uxdxconf.com" rel="noopener" target="_blank">Blog</a>
         </dd> -->
-        <dd>
+        <!-- <dd>
           <a href="{{site.baseurl}}/terms/">Terms</a>
         </dd>
         <dd>
@@ -49,10 +66,10 @@
         </dd>
       </dl>
       <dl class="footer-nav-menu-col">
-        <dt>
-          Roles
+        <dt> -->
+          <!-- Roles -->
           <!-- Attending -->
-        </dt>
+        <!-- </dt> -->
         <!-- <dd>
           <a href="{{site.baseurl}}/why-attend/">Why Attend</a>
         </dd>
@@ -62,7 +79,7 @@
         <dd>
           <a href="{{site.baseurl}}/attendee-faq/">Attendee FAQ</a>
         </dd> -->
-        <dd>
+        <!-- <dd>
           <a href="{{site.baseurl}}/ux/">UX @ UXDX</a>
         </dd>
         <dd>
@@ -70,11 +87,11 @@
         </dd>
         <dd>
           <a href="{{site.baseurl}}/product/">Product @ UXDX</a>
-        </dd>
+        </dd> -->
         <!-- <dd>
           <a href="{{site.baseurl}}/marketing/">Marketing @ UXDX</a>
         </dd> -->
-      </dl>
+      <!-- </dl> -->
       <!-- <dl class="col-3">
         <dt>
           Get Involved
