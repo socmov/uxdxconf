@@ -1,9 +1,9 @@
 <div class="section {{section.codename}}">
   {% if section.image_rows.size == 0 %}
   <div class="container">
-    <h1>
+    <h2>
       {{section.title}}
-    </h1>
+    </h2>
   {% endif %}
 
     <!-- SECTION CONTENT -->
@@ -13,7 +13,7 @@
     
     <!-- CARDS -->
     {% if section.cards.size > 0 %}
-    <div class="d-flex justify-content-around flex-wrap">
+    <div class="d-flex justify-content-between flex-wrap">
       {% for card in section.cards %}
       <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %} {{card.codename}}">
         <img class="card-img-top" src="{{card.card_image[0].url}}" alt="{{card.card_image[0].description}}">
