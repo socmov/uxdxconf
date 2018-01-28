@@ -113,10 +113,16 @@
 
     <!-- FORMS -->
     {% if section.form.size > 0 %} 
-      {% assign form = section.form[0].form_name | append: '.html' |prepend: 'forms/' %}
+      {% assign form = section.form[0].form_name | append: '.html' | prepend: 'forms/' %}
       {% include {{form}} %}
     {% endif %}
-      
+
+    <!-- AGENDA -->
+    {% if section.agenda.size > 0 %}
+      {% assign agenda = site.data.agendas | where:"codename",section.agenda[0].codename %}
+      {% assign agenda = agenda[0] %}
+      {% include components/agenda.html agenda=agenda %}
+    {% endif %}
 
     <!-- VIDEO PLAYLISTS -->
     {% if section.video_playlist.size > 0 %}
@@ -131,6 +137,7 @@
       {% endfor %}
     </div>
     {% endif %}
+
   {% if section.image_rows.size == 0 %}
   </div>
   {% endif %}
