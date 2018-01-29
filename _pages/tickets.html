@@ -90,20 +90,17 @@ title: Tickets
   {% endfor %}
 
   <div class="tickets section">
-    <div class="alert alert-success" role="alert">
-      <h2 class="alert-heading">Want free tickets?</h2>
-      <hr>
-      <h4>Buy any 4 tickets and you get one free!</h4>
+    <!-- <div class="alert alert-success" role="alert">
+      <h3>Buy any 4 tickets and you get one free!</h3>
       <p class="mb-0">Discounts automatically applied when you enter in the quantity of tickets.</p>
-    </div>
+    </div> -->
     <div class="tickets-table">
       <table class="table table-striped">
         <thead>
           <tr>
             {% if today_date < two_for_one %}
               <th scope="col">
-                <h1>2 for 1</h1>
-                <small>Until 3<sup>rd</sup> May 2018</small>
+                <h1>2for1 Offer</h1>
               </th>
             {% endif %} {% if today_date >= two_for_one and today_date < super_early %}
               <th scope="col">
@@ -126,7 +123,8 @@ title: Tickets
               </th>
             {% endif %}
             <th>
-              Price <small>(ex. VAT)</small>
+              Price <small>(ex. VAT)</small><br>
+              <small>20% discount on 5+ tickets</small>
             </th>
           </tr>
         </thead>

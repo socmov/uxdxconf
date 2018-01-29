@@ -4,6 +4,17 @@
   // margin: auto;
 }
 
+.mauticform-message:not(:empty) {
+  @extend .alert-success;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.mauticform-error:not(:empty) {
+  @extend .alert-danger;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 // .mauticform-innerform {}
 
 // .mauticform-post-success {}
