@@ -25,8 +25,8 @@
     if (page_token) { theUrl += ('&pageToken=' + page_token); } //If there is page token, start there
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.setRequestHeader('referrer', referrer)
     xmlHttp.open("GET", theUrl, true);
+    xmlHttp.setRequestHeader('referrer', referrer)
     xmlHttp.send(null);
     xmlHttp.onload = function (e) { //when the request comes back
       buildJSON(xmlHttp.responseText, video_list, playlistID); //send the data to buildJSON
