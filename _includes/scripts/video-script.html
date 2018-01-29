@@ -25,7 +25,7 @@
     if (page_token) { theUrl += ('&pageToken=' + page_token); } //If there is page token, start there
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    XMLHttp.setRequestHeader('referrer', referrer)
+    xmlHttp.setRequestHeader('referrer', referrer)
     xmlHttp.open("GET", theUrl, true);
     xmlHttp.send(null);
     xmlHttp.onload = function (e) { //when the request comes back
