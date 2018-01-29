@@ -11,16 +11,23 @@ const urlsToCache = [
 
 ]
 
-// self.addEventListener('install', function (event) {
-//   // Perform install steps
-//   event.waitUntil(
-//     caches.open(CACHE_NAME)
-//       .then(function (cache) {
-//         console.log('Opened cache');
-//         return cache.addAll(urlsToCache);
-//       })
-//   );
-// });
+self.addEventListener('install', function (event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function (cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+      .then(function () {
+        // `skipWaiting()` forces the waiting ServiceWorker to become the
+        // active ServiceWorker, triggering the `onactivate` event.
+        // Together with `Clients.claim()` this allows a worker to take effect
+        // immediately in the client(s).
+        return self.skipWaiting();
+      })
+  );
+});
 
 // self.addEventListener('fetch', function (event) {
 //   event.respondWith(
