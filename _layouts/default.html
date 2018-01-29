@@ -176,14 +176,6 @@ n.callMethod ?
 
     <script type="text/javascript">
 
-      function showOfflineToast() {
-        let offlineToast = document.querySelector('.offline-ready');
-        offlineToast.classList.add('active');
-        setTimeout(function () {
-          offlineToast.className = offlineToast.className.replace("active", "").trim();
-        }, 5500);
-      }
-
       // (1)
       if (navigator.serviceWorker) {
         navigator.serviceWorker.register('/sw.js').then(function (reg) {
@@ -201,7 +193,7 @@ n.callMethod ?
             }
             // (2)
             if (worker.state == 'activated' && !navigator.serviceWorker.controller) {
-              showOfflineToast();
+              console.log('[*] SW activated!');
             }
           });
         });
