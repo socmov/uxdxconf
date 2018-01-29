@@ -1,4 +1,8 @@
-const staticCacheName = "uxdx-2018-cache-v1";
+---
+  layout: null
+---
+
+const CACHE_NAME = "uxdx-2018-cache-v1";
 
 console.log("installing service worker");
 
