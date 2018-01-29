@@ -14,6 +14,7 @@
   var ypt_index = 0; //Playlists begin at the first video by default
 
   function getPlaylistData(playlistID, video_list, page_token) { //Makes a single request to Youtube Data API
+    var referrer = 'uxdxconf.com';
     var apiKey = 'AIzaSyBP18rY7_dco4hdNLZiSlM612i2O2kwaak';
     var theUrl =
       'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet' +
@@ -24,6 +25,7 @@
     if (page_token) { theUrl += ('&pageToken=' + page_token); } //If there is page token, start there
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
+    XMLHttp.setRequestHeader('referrer', referrer)
     xmlHttp.open("GET", theUrl, true);
     xmlHttp.send(null);
     xmlHttp.onload = function (e) { //when the request comes back

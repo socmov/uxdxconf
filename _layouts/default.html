@@ -14,9 +14,24 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'      
+}); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M9MJLPW');</script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9MJLPW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <a href="{{ site.baseurl }}/" class="navbar-brand">
         <img src="{{ site.baseurl }}/images/UXDX-White-NoLogoText-NoText.svg"  width="30" height="30" alt="UXDX Conf 2018"/>
@@ -48,132 +63,16 @@
     </main>
 
     {% include components/footer.html %}
-    
-    <!-- <footer class="container section">
-      <div class="footer-text">
-        <h2>UXDX</h2>
-      </div>
-      <div class="footer-social-icon">
-        <a href="https://ie.linkedin.com/company/uxdx" target="_blank" sr-only="UXDX Linkedin" rel="noopener">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="https://twitter.com/uxdxconf" target="_blank" sr-only="UXDX Twitter" rel="noopener">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCbHlDYI3bkUa1vx_qdJ8nbg" target="_blank" sr-only="UXDX Youtube" rel="noopener">
-          <i class="fab fa-youtube" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="footer-menu">
-        <ul class="nav justify-content-center"> 
-          {% for link in site.data.conference.secondary_menu[0].navigation_items %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/{{link.page[0].url_slug}}/">{{link.title}}</a>
-            </li>
-          {% endfor %}
-          <li class="nav-item">
-            <a href="{{site.baseurl}}/about/">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="{{site.baseurl}}/partners/">Partners</a>
-          </li>
-          <li class="nav-item">
-            <a href="{{site.baseurl}}/terms/">Terms</a>
-          </li>
-          <li class="nav-item">
-            <a href="{{site.baseurl}}/codeofconduct/">Code of Conduct</a>
-          </li>
-        </ul>
-      </div>
-      <div class="small text-muted">
-        <p>Copyright ©2018 Socially Motivated Ltd</p>
-      </div>
-    </footer> -->
+
 
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     {% include scripts/video-script.html %}
+    {% include scripts/agenda_toggle.html %}
 
 
-    {% include scripts/analytics.html %}
-    <script type="text/javascript">
-      window.$crisp = []; 
-      window.CRISP_WEBSITE_ID = "8d39cddd-9a5c-4a2c-8b08-8b404a966a53"; 
-      (function () { d = document; s = d.createElement("script"); 
-        s.src = "https://client.crisp.chat/l.js"; s.async = 1; 
-        d.getElementsByTagName("head")[0].appendChild(s); })();
-
-      $(document).ready(function () {
-        // get current URL path and assign 'active' class
-        var pathname = window.location.pathname;
-        $('.navbar-nav > li > a[href="' + pathname + '"]').parent().addClass('active');
-      })
-    </script>
-    <script>
-      !function (f, b, e, v, n, t, s) {
-        if (f.fbq) return; n = f.fbq = function () {          
-n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        }; if (!f._fbq) f._fbq = n;
-        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
-        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-      }(window,
-        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-      fbq('init', '1081444315278926');
-      fbq('track', "PageView");
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1081444315278926&ev=PageView&noscript=1"
-      />
-    </noscript>
     
-    <!-- Google Code for Remarketing Tag -->
-    <script type="text/javascript">
-      /* <![CDATA[ */
-      var google_conversion_id = 876748924;
-      var google_custom_params = window.google_tag_params;
-      var google_remarketing_only = true;
-          /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-      <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/876748924/?guid=ON&amp;script=0"
-        />
-      </div>
-    </noscript>
-    
-    <script>
-      (function (w, d, t, u, n, a, m) {
-      w['MauticTrackingObject'] = n;
-        w[n] = w[n] || function () { (w[n].q = w[n].q || []).push(arguments) }, a = d.createElement(t),
-          m = d.getElementsByTagName(t)[0]; a.async = 1; a.src = u; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://mktg.sociallymotivated.com/mtc.js', 'mt');
-
-      mt('send', 'pageview');
-    </script>
-    <script type="text/javascript">
-      /** This section is only needed once per page if manually copying **/
-      if (typeof MauticSDKLoaded == 'undefined') {
-        var MauticSDKLoaded = true;
-        var head = document.getElementsByTagName('head')[0];
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://mktg.sociallymotivated.com/media/js/mautic-form.js';
-        script.onload = function () {
-          MauticSDK.onLoad();
-        };
-        head.appendChild(script);
-        var MauticDomain = 'https://mktg.sociallymotivated.com';
-        var MauticLang = {
-          'submittingMessage': "Please wait..."
-        }
-      }
-    </script>
-
     <script type="text/javascript">
 
       // (1)
@@ -200,6 +99,5 @@ n.callMethod ?
       }
     </script>
 
-    {% include scripts/agenda_toggle.html %}
   </body>
 </html>
