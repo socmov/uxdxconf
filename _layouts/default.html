@@ -162,15 +162,49 @@ n.callMethod ?
         var head = document.getElementsByTagName('head')[0];
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'http://104.199.47.9/media/js/mautic-form.js';
+        script.src = 'https://104.199.47.9/media/js/mautic-form.js';
         script.onload = function () {
           MauticSDK.onLoad();
         };
         head.appendChild(script);
-        var MauticDomain = 'http://104.199.47.9';
+        var MauticDomain = 'https://104.199.47.9';
         var MauticLang = {
           'submittingMessage': "Please wait..."
         }
+      }
+    </script>
+
+    <script type="text/javascript">
+
+      function showOfflineToast() {
+        let offlineToast = document.querySelector('.offline-ready');
+        offlineToast.classList.add('active');
+        setTimeout(function () {
+          offlineToast.className = offlineToast.className.replace("active", "").trim();
+        }, 5500);
+      }
+
+      // (1)
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js').then(function (reg) {
+          if (!reg.installing) return;
+          console.log("[*] ServiceWorker is installing...");
+
+          var worker = reg.installing;
+
+          worker.addEventListener('statechange', function () {
+            if (worker.state == 'redundant') {
+              console.log('[*] Install failed');
+            }
+            if (worker.state == 'installed') {
+              console.log('[*] Install successful!');
+            }
+            // (2)
+            if (worker.state == 'activated' && !navigator.serviceWorker.controller) {
+              showOfflineToast();
+            }
+          });
+        });
       }
     </script>
 
