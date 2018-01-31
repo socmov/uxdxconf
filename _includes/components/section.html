@@ -71,7 +71,7 @@
     <!-- BUTTONS -->
     {% if section.buttons.size > 0 %}
     {% for button in section.buttons %}
-    <a href="{{site.baseurl}}/{{button.url_link}}/" class="btn {{button.class}}">{{button.button_text}}</a>
+    <a href="{{site.baseurl}}/{{button.url_link}}" class="btn {{button.class}}">{{button.button_text}}</a>
     {% endfor %}
     {% endif %}
 
