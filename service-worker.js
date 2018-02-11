@@ -2,16 +2,24 @@
   layout: null
 ---
 
-const CACHE_NAME = "uxdx-2018-cache-v1";
+const CACHE_NAME = "uxdx-2018-cache-v8";
 
 console.log("installing service worker");
 
 const urlsToCache = [
-  'style.css'
-
+  {% comment %}
+  'style.css',
+  {% for page in site.html_pages %}
+  '{{ page.url }}',
+  {% endfor %}
+{% for image in site.static_files %}{% if image.path contains 'images/' %}
+  "{{ image.path }}",
+{% endif %}{% endfor %}
+{% endcomment %}
 ]
 
 self.addEventListener('install', function (event) {
+  self.skipWaiting();
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -19,48 +27,31 @@ self.addEventListener('install', function (event) {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
-      .then(function () {
-        // `skipWaiting()` forces the waiting ServiceWorker to become the
-        // active ServiceWorker, triggering the `onactivate` event.
-        // Together with `Clients.claim()` this allows a worker to take effect
-        // immediately in the client(s).
-        return self.skipWaiting();
-      })
   );
 });
 
-// self.addEventListener('fetch', function (event) {
-//   event.respondWith(
-//     caches.open(CACHE_NAME).then(function (cache) {
-//       return cache.match(event.request).then(function (response) {
-//         return response || fetch(event.request).then(function (response) {
-//           cache.put(event.request, response.clone());
-//           return response;
-//         });
-//       });
-//     })
-//   );
-// });
-
-// self.addEventListener('fetch', function (event) {
-//   event.respondWith(
-//     caches.open(CACHE_NAME).then(function (cache) {
-//       return fetch(event.request).then(function (response) {
-//         cache.put(event.request, response.clone());
-//         return response;
-//       });
-//     })
-//   );
-// });
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.open(CACHE_NAME).then(function (cache) {
+      return cache.match(event.request).then(function (response) {
+        if (response) console.log('service from cache', event.request.url)
+        return response || fetch(event.request)
+        // .then(function (response) {
+        //   cache.put(event.request, response.clone());
+        //   return response;
+        // });
+      });
+    })
+  );
+});
 
 self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (cacheNames) {
       return Promise.all(
         cacheNames.filter(function (cacheName) {
-          // Return true if you want to remove this cache,
-          // but remember that caches are shared across
-          // the whole origin
+          return cacheName.startsWith('uxdx-2018-cache-')
+            && cacheName != CACHE_NAME;
         }).map(function (cacheName) {
           return caches.delete(cacheName);
         })
