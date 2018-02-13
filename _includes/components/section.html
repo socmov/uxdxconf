@@ -28,9 +28,21 @@
     <div class="d-flex justify-content-between flex-wrap">
       {% for card in section.cards %}
       <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %} {{card.codename}}">
-        <img class="card-img-top" src="{{card.card_image[0].url}}" alt="{{card.card_image[0].description}}">
+        {% if card.link.size > 2 %}
+        <a href ="{{card.link}}">
+          {% endif %}
+          <img class="card-img-top" src="{{card.card_image[0].url}}" alt="{{card.card_image[0].description}}">
+        {% if card.link.size > 2 %}
+        </a>
+        {% endif %}
         <div class="card-body">
+          {% if card.link.size > 2 %}
+          <a href="{{card.link}}">
+          {% endif %}
           <h4 class="card-title">{{card.title}}</h4>
+          {% if card.link.size > 2 %}
+          </a>
+          {% endif %}
           <h5 class="card-sub-title">{{card.sub_title}}</h5>
           <p class="card-text">
             {{card.content}}

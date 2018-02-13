@@ -1,5 +1,11 @@
 <div class="speaker-box card align-self-stretch">
-  <img class="card-img-top speaker-profile" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}">
+  <div class="card-img-top">
+    <div class="img-holder">
+      	<img class="speaker-img" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}">
+    </div>
+  </div>
+
+  <!-- <img class="card-img-top speaker-profile" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}"> -->
   <div class="card-body">
     <h4 class="card-title">
       {{item.first_name}} {{item.last_name}}
