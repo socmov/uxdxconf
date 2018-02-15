@@ -103,8 +103,9 @@
     {% if section.data.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
     {% for dataType in section.data %}
-      {% assign items = site.data[dataType.data] | sort:dataType.sort %}
-      
+      {% if dataType.sort.size > 2 %} {% assign items = site.data[dataType.data] | sort:dataType.sort %} {% endif %}
+      {% assign items = site.data[dataType.data]%}
+
       {% for item in items %}
         {% if dataType.filter_field.size > 3 %}
           {% if item[dataType.filter_field] contains dataType.filter_value %}
