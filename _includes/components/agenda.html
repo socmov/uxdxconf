@@ -43,7 +43,7 @@
             <div class="schedule__grid__events">
               {% assign sortedSessions = include.agenda.start_times[startTime] | sort: 'location' | reverse %} {% for session in sortedSessions
               %}
-              <div class="schedule__grid__event {{session.location}} {{session.session[0].type}}">
+              <div class="schedule__grid__event {{session.location}} {{session.session[0].type}}" session-id="{{session.session[0].id}}">
                 <div class="schedule__grid__event__photos">
                 {% if session.session[0].speakers.size == 1 %}
                   <img src="{{session.session[0].speakers[0].profile_picture}}" alt="{{session.session[0].speakers[0].first_name}} {{session.session[0].speakers[0].last_name}}, {{session.session[0].speakers[0].job_title}}"
