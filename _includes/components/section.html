@@ -84,7 +84,7 @@
     {% if section.buttons.size > 0 %}
     {% for button in section.buttons %}
 
-    {% if button.url_link.length > 2 %}
+    {% if button.url_link.size > 2 %}
      {% if button.url_link contains "://"" %} {% assign link = button.url_link %}
      {% else %} {% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %}
      {% endif %}
