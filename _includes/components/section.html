@@ -112,17 +112,17 @@
     {% if section.data.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
     {% for dataType in section.data %}
-      {% if dataType.sort.size > 2 %} {% assign items = site.data[dataType.data] | sort:dataType.sort %} {% endif %}
-      {% assign items = site.data[dataType.data]%}
+      {% if dataType.sort_06c03ca.size > 2 %} {% assign items = site.data[dataType.data_2d13f0f] | sort:dataType.sort_06c03ca %} {% endif %}
+      {% assign items = site.data[dataType.data_2d13f0f]%}
       {% assign lowercase_filter = dataType.filter_value | downcase %}
       
       {% for item in items %}
-      {% if dataType.filter_field.size > 3 %}
-        {% if item[dataType.filter_field] contains lowercase_filter %}
-            {% include components/{{dataType.template}} item=item %}
+      {% if dataType.filter_field_300372b.size > 3 %}
+        {% if item[dataType.filter_field_300372b] contains lowercase_filter %}
+            {% include components/{{dataType.template_aefaf3b}} item=item %}
           {% endif %}
         {% else %}
-          {% include components/{{dataType.template}} item=item %} 
+          {% include components/{{dataType.template_aefaf3b}} item=item %} 
         {% endif %}
       {% endfor %}
 
