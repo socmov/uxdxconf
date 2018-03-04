@@ -277,16 +277,14 @@ body {
 ///////////////////
 // PARTNERS /////
 //////////////////
-.partners___section {
-  .card {
-    width: 30rem;
-    .partner-profile {
-      max-width:200px;
-      margin: 2rem;
-    }
-    .card-img-top { 
-      border-bottom: 1px dashed $primary;
-    }
+.partner-box {
+  width: 30rem;
+  .partner-profile {
+    max-width:200px;
+    margin: 2rem;
+  }
+  .card-img-top { 
+    border-bottom: 1px dashed $primary;
   }
   .display-controllers {
     cursor: pointer;

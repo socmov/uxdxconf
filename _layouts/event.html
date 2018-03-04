@@ -46,7 +46,7 @@
     
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
-          {% for page in site.data.conference.primary_menu[0].pages___buttons %}
+          {% for page in site.data.conference.primary_menu[0].pages %}
             <li class="nav-item">
               {% if page.url_slug == 'tickets' %}
                 <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>

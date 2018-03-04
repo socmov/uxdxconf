@@ -6,7 +6,7 @@
         <dt>
           {{menu.name}}
         </dt>
-        {% for page in menu.pages %}
+        {% for page in menu.pages___buttons %}
         <dd>
           <a href="{{site.baseurl}}/{{page.url_slug}}">
             {% if page.menu_title.size > 3 %}

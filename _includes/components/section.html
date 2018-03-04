@@ -83,6 +83,7 @@
     <!-- BUTTONS -->
     {% if section.buttons.size > 0 %}
     {% for button in section.buttons %}
+    <!-- TODO CHANGE THE URL IF IT HAS HTTP -->
     <a href="{{site.baseurl}}/{{button.url_link}}" class="btn {{button.class}}">{{button.button_text}}</a>
     {% endfor %}
     {% endif %}
@@ -105,10 +106,11 @@
     {% for dataType in section.data %}
       {% if dataType.sort.size > 2 %} {% assign items = site.data[dataType.data] | sort:dataType.sort %} {% endif %}
       {% assign items = site.data[dataType.data]%}
-
+      {% assign lowercase_filter = dataType.filter_value | downcase %}
+      
       {% for item in items %}
-        {% if dataType.filter_field.size > 3 %}
-          {% if item[dataType.filter_field] contains dataType.filter_value %}
+      {% if dataType.filter_field.size > 3 %}
+        {% if item[dataType.filter_field] contains lowercase_filter %}
             {% include components/{{dataType.template}} item=item %}
           {% endif %}
         {% else %}
