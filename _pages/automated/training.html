@@ -3,11 +3,10 @@ layout: default
 permalink: /training
 url_slug: training
 title: Training
+conference: [object Object]
 ---
 
 {% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %} {% assign pageContent = pageContent[0] %}
-
-{% assign conference = site.data.conferences | where: "id", page.conference[0].id %} {% assign conference = conference[0] %}
 
 {% include components/pageTitle.html pageContent=pageContent %}
 {% if pageContent.header_image.size == 0 %}
