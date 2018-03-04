@@ -43,10 +43,12 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      {% assign conference = site.data.conferences | where: "id", page.conference %} {% assign conference = conference[0] %}
     
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
-          {% for page in site.data.conference.primary_menu[0].pages___buttons %}
+          {% for page in conference.primary_menu[0].pages___buttons %}
             <li class="nav-item">
               {% if page.url_slug == 'tickets' %}
                 <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>

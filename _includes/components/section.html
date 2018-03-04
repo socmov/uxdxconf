@@ -83,8 +83,15 @@
     <!-- BUTTONS -->
     {% if section.buttons.size > 0 %}
     {% for button in section.buttons %}
-    <!-- TODO CHANGE THE URL IF IT HAS HTTP -->
-    <a href="{{site.baseurl}}/{{button.url_link}}" class="btn {{button.class}}">{{button.button_text}}</a>
+
+    {% if button.url_link %}
+     {% if button.url_link contains "://"" %} {% assign link = button.url_link %}
+     {% else %} {% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %}
+     {% endif %}
+      <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
+    {% elsif button.tito_release %}
+      <tito-button event="{{site.conference.tito}}" releases="{{bundleTicket}}">{{button.button_text}}</tito-button>
+    {% endif %}
     {% endfor %}
     {% endif %}
 

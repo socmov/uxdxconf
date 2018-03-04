@@ -1,7 +1,8 @@
 <footer class="footer" id="footer" role="contentinfo">
   <div class="container">
     <nav class="footer-nav cols-row d-flex justify-content-between flex-wrap">
-      {% for menu in site.data.conference.secondary_menu[0].nested_menu %}
+      {% assign conference = site.data.conferences | where: "id", page.conference %} {% assign conference = conference[0] %}
+      {% for menu in conference.secondary_menu[0].nested_menu %}
       <dl class="footer-nav-menu-col">
         <dt>
           {{menu.name}}

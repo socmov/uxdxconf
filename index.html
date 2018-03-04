@@ -1,6 +1,7 @@
 ---
 layout: default
-url_slug: home
+url_slug: home 
+conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
 ---
 
 {% assign pageContent = site.data.pages | where:"url_slug", page.url_slug %}
@@ -26,7 +27,6 @@ url_slug: home
 </div>
 
 
-<!-- <h1>Test</h1> -->
 {% for section in pageContent.sections %} {% include components/section.html section=section %} {% endfor %}
 
 
