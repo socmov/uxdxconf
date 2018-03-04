@@ -50,6 +50,10 @@ body {
 .navbar {
   background: $uxdx;
   color: $white;
+  .nav-link {
+    font-size: 16px;
+  }
+
 }
 
 
@@ -125,7 +129,7 @@ body {
 
 // Call to Action
 .buttons-section {
-  background: $uxdx;
+  background: $uxdx-secondary;
   color: white;
   text-align: center;
 }
@@ -329,11 +333,11 @@ body {
     // max-width: 30rem;
     padding-bottom: 3rem;
   }
-  .tito-tickets-button {
-    @extend .btn;
-    @extend .btn-primary;
-    @extend .btn-lg;
-  }
+}
+.tito-tickets-button {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
 }
 
 

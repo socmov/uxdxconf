@@ -84,13 +84,14 @@
     {% if section.buttons.size > 0 %}
     {% for button in section.buttons %}
 
-    {% if button.url_link %}
+    {% if button.url_link.length > 2 %}
      {% if button.url_link contains "://"" %} {% assign link = button.url_link %}
      {% else %} {% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %}
      {% endif %}
       <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
     {% elsif button.tito_release %}
-      <tito-button event="{{site.conference.tito}}" releases="{{bundleTicket}}">{{button.button_text}}</tito-button>
+      {% assign conference = site.data.conferences | where: "id", page.conference %} {% assign conference = conference[0] %}
+      <tito-button event="{{conference.tito_event}}" releases="{{button.tito_release}}">{{button.button_text}}</tito-button>
     {% endif %}
     {% endfor %}
     {% endif %}

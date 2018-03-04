@@ -81,8 +81,12 @@ $action:        $uxdx-purple !default;
 // $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
 
+$grad1: #856DB0;
+$grad2: #4C9FD8;
+$grad3: #3EC0C4;
 $uxdx: linear-gradient(to left, $primary, $action);
-$uxdx-secondary: linear-gradient(to left, $primary, $secondary);
+$uxdx-secondary: linear-gradient(to right top, $grad2, $grad3);
+// $uxdx-secondary: linear-gradient(to left, $primary, $secondary);
 
 // $theme-colors: () !default;
 // $theme-colors: map-merge((
