@@ -172,6 +172,13 @@
     </div>
     {% endif %}
 
+    <!-- STAFF -->
+   {% if section.staff.size > 0 %}  
+   {% for staff in section.staff %}
+    {% include components/staffCard.html staff=staff %}
+   {% endfor %}
+   {% endif %}
+
   {% if section.image_rows.size == 0 %}
   </div>
   {% endif %}
