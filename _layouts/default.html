@@ -15,12 +15,12 @@
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyBqMDmlftmkKPNqwfSkewtPPd81oh5F9Jc",
-            authDomain: "testnetic-20ffd.firebaseapp.com",
-            databaseURL: "https://testnetic-20ffd.firebaseio.com",
-            projectId: "testnetic-20ffd",
-            storageBucket: "",
-            messagingSenderId: "338486236116"
+            apiKey: "AIzaSyAP8fPFW7OFw1Da05Geiev5fIZfkdAZL8A",
+            authDomain: "uxdxconf.firebaseapp.com",
+            databaseURL: "https://uxdxconf.firebaseio.com",
+            projectId: "uxdxconf",
+            storageBucket: "uxdxconf.appspot.com",
+            messagingSenderId: "576147997259"
         };
         firebase.initializeApp(config);
     </script>
@@ -91,8 +91,7 @@
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     {% include scripts/video-script.html %} {% include scripts/agenda_toggle.html %}
 
-
-    <script src="{{ '/_scripts/auth.js'| prepend: site.baseurl }}"></script>
+    <script src="{{ site.baseurl }}/assets/js/auth.js"></script>
     <script type="text/javascript">
         // (1)
         if (navigator.serviceWorker) {
