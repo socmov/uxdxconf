@@ -1,0 +1,18 @@
+<div class="horizontal-partner-box align-self-stretch">
+  <div class="container py-3">
+    <div class="flex-row d-flex">
+      <div class="py-1">
+        <div class="img-holder">
+          <img class="speaker-img" src="{{include.item.company[0].url}}" alt="{{include.item.name}}">
+        </div>
+      </div>
+      <div class="px-3">
+        <div class="card-block px-3">
+          <h4 class="card-title">{{include.item.name}}</h4>
+          <p class="card-text">{{include.item.bio}}</p>
+          <a href="{{include.item.url}}" target="_blank" rel="noopener"> {{include.item.url}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
