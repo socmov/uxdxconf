@@ -9,6 +9,8 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico?">
+
+    
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <script src='https://js.tito.io/v1' async></script>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?{{site.time | date: '%s%N'}}" />
@@ -75,7 +77,23 @@
     {% include scripts/video-script.html %}
     {% include scripts/agenda_toggle.html %}
 
-
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-messaging.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAP8fPFW7OFw1Da05Geiev5fIZfkdAZL8A",
+        authDomain: "uxdxconf.firebaseapp.com",
+        databaseURL: "https://uxdxconf.firebaseio.com",
+        projectId: "uxdxconf",
+        storageBucket: "uxdxconf.appspot.com",
+        messagingSenderId: "576147997259"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="{{ site.baseurl }}/assets/js/auth.js"></script>
     
     <script type="text/javascript">
 
