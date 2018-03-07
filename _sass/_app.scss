@@ -42,6 +42,21 @@ body {
     }
   }
 }
+.horizontal-content {
+
+  .horizontal-image {
+    min-width: 250px;
+    width:250px;
+    .horizontal-card-image {
+      max-width: 90%;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .container-row {
+      flex-wrap: wrap;
+    }
+  }
+}
   
 
 //////////////

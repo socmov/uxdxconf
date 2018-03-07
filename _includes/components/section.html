@@ -83,16 +83,7 @@
     <!-- BUTTONS -->
     {% if section.buttons.size > 0 %}
     {% for button in section.buttons %}
-
-    {% if button.url_link.size > 2 %}
-     {% if button.url_link contains "://"" %} {% assign link = button.url_link %}
-     {% else %} {% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %}
-     {% endif %}
-      <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
-    {% elsif button.tito_release %}
-      {% assign conference = site.data.conferences | where: "id", page.conference %} {% assign conference = conference[0] %}
-      <tito-button event="{{conference.tito_event}}" releases="{{button.tito_release}}">{{button.button_text}}</tito-button>
-    {% endif %}
+      {% include components/button.html button=button %}
     {% endfor %}
     {% endif %}
 
@@ -172,10 +163,10 @@
     </div>
     {% endif %}
 
-    <!-- STAFF -->
-   {% if section.staff.size > 0 %}  
-   {% for staff in section.staff %}
-    {% include components/staffCard.html staff=staff %}
+    <!-- HORIZONTAL CONTENT -->
+   {% if section.horizontal_content.size > 0 %} 
+   {% for horizontal_content in section.horizontal_content %}
+    {% include components/horizontalCard.html item=horizontal_content %}
    {% endfor %}
    {% endif %}
 
