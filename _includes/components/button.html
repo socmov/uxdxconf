@@ -1,11 +1,11 @@
 
 {% assign button = include.button[0] %}
-{% if button.url_link %} 
-{% if button.url_link contains "://" or button.url_link contains "mailto:" %} 
-{% assign link = button.url_link %} 
-{% else %}
-{% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %} 
-{% endif %}
+{% if button.url_link.size > 3 %} 
+  {% if button.url_link contains "://" or button.url_link contains "mailto:" %} 
+  {% assign link = button.url_link %} 
+  {% else %}
+  {% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %} 
+  {% endif %}
   <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
 {% elsif button.tito_release %} 
   {% assign conference = site.data.conferences | where: "id", page.conference %} 
