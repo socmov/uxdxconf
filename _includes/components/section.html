@@ -1,3 +1,9 @@
+<!-- JUMBOTRON -->
+{% if section.jumbotron.size > 0 %}
+{% assign jumbotron = section.jumbotron[0] %}
+  {% include components/jumbotron.html item=jumbotron %}
+{% else %}
+
 <div class="section 
   {{section.codename}}
   
@@ -22,7 +28,9 @@
     {% if section.content.size > 12 %}
       {{section.content}} 
     {% endif %}
-    
+
+
+  
     <!-- CARDS -->
     {% if section.cards.size > 0 %}
     <div class="d-flex justify-content-between flex-wrap">
@@ -174,3 +182,4 @@
   </div>
   {% endif %}
 </div>
+{% endif %}

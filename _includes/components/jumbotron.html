@@ -1,0 +1,20 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron" style="
+  background: url('{{include.item.header_image[0].url}}') no-repeat center;
+  background-size: cover;">
+  <div class="container d-flex justify-content-center">
+    {% if include.item.logo[0].url %}
+    <div class="header-logo-div">
+      <img src="{{include.item.logo[0].url}}" class="header-logo" alt="{{include.item.logo[0].description}}">
+    </div>
+    {% endif %}
+    <div class="">
+      <h1 class="display-5">{{include.item.title}}</h1>
+      <h3 class="display-4">
+        <em>{{include.item.sub_title}}</em>
+      </h3>
+      <h5>{{include.item.line3}}</h5>
+      <p>{{include.item.line4}}</p>
+    </div>
+  </div>
+</div>
