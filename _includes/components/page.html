@@ -1,0 +1,8 @@
+{% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %} 
+{% assign pageContent = pageContent[0] %} 
+
+{% include components/pageTitle.html pageContent=pageContent %} 
+
+{% for section in pageContent.sections %} 
+  {% include components/section.html section=section %} 
+{% endfor %}

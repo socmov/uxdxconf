@@ -68,6 +68,11 @@ body {
   .nav-link {
     font-size: 16px;
   }
+  .nav-item {
+    .tito-tickets-button {
+      @extend .btn-outline-light
+    }
+  }
 
 }
 
@@ -351,8 +356,7 @@ body {
 }
 .tito-tickets-button {
   @extend .btn;
-  @extend .btn-primary;
-  @extend .btn-lg;
+  @extend .btn-outline-light;
 }
 
 
