@@ -128,21 +128,27 @@ body {
 }
 .uxdx_model_section {
   .card {
-    color: white;
+    // color: white;
   }
   .uxdx_model___ux_card {
     .card-body {
-      background-color: $ux;
+      // background-color: $ux;
+      border-top: 5px solid $ux;
+      border-bottom: 5px solid $ux;
     }
   }
   .uxdx_model___dev_card {
     .card-body {
-      background-color: $dev;
+      // background-color: $dev;
+      border-top: 5px solid $dev;
+      border-bottom: 5px solid $dev;
     }
   }
   .uxdx_model___ops_card {
     .card-body {
-      background-color: $ops;
+      // background-color: $ops;
+      border-top: 5px solid $ops;
+      border-bottom: 5px solid $ops;
     }
   }
 }
@@ -245,6 +251,29 @@ body {
   // }
 }
 
+// SPLASH //
+.splash-screen {
+    background: url('images/two-hamsters.jpg') no-repeat center bottom;
+    background-size: cover;
+    height: 800px;
+
+  }
+  .splash-container {
+    color: white;
+    text-shadow: 1px 1px #000000;
+    h1 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .splash-screen {
+      height:500px;
+    }
+  }
+
+
+
 
 
 // SPEAKERS //
@@ -283,7 +312,7 @@ body {
   }
 }
 .company-logo {
-  max-width: 5rem;
+  max-width: 6rem;
   max-height: 3rem;
 }
 

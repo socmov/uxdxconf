@@ -41,12 +41,19 @@
       </a>
       
       <a class="navbar-brand" href="{{ site.baseurl }}/">UXDX Conf 2018</a>
+
+      {% assign conference = site.data.conferences | where: "id", page.conference %} 
+      {% assign conference = conference[0] %}
+      
+      {% if conference.primary_menu[0].pages___buttons.size > 0 %}
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uxdxNav" aria-controls="uxdxNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      {% else %}
+        <div></div>
+      {% endif %}
 
-      {% assign conference = site.data.conferences | where: "id", page.conference %} {% assign conference = conference[0] %}
     
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">

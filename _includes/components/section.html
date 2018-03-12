@@ -33,7 +33,7 @@
   
     <!-- CARDS -->
     {% if section.cards.size > 0 %}
-    <div class="d-flex justify-content-between flex-wrap">
+    <div class="d-flex justify-content-around flex-wrap">
       {% for card in section.cards %}
       <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %} {{card.codename}}">
         {% if card.link.size > 2 %}
@@ -52,9 +52,11 @@
           </a>
           {% endif %}
           <h5 class="card-sub-title">{{card.sub_title}}</h5>
-          <p class="card-text">
-            {{card.content}}
-          </p>
+          {% if card.content.size >11 %}
+            <p class="card-text">
+              {{card.content}}
+            </p>
+          {% endif %}
         </div>
       </div>
       {% endfor %}
