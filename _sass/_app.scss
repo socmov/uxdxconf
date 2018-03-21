@@ -12,6 +12,10 @@ body {
   padding-bottom: 3rem;
   // border-bottom: 2px dashed $primary;
 }
+table {
+  @extend .table;
+}
+
 .card {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -387,6 +391,10 @@ body {
   .details {
     // max-width: 30rem;
     padding-bottom: 3rem;
+  }
+  .tito-tickets-button {
+    @extend .btn;
+    @extend .btn-primary;
   }
 }
 .tito-tickets-button {
