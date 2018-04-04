@@ -1,3 +1,8 @@
+{% if include.item.company_name %}
 <div class="highlighted-company-logo">
   <img src="{{include.item.logo[0].url}}" alt="{{include.item.company_name}}">
+{% elsif include.item.name %}
+<div class="highlighted-sponsor-logo">
+  <img src="{{include.item.company[0].url}}" alt="{{include.item.name}}">
+{% endif %}
 </div>
