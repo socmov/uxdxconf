@@ -1,0 +1,23 @@
+<div class="card align-self-stretch {% if include.cards-size > 2 %} group3 {% elsif include.cards-size > 1 %} group2 {% endif %} {{include.card.codename}}">
+  {% if include.card.link.size > 2 %}
+  <a href="{{include.card.link}}">
+    {% endif %}
+    <img class="card-img-top" src="{{include.card.card_image[0].url}}" alt="{{include.card.card_image[0].description}}"> {% if include.card.link.size > 2 %}
+  </a>
+  {% endif %}
+  <div class="card-body">
+    {% if include.card.link.size > 2 %}
+    <a href="{{include.card.link}}">
+      {% endif %}
+      <h4 class="card-title">{{include.card.title}}</h4>
+      {% if include.card.link.size > 2 %}
+    </a>
+    {% endif %}
+    <h5 class="card-sub-title">{{include.card.sub_title}}</h5>
+    {% if include.card.content.size >11 %}
+    <p class="card-text">
+      {{include.card.content}}
+    </p>
+    {% endif %}
+  </div>
+</div>

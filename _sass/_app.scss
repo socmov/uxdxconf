@@ -260,6 +260,13 @@ table {
   // }
 }
 
+// Modal
+@include media-breakpoint-up(sm) {
+  .modal-dialog {
+    max-width: 80%;
+  }
+}
+
 // SPLASH //
 .splash-screen {
     background: url('images/two-hamsters.jpg') no-repeat center bottom;

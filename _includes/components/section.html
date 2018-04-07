@@ -34,31 +34,13 @@
     <!-- CARDS -->
     {% if section.cards.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
+      {% assign size = section.cards.size %}
       {% for card in section.cards %}
-      <div class="card align-self-stretch {% if section.cards.size > 2 %} group3 {% elsif section.cards.size > 1 %} group2 {% endif %} {{card.codename}}">
-        {% if card.link.size > 2 %}
-        <a href ="{{card.link}}">
-          {% endif %}
-          <img class="card-img-top" src="{{card.card_image[0].url}}" alt="{{card.card_image[0].description}}">
-        {% if card.link.size > 2 %}
-        </a>
+        {% if card.type_of_card == 'Modal' %} <!--MAKE MODAL FLAG-->
+        {% include components/modalCard.html card=card cards-size=size %}
+        {% else %}
+        {% include components/card.html card=card cards-size=size %}
         {% endif %}
-        <div class="card-body">
-          {% if card.link.size > 2 %}
-          <a href="{{card.link}}">
-          {% endif %}
-          <h4 class="card-title">{{card.title}}</h4>
-          {% if card.link.size > 2 %}
-          </a>
-          {% endif %}
-          <h5 class="card-sub-title">{{card.sub_title}}</h5>
-          {% if card.content.size >11 %}
-            <p class="card-text">
-              {{card.content}}
-            </p>
-          {% endif %}
-        </div>
-      </div>
       {% endfor %}
     </div>
     {% endif %} 
