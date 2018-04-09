@@ -1,0 +1,14 @@
+<div id="map {{include.map.codename}}" class="google-map"></div>
+<script>
+  function initMap() {
+    var location = { lat: {{ include.map.latitude }}, lng: {{ include.map.longitude }} };
+    var map = new google.maps.Map(document.getElementById('map {{include.map.codename}}'), {
+      zoom: {{include.map.zoom}},
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+</script>

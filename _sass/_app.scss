@@ -131,9 +131,6 @@ table {
   background-color: $gray-100;
 }
 .uxdx_model_section {
-  .card {
-    // color: white;
-  }
   .uxdx_model___ux_card {
     .card-body {
       // background-color: $ux;
@@ -265,6 +262,13 @@ table {
   .modal-dialog {
     max-width: 80%;
   }
+}
+
+// MAP
+.google-map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
 }
 
 // SPLASH //

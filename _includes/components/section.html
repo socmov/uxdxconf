@@ -134,6 +134,12 @@
       {% include {{form}} %}
     {% endif %}
 
+    <!-- MAPS -->
+    {% if section.map.size > 0 %} 
+      {% assign map = section.map[0] %} 
+      {% include components/map.html map=map %}
+    {% endif %}
+    
     <!-- AGENDA -->
     {% if section.agenda.size > 0 %}
       {% assign agenda = site.data.agendas | where:"codename",section.agenda[0].codename %}
