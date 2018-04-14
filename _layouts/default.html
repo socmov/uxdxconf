@@ -8,16 +8,12 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico?">
-
-    
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-    <script src='https://js.tito.io/v1' async></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico?">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?{{site.time | date: '%s%N'}}" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    
-    
     <script src="{{'/node_modules/jquery/dist/jquery.slim.js' | prepend: site.baseurl}}"></script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -29,29 +25,6 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-M9MJLPW');</script>
     <!-- End Google Tag Manager -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPtcZILQvhUSmIGfm04e7tUj8RUmKbccQ&callback=initMap">
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-    <script>
-      window.addEventListener("load", function () {
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#edeff5",
-              "text": "#838391"
-            },
-            "button": {
-              "background": "#4b81e8"
-            }
-          },
-          "theme": "classic",
-          "content": {
-            "href": "https://uxdxconf.com/cookie-policy"
-          }
-        })
-      });
-    </script>
   </head>
 
   <body>
@@ -108,7 +81,7 @@
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     {% include scripts/video-script.html %}
     {% include scripts/agenda_toggle.html %}
-
+    
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-firestore.js"></script>
