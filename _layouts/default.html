@@ -61,7 +61,12 @@
             {% if page.url_slug == 'tickets' %}
             <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
             {% elsif page.url_slug %}
-            <a class="nav-link" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
+              {% if page.menu_title.size > 0 %}
+                {% assign title = page.menu_title %}
+              {% else %}
+               {% assign title = page.url_slug | capitalize %}
+              {% endif %}
+              <a class="nav-link" href="{{ site.baseurl }}/{{page.url_slug}}">{{title}}</a>
             {% else %}
               <tito-button event="{{conference.tito_event}}" releases="{{page.tito_release}}">{{button.button_text}}</tito-button>
             {% endif %}
