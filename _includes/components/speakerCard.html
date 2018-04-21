@@ -1,10 +1,10 @@
-<div class="speaker-box card align-self-stretch">
+<div class="speaker-box card align-self-stretch" data-toggle="modal" data-target="#{{item.codename}}">
   <div class="card-img-top">
     <div class="img-holder">
-      	<img class="speaker-img" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}">
+      <img class="speaker-img" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}">
     </div>
   </div>
-
+  
   <!-- <img class="card-img-top speaker-profile" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}"> -->
   <div class="card-body">
     <h4 class="card-title">
@@ -20,5 +20,40 @@
       <img src="{{item.company_logo[0].url}}" alt="{{item.company}}" class="company-logo">
     </div>
     {% endif %}
+  </div>
+</div>
+
+
+<div class="modal fade" id="{{item.codename}}" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex flex-wrap">
+          <img class="speaker-img-modal" src="{{item.profile_picture[0].url}}" alt="{{item.first_name}} {{item.last_name}}">
+          <div class="ml-3">
+            <h3 class="modal-title">{{item.first_name}} {{item.last_name}}</h3>
+            <h5>
+              <small class="text-muted">{{item.job_title}},
+                <strong>{{item.company}}</strong>
+              </small>
+            </h5>
+            {% if item.company_logo[0].url.size > 10 %}
+            <div class="mt-auto">
+              <img src="{{item.company_logo[0].url}}" alt="{{item.company}}" class="company-logo">
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{item.bio}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>

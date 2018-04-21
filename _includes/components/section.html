@@ -95,8 +95,11 @@
     {% if section.data.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
     {% for dataType in section.data %}
-      {% if dataType.sort_06c03ca.size > 2 %} {% assign items = site.data[dataType.data_2d13f0f] | sort:dataType.sort_06c03ca %} {% endif %}
-      {% assign items = site.data[dataType.data_2d13f0f]%}
+      {% if dataType.sort_06c03ca.size > 2 %} 
+        {% assign items = site.data[dataType.data_2d13f0f] | sort:dataType.sort_06c03ca %} 
+      {% else %}
+        {% assign items = site.data[dataType.data_2d13f0f]%}
+      {% endif %}
       {% assign lowercase_filter = dataType.filter_value | downcase %}
       
       {% for item in items %}
