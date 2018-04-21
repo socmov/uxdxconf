@@ -10,5 +10,6 @@
 {% elsif button.tito_release %} 
   {% assign conference = site.data.conferences | where: "id", page.conference %} 
   {% assign conference = conference[0] %}
-  <tito-button event="{{conference.tito_event}}" releases="{{button.tito_release}}">{{button.button_text}}</tito-button>
+  <tito-widget event="{{conference.tito_event}}" releases="{{button.tito_release}}"></tito-widget>
+  <!-- <tito-button event="{{conference.tito_event}}" releases="{{button.tito_release}}">{{button.button_text}}</tito-button> -->
 {% endif %}
