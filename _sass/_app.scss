@@ -427,7 +427,10 @@ tito-widget {
     max-width: 500px;
     color: white;
     .tito-ticket-vat {
-      color: #bbbaba
+      color: white;
+    }
+    .tito-ticket-description {
+      color: white;
     }
   }
 }
