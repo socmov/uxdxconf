@@ -45,9 +45,9 @@
               <div class="schedule__grid__event {{session.location}} {{session.session[0].type}}" session-id="{{session.session[0].id}}">
                 <div class="schedule__grid__event__photos">
                 {% if session.session[0].speakers.size == 1 %}
-                  <img src="{{session.session[0].speakers[0].profile_picture}}" alt="{{session.session[0].speakers[0].first_name}} {{session.session[0].speakers[0].last_name}}, {{session.session[0].speakers[0].job_title}}"
+                  <img src="{{session.session[0].speakers[0].profile_picture[0].url}}" alt="{{session.session[0].speakers[0].first_name}} {{session.session[0].speakers[0].last_name}}, {{session.session[0].speakers[0].job_title}}"
                     class="profile_picture">
-                  <img src="{{session.session[0].speakers[0].company_logo}}" alt="{{session.session[0].speakers[0].company}}" class="company_logo"> {% elsif session.session[0].speakers.size > 1 %}
+                  <img src="{{session.session[0].speakers[0].company_logo[0].url}}" alt="{{session.session[0].speakers[0].company}}" class="company_logo"> {% elsif session.session[0].speakers.size > 1 %}
                   <img src="{{site.baseurl}}/images/panel.jpg" alt="Panel Session" class="profile_picture"> 
                 {% endif %} 
                 </div>
