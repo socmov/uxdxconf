@@ -311,7 +311,7 @@ table {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   &:hover {
-    filter:grayscale(0%);
+    // filter:grayscale(0%);
   }
 }
 .feature-img {
@@ -331,6 +331,7 @@ table {
   width: 14rem;
   &.card {
     border: 0px;
+    cursor: pointer;
   }
   .card-img-top {
     max-height: 100%;
