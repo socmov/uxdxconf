@@ -1,3 +1,7 @@
+{% capture nowunix %} {{'now' | date: '%s'}} {% endcapture %} 
+{% assign future = nowunix | plus: 86400 %}
+{% assign past = nowunix | minus: 86400 %}
+
 <div class="uxdx_agenda">
 
   {% if include.agenda.dates.size > 1 or include.agenda.locations.size > 1 %}
@@ -61,12 +65,12 @@
                       <span class="company">{{speaker.company}}</span>
                     </p>
                     <!-- {% if forloop.last != true %}
-                                <br>
-                            {% endif %} -->
-                    {% endfor %}
-                  </div>
-                  <div class="schedule__grid__event__meta">
-                    <div class="d-flex justify-content-between flex-wrap">
+                      <br>
+                      {% endif %} -->
+                      {% endfor %}
+                    </div>
+                    <div class="schedule__grid__event__meta">
+                      <div class="d-flex justify-content-between flex-wrap">
                       <div class="meta-details">
                         {% if session.location and session.session[0].type != "Break" %}
                         <span class="badge {{session.location}}">{{session.location}}</span>
@@ -74,10 +78,10 @@
                       </div>
                       {% if session.session[0].description.size > 50 %}
                       <div class="display-controllers collapsed" data-toggle="collapse" data-target="#{{session.codename}}" aria-expanded="false"
-                        aria-controls="{{session.codename}}">
-                        <span class="show-ctrl">
-                          <i class="fas fa-chevron-down"></i>
-                          <small>More</small>
+                      aria-controls="{{session.codename}}">
+                      <span class="show-ctrl">
+                        <i class="fas fa-chevron-down"></i>
+                        <small>More</small>
                         </span>
                         <span class="hide-ctrl">
                           <i class="fas fa-chevron-up"></i>
@@ -86,13 +90,22 @@
                       </div>
                       {% endif %}
                     </div>
+                    
+                    {% capture sessiontime %} {{startTime | date: '%s'}} {% endcapture %} 
+                    {% assign sessiontime = sessiontime | plus: 0 %}
+                    {% if sessiontime < future and sessiontime > past %}
+                      <div>
+                        <button data-target="#feedbackDialog" data-toggle="modal" class="btn btn-secondary openFeedbackDialog" data-session-id="{{session.session[0].codename}}" data-session-name="{{session.session[0].name}}">Give Feedback</button>
+                      </div>
+                    {% endif %}
                     <div class="collapse" id="{{session.codename}}">
                       <!-- <div class="card card-body"> -->
-                      {{session.session[0].description}}
-                      <!-- </div> -->
+                        {{session.session[0].description}}
+                        
+                        <!-- </div> -->
+                      </div>
                     </div>
                   </div>
-                </div>
               </div>
               {% endfor %}
             </div>
@@ -104,3 +117,103 @@
     {% endfor %}
   </div>
 </div>
+
+
+
+<div class="modal fade" id="feedbackDialog" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="hidden" id="session-id">
+          <fieldset class="starability-basic">
+            <legend>Speaker:</legend>
+            <input type="radio" id="no-speaker-rate" class="input-no-rate" name="speaker-rating" value="0" checked aria-label="No speaker-rating." />
+            <input type="radio" id="speaker-rate1" name="speaker-rating" value="1">
+            <label for="speaker-rate1" title="Terrible">1 star</label>
+            <input type="radio" id="speaker-rate2" name="speaker-rating" value="2">
+            <label for="speaker-rate2" title="Not good">2 stars</label>
+            <input type="radio" id="speaker-rate3" name="speaker-rating" value="3">
+            <label for="speaker-rate3" title="Average">3 stars</label>
+            <input type="radio" id="speaker-rate4" name="speaker-rating" value="4">
+            <label for="speaker-rate4" title="Very good">4 stars</label>
+            <input type="radio" id="speaker-rate5" name="speaker-rating" value="5">
+            <label for="speaker-rate5" title="Amazing">5 stars</label>
+          </fieldset>
+          <fieldset class="starability-basic">
+            <legend>Content:</legend>
+            <input type="radio" id="no-content-rate" class="input-no-rate" name="content-rating" value="0" checked aria-label="No rating." />
+            <input type="radio" id="content-rate1" name="content-rating" value="1">
+            <label for="content-rate1" title="Terrible">1 star</label>
+            <input type="radio" id="content-rate2" name="content-rating" value="2">
+            <label for="content-rate2" title="Not good">2 stars</label>
+            <input type="radio" id="content-rate3" name="content-rating" value="3">
+            <label for="content-rate3" title="Average">3 stars</label>
+            <input type="radio" id="content-rate4" name="content-rating" value="4">
+            <label for="content-rate4" title="Very good">4 stars</label>
+            <input type="radio" id="content-rate5" name="content-rating" value="5">
+            <label for="content-rate5" title="Amazing">5 stars</label>
+          </fieldset>
+          <div class="form-group">
+            <label for="feedback-comment">Comment</label>
+            <textarea class="form-control" id="feedback-comment" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="blank.html" class="btn btn-primary" id="submit">Submit</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $('#feedbackDialog').on('show.bs.modal', function (e) {
+    //get data-id attribute of the clicked element
+    var sessionId = $(e.relatedTarget).data('sessionId');
+    var sessionName = $(e.relatedTarget).data('sessionName');
+
+    //populate the textbox
+    $('#modalTitle').text(sessionName);
+    $('#session-id').val(sessionId);
+
+  })
+
+  $("#submit").click(function (e) {
+    e.preventDefault();
+    let sessionId = $('#session-id').val()
+    let response = {
+      speaker: $("input:radio[name ='speaker-rating']:checked").val(),
+      content: $("input:radio[name ='content-rating']:checked").val(),
+      comment: $('#feedback-comment').val(),
+      timeStamp: Date.now()
+    }
+    
+    // send the response
+    $.ajax({
+      url: "https://socmov-45ba2.firebaseio.com/feedback/" + sessionId + "/feedback.json",
+      type: 'POST',
+      data: JSON.stringify(response),
+      dataType: 'json'
+    }).done(function (e) {
+      // console.log(e)
+    });
+
+    // reset data
+    $('#feedback-comment').val(''),
+    $("#no-content-rate").prop('checked', true);
+    $("#no-speaker-rate").prop('checked', true);
+    $('#session-id').val('')
+
+    // close the modal
+    $('#feedbackDialog').modal('hide');
+  });
+</script>
