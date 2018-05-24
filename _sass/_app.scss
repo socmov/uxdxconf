@@ -442,6 +442,10 @@ tito-widget {
 footer {
   background-color: $gray-700;
   padding-top: 3rem;
+  
+  a {
+    color: $gray-500;
+  }
   // text-align: center;
   .footer-nav {
     border-bottom: 1px solid $gray-500;
@@ -451,9 +455,6 @@ footer {
     dt {
       @extend h4;
       color: white;
-    }
-    a {
-      color: $gray-500;
     }
   }
   .footer-social {
