@@ -9,7 +9,7 @@
   
   {% if section.cards.size > 0 %} cards-section {% endif %}
   {% if section.testimonials.size > 0 %} testimonials-section {% endif %}
-  {% if section.buttons.size > 0 %} buttons-section {% endif %}
+  {% if section.buttons___widget.size > 0 %} buttons-section {% endif %}
   {% if section.stats.size > 0 %} stats-section {% endif %}
   {% if section.data.size > 0 %} data-section {% endif %}
   {% if section.image_rows.size > 0 %} image_rows-section {% endif %}
@@ -73,8 +73,8 @@
     {% endif %}
 
     <!-- BUTTONS -->
-    {% if section.buttons.size > 0 %}
-    {% for button in section.buttons %}
+    {% if section.buttons___widget.size > 0 %}
+    {% for button in section.buttons___widget %}
       {% include components/button.html button=button %}
     {% endfor %}
     {% endif %}

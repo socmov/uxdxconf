@@ -11,7 +11,7 @@ conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
 <!-- Assign Dates -->
 {% assign today_date = 'now' | date: '%s' %}  
 {% assign two_for_one = 'May 4, 2018' | date: '%s' %} 
-{% assign super_early = 'June 1, 2018' | date: '%s' %} 
+{% assign super_early = 'June 29, 2018' | date: '%s' %} 
 {% assign early = 'June 29, 2018' | date: '%s' %} 
 {% assign regular1 = 'July 06, 2018' | date: '%s' %} 
 {% assign regular2 = 'July 13, 2018' | date: '%s' %} 
@@ -30,55 +30,72 @@ conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
 
 {% if today_date < two_for_one%} 
   {% assign confTicket = 'l-y0flwqoaw' %} 
-  {% assign bundleTicket = 'ejxcbtpidzg' %}
+  {% assign bundleTicket = 'ejxcbtpidzg' %} 
+  {% assign expiry = super_early %}
 {% elsif today_date >= super_early and today_date < early %}
   {% assign confTicket = 'zs-eqamk5mc' %}
-  {% assign bundleTicket = '' %}
+  {% assign bundleTicket = '' %} 
+  {% assign expiry = early %}
 {% elsif today_date >= early and today_date < regular1 %}
   {% assign confTicket = 'ci5wpltc-5m' %}
-  {% assign bundleTicket = '' %}
+  {% assign bundleTicket = '' %} 
+  {% assign expiry = regular1 %}
 {% elsif today_date >= regular1 and today_date < regular2 %}
   {% assign confTicket = 'ydglcmzkk-y' %}
-  {% assign bundleTicket = '' %}
+  {% assign bundleTicket = '' %} 
+  {% assign expiry = regular2 %}
 {% elsif today_date >= regular2 and today_date < regular3 %}
   {% assign confTicket = '6r-puiiquzw' %}
-  {% assign bundleTicket = '' %}
+  {% assign bundleTicket = '' %} 
+  {% assign expiry = regular3 %}
 {% elsif today_date >= regular3 and today_date < regular4 %}
   {% assign confTicket = 'fc1wxhrkn-q' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular4 %}
 {% elsif today_date >= regular4 and today_date < regular5 %}
   {% assign confTicket = 'n-mgi94lexw' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular5 %}
 {% elsif today_date >= regular5 and today_date < regular6 %}
   {% assign confTicket = 'x52ipwhxeho' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular6 %}
 {% elsif today_date >= regular6 and today_date < regular7 %}
   {% assign confTicket = 'vgel3f-awic' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular7 %}
 {% elsif today_date >= regular7 and today_date < regular8 %}
   {% assign confTicket = 'fhqs8uaztts' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular8 %}
 {% elsif today_date >= regular8 and today_date < regular9 %}
   {% assign confTicket = 'kwwqb-meiys' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular9 %}
 {% elsif today_date >= regular9 and today_date < regular10 %}
   {% assign confTicket = 'vyiswgcnhte' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular10 %}
 {% elsif today_date >= regular10 and today_date < regular11 %}
   {% assign confTicket = 'zoa0yvd0pva' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular11 %}
 {% elsif today_date >= regular11 and today_date < regular12 %}
   {% assign confTicket = 'r-hmndiwfty' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular12 %}
 {% elsif today_date >= regular12 and today_date < regular13 %} 
  {% assign confTicket='jt0zjjg7hhi' %} 
  {% assign bundleTicket='' %}
+   {% assign expiry = regular13 %}
 {% elsif today_date >= regular13 and today_date < late %} 
  {% assign confTicket='gfl4k6pt7ya' %} 
  {% assign bundleTicket='' %}
+   {% assign expiry = late %}
 {% elsif today_date >= late %}
   {% assign confTicket = 'dzyxl6pbu7y' %}
   {% assign bundleTicket = '' %}
+   {% assign expiry = regular1 %}
 {% endif%}
 
 
@@ -90,11 +107,7 @@ conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
     {% include components/section.html section=section %}
   {% endfor %}
 
-  <div class="tickets section">
-    <!-- <div class="alert alert-success" role="alert">
-      <h3>Buy any 4 tickets and you get one free!</h3>
-      <p class="mb-0">Discounts automatically applied when you enter in the quantity of tickets.</p>
-    </div> -->
+  <!-- <div class="tickets section">
     <div class="tickets-table">
       <table class="table table-striped">
         <thead>
@@ -181,7 +194,9 @@ conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
     <hr>
 
     
-  </div>
-</div>
+  </div> -->
+  <h3>Bulk Discount: Buy 5, get one free!</h3>
+  <p class="small muted">Discount automatically applied</p>
 
-<!-- <tito-button event="ultimateconf/2013"></tito-button> -->
+  <tito-widget event="initiate/uxdx18" class="regular"></tito-widget>
+</div>
