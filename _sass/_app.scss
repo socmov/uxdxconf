@@ -424,9 +424,8 @@ table {
   @extend .btn-outline-light;
 }
 
-tito-widget:not(.regular) {
+tito-widget {
   .tito-wrapper {
-    max-width: 500px;
     color: white;
     .tito-ticket-vat {
       color: white;
@@ -437,8 +436,19 @@ tito-widget:not(.regular) {
   }
 }
 tito-widget.regular {
+  .tito-ticket-name-wrapper {
+    text-align: left;
+  }
+  .tito-ticket-name {
+    font-size: 1.5rem;
+  }
   .tito-degressive-price-desc {
     font-size:small;
+  }
+}
+.tito-widget:not(.regular) {
+  .tito-wrapper {
+    max-width: 500px;
   }
 }
 

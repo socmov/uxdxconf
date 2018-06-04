@@ -10,7 +10,7 @@
 {% elsif button.tito_release or button.show_widget.size > 0 %} 
   {% assign conference = site.data.conferences | where: "id", page.conference %} 
   {% assign conference = conference[0] %}
-  {% if button.class == blank %}
+  {% if button.show_widget.size > 0 %}
     {% assign classname = 'regular' %}
   {% endif %}
   <tito-widget event="{{conference.tito_event}}" releases="{{button.tito_release}}" class="{{classname}}"></tito-widget>
