@@ -79,6 +79,13 @@
     {% endfor %}
     {% endif %}
 
+    
+    <!-- COUNTDOWN -->
+    {% if section.countdown.size > 0 %}
+      {% assign countdown = section.countdown[0] %}
+      {% include components/countdown.html text=countdown %}
+    {% endif %}
+
     <!-- STATS -->
     {% if section.stats.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">

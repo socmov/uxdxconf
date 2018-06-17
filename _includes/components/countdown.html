@@ -1,0 +1,96 @@
+
+<span class="countdown-timer"></span>
+
+<script type="application/javascript">
+
+  function getExpiryDate() {
+
+    const today_date = Date.now()
+    const super_early = new Date(2018, 5, 1, 12, 00)
+    const early = new Date(2018, 5, 29, 12, 00)
+    const regular1 = new Date(2018, 6, 6, 12, 00)
+    const regular2 = new Date(2018, 6, 13, 12, 00)
+    const regular3 = new Date(2018, 6, 20, 12, 00)
+    const regular4 = new Date(2018, 6, 27, 12, 00)
+    const regular5 = new Date(2018, 7, 3, 12, 00)
+    const regular6 = new Date(2018, 7, 10, 12, 00)
+    const regular7 = new Date(2018, 7, 17, 12, 00)
+    const regular8 = new Date(2018, 7, 24, 12, 00)
+    const regular9 = new Date(2018, 7, 31, 12, 00)
+    const regular10 = new Date(2018, 8, 7, 12, 00)
+    const regular11 = new Date(2018, 8, 14, 12, 00)
+    const regular12 = new Date(2018, 8, 21, 12, 00)
+    const regular13 = new Date(2018, 8, 28, 12, 00)
+    const late = new Date(2018, 9, 5, 12, 00)
+
+    let expiry
+    let expired = false
+    if(today_date < super_early) expiry = super_early
+    else if (today_date < early) expiry = early
+    else if (today_date < regular1) expiry = regular1
+    else if (today_date < regular2) expiry = regular2
+    else if (today_date < regular3) expiry = regular3
+    else if (today_date < regular4) expiry = regular4
+    else if (today_date < regular5) expiry = regular5
+    else if (today_date < regular6) expiry = regular6
+    else if (today_date < regular7) expiry = regular7
+    else if (today_date < regular8) expiry = regular8
+    else if (today_date < regular9) expiry = regular9
+    else if (today_date < regular10) expiry = regular10
+    else if (today_date < regular11) expiry = regular11
+    else if (today_date < regular12) expiry = regular12
+    else if (today_date < regular13) expiry = regular13
+    else if (today_date < late) expiry = late
+    else expired = true
+    
+    return expiry
+  }
+
+  // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // get the expiry time
+      let expiry = getExpiryDate().getTime();
+
+      var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
+      var duration = moment.duration(leftTime);
+
+      // get the value to show
+      var value = "{{include.text[0].pre}} "
+      var dayWord = duration.days() > 1 ? 'days' : 'day'
+      var hourWord = duration.hours() > 1 ? 'hours' : 'hour'
+      var minuteWord = duration.minutes() > 1 ? 'minutes' : 'minute'
+      var secondWord = duration.seconds() > 1 ? 'seconds' : 'second'
+      if (duration.days() > 5) {
+        value += duration.days() + ' ' + dayWord
+      }
+      else if (duration.days() < 3 && duration.days() > 0) {
+        value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
+      }
+      else if (duration.hours() > 0) {
+        value += duration.hours() + ' ' + hourWord + ', ' + duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
+      }
+      else {
+        value += duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
+      }
+
+      value += " {{include.text[0].post}}"
+
+
+    // Display the result in the element with id="countdown-timer"
+    if ($(".countdown-timer")[0]) {
+
+      // Do something if class exists
+      var elementArray = document.getElementsByClassName("countdown-timer");
+      for (var i = 0; i < elementArray.length; i++) {
+
+        elementArray[i].innerHTML = value
+      }
+    }
+
+  }, 1000);
+
+</script>

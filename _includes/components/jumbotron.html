@@ -15,6 +15,11 @@
       </h3>
       <h5>{{include.item.line3}}</h5>
       <p>{{include.item.line4}}</p>
+
+      {% if include.item.countdown %}
+       {% assign countdown = include.item.countdown %} 
+       {% include components/countdown.html text=countdown %} 
+      {% endif %}
     </div>
   </div>
 </div>
