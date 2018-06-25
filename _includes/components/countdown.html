@@ -59,7 +59,7 @@
       var duration = moment.duration(leftTime);
 
       // get the value to show
-      var value = "{{include.text[0].pre}} "
+      var value = "{{include.text.pre}} "
       var dayWord = duration.days() > 1 ? 'days' : 'day'
       var hourWord = duration.hours() > 1 ? 'hours' : 'hour'
       var minuteWord = duration.minutes() > 1 ? 'minutes' : 'minute'
@@ -67,7 +67,7 @@
       if (duration.days() > 5) {
         value += duration.days() + ' ' + dayWord
       }
-      else if (duration.days() < 3 && duration.days() > 0) {
+      else if (duration.days() < 5 && duration.days() > 0) {
         value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
       }
       else if (duration.hours() > 0) {
@@ -77,7 +77,7 @@
         value += duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
       }
 
-      value += " {{include.text[0].post}}"
+      value += " {{include.text.post}}"
 
 
     // Display the result in the element with id="countdown-timer"

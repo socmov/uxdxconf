@@ -28,7 +28,13 @@
     {% if section.content.size > 12 %}
       {{section.content}} 
     {% endif %}
-
+    
+    
+    <!-- COUNTDOWN -->
+    {% if section.countdown.size > 0 %}
+      {% assign countdown = section.countdown %}
+      {% include components/countdown.html text=countdown %}
+    {% endif %}
 
   
     <!-- CARDS -->
@@ -79,12 +85,6 @@
     {% endfor %}
     {% endif %}
 
-    
-    <!-- COUNTDOWN -->
-    {% if section.countdown.size > 0 %}
-      {% assign countdown = section.countdown[0] %}
-      {% include components/countdown.html text=countdown %}
-    {% endif %}
 
     <!-- STATS -->
     {% if section.stats.size > 0 %}
