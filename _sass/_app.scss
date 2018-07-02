@@ -424,7 +424,8 @@ table {
   @extend .btn-outline-light;
 }
 
-tito-widget {
+.button__widget {
+  tito-widget {
   .tito-wrapper {
     color: white;
     .tito-ticket-vat {
@@ -434,6 +435,7 @@ tito-widget {
       color: white;
     }
   }
+}
 }
 tito-widget.regular {
   .tito-ticket-name-wrapper {
@@ -495,8 +497,7 @@ footer {
   width: 200px;
 }
 
-.countdown-timer {
-  font-size: 1.6rem;
-  font-style: italic;
+.alert {
+  margin-bottom: 0rem;
 }
 
