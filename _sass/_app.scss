@@ -418,7 +418,30 @@ table {
     @extend .btn;
     @extend .btn-primary;
   }
+
 }
+.ticket-card {
+  width: 335px;
+  margin-right: 2rem;
+  .tito-tickets-button {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-block;
+  }
+  .ticket-details {
+    height: 80px;
+  }
+  .card-header {
+    background-color: $action;
+  }
+  .card-title {
+    font-size: 2.5rem;
+  }
+  ul li:nth-child(odd) {
+    background-color: #fbfbfb;
+  }
+}
+
 .tito-tickets-button {
   @extend .btn;
   @extend .btn-outline-light;
