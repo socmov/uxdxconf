@@ -844,5 +844,5 @@ $uxdx-secondary: linear-gradient(to right top, $grad2, $grad3);
 // $pre-color:                         $gray-900 !default;
 // $pre-scrollable-max-height:         340px !default;
 
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";

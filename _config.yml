@@ -53,7 +53,6 @@ kramdown:
 sass:
   load_paths:
     - _sass
-    - node_modules
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
@@ -68,6 +67,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - node_modules
 
 include: ["_pages"]
 
