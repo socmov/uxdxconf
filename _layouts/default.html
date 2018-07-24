@@ -17,128 +17,7 @@
 
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
-    <script type="application/javascript">
-
-      function getConfDetails() {
-
-        const today_date = Date.now()
-        const super_early = new Date(2018, 5, 1, 12, 00)
-        const early = new Date(2018, 5, 29, 12, 00)
-        const regular1 = new Date(2018, 6, 6, 23, 59, 59)
-        const regular3 = new Date(2018, 6, 20, 23, 59, 59)
-        const regular5 = new Date(2018, 7, 3, 23, 59, 59)
-        const regular7 = new Date(2018, 7, 17, 23, 59, 59)
-        const regular9 = new Date(2018, 7, 31, 23, 59, 59)
-        const regular11 = new Date(2018, 8, 14, 23, 59, 59)
-        const regular13 = new Date(2018, 8, 28, 23, 59, 59)
-        const late = new Date(2018, 9, 5, 23, 59, 59)
-
-        let expiry, confRelease, confTrainingRelease, confPrice, confTrainingPrice
-        let expired = false
-        if (today_date < super_early) {
-          expiry = super_early
-        }
-
-        else if (today_date < early) {
-          expiry = early
-        }
-        else if (today_date < regular1) {
-          expiry = regular1
-          confRelease = 'ydglcmzkk-y'
-          confTrainingRelease = 'dxpcv7huse4'
-          confPrice = 545
-          confTrainingPrice = 850
-        }
-        else if (today_date < regular3) {
-          expiry = regular3
-          confRelease = 'fc1wxhrkn-q'
-          confTrainingRelease = 'zna8bzjxsai'
-          confPrice = 565
-          confTrainingPrice = 890
-        }
-        else if (today_date < regular5) {
-          expiry = regular5
-          confRelease = 'x52ipwhxeho'
-          confTrainingRelease = 'nqbyokejscq'
-          confPrice = 590
-          confTrainingPrice = 930
-
-        }
-        else if (today_date < regular7) {
-          expiry = regular7
-          confRelease = 'fhqs8uaztts'
-          confTrainingRelease = 'hotm-ixkssu'
-          confPrice = 660
-          confTrainingPrice = '1,050'
-
-        }
-        else if (today_date < regular9) {
-          expiry = regular9
-          confRelease = 'vyiswgcnhte'
-          confTrainingRelease = 'blb8sfmp6wo'
-          confPrice = 690
-          confTrainingPrice = '1,100'
-
-        }
-        else if (today_date < regular11) {
-          expiry = regular11
-          confRelease = 'r-hmndiwfty'
-          confTrainingRelease = 'xb-dbsahsge'
-          confPrice = 735
-          confTrainingPrice = '1,180'
-
-        }
-        else if (today_date < regular13) {
-          expiry = regular13
-          confRelease = 'gfl4k6pt7ya'
-          confTrainingRelease = 'nvxicfratku'
-          confPrice = 770
-          confTrainingPrice = '1,250'
-
-        }
-        else if (today_date < late) {
-          expiry = late
-          confRelease = 'dzyxl6pbu7y'
-          confTrainingRelease = 'o4e81imuxsy'
-          confPrice = 850
-          confTrainingPrice = '1,375'
-
-        }
-        else expired = true
-
-        return {
-          expiry,
-          confRelease,
-          confTrainingRelease,
-          confPrice,
-          confTrainingPrice
-        }
-      }
-
-
-      // get the expiry time
-      let details = getConfDetails();
-
-      window.onload = function () {
-        console.log(details);
-
-        var conferencePrice = document.getElementById("conference-price");
-        conferencePrice.innerHTML = "€" + details.confPrice;
-
-        var conferenceRelease = document.getElementById("conference-release");
-        conferenceRelease.setAttribute("releases", details.confRelease);
-
-        var conferenceTrainingPrice = document.getElementById("conference-training-price");
-        conferenceTrainingPrice.innerHTML = "€" + details.confTrainingPrice;
-
-        var conferenceTrainingRelease = document.getElementById("conference-training-release");
-        conferenceTrainingRelease.setAttribute("releases", details.confTrainingRelease);
-      }
-
-
-    </script>
-    <script src='https://js.tito.io/v1' async></script>
+    
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -213,6 +92,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/titov1.js"></script>
     {% include scripts/video-script.html %}
     {% include scripts/agenda_toggle.html %}
     
