@@ -5,22 +5,37 @@ layout: default
 <article>
   <header>
     <h2>{{ page.title }}</h2>
-    <span>
-      <i class="far fa-calendar-alt"></i>
-      <time datetime="{{page.date|date:" %F "}}">{{page.date|date:"%b %d, %Y"}}</time>
-    </span>
-    <br/>
-    <span class="category">
-      <i class="fas fa-tags"></i> {{ page.categories | category_links }}</span>
-    <br/>
-    <span class="author">
-      <i class="far fa-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
+    <div class="meta">
+      <span class="author">{% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
+      |
+      <span class="date"><time datetime="{{page.date|date:" %F "}}">{{page.date|date:"%b %d, %Y"}}</time></span>
+      <!-- <span>
+        <i class="far fa-calendar-alt"></i>
+        <time datetime="{{page.date|date:" %F "}}">{{page.date|date:"%b %d, %Y"}}</time>
+      </span>
+      <br/>
+      <span class="category">
+        <i class="fas fa-tags"></i> {{ page.categories | category_links }}
+      </span>
+      <br/>
+      <span class="author">
+        <i class="far fa-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}
+      </span> -->
+    </div>
   </header>
 
   <div class="entry">{{ content }}</div>
 
   
-  {% include forms/newslettersignup.html %} 
-
+  
 </article>
+</div>
+
+<div class="section forms-section">
+  <div class="container">
+    <h2>
+      Sign up to get notified about new articles
+    </h2>
+    {% include forms/newslettersignup.html %} 
+  </div>
 </div>

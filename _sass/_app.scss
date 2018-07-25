@@ -525,7 +525,17 @@ footer {
 }
 
 .blog {
-  font-size: 2rem ;
+  header {
+    padding-top:2rem;
+  }
+  .meta {
+    font-size: 0.8rem;
+  }
+  .entry {
+    padding-top: 2rem;
+    font-size: 1.4rem ;
+    padding-bottom: 2rem;
+  }
   // font-style: normal ;
   // font-weight: 400 ;
   // height: 165px ;
