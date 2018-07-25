@@ -6,9 +6,9 @@ date: '2018-06-21 16:16:01 0000'
 categories: blog
 permalink: 'blog/:title'
 author: Rory Madden
+canonical-url: >-
+  https://medium.com/@uxdxconf/uxdx-trends-across-europe-2018-agile-transformation-7e1d0b5a005b
 ---
-# UXDX Community 2018: Agile Transformation
-
 Throughout May and June UXDX ran mini community events in 8 different cities across Europe. The core concept was the same; break down the siloes with product development teams by bringing together different speakers, from UXers, designers, developers to product managers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
 
 1. Agile Transformation
