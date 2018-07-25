@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Product Vision
-date: {}
+date: '2018-07-25 10:46:00 0000'
 categories: blog
 permalink: 'blog/:title'
 author: Rory Madden
