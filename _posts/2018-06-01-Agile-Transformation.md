@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Agile Transformation
 date: '2018-06-21 16:16:01 0000'
