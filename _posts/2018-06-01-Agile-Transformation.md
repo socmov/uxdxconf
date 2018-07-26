@@ -32,9 +32,6 @@ Theory Y assumes that people are self-motivated to complete work and enjoy takin
 
 Most people say they know Theory X people but the vast majority believe that they themselves are Theory Y — something here is wrong, the math doesn't add up!
 
-
-Tony Grout, Enterprise Agile and DevOps Transformation Director for Atlassian
-
 Actually according to Tony, "there is no such thing as Theory X and Theory Y people, where they work is what makes the biggest difference". People react differently in different situations according to their environment. No company sets out to hire demotivated employees but the workplace structures and processes can remove the intrinsic motivation that people have. Unfortunately a lot of companies treat the symptoms of a demotivated workforce by layering on additional processes and checks to manage these untrustworthy employees. There is a psychological phenomenon known as the [Golem effect](https://en.wikipedia.org/wiki/Golem_effect) whereby when lower expectations are placed upon a person it lead to poorer performance. So this approach is, in fact, self fulfilling.
 
 > A bad system will beat a good person every time
@@ -101,4 +98,4 @@ In a future article, we will share the trends and approaches that people have ad
 UXDX Conferences are run to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the siloes within teams. UXDX provides a platform for teams to take the lessons which have been learned the hard way at other organisations to speed up your delivery.
 
 - Learn more about  [UXDX](http://www.uxdxconf.com/)
-- Early bird tickets ending for the  [UXDX Global Gathering](http://www.uxdxconf.com/).
+- Tickets on sale for [UXDX Dublin](http://www.uxdxconf.com/), October 2018.
