@@ -43,7 +43,7 @@ There is an opposite version of the Golem effect called the [Pygmalion effect](h
 
 Data is a very valuable, and highly sensitive, asset for companies; it can be used to understand the company's customers, its areas of excellence and its areas of weakness. Due to this, some companies are very restrictive in terms of who can access customer and analytical data which hinders the ability of product development teams to build the products that their customers actually want. In their talks [Lisa Trumpstedt](https://youtu.be/iMAIy-DhVE4) in Stockholm and  [Will Demaine](https://youtu.be/l1LeQ2ZFFX8) in London touched on this point from a product owner and a lead developer point of view respectively. Product teams are constantly facing choices about how to build their products. In order to be successful they need to understand the full details of their customers and their behaviours, how the product is meeting those needs today and where the weak points are that need to be resolved. A lot of the concerns can be dealt with through contractual obligations around sharing data, you just need to trust your people. To paraphrase a famous quote about training:
 
-**Security** : "What happens if we share customer data with our people and they leave"
+**Security** : "What happens if we share customer data with our people and they leave?"
 
 **Product** : "What happens if we don't, and they stay?"
 
