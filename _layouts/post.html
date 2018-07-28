@@ -4,9 +4,13 @@ layout: default
 <div class="container blog">
 <article>
   <header>
-    <h2>{{ page.title }}</h2>
+    <h1>{{ page.title }}</h1>
     <div class="meta">
-      <span class="author">{% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
+      <span class="author">
+        {%if page.author-href %}<a href="{{page.author-href}}">{% endif%}
+          {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}
+        {%if page.author-href %}</a>{% endif%}
+      </span>
       |
       <span class="date"><time datetime="{{page.date|date:" %F "}}">{{page.date|date:"%b %d, %Y"}}</time></span>
       <!-- <span>

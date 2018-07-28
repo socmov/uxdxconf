@@ -10,14 +10,7 @@
     <![endif]-->
 
     {% if page.canonical-url == nil %} 
-      {% capture canonical %}
-        {{ site.url }} 
-        {% if site.permalink contains '.html' %}
-          {{ page.url }}
-        {% else %}
-          {{ page.url | remove:'index.html' | strip_slash }}
-        {% endif %}
-      {% endcapture %}
+      {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
     {% else %} 
       {% assign canonical = page.canonical-url %} 
     {% endif %}

@@ -1,0 +1,41 @@
+--- 
+layout: default 
+permalink: /insights 
+url_slug: insights 
+title: UXDX Insights 
+conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
+---
+
+<div class="container blog-list">
+  <section>
+
+    <h1>UXDX Insights</h1>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <br>
+        <div class="meta">
+          <span class="author">
+            {% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}
+          </span>
+          |
+          <span class="date">
+            <time datetime="{{post.date|date:" %F "}}">{{post.date|date:"%b %d, %Y"}}</time>
+          </span>
+        </div>
+        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 350 }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+<div class="section forms-section">
+  <div class="container">
+    <h2>
+      Sign up to get notified about new articles
+    </h2>
+    {% include forms/newslettersignup.html %}
+  </div>
+</div>
