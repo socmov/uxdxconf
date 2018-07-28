@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Agile Transformation
+title: 'UXDX Community 2018: Agile Transformation'
 date: '2018-06-21 16:16:01 0000'
 categories: blog
 permalink: 'blog/:title'
