@@ -9,16 +9,7 @@ author: Rory Madden
 canonical-url: >-
   https://medium.com/@uxdxconf/uxdx-trends-across-europe-2018-agile-transformation-7e1d0b5a005b
 ---
-Throughout May and June UXDX ran mini community events in 8 different cities across Europe. The core concept was the same; break down the siloes with product development teams by bringing together different speakers, from UXers, designers, developers to product managers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
-
-1. Agile Transformation
-2. Product Vision
-3. Execution
-4. Launch
-
-# Agile Transformation
-
-Small, cross functional autonomous teams formed a part of nearly every talk at UXDX Europe. The benefits of this structure are being recognised in a number of companies but for those coming from more traditional enterprise backgrounds the ability to shift to this way of working might seem unachievable. A number of our talks touched on this subject and this leads us to our first trend from the conference series:  **Agile Transformation**.
+Small, cross functional autonomous teams formed a part of nearly every talk at the UXDX Community conferences. The benefits of this structure are being recognised in a number of companies but for those coming from more traditional enterprise backgrounds the ability to shift to this way of working might seem unachievable. A number of our talks touched on this subject and this leads us to our first trend from the conference series:  **Agile Transformation**.
 
 Tony Grout, Enterprise Agile and DevOps Transformation Director at Atlassian, gave a  [great talk](https://youtu.be/j5dXrSua57E) about his experience running agile transformations at Lloyds, Skype, Microsoft and in his current role at Atlassian. What is his formula for making an organisation agile? Trust, Purpose and Alignment. Easy! Although Tony was quite clear to highlight, this approach might seem simple at first it can be very challenging to implement.
 
@@ -97,3 +88,11 @@ UXDX Conferences are run to help teams accelerate product success. We believe th
 
 - Learn more about  [UXDX](http://www.uxdxconf.com/)
 - Tickets on sale for [UXDX Dublin](http://www.uxdxconf.com/), October 2018.
+
+# UXDX Community Series
+Throughout May and June 2018 UXDX ran mini community events in 8 different cities across Europe. The core concept was the same; break down the siloes with product development teams by bringing together different speakers, from UXers, designers, developers to product managers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
+
+1. Agile Transformation
+2. Product Vision
+3. Execution
+4. Launch
