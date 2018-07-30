@@ -55,10 +55,16 @@
       </a>
       
       <a class="navbar-brand" href="{{ site.baseurl }}/">UXDX Conf 2018</a>
-
-      {% assign conference = site.data.conferences | where: "id", page.conference %} 
-      {% assign conference = conference[0] %}
       
+      
+      {% if page.conference == nil %}
+        {% assign confId = layout.conference %}
+      {% else %}
+        {% assign confId = page.conference %}
+      {% endif %}
+      {% assign conference = site.data.conferences | where: "id", confId %} 
+      {% assign conference = conference[0] %}
+
       {% if conference.primary_menu[0].pages___buttons.size > 0 %}
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uxdxNav" aria-controls="uxdxNav"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +77,7 @@
     
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
-          {% for page in conference.primary_menu[0].pages___buttons %}
+          {% for page in conference.primary_menu[0].pages___buttons %}  
           <li class="nav-item">
             {% if page.url_slug == 'tickets' %}
             <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
