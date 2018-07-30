@@ -18,7 +18,7 @@ The aim of UXDX is to help people to implement the new theories that they learn 
 
 ## Defining the Problem
 
-In his talk, [Val Scholz, Head of Growth at Revolut](https://youtu.be/zlqoaWC1PfE), highlighted the problem of teams rushing to solutions. His teams spend 70-80% of their time researching the problem space before they start any implementation. This concept was echoed by numerous other speakers. It's easy to jump to solutions that we think will work but [research](http://ai.stanford.edu/~ronnyk/ExPThinkWeek2009Public.pdf) shows that up to two thirds of product decisions do not help to meet the goals of the product.
+In his talk, [Val Scholz, Head of Growth at Revolut](https://youtu.be/zlqoaWC1PfE){:target="_blank"}, highlighted the problem of teams rushing to solutions. His teams spend 70-80% of their time researching the problem space before they start any implementation. This concept was echoed by numerous other speakers. It's easy to jump to solutions that we think will work but [research](http://ai.stanford.edu/~ronnyk/ExPThinkWeek2009Public.pdf){:target="_blank"} shows that up to two thirds of product decisions do not help to meet the goals of the product.
 
 > "Up to two thirds of product decisions do not help to meet the goals of the product."
 
@@ -28,7 +28,7 @@ The more time a teams spends understanding the customer and the problem space th
 
 > The first step in recovery is admitting that you have a problem, and the first step in product development is admitting that you don't know the answers.
 
-To move forward, in the right direction, start by documenting your assumptions so you, and your team, can start designing experiments around validating these assumptions. This in turn will reduce the risk of building a product that customers don't want. [John Buckley, UX Designer at Frontend.com, gave a talk](https://youtu.be/Jm8CcOUwcbQ) where he advocated documenting your assumptions in three key areas:
+To move forward, in the right direction, start by documenting your assumptions so you, and your team, can start designing experiments around validating these assumptions. This in turn will reduce the risk of building a product that customers don't want. [John Buckley, UX Designer at Frontend.com, gave a talk](https://youtu.be/Jm8CcOUwcbQ){:target="_blank"} where he advocated documenting your assumptions in three key areas:
 
 1. your customers and their needs
 2. the business model behind the product
