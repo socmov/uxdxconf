@@ -10,11 +10,11 @@ published: true
 ---
 One of the misconceptions about agile is that you don't need to plan - you can react and change as you go. However, product planning is just as important in an agile context as in traditional waterfall environments.
 
-In the previous article on [Agile Transformation](https://uxdxconf.com/blog/UXDX-Community-Agile-Transformation), we discussed the benefit of having a goal and principles for your product. A visible and inspiring goal helps to motivate the team to work hard to reach the goal by instilling a sense of purpose into their work. However the purpose of agoal is the outcome you are trying to achieve. While a goal meets its need of inspiring the team it is too high level to provide the necessary direction for a team as they move into implementation.
+In the previous article on [Agile Transformation](https://uxdxconf.com/blog/UXDX-Community-Agile-Transformation), we discussed the benefit of having a goal and principles for your product. A visible and inspiring goal helps to motivate the team to focus and commit by instilling a sense of purpose into their work. However a good goal describes the outcome you are trying to achieve, which is too high level to provide the necessary direction for a team as they move into implementation.
 
 This is where the product vision comes in. The vision process is where the team take a step back from the details of the product to spend time understanding the problem, ideating on solutions and defining the high level experimentation roadmap for delivery. Unlike the Design phase of a Waterfall process, the Vision process is an ongoing, iterative activity throughout the life of a product.
 
-The aim of UXDX is to help people to implement the new theories that they learn so we ask all of our speakers to demonstrate how to put the theories into practice. I've collated some of the approaches that our UXDX Europe speakers have taken to defining their product vision below.
+The aim of UXDX is to help people to implement the new theories that they learn so we ask all of our speakers to demonstrate how to put the theories they advocate into practice. I've collated some of the approaches that our UXDX Community speakers have taken to defining their product vision below.
 
 ## Defining the Problem
 
@@ -56,7 +56,7 @@ For those interested in learning more about Design Sprints or the Jobs to be Don
 
 ## Product Roadmap
 
-Having spent the time understanding the problem space and running a number of research experiments to validate your assumptions you should now be in a good position to start defining the solution for the problem(s) that your customers are facing. This is where most teams move towards the Minimum Viable Product. Unfortunately this term has become overused and misunderstood which has led to poor implementation approaches. These challenges were the next set of trends that the talks at UXDX Europe addressed.
+Having spent the time understanding the problem space and running a number of research experiments to validate your assumptions you should now be in a good position to start defining the solution for the problem(s) that your customers are facing. This is where most teams move towards the Minimum Viable Product. Unfortunately this term has become overused and misunderstood which has led to poor implementation approaches. These challenges were the next set of trends that the UXDX Community talks addressed.
 
 ### Shared Understanding of the Problem
 
