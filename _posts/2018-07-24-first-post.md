@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Product Vision
-date: '2018-07-25 10:46:00 0000'
+title: 'UXDX Community 2018: Product Vision'
+date: '2018-07-30 18:11:00 0000'
 categories: blog
 permalink: 'blog/:title'
 author: Rory Madden
