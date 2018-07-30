@@ -16,6 +16,7 @@
   {% if section.image_rows.size > 0 %} image_rows-section {% endif %}
   {% if section.form.size > 0 %} forms-section {% endif %}
   {% if section.agenda.size > 0 %} agenda-section {% endif %}
+  {% if section.blog_list.size > 0 %} blog-list-section {% endif %}
   {% if section.video_playlist.size > 0 %} video_playlist-section {% endif %}">
 
   {% if section.image_rows.size == 0 %}
@@ -175,6 +176,13 @@
     {% include components/horizontalCard.html item=horizontal_content %}
    {% endfor %}
    {% endif %}
+
+    <!-- BLOG LIST CONTENT -->
+    {% if section.blog_list.size > 0 %} 
+    {% for blog_list in section.blog_list %}
+      {% include components/blog-list.html item=blog_list %}
+    {% endfor %}
+    {% endif %} 
 
   {% if section.image_rows.size == 0 %}
   </div>
