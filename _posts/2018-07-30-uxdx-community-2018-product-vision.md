@@ -120,7 +120,7 @@ UXDX Conferences are run to help teams accelerate product success. We believe th
 
 Throughout May and June 2018 UXDX ran mini community events in 8 different cities across Europe. The core concept was the same; break down the siloes with product development teams by bringing together different speakers, from UXers, designers, product managers and developers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
 
-- [Agile Transformation](https://uxdxconf.com/blog/UXDX-Community-Agile-Transformation)
+- [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
 - Product Vision
 - Execution
 - Launch
