@@ -553,6 +553,9 @@ footer {
     padding-top: 2rem;
     font-size: 1.4rem ;
     padding-bottom: 2rem;
+    h2, h3 {
+      padding-top:2rem;
+    }
   }
   blockquote {
     border-left: 3px solid rgba(0,0,0,.84);
