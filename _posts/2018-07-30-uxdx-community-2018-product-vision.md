@@ -10,7 +10,7 @@ published: true
 ---
 One of the misconceptions about agile is that you don't need to plan - you can react and change as you go. However, product planning is just as important in an agile context as in traditional waterfall environments.
 
-In the previous article on [Agile Transformation](https://uxdxconf.com/blog/UXDX-Community-Agile-Transformation), we discussed the benefit of having a goal and principles for your product. A visible and inspiring goal helps to motivate the team to focus and commit by instilling a sense of purpose into their work. However a good goal describes the outcome you are trying to achieve, which is too high level to provide the necessary direction for a team as they move into implementation.
+In the previous article on [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation), we discussed the benefit of having a goal and principles for your product. A visible and inspiring goal helps to motivate the team to focus and commit by instilling a sense of purpose into their work. However a good goal describes the outcome you are trying to achieve, which is too high level to provide the necessary direction for a team as they move into implementation.
 
 This is where the product vision comes in. The vision process is where the team take a step back from the details of the product to spend time understanding the problem, ideating on solutions and defining the high level experimentation roadmap for delivery. Unlike the Design phase of a Waterfall process, the Vision process is an ongoing, iterative activity throughout the life of a product.
 
