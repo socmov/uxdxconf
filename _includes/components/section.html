@@ -8,6 +8,7 @@
   {{section.codename}}
   
   {% if section.cards.size > 0 %} cards-section {% endif %}
+  {% if section.training-cards.size > 0 %} cards-section {% endif %}
   {% if section.testimonials.size > 0 %} testimonials-section {% endif %}
   {% if section.ticket_widget.size > 0 %} tickets-section
   {% elsif section.buttons___widget.size > 0 %} buttons-section {% endif %}
@@ -42,6 +43,16 @@
         {% else %}
         {% include components/card.html card=card cards-size=size %}
         {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %} 
+
+    <!-- TRAINING CARDS -->
+    {% if section.training-cards.size > 0 %}
+    <div class="d-flex justify-content-around flex-wrap">
+      {% assign size = section.training-cards.size %}
+      {% for card in section.training-cards %}
+        {% include components/trainingCard.html card=card cards-size=size %}
       {% endfor %}
     </div>
     {% endif %} 
