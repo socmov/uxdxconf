@@ -17,7 +17,7 @@
 
     <!-- show speaker info -->
     {% if include.card.trainers.size > 0 %}
-    <div class="trainer-details">>
+    <div class="trainer-details">
       <div class="schedule__grid__event__photos">
         {% if include.card.trainers.size == 1 %}
           <img src="{{include.card.trainers[0].profile_picture[0].url}}" alt="{{include.card.trainers[0].first_name}} {{include.card.trainers[0].last_name}}, {{include.card.trainers[0].job_title}}"
