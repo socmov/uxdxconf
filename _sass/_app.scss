@@ -45,30 +45,35 @@ table {
       @extend .card-link;
     }
   }
-  .schedule__grid__event__photos {
-    max-width: 80px;
-    min-width: 80px;
-    img.profile_picture {
-      width: 50px;
-      height: 50px;
-      margin-top: 0.5rem;
-      margin-right: 1rem;
+  .trainer-details {
+    padding: 10px 20px;
+    // border-bottom: 1px dashed #333;
+    border-top: 1px dashed #333;
+    .schedule__grid__event__photos {
+      max-width: 80px;
+      min-width: 80px;
+      img.profile_picture {
+        width: 50px;
+        height: 50px;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+      }
+      img.company_logo {
+        max-width: 50px;
+        max-height: 30px;
+      }
     }
-    img.company_logo {
-      max-width: 50px;
-      max-height: 30px;
-    }
-  }
-  .schedule__grid__event__details {
-    flex-grow: 1;
-    .schedule__grid__event__title {
-      @extend .h5;
-    }
-    
-    .schedule__grid__event__speakers {
-      font-size: 1rem;
-      span.company {
-        font-weight: 700;
+    .schedule__grid__event__details {
+      flex-grow: 1;
+      .schedule__grid__event__title {
+        @extend .h5;
+      }
+      
+      .schedule__grid__event__speakers {
+        font-size: 1rem;
+        span.company {
+          font-weight: 700;
+        }
       }
     }
   }
