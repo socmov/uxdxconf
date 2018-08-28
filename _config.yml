@@ -77,3 +77,35 @@ include: ["_pages"]
 #     scope: 
 #       path: "speakers/"
 #       type
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'https://uxdxconf.com/'
+  media: 'images'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "categories"
+        field:
+          element: "text"
+          label: "Categories"
+          value: "blog"
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          value: "Rory Madden"
+    _posts/static:
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: "blog/:title"
