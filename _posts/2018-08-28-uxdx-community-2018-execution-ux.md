@@ -5,6 +5,7 @@ date: '2018-08-28 18:45:00 0000'
 categories: blog
 permalink: 'blog/:title'
 author: Rory Madden
+title: 'UXDX Community 2018: Execution: UX'
 ---
 In the previous article on [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision) we discussed spending time understanding the problem, designing your experiments and mapping out your high level product roadmap. Now it’s time to start implementation. 
 
