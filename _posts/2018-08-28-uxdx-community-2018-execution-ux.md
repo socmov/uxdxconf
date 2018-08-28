@@ -18,7 +18,7 @@ In fact the counter point is true as well - it’s hard to stick to a plan if yo
 
 The goal, therefore, is to keep learning the entire way through the development cycle. This is achieved by delivering incrementally, staying focused on the outcome to be achieved and remaining flexible in our solutions. Another key point is that we need to recognise that creativity exists everywhere in the delivery team - it’s not just the responsibility of the product department. The challenge that teams face is not knowing how to tap into that creativity. This is where the UXDX model comes in. By incorporating UX into the product delivery lifecycle it ensures that teams are constantly experimenting and updating assumptions about customers so that course corrections can be adopted quickly. 
 
-![uxdx-model.svg]({{site.baseurl}}/uxdx-model.svg)
+![uxdx-model.png]({{site.baseurl}}/_posts/uxdx-model.png)
 
 # UX
 ## Team Engagement
@@ -28,8 +28,7 @@ The second approach was to do staggered UX -> Dev cycles. In essence this was an
 
 The current approach that the team use is a dual track agile approach. In this process there are representatives from the dev team taking part throughout the discovery process as well as UX team members taking part in the development phase. One great side effect of this approach is that the product owner is able to start working with outcomes for the whole team. Previously the UX team were given outcomes but the development teams were given features. Now that the development team are involved in the discovery process they understand the outcomes to be achieved and this is the driver for the development rather than feature specifications. 
 
-![uxdx-model-ux.svg]({{site.baseurl}}/uxdx-model-ux.svg)
-
+![udxd-model-research.png]({{site.baseurl}}/_posts/udxd-model-research.png)
 
 ## Research
 There were a number of great talks about doing high quality research, but the question that came up most frequently was “how much research is enough?”. Consensus from attendees was that the time allocated is always shorter than what is needed. While not the answer that most people will be looking for [Paul Adams from Intercom](https://vimeo.com/275265188) gave a great response to this question:  “A product now is worth more to a company than a better product in a few months”. His point is that companies need to trade off doing the perfect amount of research with doing enough to get the product to market and get revenue coming in. Once the product is out there, you can keep iterating on it and continuously improve it. To be celar, Paul was making this point about developing a feature that the competition already had in place. There are clear arguments for more upfront research when the market and solution are uncertain but the key point is that there is no ‘one-size-fits-all’ answer for the question of how much research is enough. You will likely have less time than you would like so the challenge is to make the time you do have as efficient as possible.
@@ -50,6 +49,8 @@ Another challenge that people discussed was where to find customers for their re
 ### Freshness
 The benefit of fresh research is clear. The quicker development teams can act on the insights from research the better the results. Research goes stale over time as customer demands change and the market shifts. Another benefit of quicker releases is that the team can more effectively isolate individual changes and assess their impact in isolation. Linked with an effective A/B testing strategy the team can gain valuable insights into their customers and really optimise for learning. 
 
+![uxdx-model-hypothesis.png]({{site.baseurl}}/_posts/uxdx-model-hypothesis.png)
+
 ## Hypothesis
 The hypothesis session is at the core of outcome driven development. [Research at Bing](http://ai.stanford.edu/~ronnyk/ExPThinkWeek2009Public.pdf) shows that as little as 20-30% of product ideas have the desired effect and up to 33% of ideas can have a negative effect on your product. Unfortunately there is no way of knowing, definitively, which features will work ahead of time, and product teams need to accept this in order to deliver great products. The first step in product development is admitting that you don’t know the answers. 
 
@@ -58,6 +59,8 @@ The hypothesis session is at the core of outcome driven development. [Research a
 This is where the hypothesis session comes in. In these sessions the full team come together to tackle an outcome that the business is trying to achieve. The team ideate on potential solutions to deliver on the highlighted outcome using the research that has been conducted. The [assumptions document](https://uxdxconf.com/blog/uxdx-community-2018-product-vision) should be referenced and updated in these sessions so that the team can take advantage of previous learnings and track the new assumptions and experiments that they will be conducting. The final step of the hypothesis session is to rank the ideas on an impact versus cost basis and select the top ideas for implementation.
 
 As Tuomas and Noe highlighted in their team structure talk if the development team are excluded from the discovery process it will lead to handover problems like miscommunication, invalid assumptions and ultimately invalid decisions made in good faith. By including the full team you also get to tap into the insights and creativity of a larger group of people. The key thing here to remember is that you do not need to achieve consensus on ideas. The Product Owner is ultimately responsible for deciding on the experiments that will be run but by gathering feedback from the entire team people are more likely to buy into the decisions and understand the reasoning behind their selection. 
+
+![uxdx-model-prototype.png]({{site.baseurl}}/_posts/uxdx-model-prototype.png)
 
 ## Prototype
 > “You can use an eraser on the drafting table or a sledge hammer on the construction site.” - [Tweet This](https://ctt.ac/098x7)
