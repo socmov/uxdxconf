@@ -102,25 +102,17 @@ Management communication is key for two reasons; trust and feedback. Managing by
 
 In terms of feedback, while HIPPO is considered a negative term it must be remembered that the management team are aligned closer with the company direction and are in regular contact with customers so they are more informed in a number of areas, and critically, they know what their customers will pay for. While we need to avoid HIPPO feature specification we need to take these insights seriously and design experiments around validating them.
 
-## From Vision to Execution
+# From Vision to Execution
 
 So having spent the time understanding the problem, designing your experiments and mapping out your high level product roadmap it's now time to start implementation.
 
 In the next article in our series we will share the latest trends that teams are using to execute on their vision, covering the full UXDX Model of activities across UX and Development.
 
-## What is UXDX?
-
-UXDX Conferences are run to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. UXDX provides a platform for teams to take the lessons which have been learned the hard way at other organisations to speed up your delivery.
-
-[Learn more about UXDX](https://uxdxconf.com)
-
-[Tickets on Sale for UXDX](https://uxdxconf.com/tickets)
-
-### UXDX Community
-
-Throughout May and June 2018 UXDX ran mini community events in 8 different cities across Europe. The core concept was the same; break down the siloes with product development teams by bringing together different speakers, from UXers, designers, product managers and developers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
+## UXDX Community
+[UXDX](https://uxdxconf.com) has a mission to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; bring together different speakers, from UXers, designers, product managers and developers, to give insights across the whole product life-cycle. This series of blogs will go through the trends uncovered during the events.
 
 - [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
-- Product Vision
-- Execution
+- [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
+- [Execution: UX](https://uxdxconf.com/blog/uxdx-community-2018-execution-ux)
+- [Execution: DX](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx)
 - Launch
