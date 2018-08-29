@@ -2,7 +2,7 @@
 layout: post
 categories: blog
 author: Rory Madden
-published: false
+published: true
 title: 'UXDX Community 2018: Execution : DX'
 date: '2018-08-29 19:45:00 0000'
 ---
@@ -10,7 +10,7 @@ In the last post we shared the [key trends in the UX space](https://uxdxconf.com
 
 # Sharing Prototypes
 
-> “Bringing the development team into the discovery phase will reduce miscommunication” - Tweet this
+> “Bringing the development team into the discovery phase will reduce miscommunication” - <a href="https://ctt.ac/N7UvD" target="_blank">Tweet This</a> 
 
 Bringing the development team into the discovery phase will reduce miscommunication but there is still a need to share the feature designs with the developers. [Oscar Nilsson, Experience Designer at Minecraft](https://youtu.be/ueanfQXFtLo), recommends optimising your handover to the development team in the following key areas:
 
@@ -28,7 +28,7 @@ Fantasy data, while useful for populating a design can mask some of the challeng
 ## Focus on the Outcome
 There is a risk that as teams move into the build stage the focus on outcomes is replaced with the process of building the features. This is dangerous as, over time, people may forget the reason about why we’re building something and invalid assumptions creep in leading to well intentioned but incorrect decisions. 
 
-> “If you’re not watchful, the process can become the thing. The process becomes the proxy for the result you want” Jeff Bezos - Tweet This
+> “If you’re not watchful, the process can become the thing. The process becomes the proxy for the result you want” Jeff Bezos - <a href="https://ctt.ac/m5N1E" target="_blank">Tweet This</a>
 
 This is where Hypothesis Driven Development (HDD) comes in. HDD is a way of writing user stories that keeps the focus on the outcome. THe format is almost identical to traditional stories except for two key aspects. THe first is that the stories are phrased “I believe that” which removes the fallacy that we know for sure what the effect will be. The second is that the stories end with “And I’ll know I’m right when …”. The metric that we are trying to measure should be placed here. This ties the story back to the outcome that we are trying to achieve and it gives us a great way of comparing our expectations against reality after a feature is released.  
 
@@ -40,7 +40,7 @@ When it comes to development there is the famous line that there are three choic
 
 Refactoring is the term that development teams use to tidy up the code base. In essence it involves rewriting working code to make it easier to maintain. Unfortunately whenever you edit code there is a risk of breaking things that are already working. However, the more you put off refactoring the messier the code becomes which increases the risk of things. The earlier and more regularly that you maintain your code the less impact it will have on your customers. Given the importance of refactoring teams have identified a path forward: (Acceptance) Test Driven Development. The core concept is to write tests to validate a feature before you write the code in the first place. Nik Crabtree, Lead Principal Software Developer at ASOS gave a talk on [the benefits of ATDD](https://youtu.be/IpBXhOzoPsU) including the core concept of Red, Green, Refactor. The idea behind Acceptance Test Driven Development (ATDD) is that you write a test for a feature that doesn’t exist (Red - because the test will fail), then you write the simplest piece of code to make the test pass (Green) and the final step is to edit the code more maintainable over time (Refactor). Writing these tests introduces an initial overhead for teams but the benefit is that teams can know immediately if they have broken something during a refactor as the tests start to fail. In addition to the safety benefits, some teams report increases in efficiency as the tests make them more focussed in writing the initial code.
 
-> TDD gives developers the freedom to properly maintain their code - Tweet this
+> "TDD gives developers the freedom to properly maintain their code" - <a href="https://ctt.ac/5w5E0" target="_blank">Tweet This</a>
 
 ## Continuous Improvement
 The final trend from the UXDX community sessions was that struggle that a lot of teams face where they know there are things that they can improve but they are constantly rushing from one deadline to the next, doomed to replicate the same mistakes again and again. This is known as Survivorship mode, according to Roy Osherove, author of Elastic Leadership: Growing Self-Organising Teams. [Fabrizio Fortunato, Head of Frontend at Ryanair](https://youtu.be/epfwPgm8R9o) talked about how team leads should aligning their style of leadership based on the mode that the team is working in. The goal of this approach is to help teams move from Survivorship to Learning mode, where they can analyse their practices, identify alternate approaches to problems, and ultimately become Self-Organising.
@@ -52,11 +52,11 @@ The testing sessions that we held prompted the most questions so there is clearl
 
 ## The Test Pyramid
 ![test-pyramid.png]({{site.baseurl}}/images/test-pyramid.png)
-Credit:[Martin Fowler](https://martinfowler.com/bliki/TestPyramid.html)
+_Credit:[Martin Fowler](https://martinfowler.com/bliki/TestPyramid.html)_
 
 The test pyramid is a concept that separates tests into three categories: Unit tests (tests for isolated pieces of code), Integration Tests (tests that combine multiple pieces of code to validate that they work together), and UI tests (tests which validate the end-to-end flow for a customer through the User Interface). The test triangle is named as it advocates having a lot of Unit tests (very quick), less Integration tests (not as quick) and even fewer UI tests (very slow). This is definitely best practice if you are starting out with a new product but if you have an existing product in place where should you start? Russell Sim, Test Engineer at Zendesk touched on this in his talk on [Improving the tools and processes in DevOps](https://youtu.be/pPGAvwlnkz0). Recognising that some products have no coverage at all, Russell recommended inverting the test pyramid: start building out full coverage across your UI tests as these will give you the best short term rewards. Over time you can redress the balance in your tests, while ensuring high quality.
 
-> “If you want to get automated testing coverage on an existing product inver the test pyramid and start with UI tests” - Tweet this
+> “If you want to get automated testing coverage on an existing product invert the test pyramid and start with UI tests” - <a href="https://ctt.ac/64dV8" target="_blank">Tweet This</a> 
 
 ## Developers writing tests
 We touched on ATDD in the Build section, which is a great method of building a regression test suite for your product, however it should not be relied upon to provide full coverage. The tests that developers write will follow happy paths and only include a small sample of data variations. The test team will be responsible for testing more edge cases and data variations to ensure a more robust and high quality product. 
@@ -78,7 +78,7 @@ Previously developers didn’t pay too much attending to hardware but the large 
 ## Continuous Improvement: Where is the Value?
 New tools and processes enable even further ideas that once didn’t seem possible. Automation removes so many of the previous problems that the purpose of having different environments for different stages of testing is being brought into question. Some teams are starting to question the need for pre-production environments completely. Natalia Bartol and Fabio Cognigni from Hudson Bay Company, gave a talk on [No Risk, no reward. The joys of testing in Production](https://youtu.be/e2x-IUSo3sI). The team reviewed the challenges that they faced in their pre-production environments from configuration synchronisation, to valid data setup, to third party service predictability. In this instance the solution the team came up with was that it would be more efficient, and higher quality, to release code straight to production and test it there. Hudson Bay Company manage a platform product that support multiple brands such as Saks Fifth Avenue, Galeria Kaufhof, Gilt and more. Each brand is isolated from the other on the platform so the team created a new company just for testing. Code is released to this brand where is is tested under more real-world conditions. Once everything passes the code is released to other brands. When teams are in learning mode many different solution to previously challenging problems can appear.
 
-> “When teams are in learning mode many different solution to previously challenging problems can appear.” - Tweet this 
+> “When teams are in learning mode many different solution to previously challenging problems can appear.” - <a href="https://ctt.ac/VZ3s5" target="_blank">Tweet This</a> 
 
 # Deploy
 ![uxdx-model-deploy.png]({{site.baseurl}}/images/uxdx-model-deploy.png)
@@ -90,14 +90,14 @@ There are numerous benefits to releasing frequently from reducing the risk of th
 
 The tools and techniques to automate code migrations across the non-production environments can help with deployments but since your customers are using your production product so you can’t just build a new environment and tear down the old one like you can with your other environments. You can do something similar to that though. With Blue/Green or Canary releases you build a new production stack which includes your new feature and then you start migrating traffic in stages across to the new stack. This piecemeal migration enables teams to verify everything is working while impacting only a small percentage of customers. If problems arise all of the traffic reverts to the old instance and the issues are investigated. Once all of the traffic is migrated to the new environment you can retire the old stack. As teams start to release more frequently even this gradual migration process becomes automated. The only need for human intervention is when one of the health metrics being monitored drops and the code needs to be investigated.
 
-> Deployments used to be big events but as teams automate more and release more frequently they become routine and boring! - Tweet this 
+> "Deployments used to be big events but as teams automate more and release more frequently they become routine and boring!" - <a href="https://ctt.ac/4UOaF" target="_blank">Tweet This</a> 
 
 # Monitor
 ![uxdx-model-monitor.png]({{site.baseurl}}/images/uxdx-model-monitor.png)
 
 The final step in the UXDX cycle is where the real learning comes in. Having specified your assumptions and experiments up front you can track customer behaviours and prove or disprove your hypothesis . Not every idea will work but the key thing is that you will have uncovered this before investing many more months building more complex iterations of a feature. 
 
-> Build-Measure-Learn - the simple process that leads to amazing products. - Tweet this
+> Build-Measure-Learn - the simple process that leads to amazing products. - <a href="https://ctt.ac/gCP7_" target="_blank">Tweet This</a>
 
 # From Delivery to Use
 You've built an amazing product. But where are the customers. The final section of the UXDX community series will touch on the talks that people gave around raising awareness for their products, but also how to keep people engaged and promote feature discovery once they are engaged.
