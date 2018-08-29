@@ -1,6 +1,6 @@
 ---
-published: true
 layout: post
+published: true
 date: '2018-08-28 18:45:00 0000'
 categories: blog
 permalink: 'blog/:title'
@@ -83,20 +83,11 @@ Prototypes are great for validating concepts quickly but the work often needs to
 # From Design to Delivery
 Having done the due diligence in defining the best solution for the outcome that you are trying to achieve it is now time to start building it. Continue reading at Execution: DX
 
-# What is UXDX?
-
-UXDX Conferences are run to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. UXDX provides a platform for teams to take the lessons which have been learned the hard way at other organisations to speed up your delivery.
-
-[Learn more about UXDX](https://uxdxconf.com)
-
-[Tickets on Sale for UXDX](https://uxdxconf.com/tickets)
-
 ## UXDX Community
-
-Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; break down the silos with product development teams by bringing together different speakers, from UXers, designers, product managers and developers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
+[UXDX](https://uxdxconf.com) has a mission to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; bring together different speakers, from UXers, designers, product managers and developers, to give insights across the whole product life-cycle. This series of blogs will go through the trends uncovered during the events.
 
 - [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
 - [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
 - Execution: UX
-- Execution: DX
+- [Execution: DX](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx)
 - Launch
