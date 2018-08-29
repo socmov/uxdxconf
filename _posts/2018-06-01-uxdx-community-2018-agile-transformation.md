@@ -1,6 +1,6 @@
 ---
-published: true
 layout: post
+published: true
 title: 'UXDX Community 2018: Agile Transformation'
 date: '2018-06-21 16:16:01 0000'
 categories: blog
@@ -82,17 +82,11 @@ The challenge that you will encounter is that while people may love change peopl
 
 In a future article, we will share the trends and approaches that people have adopted to implement these changes in their organisations.
 
-# What is UXDX?
+## UXDX Community
+[UXDX](https://uxdxconf.com) has a mission to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; bring together different speakers, from UXers, designers, product managers and developers, to give insights across the whole product life-cycle. This series of blogs will go through the trends uncovered during the events.
 
-UXDX Conferences are run to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the siloes within teams. UXDX provides a platform for teams to take the lessons which have been learned the hard way at other organisations to speed up your delivery.
-
-- Learn more about  [UXDX](http://www.uxdxconf.com/)
-- Tickets on sale for [UXDX Dublin](http://www.uxdxconf.com/tickets), October 2018.
-
-# UXDX Community Series
-Throughout May and June 2018 UXDX ran mini community events in 8 different cities across Europe. The core concept was the same; break down the siloes with product development teams by bringing together different speakers, from UXers, designers, developers to product managers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
-
-1. Agile Transformation
-2. [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
-3. Execution
-4. Launch
+- [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
+- [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
+- [Execution: UX](https://uxdxconf.com/blog/uxdx-community-2018-execution-ux)
+- [Execution: DX](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx)
+- Launch
