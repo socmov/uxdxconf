@@ -24,6 +24,7 @@ Re-use saves time so try to limit the use of one-off components. If an existing 
 Fantasy data, while useful for populating a design can mask some of the challenges that your designs encounter real data. There are a number of tools that let you import data so its likely that your prototyping tool enables this. This step can help to identify bugs that otherwise would be found much later in development, when its more expensive to fix them. 
 
 # Build
+![uxdx-model-build.png]({{site.baseurl}}/images/uxdx-model-build.png)
 ## Focus on the Outcome
 There is a risk that as teams move into the build stage the focus on outcomes is replaced with the process of building the features. This is dangerous as, over time, people may forget the reason about why we’re building something and invalid assumptions creep in leading to well intentioned but incorrect decisions. 
 
@@ -45,6 +46,8 @@ Refactoring is the term that development teams use to tidy up the code base. In 
 The final trend from the UXDX community sessions was that struggle that a lot of teams face where they know there are things that they can improve but they are constantly rushing from one deadline to the next, doomed to replicate the same mistakes again and again. This is known as Survivorship mode, according to Roy Osherove, author of Elastic Leadership: Growing Self-Organising Teams. [Fabrizio Fortunato, Head of Frontend at Ryanair](https://youtu.be/epfwPgm8R9o) talked about how team leads should aligning their style of leadership based on the mode that the team is working in. The goal of this approach is to help teams move from Survivorship to Learning mode, where they can analyse their practices, identify alternate approaches to problems, and ultimately become Self-Organising.
 
 # Test
+![uxdx-model-test.png]({{site.baseurl}}/images/uxdx-model-test.png)
+
 The testing sessions that we held prompted the most questions so there is clearly a lot of interest in the quality space. Scott Riseborough gave a fantastic talk on [Manual versus Automated testing](https://youtu.be/5w57In8lSPQ) at UXDX London. Manual testing has a bad reputation but as Scott explained there is a no single right approach for every situation. Manual testing is cheaper in the short term, it’s more flexible to change and people can often come up with creative solutions to problems. When you are testing something new, and particularly if you’re not sure you will need to support it long term, manual testing can be the best solution. However if you are building something that will need to be tested repeatedly and for an extended period then automation is the way to go. 
 
 ## The Test Pyramid
@@ -59,6 +62,8 @@ The test pyramid is a concept that separates tests into three categories: Unit t
 We touched on ATDD in the Build section, which is a great method of building a regression test suite for your product, however it should not be relied upon to provide full coverage. The tests that developers write will follow happy paths and only include a small sample of data variations. The test team will be responsible for testing more edge cases and data variations to ensure a more robust and high quality product. 
 
 # Release
+![uxdx-model-release.png]({{site.baseurl}}/images/uxdx-model-release.png)
+
 The release train involves migrating the code that you want to deploy through a number of pre-production environments where different sets of tests are executed against the code to validate that everything works as expected. This process used to be very manual, time consuming and error prone.  
 
 ## Automated Environments: Infrastructure as Code
@@ -76,6 +81,8 @@ New tools and processes enable even further ideas that once didn’t seem possib
 > “When teams are in learning mode many different solution to previously challenging problems can appear.” - Tweet this 
 
 # Deploy
+![uxdx-model-deploy.png]({{site.baseurl}}/images/uxdx-model-deploy.png)
+
 After all of the hard work it’s now time to get your new features into the hands of your customers. 
 
 ## Frequent Deployments
@@ -86,6 +93,8 @@ The tools and techniques to automate code migrations across the non-production e
 > Deployments used to be big events but as teams automate more and release more frequently they become routine and boring! - Tweet this 
 
 # Monitor
+![uxdx-model-monitor.png]({{site.baseurl}}/images/uxdx-model-monitor.png)
+
 The final step in the UXDX cycle is where the real learning comes in. Having specified your assumptions and experiments up front you can track customer behaviours and prove or disprove your hypothesis . Not every idea will work but the key thing is that you will have uncovered this before investing many more months building more complex iterations of a feature. 
 
 > Build-Measure-Learn - the simple process that leads to amazing products. - Tweet this
@@ -93,16 +102,9 @@ The final step in the UXDX cycle is where the real learning comes in. Having spe
 # From Delivery to Use
 You've built an amazing product. But where are the customers. The final section of the UXDX community series will touch on the talks that people gave around raising awareness for their products, but also how to keep people engaged and promote feature discovery once they are engaged.
 
-# What is UXDX?
-
-UXDX Conferences are run to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. UXDX provides a platform for teams to take the lessons which have been learned the hard way at other organisations to speed up your delivery.
-
-[Learn more about UXDX](https://uxdxconf.com)
-[Tickets on Sale for UXDX](https://uxdxconf.com/tickets)
 
 ## UXDX Community
-
-Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; break down the silos with product development teams by bringing together different speakers, from UXers, designers, product managers and developers, to give insights on their focus within the product life-cycle. The beauty of this was the ability to identify the themes and trends being repeated in the more than 40 different companies that presented. Our team were overwhelmed with the insights that we got from the cities, and this series of blogs will go through these trends.
+[UXDX](https://uxdxconf.com) has a mission to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; bring together different speakers, from UXers, designers, product managers and developers, to give insights across the whole product life-cycle. This series of blogs will go through the trends uncovered during the events.
 
 - [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
 - [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
