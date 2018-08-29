@@ -81,7 +81,7 @@ Once usability has been validated it is time to put the icing on top. Animations
 Prototypes are great for validating concepts quickly but the work often needs to be replicated by the development teams. If you have a large and long lived product investing in the creation of a live style guide with standardised components can return dividends. The prototypes that you build can be picked up directly by the development team reducing the time to market considerably. 
 
 # From Design to Delivery
-Having done the due diligence in defining the best solution for the outcome that you are trying to achieve it is now time to start building it. Continue reading at Execution: DX
+Having done the due diligence in defining the best solution for the outcome that you are trying to achieve it is now time to start building it. Continue reading at [Execution: DX](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx)
 
 ## UXDX Community
 [UXDX](https://uxdxconf.com) has a mission to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; bring together different speakers, from UXers, designers, product managers and developers, to give insights across the whole product life-cycle. This series of blogs will go through the trends uncovered during the events.
