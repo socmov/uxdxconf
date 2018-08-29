@@ -106,7 +106,7 @@ In terms of feedback, while HIPPO is considered a negative term it must be remem
 
 So having spent the time understanding the problem, designing your experiments and mapping out your high level product roadmap it's now time to start implementation.
 
-In the next article in our series we will share the latest trends that teams are using to execute on their vision, covering the full UXDX Model of activities across UX and Development.
+In the next article in our series we will share the latest trends that teams are using to execute on their vision, covering the full UXDX Model of activities across [UX](https://uxdxconf.com/blog/uxdx-community-2018-execution-ux) and [Development](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx).
 
 ## UXDX Community
 [UXDX](https://uxdxconf.com) has a mission to help teams accelerate product success. We believe that this is done by incorporating UX into the product lifecycle and breaking down the silos within teams. Throughout May and June 2018 UXDX ran community events in 8 different cities across Europe. The core concept was the same; bring together different speakers, from UXers, designers, product managers and developers, to give insights across the whole product life-cycle. This series of blogs will go through the trends uncovered during the events.
