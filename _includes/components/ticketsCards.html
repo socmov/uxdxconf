@@ -100,20 +100,61 @@
   // get the expiry time
   let details = getConfDetails();
 
-  window.onload = function () {
+  // window.onload = function () {
 
+  //   var conferencePrice = document.getElementById("conference-price");
+  //   conferencePrice.innerHTML = "€" + details.confPrice;
+
+  //   var conferenceRelease = document.getElementById("conference-release");
+  //   conferenceRelease.setAttribute("releases", details.confRelease);
+
+  //   var conferenceTrainingPrice = document.getElementById("conference-training-price");
+  //   conferenceTrainingPrice.innerHTML = "€" + details.confTrainingPrice;
+
+  //   var conferenceTrainingRelease = document.getElementById("conference-training-release");
+  //   conferenceTrainingRelease.setAttribute("releases", details.confTrainingRelease);
+  // }
+  
+  document.addEventListener("DOMContentLoaded", function (event) {
     var conferencePrice = document.getElementById("conference-price");
     conferencePrice.innerHTML = "€" + details.confPrice;
-
-    var conferenceRelease = document.getElementById("conference-release");
-    conferenceRelease.setAttribute("releases", details.confRelease);
 
     var conferenceTrainingPrice = document.getElementById("conference-training-price");
     conferenceTrainingPrice.innerHTML = "€" + details.confTrainingPrice;
 
-    var conferenceTrainingRelease = document.getElementById("conference-training-release");
-    conferenceTrainingRelease.setAttribute("releases", details.confTrainingRelease);
-  }
+    // var conferenceRelease = document.getElementById("conference-release");
+    // conferenceRelease.setAttribute("releases", details.confRelease);
+
+    // var conferenceTrainingRelease = document.getElementById("conference-training-release");
+    // conferenceTrainingRelease.setAttribute("releases", details.confTrainingRelease);
+
+    var loadWidgetWithFallback = function (e) {
+      e.preventDefault()
+
+      if (TitoWidget.modern_and_not_mobile() && this.overlay_enabled()) {
+        this.load();
+      }
+      else {
+        open(this.fallback_url())
+      };
+    }
+
+    Tito.instance('initiate/uxdx18', {
+      releases: details.confRelease,
+      success: function (widget) {
+        document.getElementById('book-now-conf').onclick = loadWidgetWithFallback.bind(widget);
+        return false;
+      }
+    });
+    Tito.instance('initiate/uxdx18', {
+      releases: details.confTrainingRelease,
+      success: function (widget) {
+        document.getElementById('book-now-conf-training').onclick = loadWidgetWithFallback.bind(widget);
+        return false;
+      }
+    });
+  });
+  
 </script>
 
 <div class="tab-content clearfix">
@@ -153,7 +194,8 @@
         </ul>
 
       </div>
-      <tito-button event="initiate/uxdx18" id="conference-release">Book Now</tito-button>
+      <!-- <tito-button event="initiate/uxdx18" id="conference-release">Book Now</tito-button> -->
+      <a href="https://ti.to/initiate/uxdx18" class="btn tito-tickets-button" id="book-now-conf" target="_blank">Book Now</a>
     </div>
     <div class="card ticket-card">
       <div class="card-header">
@@ -190,7 +232,8 @@
         </ul>
 
       </div>
-      <tito-button event="initiate/uxdx18" id="conference-training-release">Book Now</tito-button>
+      <!-- <tito-button event="initiate/uxdx18" id="conference-training-release">Book Now</tito-button> -->
+      <a href="https://ti.to/initiate/uxdx18" class="btn tito-tickets-button" id="book-now-conf-training" target="_blank">Book Now</a>
     </div>
     <div class="card ticket-card">
       <div class="card-header">
@@ -219,7 +262,8 @@
         </ul>
 
       </div>
-      <tito-button event="initiate/uxdx18" releases="5kucuogkpbc">Book Now</tito-button>
+      <!-- <a href="https://ti.to/initiate/uxdx18" releases="5kucuogkpbc" id="book-now" target="_blank">Book Now</a> -->
+      <a href="https://ti.to/initiate/uxdx18" class="btn tito-tickets-button" id="book-now-executive" target="_blank">Book Now</a>
     </div>
   </div>
   <!-- <div class="tab-pane fade d-flex justify-content-center" id="tickets-teams" aria-labelledby="tickets-teams" role="tabpanel">
