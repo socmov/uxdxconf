@@ -114,5 +114,5 @@ In the next article in our series we will share the latest trends that teams are
 - [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
 - [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
 - [Execution: UX](https://uxdxconf.com/blog/uxdx-community-2018-execution-ux)
-- [Execution: DX](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx)
+- [Execution: DX](https://uxdxconf.com/uxdx-community-2018-execution-dx)
 - Launch
