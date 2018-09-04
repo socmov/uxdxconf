@@ -89,5 +89,5 @@ Having done the due diligence in defining the best solution for the outcome that
 - [Agile Transformation](https://uxdxconf.com/blog/uxdx-community-2018-agile-transformation)
 - [Product Vision](https://uxdxconf.com/blog/uxdx-community-2018-product-vision)
 - Execution: UX
-- [Execution: DX](https://uxdxconf.com/blog/uxdx-community-2018-execution-dx)
+- [Execution: DX](https://uxdxconf.com/uxdx-community-2018-execution-dx)
 - Launch
