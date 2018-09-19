@@ -55,7 +55,7 @@
       // get the expiry time
       let expiry = getExpiryDate().getTime();
       // manually setting the end date
-      expiry = new Date(2018,09,03, 09,00).getTime();
+      expiry = new Date(2018,09,04, 09,00).getTime();
 
       var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
       var duration = moment.duration(leftTime);
