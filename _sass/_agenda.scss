@@ -51,6 +51,14 @@
   }
 }
 
+.openFeedbackDialog {
+  color: white;
+  margin-top: 20px;
+  &:hover {
+    color: white;
+  }
+}
+
 .schedule__grid {
   .schedule__grid__time {
     @extend .h4;

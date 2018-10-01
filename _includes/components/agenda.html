@@ -1,5 +1,5 @@
 {% capture nowunix %} {{'now' | date: '%s'}} {% endcapture %} 
-{% assign future = nowunix | plus: 86400 %}
+{% assign future = nowunix | plus: 1209600 %}
 {% assign past = nowunix | minus: 1209600 %}
 
 <div class="uxdx_agenda">
@@ -72,35 +72,36 @@
                   </div>
                   <div class="schedule__grid__event__meta">
                     <div class="d-flex justify-content-between flex-wrap">
-                    <div class="meta-details">
-                      {% if session.location and session.session[0].type != "Break" %}
-                      <span class="badge {{session.location}}">{{session.location}}</span>
-                      {{session.stream[0].name}} {% endif %}
+                      <div class="meta-details">
+                        {% if session.location and session.session[0].type != "Break" %}
+                        <span class="badge {{session.location}}">{{session.location}}</span>
+                        {{session.stream[0].name}} {% endif %}
+                      </div>
+                      {% if session.session[0].description.size > 50 %}
+                      <div class="display-controllers collapsed" data-toggle="collapse" data-target="#{{session.codename}}" aria-expanded="false"
+                      aria-controls="{{session.codename}}">
+                      <span class="show-ctrl">
+                        <i class="fas fa-chevron-down"></i>
+                        <small>More</small>
+                        </span>
+                        <span class="hide-ctrl">
+                          <i class="fas fa-chevron-up"></i>
+                          <small>Less</small>
+                        </span>
+                      </div>
+                      {% endif %}
                     </div>
-                    {% if session.session[0].description.size > 50 %}
-                    <div class="display-controllers collapsed" data-toggle="collapse" data-target="#{{session.codename}}" aria-expanded="false"
-                    aria-controls="{{session.codename}}">
-                    <span class="show-ctrl">
-                      <i class="fas fa-chevron-down"></i>
-                      <small>More</small>
-                      </span>
-                      <span class="hide-ctrl">
-                        <i class="fas fa-chevron-up"></i>
-                        <small>Less</small>
-                      </span>
-                    </div>
+                    
+                    {% capture sessiontime %} {{startTime | date: '%s'}} {% endcapture %} 
+                    {% assign sessiontime = sessiontime | plus: 0 %}
+                    
+                    {% if sessiontime < future and sessiontime > past and page.url == '/feedback' %}
+                      <div>
+                        <button data-target="#feedbackDialog" data-toggle="modal" class="btn btn-secondary openFeedbackDialog" data-session-id="{{session.session[0].codename}}" data-session-name="{{session.session[0].name}}">Give Feedback</button>
+                      </div>
                     {% endif %}
-                  </div>
-                  
-                  {% capture sessiontime %} {{startTime | date: '%s'}} {% endcapture %} 
-                  {% assign sessiontime = sessiontime | plus: 0 %}
-                  {% if sessiontime < future and sessiontime > past %}
-                    <div>
-                      <button data-target="#feedbackDialog" data-toggle="modal" class="btn btn-secondary openFeedbackDialog" data-session-id="{{session.session[0].codename}}" data-session-name="{{session.session[0].name}}">Give Feedback</button>
-                    </div>
-                  {% endif %}
-                  <div class="collapse" id="{{session.codename}}">
-                    <!-- <div class="card card-body"> -->
+                    <div class="collapse" id="{{session.codename}}">
+                      <!-- <div class="card card-body"> -->
                       {{session.session[0].description}}
                       
                       <!-- </div> -->
@@ -200,7 +201,7 @@
     
     // send the response
     $.ajax({
-      url: "https://socmov-45ba2.firebaseio.com/feedback/" + sessionId + "/feedback.json",
+      url: "https://socmov-45ba2.firebaseio.com/feedback/europe2018/" + sessionId + "/feedback.json",
       type: 'POST',
       data: JSON.stringify(response),
       dataType: 'json'
