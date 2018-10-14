@@ -165,8 +165,18 @@ table {
   .container {
     @extend .d-flex;
     @extend .flex-row;
+    @extend .flex-wrap;
   }
-  
+  h2 {
+    min-width: 200px;
+    max-width: 300px;
+  }
+  .section-content {
+    min-width: 200px;
+    max-width: 800px;
+    padding-left: 2rem;
+    text-align: left;
+  }
 }
 
 // Stats

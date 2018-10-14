@@ -1,4 +1,4 @@
-const feedback = require('./uxdxEuropeFeedbackMay18.json')
+const feedback = require('../uxdx2018Feedback.json')
 const agendas = require('./agendas.json')
 const fs = require('fs')
 const json2csv = require('json2csv').parse

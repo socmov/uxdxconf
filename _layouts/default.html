@@ -17,14 +17,13 @@
     <link rel="canonical" href="{{ canonical }}">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-    <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico?">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?{{site.time | date: '%s%N'}}" />
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- <script src="{{ site.baseurl }}/assets/js/typing.js"></script> -->
     
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -55,7 +54,7 @@
         <img src="{{ site.baseurl }}/images/UXDX-White-NoLogoText-NoText.svg"  width="30" height="30" alt="UXDX Conf 2018"/>
       </a>
       
-      <a class="navbar-brand" href="{{ site.baseurl }}/">UXDX Conf 2018</a>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">UXDX Conf 2019</a>
       
       
       {% if page.conference == nil %}
@@ -97,8 +96,38 @@
         </ul>
       </div>
     </nav>
+    <div class="conference-details-header"> 
+      <p>
+        <i class="far fa-calendar-alt"></i> October 7 - 8, 2019 | <a href="venue">RDS, Dublin, Ireland</a>
+      </p>
+    </div>
     
     <main role="main">
+      <!-- <div class="jumbotron" style="
+        background: url('https://uxdxconf.com/images/kentico/9add54dd-a0a9-4cee-9658-d2cc9502e4c2/home-header.jpg') no-repeat center;
+        background-size: cover;">
+        <div class="container d-flex justify-content-center">
+      
+          <div class="header-logo-div">
+            <img src="https://uxdxconf.com/images/kentico/8af35655-d60b-4476-8cd9-3006b1e8f405/UXDX-White-LogoText-NoText.svg"
+              class="header-logo" alt="UXDX">
+          </div>
+      
+          <div class="">
+            <h1 class="display-5">It Takes a Team</h1>
+            <h3 class="display-4">
+              to build
+              <span class="typewrite" data-period="2000" data-loops="1" data-type='[ "an awesome", "the world&apos;s best", "a market winning", "a successful" ]'>
+                <span class="wrap"></span>
+              </span>
+              product
+            </h3>
+            <h5>7th&nbsp;- 8th&nbsp;October 2019 | RDS, Dublin, Ireland</h5>
+            <p>Join us for two days of inspiring talks, innovative best practices, successful case studies and amazing networking.</p>
+            <button class="btn btn-outline-light">Get your Tickets</button>
+          </div>
+        </div>
+      </div> -->
       {{ content }}
     </main>
 

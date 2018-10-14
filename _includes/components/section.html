@@ -27,6 +27,7 @@
     </h2>
   {% endif %}
 
+  <div class="section-content">
     <!-- SECTION CONTENT -->
     {% if section.content.size > 12 %}
       {{section.content}} 
@@ -195,8 +196,9 @@
     {% endfor %}
     {% endif %} 
 
-  {% if section.image_rows.size == 0 %}
+    {% if section.image_rows.size == 0 %}
+    </div>
+    {% endif %}
   </div>
-  {% endif %}
 </div>
 {% endif %}
