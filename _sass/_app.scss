@@ -10,6 +10,9 @@ body {
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  h2 {
+    font-size: 4rem;
+  }
   // border-bottom: 2px dashed $primary;
 }
 table {
@@ -101,15 +104,25 @@ table {
 .navbar {
   background: $uxdx;
   color: $white;
-  .nav-link {
-    font-size: 16px;
+  .navbar-brand {
+    font-size: 1.5rem;
   }
-  .nav-item {
-    .tito-tickets-button {
-      @extend .btn-outline-light
+  .navbar-dark .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 1rem;
+        color: white;
+      }
+      .btn-outline-light {
+        padding: 0.5rem 2rem;
+        font-weight: 700;
+      }
     }
   }
-
+}
+.conference-details-header p {
+  margin: 0.8rem 1rem 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
 
@@ -120,7 +133,7 @@ table {
 // Header //
 .jumbotron {
   color: $white;
-  text-align: center;
+  // text-align: center;
   margin-bottom: 0rem;
   .header-logo-div {
     display: none;
@@ -130,17 +143,30 @@ table {
     height: 250px;
   }
   .display-5 {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 5rem;
+    font-weight: 500;
   }
-  h3 {
-    padding-bottom: 20px;
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+    padding-bottom: 2rem;
   }
   @include media-breakpoint-up(sm) {
     .header-logo-div {
       display: block;
     }
   }
+}
+
+// about-uxdx 
+.about_uxdx_section {
+  .container {
+    @extend .d-flex;
+    @extend .flex-row;
+  }
+  
 }
 
 // Stats
