@@ -299,12 +299,27 @@ table {
 }
 
 // SIGNUP FORM //
+
 .forms-section {
   background: $gray-300;
   color: #444;
   .btn-primary {
     @extend .btn-outline-dark;
   }
+}
+.subscribe_.forms-section {
+  background: $secondary;
+  h2 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  p:first-of-type {
+    font-size: 2rem;
+  }
+  // color: #444;
+  // .btn-primary {
+  //   @extend .btn-outline-dark;
+  // }
 }
 
 .recommend_a_speaker_section {
