@@ -18,7 +18,9 @@
   {% if section.form.size > 0 %} forms-section {% endif %}
   {% if section.agenda.size > 0 %} agenda-section {% endif %}
   {% if section.blog_list.size > 0 %} blog-list-section {% endif %}
-  {% if section.video_playlist.size > 0 %} video_playlist-section {% endif %}">
+  {% if section.video_playlist.size > 0 %} video_playlist-section {% endif %}
+  
+  colour_{{section.colour}}">
 
   {% if section.image_rows.size == 0 %}
   <div class="container">

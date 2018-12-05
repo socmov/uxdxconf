@@ -3,97 +3,75 @@
   function getConfDetails() {
 
     const today_date = Date.now()
-    const super_early = new Date(2018, 5, 1, 12, 00)
-    const early = new Date(2018, 5, 29, 12, 00)
-    const regular1 = new Date(2018, 6, 6, 23, 59, 59)
-    const regular3 = new Date(2018, 6, 20, 23, 59, 59)
-    const regular5 = new Date(2018, 7, 3, 23, 59, 59)
-    const regular7 = new Date(2018, 7, 17, 23, 59, 59)
-    const regular9 = new Date(2018, 7, 31, 23, 59, 59)
-    const regular11 = new Date(2018, 8, 14, 23, 59, 59)
-    const regular13 = new Date(2018, 8, 28, 23, 59, 59)
-    const late = new Date(2018, 9, 5, 23, 59, 59)
+    const first200 = new Date(2019, 1, 1, 00, 00, 00)
+    const super_early = new Date(2019, 4, 31, 00, 00, 00)
+    const early = new Date(2019, 5, 14, 00, 00, 00)
+    const regular1 = new Date(2019, 5, 28, 00, 00, 00)
+    const regular2 = new Date(2019, 6, 12, 00, 00, 00)
+    const regular3 = new Date(2019, 6, 26, 00, 00, 00)
+    const regular4 = new Date(2019, 7, 9, 00, 00, 00)
+    const regular5 = new Date(2019, 7, 23, 00, 00, 00)
+    const regular6 = new Date(2019, 8, 06, 00, 00, 00)
+    const regular7 = new Date(2019, 8, 20, 00, 00, 00)
+    const regular8 = new Date(2019, 9, 1, 00, 00, 00)
+    const late = new Date(2019, 9, 9, 00, 00, 00)
 
-    let expiry, confRelease, confTrainingRelease, confPrice, confTrainingPrice
-    let expired = false
-    if (today_date < super_early) {
-      expiry = super_early
+    const confDetails = {
+      first200: {
+        confRelease: '8rwzkcjklyg',
+        confPrice: 450,
+        ticketTitle: "First release",
+        ticketSubTitle: "Limited to 200 tickets",
+      },
+      super_early: {
+        confRelease: 'ydglcmzkk-y',
+        confPrice: 450
+      }
     }
 
+    let expired = false, sale
+    if (today_date < first200) {
+      sale = "first200"
+    }
+    else if (today_date < super_early) {
+      sale = "super_early"
+    }
     else if (today_date < early) {
-      expiry = early
+      sale = "early"
     }
     else if (today_date < regular1) {
-      expiry = regular1
-      confRelease = 'ydglcmzkk-y'
-      confTrainingRelease = 'dxpcv7huse4'
-      confPrice = 545
-      confTrainingPrice = 850
+      sale = "regular1"
+    }
+    else if (today_date < regular2) {
+      sale = "regular2"
     }
     else if (today_date < regular3) {
-      expiry = regular3
-      confRelease = 'fc1wxhrkn-q'
-      confTrainingRelease = 'zna8bzjxsai'
-      confPrice = 565
-      confTrainingPrice = 890
+      sale = "regular3"
+    }
+    else if (today_date < regular4) {
+      sale = "regular4"
     }
     else if (today_date < regular5) {
-      expiry = regular5
-      confRelease = 'x52ipwhxeho'
-      confTrainingRelease = 'nqbyokejscq'
-      confPrice = 590
-      confTrainingPrice = 930
-
+      sale = "regular5"
+    }
+    else if (today_date < regular6) {
+      sale = "regular6"
     }
     else if (today_date < regular7) {
-      expiry = regular7
-      confRelease = 'fhqs8uaztts'
-      confTrainingRelease = 'hotm-ixkssu'
-      confPrice = 660
-      confTrainingPrice = '1,050'
-
+      sale = "regular7"
     }
-    else if (today_date < regular9) {
-      expiry = regular9
-      confRelease = 'vyiswgcnhte'
-      confTrainingRelease = 'blb8sfmp6wo'
-      confPrice = 690
-      confTrainingPrice = '1,100'
-
-    }
-    else if (today_date < regular11) {
-      expiry = regular11
-      confRelease = 'r-hmndiwfty'
-      confTrainingRelease = 'xb-dbsahsge'
-      confPrice = 735
-      confTrainingPrice = '1,180'
-
-    }
-    else if (today_date < regular13) {
-      expiry = regular13
-      confRelease = 'gfl4k6pt7ya'
-      confTrainingRelease = 'nvxicfratku'
-      confPrice = 770
-      confTrainingPrice = '1,250'
-
+    else if (today_date < regular8) {
+      sale = "regular8"
     }
     else if (today_date < late) {
-      expiry = late
-      confRelease = 'dzyxl6pbu7y'
-      confTrainingRelease = 'o4e81imuxsy'
-      confPrice = 850
-      confTrainingPrice = '1,375'
-
+      sale = "late"
     }
     else expired = true
 
-    return {
-      expiry,
-      confRelease,
-      confTrainingRelease,
-      confPrice,
-      confTrainingPrice
-    }
+    console.log(sale)
+    console.log(confDetails[sale])
+
+    return confDetails[sale]
   }
 
 
@@ -109,24 +87,22 @@
   //   conferenceRelease.setAttribute("releases", details.confRelease);
 
   //   var conferenceTrainingPrice = document.getElementById("conference-training-price");
-  //   conferenceTrainingPrice.innerHTML = "€" + details.confTrainingPrice;
 
   //   var conferenceTrainingRelease = document.getElementById("conference-training-release");
-  //   conferenceTrainingRelease.setAttribute("releases", details.confTrainingRelease);
   // }
-  
+
   document.addEventListener("DOMContentLoaded", function (event) {
     var conferencePrice = document.getElementById("conference-price");
     conferencePrice.innerHTML = "€" + details.confPrice;
 
-    var conferenceTrainingPrice = document.getElementById("conference-training-price");
-    conferenceTrainingPrice.innerHTML = "€" + details.confTrainingPrice;
+      
+    var ticketTitle = document.getElementById("ticket-title");
+    ticketTitle.innerHTML = details.ticketTitle;
+    var ticketSubTitle = document.getElementById("ticket-sub-title");
+    ticketSubTitle.innerHTML = details.ticketSubTitle;
 
     var conferenceRelease = document.getElementById("book-now-conf");
     conferenceRelease.setAttribute("href", "https://ti.to/initiate/uxdx18/with/" + details.confRelease);
-
-    var conferenceTrainingRelease = document.getElementById("book-now-conf-training");
-    conferenceTrainingRelease.setAttribute("href", "https://ti.to/initiate/uxdx18/with/" + details.confTrainingRelease);
 
     // var loadWidgetWithFallback = function (e) {
     //   e.preventDefault()
@@ -149,23 +125,22 @@
     //   }
     // });
     // Tito.instance('initiate/uxdx18', {
-    //   releases: details.confTrainingRelease,
     //   success: function (widget) {
     //     document.getElementById('book-now-conf-training').onclick = loadWidgetWithFallback.bind(widget);
     //     return false;
     //   }
     // });
   });
-  
+
 </script>
 
 <div class="tab-content clearfix">
-  <div class="tab-pane active fade show d-flex justify-content-around flex-wrap" id="tickets-individual" aria-labelledby="tickets-individuals"
-    role="tabpanel">
+  <div class="tab-pane active fade show d-flex justify-content-around flex-wrap" id="tickets-individual"
+    aria-labelledby="tickets-individuals" role="tabpanel">
     <div class="card ticket-card">
       <div class="card-header">
-        <h3 class="text-white">Conference</h3>
-        <p class="small text-light">4 - 5 October</p>
+        <h3 class="text-white" id="ticket-title"></h3>
+        <p class="small text-light" id="ticket-sub-title"></p>
 
       </div>
       <div class="card-body">
@@ -178,105 +153,58 @@
           <div>
             <span class="small text-muted">Regular</span>
             <br>
-            <h4 class="font-weight-light">€770</h4>
+            <h4 class="font-weight-light">€999</h4>
           </div>
           <div>
             <span class="small text-muted">Late</span>
             <br>
-            <h4 class="font-weight-light">€850</h4>
+            <h4 class="font-weight-light">€1,350</h4>
           </div>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item small">2 days / 30+ talks</li>
-          <li class="list-group-item small">Network with 1400 attendees </li>
+          <li class="list-group-item small">2 days / 40+ talks</li>
+          <li class="list-group-item small">Network with 2,000 attendees </li>
           <li class="list-group-item small">Lunch each day </li>
           <li class="list-group-item small">Dublin walking tour </li>
           <li class="list-group-item small">After party </li>
-          <li class="list-group-item small">Phone and email support </li>
+          <li class="list-group-item small">Phone and chat support </li>
         </ul>
 
       </div>
       <!-- <tito-button event="initiate/uxdx18" id="conference-release">Book Now</tito-button> -->
-      <a href="https://ti.to/initiate/uxdx18" class="btn tito-tickets-button" id="book-now-conf" target="_blank">Book Now</a>
-    </div>
-    <div class="card ticket-card">
-      <div class="card-header">
-        <h3 class="text-white">Conference + Training</h3>
-        <p class="small text-light">3 - 5 October</p>
-        <!-- <div class="alert alert-warning" role="alert">
-          Limited Tickets remaining. Will sell out shortly!
-        </div> -->
-      </div>
-      <div class="card-body">
-        <div class="text-center">
-          <!-- <h2 class="card-title" id="conference-training-price"></h2>
-          <h6 class="card-subtitle text-muted font-weight-light">Ex VAT at 23%</h6> -->
-          <h2 class="card-title">Sold Out</h2>
-        </div>
-        <hr>
-        <div class="d-flex justify-content-around ticket-details">
-          <div>
-            <span class="small text-muted">Regular</span>
-            <br>
-            <h4 class="font-weight-light">€1,250</h4>
-          </div>
-          <div>
-            <span class="small text-muted">Late</span>
-            <br>
-            <h4 class="font-weight-light">€1,375</h4>
-          </div>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item small">2 days / 30+ talks</li>
-          <li class="list-group-item small">Network with 1400 attendees </li>
-          <li class="list-group-item small">Lunch each day </li>
-          <li class="list-group-item small">Dublin walking tour </li>
-          <li class="list-group-item small">After party </li>
-          <li class="list-group-item small">Phone and email support </li>
-          <li class="list-group-item small">Hands-on specialised training</li>
-        </ul>
-
-      </div>
-      <!-- <tito-button event="initiate/uxdx18" id="conference-training-release">Book Now</tito-button> -->
-      <!-- <a href="https://ti.to/initiate/uxdx18" class="btn tito-tickets-button" id="book-now-conf-training" target="_blank" onclick="loadWidgetWithFallback.bind(widget)">Book Now</a> -->
-      <button class="btn">Sold Out</button>
+      <a href="https://ti.to/initiate/uxdx-2019" class="btn tito-tickets-button" id="book-now-conf" target="_blank">Book Now</a>
     </div>
     <div class="card ticket-card">
       <div class="card-header">
         <h3 class="text-white">Executive</h3>
-        <p class="small text-light">4 - 5 October</p>
-        
+        <p class="small text-light">Includes exclusive networking events</p>
+
       </div>
       <div class="card-body">
         <div class="text-center">
-          <h2 class="card-title">Sold Out</h2>
-          <!-- <h6 class="card-subtitle text-muted font-weight-light">Ex VAT at 23%</h6> -->
+          <!-- <h2 class="card-title">Sold Out</h2> -->
+          <h2 class="card-title">€2,495</h2>
+          <h6 class="card-subtitle text-muted font-weight-light">Ex VAT at 23%</h6>
         </div>
         <hr>
         <div class="d-flex justify-content-around ticket-details align-items-center">
-          <span class="small text-muted">Limited release</span>
+          <span class="small text-muted">Limited release, first come, first served</span>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item small">2 days / 30+ talks</li>
-          <li class="list-group-item small">Network with 1400 attendees </li>
+          <li class="list-group-item small">2 days / 40+ talks</li>
+          <li class="list-group-item small">Network with 2,000 attendees </li>
           <li class="list-group-item small">Lunch each day </li>
           <li class="list-group-item small">Dublin walking tour </li>
           <li class="list-group-item small">After party </li>
-          <li class="list-group-item small">Phone and email support </li>
+          <li class="list-group-item small">Phone and chat support </li>
           <li class="list-group-item small">Speaker dinner</li>
           <li class="list-group-item small">VIP activities</li>
         </ul>
 
       </div>
-      <!-- <a href="https://ti.to/initiate/uxdx18" releases="5kucuogkpbc" id="book-now" target="_blank">Book Now</a> -->
-      <!-- <a href="https://ti.to/initiate/uxdx18/with/5kucuogkpbc" class="btn tito-tickets-button" id="book-now-executive" target="_blank">Book Now</a> -->
-      <button class="btn">Sold Out</button>
+      <a href="https://ti.to/initiate/uxdx-2019/with/g6valw-vdjs" class="btn tito-tickets-button" id="book-now-executive"
+        target="_blank">Book Now</a>
+      <!-- <button class="btn">Sold Out</button> -->
     </div>
   </div>
-  <!-- <div class="tab-pane fade d-flex justify-content-center" id="tickets-teams" aria-labelledby="tickets-teams" role="tabpanel">
-    <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
-  </div>
-  <div class="tab-pane fade d-flex justify-content-center" id="tickets-exhibition" aria-labelledby="tickets-exhibition" role="tabpanel">
-    <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-  </div> -->
 </div>

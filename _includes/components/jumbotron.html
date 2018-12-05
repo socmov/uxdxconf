@@ -1,20 +1,48 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron" style="
-  background: url('{{include.item.header_image[0].url}}') no-repeat center;
-  background-size: cover;">
-  <div class="container d-flex justify-content-center">
-    {% if include.item.logo[0].url %}
-    <div class="header-logo-div">
-      <img src="{{include.item.logo[0].url}}" class="header-logo" alt="{{include.item.logo[0].description}}">
+
+<!-- CHeck if there is more than one image - carousel -->
+{% if include.item.header_image.size > 1 %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% for header_image in include.item.header_image %}
+    <li data-target="#carousel-{{ include.item.id }}-{{ forloop.index }}" data-slide-to="{{ forloop.index }}" {% if
+      forloop.first==true %} class="active" {% endif %}></li>
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner">
+    {% for header_image in include.item.header_image %}
+    <div class="carousel-item {% if forloop.first == true %} active {% endif %}" style="
+      background: url('{{include.item.header_image[0].url}}') no-repeat center;
+      background-size: cover;">
+      <!-- <img class="d-block w-100" src="{{include.item.header_image[forloop.index].url}}" alt="{{include.item.header_image[forloop.index].alt}}"> -->
     </div>
-    {% endif %}
-    <div class="">
-      <h1 class="display-5">{{include.item.title}}</h1>
-      <h3 class="display-4">
-        <em>{{include.item.sub_title}}</em>
-      </h3>
-      <h5>{{include.item.line3}}</h5>
-      <p>{{include.item.line4}}</p>
-    </div>
+    {% endfor %}
   </div>
 </div>
+<div class="header-content">
+
+
+  {% else %}
+  <div class="jumbotron" style="
+    background: url('{{include.item.header_image[0].url}}') no-repeat center;
+    background-size: cover;">
+    {% endif %}
+
+    <div class="container d-flex justify-content-center">
+      {% if include.item.logo[0].url %}
+      <div class="header-logo-div">
+        <img src="{{include.item.logo[0].url}}" class="header-logo" alt="{{include.item.logo[0].description}}">
+      </div>
+      {% endif %}
+      <div class="d-flex align-items-center">
+        <div>
+          <h1 class="display-5">{{include.item.title}}</h1>
+          <h3 class="display-4">
+            <em>{{include.item.sub_title}}</em>
+          </h3>
+        </div>
+        <!-- <h5>{{include.item.line3 | newline_to_br | strip_newlines | replace: '<br />', ' '}}</h5>
+        <p>{{include.item.line4 | newline_to_br | strip_newlines | replace: '<br />', ' '}}</p> -->
+      </div>
+    </div>
+  </div>
