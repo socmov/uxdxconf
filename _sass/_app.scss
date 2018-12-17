@@ -10,10 +10,18 @@ body {
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  &.colour_white {
+    background-color: white;
+  }
+  &.colour_grey {
+    background-color: $gray-100;
+  }
+  &.colour_blue {
+    background-color: $uxdx-secondary;
+  }
   h2 {
     font-size: 3rem;
   }
-  // border-bottom: 2px dashed $primary;
 }
 table {
   @extend .table;
@@ -108,15 +116,17 @@ table {
     font-size: 1.5rem;
     margin-right: 0.3rem;
   }
-  .navbar-dark .navbar-nav {
+  .navbar-nav {
     .nav-item {
       .nav-link {
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: white;
       }
-      .btn-outline-light {
+      .btn-light {
+        margin-left: 15px;
         padding: 0.5rem 2rem;
         font-weight: 700;
+        font-size: 1.1rem
       }
     }
   }
@@ -248,7 +258,7 @@ table {
     padding: 20px 40px;
   }
   .carousel-inner {
-    min-height: 200px;
+    min-height: 225px;
   }
   ol.carousel-indicators li {
     margin-top: 20px;

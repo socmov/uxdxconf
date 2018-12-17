@@ -6,40 +6,32 @@
   function getExpiryDate() {
 
     const today_date = Date.now()
-    const super_early = new Date(2018, 5, 1, 12, 00)
-    const early = new Date(2018, 5, 29, 12, 00)
-    const regular1 = new Date(2018, 6, 6, 23, 59, 59)
-    // const regular2 = new Date(2018, 6, 13, 23, 59, 59)
-    const regular3 = new Date(2018, 6, 20, 23, 59, 59)
-    // const regular4 = new Date(2018, 6, 27, 23, 59, 59)
-    const regular5 = new Date(2018, 7, 3, 23, 59, 59)
-    // const regular6 = new Date(2018, 7, 10, 23, 59, 59)
-    const regular7 = new Date(2018, 7, 17, 23, 59, 59)
-    // const regular8 = new Date(2018, 7, 24, 23, 59, 59)
-    const regular9 = new Date(2018, 7, 31, 23, 59, 59)
-    // const regular10 = new Date(2018, 8, 7, 23, 59, 59)
-    const regular11 = new Date(2018, 8, 14, 23, 59, 59)
-    // const regular12 = new Date(2018, 8, 21, 23, 59, 59)
-    const regular13 = new Date(2018, 8, 28, 23, 59, 59)
-    const late = new Date(2018, 9, 5, 23, 59, 59)
+    const first200 = new Date(2019, 1, 1, 00, 00, 00)
+    const super_early = new Date(2019, 4, 31, 00, 00, 00)
+    const early = new Date(2019, 5, 14, 00, 00, 00)
+    const regular1 = new Date(2019, 5, 28, 00, 00, 00)
+    const regular2 = new Date(2019, 6, 12, 00, 00, 00)
+    const regular3 = new Date(2019, 6, 26, 00, 00, 00)
+    const regular4 = new Date(2019, 7, 9, 00, 00, 00)
+    const regular5 = new Date(2019, 7, 23, 00, 00, 00)
+    const regular6 = new Date(2019, 8, 06, 00, 00, 00)
+    const regular7 = new Date(2019, 8, 20, 00, 00, 00)
+    const regular8 = new Date(2019, 9, 1, 00, 00, 00)
+    const late = new Date(2019, 9, 9, 00, 00, 00)
 
     let expiry
     let expired = false
-    if(today_date < super_early) expiry = super_early
+    if(today_date < first200) expiry = first200
+    else if(today_date < super_early) expiry = super_early
     else if (today_date < early) expiry = early
     else if (today_date < regular1) expiry = regular1
-    // else if (today_date < regular2) expiry = regular2
+    else if (today_date < regular2) expiry = regular2
     else if (today_date < regular3) expiry = regular3
-    // else if (today_date < regular4) expiry = regular4
+    else if (today_date < regular4) expiry = regular4
     else if (today_date < regular5) expiry = regular5
-    // else if (today_date < regular6) expiry = regular6
+    else if (today_date < regular6) expiry = regular6
     else if (today_date < regular7) expiry = regular7
-    // else if (today_date < regular8) expiry = regular8
-    else if (today_date < regular9) expiry = regular9
-    // else if (today_date < regular10) expiry = regular10
-    else if (today_date < regular11) expiry = regular11
-    // else if (today_date < regular12) expiry = regular12
-    else if (today_date < regular13) expiry = regular13
+    else if (today_date < regular8) expiry = regular8
     else if (today_date < late) expiry = late
     else expired = true
     
@@ -55,7 +47,7 @@
       // get the expiry time
       let expiry = getExpiryDate().getTime();
       // manually setting the end date
-      expiry = new Date(2018,09,04, 09,00).getTime();
+      expiry = new Date(2019,09,07, 09,00).getTime();
 
       var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
       var duration = moment.duration(leftTime);
@@ -69,7 +61,7 @@
       if (duration.days() > 5) {
         value += duration.days() + ' ' + dayWord
       }
-      else if (duration.days() < 5 && duration.days() > 0) {
+      else if (duration.days() <= 5 && duration.days() > 0) {
         value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
       }
       else if (duration.hours() > 0) {

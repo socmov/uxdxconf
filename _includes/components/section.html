@@ -30,7 +30,7 @@
   {% endif %}
 
   <div class="section-content">
-    <!-- SECTION CONTENT -->
+    <!-- SECTION CONTENT - If there is text. 12 is the default empty p that is generated so great tehn 12 means content exists -->
     {% if section.content.size > 12 %}
       {{section.content}} 
     {% endif %}
@@ -113,8 +113,8 @@
 
     <!-- DATA -->
     {% if section.data.size > 0 %}
-    <div class="d-flex justify-content-around flex-wrap">
-    {% for dataType in section.data %}
+    {% assign dataType = section.data[0] %}
+    <div class="d-flex justify-content-around flex-wrap {{dataType.display_format}}">
       {% if dataType.sort_06c03ca.size > 2 %} 
         {% assign items = site.data[dataType.data_2d13f0f] | sort:dataType.sort_06c03ca %} 
       {% else %}
@@ -131,8 +131,6 @@
           {% include components/{{dataType.template_aefaf3b}} item=item %} 
         {% endif %}
       {% endfor %}
-
-    {% endfor %}
     </div>
     {% endif %}
 
