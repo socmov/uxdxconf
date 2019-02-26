@@ -85,7 +85,7 @@
           {% for page in conference.primary_menu[0].pages___buttons %}  
           <li class="nav-item">
             {% if page.url_slug == 'tickets' %}
-            <a class="btn btn-outline-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
+            <a class="btn btn-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
             {% elsif page.url_slug %}
               {% if page.menu_title.size > 0 %}
                 {% assign title = page.menu_title %}
