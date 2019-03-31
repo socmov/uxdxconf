@@ -1,4 +1,4 @@
-const feedback = require('../uxdx2018Feedback.json')
+const feedback = require('./community2019Feedback.json')
 const agendas = require('./agendas.json')
 const fs = require('fs')
 const json2csv = require('json2csv').parse
@@ -12,13 +12,16 @@ let sessions = agendas.forEach((agenda) => {
         flattenedIndex.push(session.codename)
         flattenedSessions.push(session)
       }
+      // console.log(session)
     })
   })
 })
 
 let parsedFeedback = []
 Object.keys(feedback).forEach((session) => {
+  // console.log(session, flattenedIndex.indexOf(session))
   let sessionDetails = flattenedSessions[flattenedIndex.indexOf(session)]
+  // console.log(sessionDetails)
   let speakers = sessionDetails.speakers.map((speaker) => {
     return speaker.first_name + ' ' + speaker.last_name + ', ' + speaker.job_title + ', ' + speaker.company
   }).join()
