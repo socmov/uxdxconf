@@ -7,25 +7,31 @@
 <div class="section 
   {{section.codename}}
   
-  {% if section.cards.size > 0 %} cards-section {% endif %}
-  {% if section.training_cards.size > 0 %} cards-section {% endif %}
-  {% if section.testimonials.size > 0 %} testimonials-section {% endif %}
-  {% if section.ticket_widget.size > 0 %} tickets-section
-  {% elsif section.buttons___widget.size > 0 %} buttons-section {% endif %}
-  {% if section.stats.size > 0 %} stats-section {% endif %}
-  {% if section.data.size > 0 %} data-section {% endif %}
-  {% if section.image_rows.size > 0 %} image_rows-section {% endif %}
-  {% if section.form.size > 0 %} forms-section {% endif %}
-  {% if section.agenda.size > 0 %} agenda-section {% endif %}
-  {% if section.blog_list.size > 0 %} blog-list-section {% endif %}
-  {% if section.video_playlist.size > 0 %} video_playlist-section {% endif %}
+  {% if section.questions.size > 0 %} questions-section
+  {% elsif section.cards.size > 0 %} cards-section 
+  {% elsif section.training_cards.size > 0 %} cards-section 
+  {% elsif section.testimonials.size > 0 %} testimonials-section 
+  {% elsif section.ticket_widget.size > 0 %} tickets-section
+  {% elsif section.buttons___widget.size > 0 %} buttons-section 
+  {% elsif section.stats.size > 0 %} stats-section 
+  {% elsif section.data.size > 0 %} data-section 
+  {% elsif section.image_rows.size > 0 %} image_rows-section 
+  {% elsif section.form.size > 0 %} forms-section 
+  {% elsif section.agenda.size > 0 %} agenda-section 
+  {% elsif section.blog_list.size > 0 %} blog-list-section 
+  {% elsif section.video_playlist.size > 0 %} video_playlist-section {% endif %}
   
   colour_{{section.colour}}">
 
   {% if section.image_rows.size == 0 %}
   <div class="container">
     <h2>
-      {{section.title}}
+      {% if section.title2.size > 11 %}
+        <!-- title 2 is the rich text version -->
+        {{section.title2}}
+      {% else %}
+        {{section.title}}
+      {% endif %}
     </h2>
   {% endif %}
 
@@ -36,19 +42,34 @@
     {% endif %}
 
   
+    <!-- Questions -->
+    {% if section.questions.size > 0 %}
+    <div class="d-flex justify-content-around flex-wrap questions">
+      {% assign size = section.questions.size %}
+      {% for question in section.questions %}
+        <div class="question">
+          <p>
+            {{question.question}}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %} 
+
     <!-- CARDS -->
     {% if section.cards.size > 0 %}
     <div class="d-flex justify-content-around flex-wrap">
       {% assign size = section.cards.size %}
       {% for card in section.cards %}
-        {% if card.type_of_card == 'Modal' %} <!--MAKE MODAL FLAG-->
-        {% include components/modalCard.html card=card cards-size=size %}
-        {% else %}
-        {% include components/card.html card=card cards-size=size %}
-        {% endif %}
+      {% if card.type_of_card == 'Modal' %}
+      <!--MAKE MODAL FLAG-->
+      {% include components/modalCard.html card=card cards-size=size %}
+      {% else %}
+      {% include components/card.html card=card cards-size=size %}
+      {% endif %}
       {% endfor %}
     </div>
-    {% endif %} 
+    {% endif %}
 
     <!-- TRAINING CARDS -->
     {% if section.training_cards.size > 0 %}

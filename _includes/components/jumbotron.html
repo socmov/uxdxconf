@@ -35,11 +35,31 @@
       </div>
       {% endif %}
       <div class="d-flex align-items-center">
-        <div>
+        <div class="align-items-center">
           <h1 class="display-5">{{include.item.title}}</h1>
           <h3 class="display-4">
             <em>{{include.item.sub_title}}</em>
           </h3>
+
+          {% if include.item.primary_button or include.item.secondary_button %} 
+            {% assign primary_button = include.item.primary_button[0] %}
+            {% if primary_button.url_link contains "://" or primary_button.url_link contains "mailto:" %}
+            {% assign primary_link = primary_button.url_link %}
+            {% else %}
+            {% capture primary_link %} {{site.baseurl}}/{{primary_button.url_link}} {% endcapture %}
+            {% endif %}
+
+            {% assign secondary_button = include.item.secondary_button[0] %}
+            {% if secondary_button.url_link contains "://" or secondary_button.url_link contains "mailto:" %}
+            {% assign secondary_link = secondary_button.url_link %}
+            {% else %}
+            {% capture secondary_link %} {{site.baseurl}}/{{secondary_button.url_link}} {% endcapture %}
+            {% endif %}
+            <div class="jumbotron_buttons">
+              {% if primary_button %}<a href="{{primary_link}}" class="btn {{primary_button.class}} btn-lg">{{primary_button.button_text}}</a> {% endif %}
+              {% if secondary_button %}<a href="{{secondary_link}}" class="btn {{secondary_button.class}}">{{secondary_button.button_text}}</a> {% endif %}
+            </div>
+          {% endif %}
         </div>
         <!-- <h5>{{include.item.line3 | newline_to_br | strip_newlines | replace: '<br />', ' '}}</h5>
         <p>{{include.item.line4 | newline_to_br | strip_newlines | replace: '<br />', ' '}}</p> -->

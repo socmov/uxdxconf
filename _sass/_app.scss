@@ -20,7 +20,7 @@ body {
     background-color: $uxdx-secondary;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 table {
@@ -168,6 +168,12 @@ table {
     font-size: 1rem;
     padding-bottom: 2rem;
   }
+  .jumbotron_buttons {
+    padding-top: 2rem;
+    a {
+      margin-right: 2rem;
+    }
+  }
   @include media-breakpoint-up(sm) {
     .header-logo-div {
       display: block;
@@ -196,7 +202,9 @@ table {
 
 // Stats
 .stats-section {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-bottom: 2px solid #333;
   .stat {
     width: 10rem;
     text-align: center;
@@ -205,6 +213,54 @@ table {
       display: inline-block;
       padding: 0px 10px;
     }
+  }
+}
+
+// Questions
+.questions-section {
+  text-align: center;
+  .questions {
+    text-align: left;
+    padding-top: 1.75rem;
+    .question {
+      width: 300px;
+      background: url("images/icons/green-checkmark.svg") no-repeat top 7px left;
+      background-size: 25px;
+      padding: 0 0 0 40px;
+      font-size: 1.25rem;
+    }
+    @include media-breakpoint-up(sm) {
+      .question {
+        width: 500px;
+      }
+    }
+  }
+  
+  .card {
+    &:nth-of-type(1) {
+      .card-sub-title {
+        border-bottom: 5px solid $primary;
+      }
+    }
+    &:nth-of-type(2) {
+      .card-sub-title {
+        border-bottom: 5px solid $secondary;
+      }
+    }
+    .card-body {
+      text-align: left;
+      .card-title{
+        font-size: 4rem;
+      }
+      .card-sub-title {
+        font-size: 1.75rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  a.btn {
+    margin-top: 2rem;
+    @extend .btn-lg;
   }
 }
 

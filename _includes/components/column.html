@@ -1,0 +1,17 @@
+<div class="align-self-stretch {% if include.column-size > 2 %} group3 {% elsif include.column-size > 1 %} group2 {% endif %} {{include.column.codename}}">
+  <div class="column-body">
+    {% if include.column.link.size > 2 %}
+    <a href="{{include.column.link}}">
+      {% endif %}
+      <h4 class="card-title">{{include.column.title}}</h4>
+      {% if include.column.link.size > 2 %}
+    </a>
+    {% endif %}
+    <h5 class="card-sub-title">{{include.column.sub_title}}</h5>
+    {% if include.column.content.size >11 %}
+    <p class="card-text">
+      {{include.column.content}}
+    </p>
+    {% endif %}
+  </div>
+</div>
