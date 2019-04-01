@@ -6,5 +6,7 @@
   {% else %}
   {% capture link %} {{site.baseurl}}/{{button.url_link}} {% endcapture %} 
   {% endif %}
-  <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
+  <div class="button_link_div">
+    <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
+  </div>
 {% endif %}

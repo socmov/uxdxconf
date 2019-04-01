@@ -182,22 +182,34 @@ table {
 }
 
 // about-uxdx 
-.about_uxdx_section {
-  .container {
-    @extend .d-flex;
-    @extend .flex-row;
-    @extend .flex-wrap;
+.about_uxdx_agenda_section {
+  color: white;
+  // text-align: center;
+  &.cards-section {
+    background-color: $secondary;
   }
-  h2 {
-    min-width: 200px;
-    max-width: 300px;
+  .card {
+    color: black;
   }
-  .section-content {
-    min-width: 200px;
-    max-width: 800px;
-    padding-left: 2rem;
-    text-align: left;
+  .button_link_div {
+    text-align: center;
   }
+
+  // .container {
+  //   @extend .d-flex;
+  //   @extend .flex-row;
+  //   @extend .flex-wrap;
+  // }
+  // h2 {
+  //   min-width: 200px;
+  //   max-width: 300px;
+  // }
+  // .section-content {
+  //   min-width: 200px;
+  //   max-width: 800px;
+  //   padding-left: 2rem;
+  //   text-align: left;
+  // }
 }
 
 // Stats
