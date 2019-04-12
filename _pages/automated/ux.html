@@ -6,4 +6,12 @@ title: UX @ UXDX
 conference: 0a0c6fca-ca18-46fa-9315-37d94da4e611
 ---
 
-{% include template.html %}
+{% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %} {% assign pageContent = pageContent[0] %}
+
+{% include components/pageTitle.html pageContent=pageContent %}
+{% if pageContent.header_image.size == 0 and pageContent.sections[0].jumbotron.length == 0 %}
+<div class= "container header-section {{pageContent.codename}}" >
+  <h1>{{pageContent.title}}</h1>
+</div >
+{% endif %}
+{% for section in pageContent.sections %} {% include components/section.html section=section %} {% endfor %}
