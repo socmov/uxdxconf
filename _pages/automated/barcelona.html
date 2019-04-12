@@ -6,12 +6,4 @@ title: Barcelona
 conference: d2051bd1-72d9-4c94-bb1f-4720d2c9309a
 ---
 
-{% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %} {% assign pageContent = pageContent[0] %}
-
-{% include components/pageTitle.html pageContent=pageContent %}
-{% if pageContent.header_image.size == 0 and pageContent.sections[0].jumbotron.length == 0 %}
-<div class= "container header-section {{pageContent.codename}}" >
-  <h1>{{pageContent.title}}</h1>
-</div >
-{% endif %}
-{% for section in pageContent.sections %} {% include components/section.html section=section %} {% endfor %}
+{% include template.html %}
