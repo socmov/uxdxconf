@@ -306,13 +306,18 @@ table {
   }
 }
 
-.change_happens_when_you_combine_all_three_section {
+.how_do_you_increase_the_odds_of_success__section_94ee139 {
   .horizontal-content {
     @extend .flex-wrap; 
     .horizontal-image, .px-2 {
       flex: 1;
     }
   }
+}
+
+// Generic buttons
+.button_link_div {
+  text-align:center;
 }
 
 // Call to Action
