@@ -306,7 +306,7 @@ table {
   }
 }
 
-.change_happens_when_your_combine_all_three_section {
+.change_happens_when_you_combine_all_three_section {
   .horizontal-content {
     @extend .flex-wrap; 
     .horizontal-image, .px-2 {
@@ -664,6 +664,9 @@ footer {
     color: $gray-500;
     font-size: 1rem;
     padding-right: 10px;
+    &:hover {
+      color: white;
+    }
   }
   // text-align: center;
   .footer-nav {
