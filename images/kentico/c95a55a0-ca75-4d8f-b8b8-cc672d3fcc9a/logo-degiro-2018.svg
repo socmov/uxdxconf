@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="364 1908 421 61">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-svg-stabdart_size_-_white_1);
+      }
+
+      .cls-2 {
+        fill: #009de0;
+      }
+    </style>
+    <clipPath id="clip-svg-stabdart_size_-_white_1">
+      <rect x="364" y="1908" width="421" height="61"/>
+    </clipPath>
+  </defs>
+  <g id="svg-stabdart_size_-_white_1" data-name="svg-stabdart size - white – 1" class="cls-1">
+    <g id="Group_7" data-name="Group 7" transform="translate(364.278 1908.474)">
+      <path id="Path_1" data-name="Path 1" d="M239.786,30.206c0,21.861-14.768,28.664-33.49,28.664H187.4V1.6h18.9C225.018,1.6,239.786,8.4,239.786,30.206ZM200.947,13V47.532h5.582c9.942,0,18.954-2.151,18.954-17.268,0-15.059-9.012-17.21-18.954-17.21h-5.582Z" transform="translate(-78.442 -0.67)"/>
+      <path id="Path_2" data-name="Path 2" d="M333.3,1.6V13.461H302.889V23.519h28.722V35.439H302.889V46.951H333.3V58.87H289.4V1.6Z" transform="translate(-121.137 -0.67)"/>
+      <path id="Path_3" data-name="Path 3" d="M418.288,18.9c-1.163-3.954-5.233-7.733-12.559-7.733-8.314,0-14.768,6.163-14.768,18.257s5.989,18.722,15,18.722c6.221,0,12.733-2.384,12.733-9.652v-1.1H404.857V26.338h27.327v31.92H421.834l-.407-6.337c-3.721,5-9.3,7.326-17.559,7.326-16.919,0-27.269-11.512-27.269-29.827C376.658,11.28,388.519,0,405.9,0c12.733,0,22.966,6.4,25.641,18.9Z" transform="translate(-157.638)"/>
+      <path id="Path_4" data-name="Path 4" d="M489.1,58.87V1.6h13.489V58.87Z" transform="translate(-204.728 -0.67)"/>
+      <g id="Group_1" data-name="Group 1" transform="translate(307.687)">
+        <path id="Path_5" data-name="Path 5" d="M542.689,37.3V58.87H529.2V1.6h22.036c14.826,0,25.989,3.489,25.989,17.675,0,8.431-4.651,13.256-11.221,15.815l14.129,23.78H564.26L551.817,37.3Zm0-11.338h8.9c6.4,0,11.28-1.1,11.28-6.454,0-5.291-4.884-6.454-11.28-6.454h-8.9Z" transform="translate(-529.2 -0.67)"/>
+        <path id="Path_6" data-name="Path 6" d="M620,29.594C620,11.745,632.093,0,649.711,0c17.559,0,29.71,11.745,29.71,29.594s-12.152,29.594-29.71,29.594C632.093,59.247,620,47.444,620,29.594Zm45.118,0c0-12.152-7.035-18.489-15.407-18.489S634.3,17.443,634.3,29.594s7.035,18.489,15.408,18.489S665.118,41.8,665.118,29.594Z" transform="translate(-567.207 0)"/>
+      </g>
+      <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-2" width="95.527" height="23.082" transform="translate(0 0.93)"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-2" width="95.527" height="23.082" transform="translate(0 35.118)"/>
+    </g>
+  </g>
+</svg>
