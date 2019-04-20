@@ -85,7 +85,7 @@
           {% for page in conference.primary_menu[0].pages___buttons %}  
           <li class="nav-item">
             {% if page.url_slug == 'tickets' %}
-            <a class="btn btn-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
+              <a class="btn btn-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
             {% elsif page.url_slug %}
               {% if page.menu_title.size > 0 %}
                 {% assign title = page.menu_title %}
@@ -93,8 +93,10 @@
                {% assign title = page.url_slug | capitalize %}
               {% endif %}
               <a class="nav-link" href="{{ site.baseurl }}/{{page.url_slug}}">{{title}}</a>
+            {% elsif page.tito_release.size > 1 %}
+              <tito-button event="{{conference.tito_event}}" releases="{{page.tito_release}}">{{page.button_text}}</tito-button>
             {% else %}
-              <tito-button event="{{conference.tito_event}}" releases="{{page.tito_release}}">{{button.button_text}}</tito-button>
+              <a class="nav-link" href="{{page.url_link}}" target="_blank">{{page.button_text}}</a>
             {% endif %}
             </li>
           {% endfor %}
