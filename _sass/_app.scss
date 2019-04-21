@@ -369,9 +369,14 @@ table {
   }
 }
 .highlighted-sponsor-logo {
-  width: 15rem;
-  height: 10rem;
-  margin: 1.2rem;
+  width: 10rem;
+  height: 4rem;
+  margin: 3rem 2rem;
+  img {
+    filter: saturate(50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 // Highlight Photos
