@@ -19,6 +19,7 @@
   {% elsif section.form.size > 0 %} forms-section 
   {% elsif section.agenda.size > 0 %} agenda-section 
   {% elsif section.blog_list.size > 0 %} blog-list-section 
+  {% elsif section.video_highlight.size > 0 %} video_highlight-section
   {% elsif section.video_playlist.size > 0 %} video_playlist-section {% endif %}
   
   colour_{{section.colour}}">
@@ -198,6 +199,11 @@
       </div>
       {% endfor %}
     </div>
+    {% endif %}
+
+    <!-- VIDEO highlights -->
+    {% if section.video_highlight.size > 0 %}
+      {% include components/video-highlight.html item=section.video_highlight %}
     {% endif %}
 
     <!-- HORIZONTAL CONTENT -->

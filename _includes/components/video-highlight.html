@@ -2,11 +2,11 @@
   <div class="container">
     <div class="video-section-content justify-content-between">
       <div class="video-section-text">
-        <h2>Sample the Experience</h2>
-        <p> Watch the video to learn more about UXDX and what you can expect.</p>
+        <h2>{{ include.item[0].title }}</h2>
+        <p>{{include.item[0].description}}</p>
       </div>
       <div class="video-section-video">
-        <p><img data-video="I1GD0McfbcY" alt="The UXDX experience" src="images/video-background.png"></p>
+        <p><img data-video="{{include.item[0].video_id}}" alt="{{include.item[0].image[0].description}}" src="{{include.item[0].image[0].url}}"></p>
       </div>
     </div>
     <div id="iframeDisplay"></div>
