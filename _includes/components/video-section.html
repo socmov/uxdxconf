@@ -1,0 +1,51 @@
+<div class="section video-link">
+  <div class="container">
+    <div class="video-section-content justify-content-between">
+      <div class="video-section-text">
+        <h2>Sample the Experience</h2>
+        <p> Watch the video to learn more about UXDX and what you can expect.</p>
+      </div>
+      <div class="video-section-video">
+        <p><img data-video="I1GD0McfbcY" alt="The UXDX experience" src="images/video-background.png"></p>
+      </div>
+    </div>
+    <div id="iframeDisplay"></div>
+  </div>
+</div>
+
+<script>
+  // Listen for clicks
+  var iframe = document.getElementById("iframeDisplay")
+  
+  document.addEventListener("fullscreenchange", function () {
+    if (!document.fullscreenElement) iframe.innerHTML = "";
+  }, false);
+
+  var closeFrame = function () {
+    iframe.innerHTML = "";
+  }
+
+
+  document.addEventListener('click', function (event) {
+    var videoId = event.target.getAttribute('data-video');
+    if (!videoId) return;
+
+    // if mobile then open in a new window
+    if ($('.header-logo-div').css('display') == 'none') {
+      var win = window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
+      win.focus();
+    } else {
+      // Else play in the browser
+
+      // Create iframe
+      iframe.innerHTML = '<p> </p><div class="fullscreen-video"><a href="javascript:closeFrame();">[X]</a><iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1&?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+      var video = iframe.childNodes[1];
+
+      // Enter fullscreen mode
+      video.requestFullscreen();
+    }
+
+  }, false);
+
+  
+</script>

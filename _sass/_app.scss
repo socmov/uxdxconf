@@ -175,9 +175,48 @@ table {
       margin-right: 2rem;
     }
   }
+  .jumbotron-subscribe-form {
+    padding-top: 2rem;
+    p {
+      font-size: 1.1rem;
+    }
+    .header-form {
+      @extend .d-flex;
+      @extend .flex-row;
+      width: 100%;
+      .form-group {
+        width: 100%;
+        input {
+          // @extend .mx-sm-2;
+          margin-right: 1rem;
+          min-width: 150px;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
   @include media-breakpoint-up(sm) {
     .header-logo-div {
       display: block;
+    }
+    .jumbotron-subscribe-form {
+      .header-form {
+        .form-group {
+          width: auto;
+          .btn {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .jumbotron-subscribe-form {
+      .header-form {
+        flex-wrap: wrap
+      }
     }
   }
 }
@@ -383,6 +422,44 @@ table {
 .video-link {
   background-color: $secondary;
   text-align: center;
+  img {
+    max-width:800px;
+    width:100%;
+  }
+}
+
+.video-section-content {
+  @extend .d-flex;
+  @extend .flex-row;
+  @extend .flex-wrap;
+  .video-section-text {
+    width: 300px;
+    color: white;
+    text-align: left;
+  }
+  .video-section-video {
+    min-width: 300px;
+  }
+}
+
+.fullscreen-video {
+  position: relative;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px; 
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+  }
 }
 
 // Highlight Photos
@@ -413,6 +490,28 @@ table {
       .image-flex:not(:first-child) {
         display: none;
       }
+    }
+  }
+}
+
+// PARTNER PAGE
+.we_attract_your_target_market_section {
+  .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 478px;
+    border: 0px;
+    &.group3 {
+      flex-direction: column-reverse;
+      text-align: center;
+      width: 30rem;
+    }
+    .card-img-top {
+      // padding:20px;
+      max-height: 400px;
+    }
+    .card-body {
+      padding-bottom: 0px;
     }
   }
 }
@@ -492,8 +591,8 @@ table {
 .img-holder {
   position: relative;
   margin: auto;
-  width: 204px;
-  height: 204px;
+  width: 254px;
+  height: 254px;
   clip-path: polygon(45% 1.33975%, 46.5798% 0.60307%, 48.26352% 0.15192%, 50% 0%, 51.73648% 0.15192%, 53.4202% 0.60307%, 55% 1.33975%, 89.64102% 21.33975%, 91.06889% 22.33956%, 92.30146% 23.57212%, 93.30127% 25%, 94.03794% 26.5798%, 94.48909% 28.26352%, 94.64102% 30%, 94.64102% 70%, 94.48909% 71.73648%, 94.03794% 73.4202%, 93.30127% 75%, 92.30146% 76.42788%, 91.06889% 77.66044%, 89.64102% 78.66025%, 55% 98.66025%, 53.4202% 99.39693%, 51.73648% 99.84808%, 50% 100%, 48.26352% 99.84808%, 46.5798% 99.39693%, 45% 98.66025%, 10.35898% 78.66025%, 8.93111% 77.66044%, 7.69854% 76.42788%, 6.69873% 75%, 5.96206% 73.4202%, 5.51091% 71.73648%, 5.35898% 70%, 5.35898% 30%, 5.51091% 28.26352%, 5.96206% 26.5798%, 6.69873% 25%, 7.69854% 23.57212%, 8.93111% 22.33956%, 10.35898% 21.33975%);
   background-color: $secondary;
 }
@@ -511,8 +610,8 @@ table {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 .speaker-img-modal {
   width: 250px;
@@ -520,7 +619,7 @@ table {
   border-radius: 10%;
 }
 .speaker-box {
-  width: 14rem;
+  width: 18rem;
   &.card {
     border: 0px;
     cursor: pointer;
@@ -688,7 +787,7 @@ footer {
   .footer-nav {
     border-bottom: 1px solid $gray-500;
     .footer-nav-menu-col {
-      min-width: 15rem;
+      min-width: 14rem;
     }
     dt {
       @extend h4;
@@ -717,6 +816,7 @@ footer {
 
 .alert {
   margin-bottom: 0rem;
+  padding: 1.25rem 1.25rem 0.75rem 1.25rem
 }
 
 .blog-list-section {
