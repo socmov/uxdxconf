@@ -4,12 +4,16 @@ body {
   padding-top: 3.5rem;
   font-size: 1.2rem;
 }
+h1, h2, h3 {
+  font-weight: 800;
+}
 .header-section {
   padding-top: 3rem;
 }
 .section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #00000033;
   &.colour_white {
     background-color: white;
   }
@@ -20,10 +24,28 @@ body {
     background: $uxdx-secondary;
     color: white;
   }
+  &.colour_gradient {
+    background: $uxdx;
+    color: white;
+  }
   h2 {
     font-size: 2.5rem;
+    text-align: center;
+    @extend .mb-5;
+    @extend .pb-3;
+  }
+  .paragraph-content p {
+    @extend .pb-5;
+    @extend .pt-2;
   }
 }
+@include media-breakpoint-up(sm) {
+  .section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
 table {
   @extend .table;
 }
@@ -126,7 +148,7 @@ table {
       .btn-light {
         margin-left: 15px;
         padding: 0.5rem 2rem;
-        font-weight: 700;
+        font-weight: 800;
         font-size: 1.1rem
       }
     }
@@ -149,8 +171,9 @@ table {
 // Header //
 .jumbotron {
   color: $white;
-  // text-align: center;
+  text-align: center;
   margin-bottom: 0rem;
+
   .header-logo-div {
     display: none;
   }
@@ -159,8 +182,8 @@ table {
     height: 250px;
   }
   .display-5 {
-    font-size: 2.9rem;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 800;
   }
   .display-4 {
     font-size: 1.5rem;
@@ -176,48 +199,20 @@ table {
     }
   }
   .jumbotron-subscribe-form {
-    padding-top: 2rem;
+    padding-top: 5rem;
     p {
       font-size: 1.1rem;
-    }
-    .header-form {
-      @extend .d-flex;
-      @extend .flex-row;
-      width: 100%;
-      .form-group {
-        width: 100%;
-        input {
-          // @extend .mx-sm-2;
-          margin-right: 1rem;
-          min-width: 150px;
-        }
-        .btn {
-          width: 100%;
-        }
-      }
     }
   }
   @include media-breakpoint-up(sm) {
     .header-logo-div {
       display: block;
     }
-    .jumbotron-subscribe-form {
-      .header-form {
-        .form-group {
-          width: auto;
-          .btn {
-            width: auto;
-          }
-        }
-      }
-    }
   }
-  @include media-breakpoint-down(sm) {
-    .jumbotron-subscribe-form {
-      .header-form {
-        flex-wrap: wrap
-      }
-    }
+}
+@include media-breakpoint-up(sm) {
+  .jumbotron {
+    padding: 8rem 2rem;
   }
 }
 
@@ -255,8 +250,9 @@ table {
 // Stats
 .stats-section {
   padding-bottom: 1.5rem;
+  // margin-bottom: -5rem;
   padding-top: 1.5rem;
-  box-shadow: 0px 1px 3px 0px rgb(113, 62, 156);
+  box-shadow: 0px 1px 3px 0px rgb(113, 62, 156);s
   .stat {
     width: 10rem;
     text-align: center;
@@ -264,6 +260,28 @@ table {
       border-bottom: 4px solid $primary;
       display: inline-block;
       padding: 0px 10px;
+    }
+  }
+}
+
+.build_better_products {
+  figure {
+    display: inline-block;
+  }
+  figure:first-of-type {
+    padding-bottom: 4rem;
+  }
+  img {
+    width: 300px;
+  }
+  @include media-breakpoint-up(sm) {
+    figure:first-of-type {
+      padding-left: 10rem;
+      padding-right: 10rem;
+      padding-bottom: 0rem;
+    }
+    figure {
+
     }
   }
 }
@@ -317,6 +335,37 @@ table {
   }
 }
 
+// PROBLEMS WITH PRODUCT DEVELOPMENT
+.the_problems_with_product_development_today__sect {
+  .card {
+    &:nth-of-type(1) {
+      .card-sub-title {
+        border-bottom: 5px solid $ux;
+      }
+    }
+    &:nth-of-type(2) {
+      .card-sub-title {
+        border-bottom: 5px solid $dev;
+      }
+    }
+    &:nth-of-type(3) {
+      .card-sub-title {
+        border-bottom: 5px solid $ops;
+      }
+    }
+    .card-body {
+      text-align: left;
+      .card-title{
+        font-size: 4rem;
+      }
+      .card-sub-title {
+        font-size: 1.75rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
 
 // UXDX model
 .cards-section {
@@ -346,7 +395,7 @@ table {
   }
 }
 
-.how_do_you_increase_the_odds_of_success__section_94ee139 {
+.how_do_you_increase_the_odds_of_success__section_94ee139, .how_uxdx_can_help___horizontal_section {
   .horizontal-content {
     @extend .flex-wrap; 
     .horizontal-image, .px-2 {
@@ -365,6 +414,17 @@ table {
   background: $uxdx-secondary;
   color: white;
   text-align: center;
+  font-size: 4rem;
+}
+.register_now___section_desi {
+  text-align: center;
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 0rem !important;
+  }
+  p {
+    padding-bottom: 1rem !important;
+  }
 }
 
 
@@ -517,28 +577,63 @@ table {
 }
 
 // SIGNUP FORM //
-
+.mauticform_wrapper {
+  max-width: 100% !important;
+}
 .forms-section {
-  background: $gray-300;
-  color: #444;
+  background: $uxdx;
+  text-align: left;
+  color: white;
   .btn-primary {
-    @extend .btn-outline-dark;
+    @extend .btn-light;
   }
 }
-.subscribe_.forms-section {
-  background: $secondary;
-  h2 {
-    font-size: 4rem;
-    font-weight: 400;
+.header-form {
+  @extend .d-flex;
+  @extend .flex-row;
+  justify-content: center;
+  width: 100%;
+  .form-group {
+    width: 100%;
+    input {
+      // @extend .mx-sm-2;
+      margin-right: 1rem;
+      min-width: 150px;
+    }
+    .btn {
+      width: 100%;
+    }
   }
-  p:first-of-type {
-    font-size: 2rem;
-  }
-  // color: #444;
-  // .btn-primary {
-  //   @extend .btn-outline-dark;
-  // }
 }
+@include media-breakpoint-up(sm) {
+  .header-form {
+    .form-group {
+      width: auto;
+      .btn {
+        width: auto;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .header-form {
+    flex-wrap: wrap
+  }
+}
+// .subscribe_.forms-section {
+//   background: $secondary;
+//   h2 {
+//     font-size: 2rem;
+//     font-weight: 400;
+//   }
+//   p:first-of-type {
+//     font-size: 2rem;
+//   }
+//   // color: #444;
+//   // .btn-primary {
+//   //   @extend .btn-outline-dark;
+//   // }
+// }
 
 .recommend_a_speaker_section {
   background: inherit;
@@ -588,6 +683,9 @@ table {
 
 
 // SPEAKERS //
+.uxdx_2019_speakers_highlights {
+  padding-top: 2rem;
+}
 .img-holder {
   position: relative;
   margin: auto;
@@ -772,8 +870,9 @@ tito-widget.regular {
 
 // FOOTER
 footer {
-  background-color: $gray-700;
+  background-color: $gray-900;
   padding-top: 3rem;
+  border-top: 1px solid #ffffff33;
   
   a {
     color: $gray-500;
@@ -785,7 +884,7 @@ footer {
   }
   // text-align: center;
   .footer-nav {
-    border-bottom: 1px solid $gray-500;
+    // border-bottom: 1px solid $gray-500;
     .footer-nav-menu-col {
       min-width: 14rem;
     }

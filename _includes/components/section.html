@@ -26,20 +26,26 @@
 
   {% if section.image_rows.size == 0 %}
   <div class="container">
+    {% assign title = '' %}
+    {% if section.title2.size > 11 %}
+      {% assign title = section.title2 %}
+    {% elsif section.title.size > 1 %}
+      {% assign title = section.title %}
+    {% endif %}
+    
+    {% if title.size > 1 %}
     <h2>
-      {% if section.title2.size > 11 %}
-        <!-- title 2 is the rich text version -->
-        {{section.title2}}
-      {% else %}
-        {{section.title}}
-      {% endif %}
+      {{title}}
     </h2>
+    {% endif %}
   {% endif %}
 
   <div class="section-content">
     <!-- SECTION CONTENT - If there is text. 12 is the default empty p that is generated so great tehn 12 means content exists -->
     {% if section.content.size > 12 %}
+    <div class="paragraph-content">
       {{section.content}} 
+    </div>
     {% endif %}
 
   
