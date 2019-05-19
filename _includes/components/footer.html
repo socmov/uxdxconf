@@ -10,7 +10,7 @@
         {% for page in menu.pages___buttons %}
         <dd>
           <a href="{{site.baseurl}}/{{page.url_slug}}">
-            {% if page.menu_title.size > 3 %}
+            {% if page.menu_title.size > 1 %}
             {{page.menu_title}}
             {% else %}
             {{page.url_slug | capitalize}}
