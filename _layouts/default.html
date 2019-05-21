@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% assign pageContent = site.data.pages | where: "url_slug", page.url_slug %}
+    <title>{% if pageContent[0].meta_title %}{{pageContent[0].meta_title}}{% else %}{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }} {% endif %}</title>
 
     {% include scripts/meta.html %}
 
