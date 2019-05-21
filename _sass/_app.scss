@@ -264,7 +264,7 @@ table {
   }
 }
 
-.build_better_products {
+.build_better_products, .build_better_products___ux, .build_better_products_dx, .build_better_products___product_page, .build_better_products___project, .build_better_products___design {
   figure {
     display: inline-block;
   }
@@ -336,7 +336,7 @@ table {
 }
 
 // PROBLEMS WITH PRODUCT DEVELOPMENT
-.the_problems_with_product_development_today__sect {
+.product_development_is_broken, .product_development_is_broken___dx_page, .product_development_is_broken___ux_page {
   .card {
     &:nth-of-type(1) {
       .card-sub-title {
@@ -402,6 +402,9 @@ table {
       flex: 1;
     }
   }
+}
+.equal_image_ratio {
+  flex: 1;
 }
 
 // Generic buttons
@@ -579,6 +582,7 @@ table {
 // SIGNUP FORM //
 .mauticform_wrapper {
   max-width: 100% !important;
+  padding-top: 0px !important;
 }
 .forms-section {
   background: $uxdx;
