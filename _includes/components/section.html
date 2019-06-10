@@ -212,6 +212,11 @@
       {% include components/video-highlight.html item=section.video_highlight %}
     {% endif %}
 
+    <!-- VIDEO highlights -->
+    {% if section.table.size > 0 %}
+      {% include components/model-comparison-table.html %}
+    {% endif %}
+
     <!-- HORIZONTAL CONTENT -->
    {% if section.horizontal_content.size > 0 %} 
    {% for horizontal_content in section.horizontal_content %}
