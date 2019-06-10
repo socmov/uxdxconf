@@ -113,13 +113,16 @@ table {
   }
 }
 .horizontal-content {
-
   .horizontal-image {
     min-width: 250px;
     width:250px;
+    flex: 1;
     .horizontal-card-image {
       max-width: 90%;
     }
+  }
+  .content {
+    flex: 2;
   }
   @include media-breakpoint-down(xs) {
     .container-row {
@@ -411,7 +414,7 @@ table {
   }
 }
 .equal_image_ratio {
-  flex: 1;
+  flex: 2;
 }
 
 // Generic buttons

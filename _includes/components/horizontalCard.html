@@ -8,7 +8,7 @@
       {% else %}
       <img class="horizontal-card-image" src="{{include.item.image[0].url}}" alt="{{include.item.image[0].description}}"> {% endif %}
     </div>
-    <div class="px-2 {% if include.item.equal_image_ratio.size > 0 %} equal_image_ratio {% endif %}">
+    <div class="px-2 content">
       <h4 class="card-title">{{include.item.title}}</h4>
       <p class="card-text">{{include.item.description}}</p>
        {% if include.item.button %} {% include components/button.html button=include.item.button %} {% endif %}
