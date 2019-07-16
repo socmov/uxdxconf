@@ -652,6 +652,14 @@ table {
 //   // }
 // }
 
+.partner_form {
+  background: #f3f5f6;
+  color: inherit;
+}
+.pipedriveWebForms {
+  text-align: center;
+}
+
 .recommend_a_speaker_section {
   background: inherit;
   color: inherit;
@@ -838,7 +846,12 @@ table {
     height: 80px;
   }
   .card-header {
-    background-color: $action;
+    // background-color: $action;
+    background-color: $primary;
+    h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
   }
   .card-title {
     font-size: 2.5rem;
@@ -846,6 +859,19 @@ table {
   }
   ul li:nth-child(odd) {
     background-color: #fbfbfb;
+  }
+}
+.ticket-most-popular {
+  border: 2px solid $gray-700;
+  margin-top: -2rem;
+  .most-popular-header {
+    background-color: $secondary;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
   }
 }
 

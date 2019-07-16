@@ -11,3 +11,4 @@ images/original_images
 parsedFeedback.csv
 parsedFeedback.xlsx
 _data/uxdxEuropeFeedbackMay18.json
+node_modules/
