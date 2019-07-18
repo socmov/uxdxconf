@@ -809,6 +809,22 @@ table {
 ////////////////////////
 /// TICKETS ////////////
 ////////////////////////
+.manual_invoice {
+  padding-top: 2rem;
+  .paragraph-content {
+    display:none;
+  }
+} 
+.tickets-section {
+  padding-bottom: 2rem;
+  h2 {
+    margin-bottom: 1rem !important;
+  }
+  .paragraph-content {
+    text-align: center;
+    padding-bottom: 3rem !important;
+  }
+}
 .tickets {
   small {
     font-size: 70%;
