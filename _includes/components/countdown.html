@@ -1,24 +1,27 @@
 
-<span class="countdown-timer"></span>
+<div class="countdown-timer"></div>
 
 <script type="application/javascript">
 
+  const today_date = Date.now()
+  const first200 = new Date(2019, 1, 1, 00, 00, 00)
+  const super_early = new Date(2019, 4, 31, 23, 59, 59)
+  const early = new Date(2019, 5, 14, 23, 59, 59)
+  const regular1 = new Date(2019, 5, 28, 23, 59, 59)
+  const regular2 = new Date(2019, 6, 12, 23, 59, 59)
+  const regular3 = new Date(2019, 6, 26, 23, 59, 59)
+  const regular4 = new Date(2019, 7, 9, 23, 59, 59)
+  // const regular5 = new Date(2019, 7, 23, 23, 59, 59)
+
+  const flashsalestart = new Date(2019, 7, 13, 23, 59, 59)
+  const flashsaleend = new Date(2019, 7, 16, 23, 59, 59)
+
+  const regular6 = new Date(2019, 8, 06, 23, 59, 59)
+  const regular7 = new Date(2019, 8, 20, 23, 59, 59)
+  const regular8 = new Date(2019, 9, 1, 23, 59, 59)
+  const late = new Date(2019, 9, 4, 23, 59, 59)
+
   function getExpiryDate() {
-
-    const today_date = Date.now()
-    const first200 = new Date(2019, 1, 1, 00, 00, 00)
-    const super_early = new Date(2019, 4, 31, 23, 59, 59)
-    const early = new Date(2019, 5, 14, 23, 59, 59)
-    const regular1 = new Date(2019, 5, 28, 23, 59, 59)
-    const regular2 = new Date(2019, 6, 12, 23, 59, 59)
-    const regular3 = new Date(2019, 6, 26, 23, 59, 59)
-    const regular4 = new Date(2019, 7, 9, 23, 59, 59)
-    const regular5 = new Date(2019, 7, 23, 23, 59, 59)
-    const regular6 = new Date(2019, 8, 06, 23, 59, 59)
-    const regular7 = new Date(2019, 8, 20, 23, 59, 59)
-    const regular8 = new Date(2019, 9, 1, 23, 59, 59)
-    const late = new Date(2019, 9, 4, 23, 59, 59)
-
     let expiry
     let expired = false
     if(today_date < first200) expiry = first200
@@ -28,7 +31,8 @@
     else if (today_date < regular2) expiry = regular2
     else if (today_date < regular3) expiry = regular3
     else if (today_date < regular4) expiry = regular4
-    else if (today_date < regular5) expiry = regular5
+    else if (today_date < flashsalestart) expiry = flashsalestart
+    else if (today_date < flashsaleend) expiry = flashsaleend
     else if (today_date < regular6) expiry = regular6
     else if (today_date < regular7) expiry = regular7
     else if (today_date < regular8) expiry = regular8
@@ -39,61 +43,62 @@
   }
 
   // Update the count down every 1 second
-    var x = setInterval(function () {
+  var x = setInterval(function () {
 
-      // Get todays date and time
-      var now = new Date().getTime();
+    // Get todays date and time
+    var now = new Date().getTime();
 
-      // get the expiry time
-      let expiry = getExpiryDate().getTime();
-      // manually setting the end date
-      // expiry = new Date(2019,09,07, 09,00).getTime();
-      // console.log(expiry)
+    // get the expiry time
+    let expiry = getExpiryDate().getTime();
+    // manually setting the end date
+    // expiry = new Date(2019,09,07, 09,00).getTime();
+    // console.log(expiry)
 
-      var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
-      var duration = moment.duration(leftTime);
+    var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
+    var duration = moment.duration(leftTime);
 
-      // get the value to show
-      var value = "{{include.text.pre}} "
-      var dayWord = duration.days() != 1 ? 'days' : 'day'
-      var hourWord = duration.hours() != 1 ? 'hours' : 'hour'
-      var minuteWord = duration.minutes() != 1 ? 'minutes' : 'minute'
-      var secondWord = duration.seconds() != 1 ? 'seconds' : 'second'
-      if (duration.days() > 5) {
-        value += duration.days() + ' ' + dayWord
-      }
-      else if (duration.days() <= 5 && duration.days() > 0) {
-        value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
-      }
-      else if (duration.hours() > 0) {
-        value += duration.hours() + ' ' + hourWord + ', ' + duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
-      }
-      else {
-        value += duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
-      }
-
-      // trim if first char = '.'
-      let post = "{{include.text.post}}"
-      // console.log(post.length)
-      if (post.length === 0 || post.charAt(1) === '.') {
-        value += post
-      }
-      else {
-        value += " "  + post
-      }
-
-      if(duration.days > 12) value =''
-    // Display the result in the element with id="countdown-timer"
-    if ($(".countdown-timer")[0]) {
-
-      // Do something if class exists
-      var elementArray = document.getElementsByClassName("countdown-timer");
-      for (var i = 0; i < elementArray.length; i++) {
-
-        elementArray[i].innerHTML = value
-      }
+    // get the value to show
+    var value = "{{include.text.pre}} "
+    var dayWord = duration.days() != 1 ? 'days' : 'day'
+    var hourWord = duration.hours() != 1 ? 'hours' : 'hour'
+    var minuteWord = duration.minutes() != 1 ? 'minutes' : 'minute'
+    var secondWord = duration.seconds() != 1 ? 'seconds' : 'second'
+    if (duration.days() > 5) {
+      value += duration.days() + ' ' + dayWord
+    }
+    else if (duration.days() <= 5 && duration.days() > 0) {
+      value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
+    }
+    else if (duration.hours() > 0) {
+      value += duration.hours() + ' ' + hourWord + ', ' + duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
+    }
+    else {
+      value += duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
     }
 
+    // trim if first char = '.'
+    let post = "{{include.text.post}}"
+    // console.log(post.length)
+    if (post.length === 0 || post.charAt(1) === '.') {
+      value += post
+    }
+    else {
+      value += " "  + post
+    }
+
+    if (expiry && expiry !== flashsalestart.getTime()) {
+      var elementArray = document.getElementsByClassName("countdown-timer");
+      for (var i = 0; i < elementArray.length; i++) {
+        let text = '<div class="alert alert-info" role="alert">'
+        if (expiry === flashsaleend) {
+          text += '<b>50% OFF</b> with discount code <b>UXDX5019</b>. Sale ends in ' + value
+        } else {
+          text += 'Prices increase in ' + value
+        }
+        text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+        elementArray[i].innerHTML = text
+      }
+    }
   }, 1000);
 
 </script>
