@@ -86,18 +86,25 @@
       value += " "  + post
     }
 
+    let text
     if (expiry && expiry !== flashsalestart.getTime()) {
-      var elementArray = document.getElementsByClassName("countdown-timer");
-      for (var i = 0; i < elementArray.length; i++) {
-        let text = '<div class="alert alert-info" role="alert">'
-        if (expiry === flashsaleend) {
-          text += '<b>50% OFF</b> with discount code <b>UXDX5019</b>. Sale ends in ' + value
-        } else {
-          text += 'Prices increase in ' + value
-        }
-        text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
-        elementArray[i].innerHTML = text
+      text = '<div class="alert alert-info" role="alert">'
+      if (expiry === flashsaleend.getTime()) {
+        text += '<b>50% OFF</b> with discount code <b>UXDX5019</b>. Sale ends in ' + value
+      }else {
+        text += 'Prices increase in ' + value
       }
+      text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    }
+    else if (expiry === flashsalestart.getTime()) {
+      text = '<div class="alert alert-info" role="alert">'
+      text += 'Our <b>50%</b> sale starts in ' + value + '. Leave your email below to avoid missing out on Europe\'s largest product event.</div>'
+    }
+    
+    // put the text into the header
+    var elementArray = document.getElementsByClassName("countdown-timer");
+    for (var i = 0; i < elementArray.length; i++) {
+      elementArray[i].innerHTML = text
     }
   }, 1000);
 
