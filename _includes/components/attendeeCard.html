@@ -1,5 +1,12 @@
+{% if include.item.profile_image.size < 5 %} 
+  {% assign profile_image = 'blank-profile.png' %} 
+  {% else %}
+  {% assign profile_image = include.item.profile_image %} 
+{% endif %}
+
 <div class="attendee-box card align-self-stretch">
-  <img class="card-img-top attendee-profile" src="{{ site.baseurl }}/images/attendees/{{include.item.profile_image}}" alt="{{include.item.first_name}} {{include.item.last_name}}">
+    {{include.item.profile_image.size}}
+  <img class="card-img-top attendee-profile" src="{{ site.baseurl }}/images/attendees/{{profile_image}}" alt="{{include.item.first_name}} {{include.item.last_name}}">
   <div class="card-body">
     <h4 class="card-title">
       <a href="{{include.item.linkedin}}" rel="noopener" target="_blank">{{include.item.first_name}} {{include.item.last_name}} </a>
