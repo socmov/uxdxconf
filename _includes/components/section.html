@@ -177,7 +177,9 @@
     <!-- FORMS -->
     {% if section.form.size > 0 %} 
       {% assign form = section.form[0].form_name | append: '.html' | prepend: 'forms/' %}
-      {% include {{form}} %}
+      {% assign form_name = section.form[0].form_name %}
+      {% assign button_text = section.form[0].button_text %}
+      {% include {{form}} name=form_name button_text=button_text %}
     {% endif %}
 
     <!-- MAPS -->

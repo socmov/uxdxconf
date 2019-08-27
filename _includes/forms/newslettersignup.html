@@ -1,5 +1,6 @@
 {% if include.id %} {% assign id = include.id %} {% else %} {% assign id = 1 %} {% endif %}
 {% if include.name %} {% assign name = include.name %} {% else %} {% assign name = "newslettersignup" %} {% endif %}
+{% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
 
 <div id="mauticform_wrapper_newslettersignup" class="mauticform_wrapper">
   <form role="form" method="post" action="https://mktg.sociallymotivated.com/form/submit?formId={{id}}"
@@ -32,8 +33,7 @@
         class="mauticform-row mauticform-button-wrapper mauticform-field-3 form-group">
         <button type="submit" name="mauticform[submit]" id="mauticform_input_{{name}}_submit"
           name="mauticform[submit]" value="" class="mauticform-button btn btn-default btn-lg" value="1"
-          onClick="gtag('event', 'click', { event_category: 'engagement', event_action: 'click', event_label: 'Join the Community'});">Join the
-          Community</button>
+          onClick="gtag('event', 'click', { event_category: 'engagement', event_action: 'click', event_label: '{{button_text}}'});">{{button_text}}</button>
       </div>
     </div>
   
