@@ -267,7 +267,7 @@ table {
   }
 }
 
-.build_better_products, .build_better_products___ux, .build_better_products_dx, .build_better_products___product_page, .build_better_products___project, .build_better_products___design {
+.build_better_products, .build_better_products___ux, .build_better_products_dx, .build_better_products___product_page, .build_better_products___project, .build_better_products___design, .what_is_uxdx_about___csuite {
   figure {
     display: inline-block;
   }
@@ -760,17 +760,15 @@ table {
 ///////////////////
 // ATTENDEES /////
 //////////////////
-.attendees___section, .team_attendees {
-  .card {
-    width: 12rem;
-    .card-img-top {
-      max-height:100%;
-      max-width:100%;
-    }
-    .company-image {
-      max-width: 5rem;
-      max-height: 3rem;
-    }
+.attendee-box {
+  width: 12rem;
+  .card-img-top {
+    max-height:100%;
+    max-width:100%;
+  }
+  .company-image {
+    max-width: 5rem;
+    max-height: 3rem;
   }
 }
 ///////////////////
