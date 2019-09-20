@@ -12,6 +12,7 @@
     const regular4 = new Date(2019, 7, 9, 23, 59, 59)
     const regular6 = new Date(2019, 8, 06, 23, 59, 59)
     const regular7 = new Date(2019, 8, 20, 23, 59, 59)
+    const regular7_2 = new Date(2019, 8, 27, 23, 59, 59)
     const regular8 = new Date(2019, 9, 1, 23, 59, 59)
     const late = new Date(2019, 9, 4, 23, 59, 59)
 
@@ -76,6 +77,12 @@
         ticketTitle: "Regular",
         ticketSubTitle: "UXDX conference and training access",
       },
+      regular7_2: {
+        confRelease: 'zeiish3hjoo',
+        confPrice: 825,
+        ticketTitle: "Regular",
+        ticketSubTitle: "UXDX conference and training access",
+      },
       regular8: {
         confRelease: 'u60z5ubthzg',
         confPrice: 999,
@@ -101,6 +108,7 @@
     // else if (today_date < regular5) { sale = "regular5" }
     else if (today_date < regular6) { sale = "regular6" }
     else if (today_date < regular7) { sale = "regular7" }
+    else if (today_date < regular7_2) { sale = "regular7_2" }
     else if (today_date < regular8) { sale = "regular8" }
     else if (today_date < late) { sale = "late" }
     else expired = true

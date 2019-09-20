@@ -18,6 +18,7 @@
 
   const regular6 = new Date(2019, 8, 06, 23, 59, 59)
   const regular7 = new Date(2019, 8, 20, 23, 59, 59)
+  const regular7_2 = new Date(2019, 8, 27, 23, 59, 59)
   const regular8 = new Date(2019, 9, 1, 23, 59, 59)
   const late = new Date(2019, 9, 4, 23, 59, 59)
 
@@ -35,6 +36,7 @@
     else if (today_date < flashsaleend) expiry = flashsaleend
     else if (today_date < regular6) expiry = regular6
     else if (today_date < regular7) expiry = regular7
+    else if (today_date < regular7_2) expiry = regular7_2
     else if (today_date < regular8) expiry = regular8
     else if (today_date < late) expiry = late
     else expired = true
