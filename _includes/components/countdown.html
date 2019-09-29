@@ -104,9 +104,12 @@
     }
     
     // put the text into the header
-    var elementArray = document.getElementsByClassName("countdown-timer");
-    for (var i = 0; i < elementArray.length; i++) {
-      elementArray[i].innerHTML = text
+
+    if (expiry !== late.getTime()) {
+      var elementArray = document.getElementsByClassName("countdown-timer");
+      for (var i = 0; i < elementArray.length; i++) {
+        elementArray[i].innerHTML = text
+      }
     }
   }, 1000);
 
