@@ -50,11 +50,16 @@
               <div class="schedule__grid__event {{session.location}} {{session.session[0].type}}" session-id="{{session.session[0].id}}">
                 <div class="schedule__grid__event__photos">
                 {% if session.session[0].speakers.size == 1 %}
-                  <img src="{{session.session[0].speakers[0].profile_picture[0].url}}" alt="{{session.session[0].speakers[0].first_name}} {{session.session[0].speakers[0].last_name}}, {{session.session[0].speakers[0].job_title}}"
-                    class="profile_picture">
-                  <img src="{{session.session[0].speakers[0].company_logo[0].url}}" alt="{{session.session[0].speakers[0].company}}" class="company_logo"> {% elsif session.session[0].speakers.size > 1 %}
-                  <img src="{{site.baseurl}}/images/panel.jpg" alt="Panel Session" class="profile_picture"> 
+                <img src="{{session.session[0].speakers[0].profile_picture[0].url}}" alt="{{session.session[0].speakers[0].first_name}} {{session.session[0].speakers[0].last_name}}, {{session.session[0].speakers[0].job_title}}"
+                class="profile_picture">
+                <img src="{{session.session[0].speakers[0].company_logo[0].url}}" alt="{{session.session[0].speakers[0].company}}" class="company_logo"> {% elsif session.session[0].speakers.size > 1 %}
+                <img src="{{site.baseurl}}/images/panel.jpg" alt="Panel Session" class="profile_picture"> 
                 {% endif %} 
+                {% if session.session[0].youtube.size > 0 %}
+                <div class="video-btn" data-toggle="modal" data-src="{{session.session[0].youtube}}" data-target="#youtubeModal">
+                  <img src="{{site.baseurl}}/images/youtube.svg" width="20" height="20"> Watch
+                </div>
+                {% endif %}
                 </div>
                 <div class="schedule__grid__event__details">
                   <div class="schedule__grid__event__title">
@@ -120,7 +125,22 @@
   </div>
 </div>
 
-
+<!-- Modal -->
+<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="youtubeModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>        
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 
 <div class="modal fade" id="feedbackDialog" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -218,4 +238,25 @@
     // close the modal
     $('#feedbackDialog').modal('hide');
   });
+
+  
+  var $videoSrc;  
+  $('.video-btn').click(function() {
+      $videoSrc = $(this).data( "src" );
+      console.log('onclick', $videoSrc)
+  });
+
+  // when the modal is opened autoplay it  
+  $('#youtubeModal').on('shown.bs.modal', function (e) {
+      console.log('onopen', $videoSrc)
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+  })
+  
+  // stop playing the youtube video when I close the modal
+  $('#youtubeModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src',$videoSrc); 
+  })
+
 </script>
