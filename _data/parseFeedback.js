@@ -1,4 +1,4 @@
-const feedback = require('./community2019Feedback.json')
+const feedback = require('./uxdx2019.json')
 const agendas = require('./agendas.json')
 const fs = require('fs')
 const json2csv = require('json2csv').parse
@@ -17,30 +17,41 @@ let sessions = agendas.forEach((agenda) => {
   })
 })
 
+let count = 0
 let parsedFeedback = []
 Object.keys(feedback).forEach((session) => {
   // console.log(session, flattenedIndex.indexOf(session))
   let sessionDetails = flattenedSessions[flattenedIndex.indexOf(session)]
-  // console.log(sessionDetails)
-  let speakers = sessionDetails.speakers.map((speaker) => {
-    return speaker.first_name + ' ' + speaker.last_name + ', ' + speaker.job_title + ', ' + speaker.company
-  }).join()
+
+  let speakers = []
+  if(sessionDetails) {
+    speakers = sessionDetails.speakers.map((speaker) => {
+      return speaker.first_name + ' ' + speaker.last_name + ', ' + speaker.job_title + ', ' + speaker.company
+    }).join()
+  }
+
+
 
 
   Object.keys(feedback[session].feedback).forEach((id) => {
+    count++
     let details = feedback[session].feedback[id]
-    parsedFeedback.push({
-      conference: sessionDetails.conference[0],
-      session,
-      name: sessionDetails.name,
-      speakers: speakers,
-      speaker: details.speaker,
-      content: details.content,
-      comment: details.comment,
-      timestamp: new Date(details.timeStamp),
-    })
+    if(sessionDetails) {
+      parsedFeedback.push({
+        conference: sessionDetails.conference[0],
+        session,
+        name: sessionDetails.name,
+        speakers: speakers,
+        speaker: details.speaker,
+        content: details.content,
+        comment: details.comment,
+        timestamp: new Date(details.timeStamp),
+      })
+    }
   })
 })
+
+console.log(count)
 
 const fields = Object.keys(parsedFeedback[0])
 const opts = { fields }
