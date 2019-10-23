@@ -1,9 +1,9 @@
-let sponsors = require('../_data/sponsors.json')
+const sponsors = require('../_data/sponsors.json')
 const { parse } = require('json2csv')
 const fs = require('fs')
 
 const parseSponsors = function (conference) {
-  let confSponsors = sponsors.filter((a) => {
+  const confSponsors = sponsors.filter((a) => {
     return a.conference.indexOf(conference) !== -1
   })
   let parsedSponsors = []

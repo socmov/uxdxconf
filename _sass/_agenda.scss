@@ -51,10 +51,19 @@
   }
 }
 
+.agenda-alert {
+  text-align: center;
+  padding: 3rem;
+}
+
 .video-btn {
   padding-top: 1rem;
   font-size: 0.9rem;
   cursor: pointer;
+}
+.slides-btn {
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
 .openFeedbackDialog {

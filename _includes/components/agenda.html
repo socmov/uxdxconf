@@ -2,6 +2,14 @@
 {% assign future = nowunix | plus: 1209600 %}
 {% assign past = nowunix | minus: 1209600 %}
 
+<div class="alert alert-info agenda-alert" role="alert">
+  <h2>You can set the agenda for UXDX 2020</h2>
+  <p>We shape the agenda around what you want to know.</p> 
+  <p>Let us know what companies are doing great work and what you want to hear about.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6ynLt9ORGTSEA9mUt71zxqCI-xfHJhWk2twifRNNKTurZlQ/viewform?usp=sf_link" class="btn btn-primary btn-lg">Share Your Thoughts</a>
+  
+</div>
+
 <div class="uxdx_agenda">
 
   {% if include.agenda.dates.size > 1 or include.agenda.locations.size > 1 %}
@@ -59,6 +67,11 @@
                 <div class="video-btn" data-toggle="modal" data-src="{{session.session[0].youtube}}" data-target="#youtubeModal">
                   <img src="{{site.baseurl}}/images/youtube.svg" width="20" height="20"> Watch
                 </div>
+                {% endif %}
+                {% if session.session[0].slides.size > 0 %}
+                <a href="{{session.session[0].slides}}" class="slides-btn" target="_blank">
+                  <img src="{{site.baseurl}}/images/slides.svg" width="20" height="20"> Slides
+                </a>
                 {% endif %}
                 </div>
                 <div class="schedule__grid__event__details">
@@ -125,7 +138,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Video Modal -->
 <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="youtubeModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -140,8 +153,9 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
 
+<!-- Feedback Modal -->
 <div class="modal fade" id="feedbackDialog" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -243,12 +257,10 @@
   var $videoSrc;  
   $('.video-btn').click(function() {
       $videoSrc = $(this).data( "src" );
-      console.log('onclick', $videoSrc)
   });
 
   // when the modal is opened autoplay it  
   $('#youtubeModal').on('shown.bs.modal', function (e) {
-      console.log('onopen', $videoSrc)
     // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
     $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
   })

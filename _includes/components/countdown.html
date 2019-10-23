@@ -51,64 +51,67 @@
     var now = new Date().getTime();
 
     // get the expiry time
-    let expiry = getExpiryDate().getTime();
-    // manually setting the end date
-    // expiry = new Date(2019,09,07, 09,00).getTime();
-    // console.log(expiry)
+    let expiryDate = getExpiryDate()
+    if (expiryDate) {
+      let expiry = expiryDate.getTime();
+      // manually setting the end date
+      // expiry = new Date(2019,09,07, 09,00).getTime();
+      // console.log(expiry)
 
-    var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
-    var duration = moment.duration(leftTime);
-
-    // get the value to show
-    var value = "{{include.text.pre}} "
-    var dayWord = duration.days() != 1 ? 'days' : 'day'
-    var hourWord = duration.hours() != 1 ? 'hours' : 'hour'
-    var minuteWord = duration.minutes() != 1 ? 'minutes' : 'minute'
-    var secondWord = duration.seconds() != 1 ? 'seconds' : 'second'
-    if (duration.days() > 5) {
-      value += duration.days() + ' ' + dayWord
-    }
-    else if (duration.days() <= 5 && duration.days() > 0) {
-      value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
-    }
-    else if (duration.hours() > 0) {
-      value += duration.hours() + ' ' + hourWord + ', ' + duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
-    }
-    else {
-      value += duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
-    }
-
-    // trim if first char = '.'
-    let post = "{{include.text.post}}"
-    // console.log(post.length)
-    if (post.length === 0 || post.charAt(1) === '.') {
-      value += post
-    }
-    else {
-      value += " "  + post
-    }
-
-    let text = ''
-    if (expiry && expiry !== flashsalestart.getTime()) {
-      // text = '<div class="alert alert-danger" role="alert">'
-      if (expiry === flashsaleend.getTime()) {
-        text += '<div class="alert alert-danger" role="alert"><b>50% OFF</b> with discount code <b>UXDX5019</b>. Sale ends in ' + value
-      } else {
-        text += '<div class="alert alert-info" role="alert">Prices increase in ' + value
+      var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
+      var duration = moment.duration(leftTime);
+  
+      // get the value to show
+      var value = "{{include.text.pre}} "
+      var dayWord = duration.days() != 1 ? 'days' : 'day'
+      var hourWord = duration.hours() != 1 ? 'hours' : 'hour'
+      var minuteWord = duration.minutes() != 1 ? 'minutes' : 'minute'
+      var secondWord = duration.seconds() != 1 ? 'seconds' : 'second'
+      if (duration.days() > 5) {
+        value += duration.days() + ' ' + dayWord
       }
-      text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
-    }
-    else if (expiry === flashsalestart.getTime()) {
-      text = '<div class="alert alert-danger" role="alert">'
-      text += 'Our <b>50%</b> sale starts in ' + value + '. Leave your email below to avoid missing out on Europe\'s largest product event.</div>'
-    }
-    
-    // put the text into the header
-
-    if (expiry !== late.getTime()) {
-      var elementArray = document.getElementsByClassName("countdown-timer");
-      for (var i = 0; i < elementArray.length; i++) {
-        elementArray[i].innerHTML = text
+      else if (duration.days() <= 5 && duration.days() > 0) {
+        value += duration.days() + ' ' + dayWord + ', ' + duration.hours() + ' ' + hourWord + ' and ' + duration.minutes() + ' ' + minuteWord
+      }
+      else if (duration.hours() > 0) {
+        value += duration.hours() + ' ' + hourWord + ', ' + duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
+      }
+      else {
+        value += duration.minutes() + ' ' + minuteWord + ' and ' + duration.seconds() + ' ' + secondWord
+      }
+  
+      // trim if first char = '.'
+      let post = "{{include.text.post}}"
+      // console.log(post.length)
+      if (post.length === 0 || post.charAt(1) === '.') {
+        value += post
+      }
+      else {
+        value += " "  + post
+      }
+  
+      let text = ''
+      if (expiry && expiry !== flashsalestart.getTime()) {
+        // text = '<div class="alert alert-danger" role="alert">'
+        if (expiry === flashsaleend.getTime()) {
+          text += '<div class="alert alert-danger" role="alert"><b>50% OFF</b> with discount code <b>UXDX5019</b>. Sale ends in ' + value
+        } else {
+          text += '<div class="alert alert-info" role="alert">Prices increase in ' + value
+        }
+        text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+      }
+      else if (expiry === flashsalestart.getTime()) {
+        text = '<div class="alert alert-danger" role="alert">'
+        text += 'Our <b>50%</b> sale starts in ' + value + '. Leave your email below to avoid missing out on Europe\'s largest product event.</div>'
+      }
+      
+      // put the text into the header
+  
+      if (expiry !== late.getTime()) {
+        var elementArray = document.getElementsByClassName("countdown-timer");
+        for (var i = 0; i < elementArray.length; i++) {
+          elementArray[i].innerHTML = text
+        }
       }
     }
   }, 1000);
