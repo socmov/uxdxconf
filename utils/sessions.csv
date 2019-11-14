@@ -1,85 +1,184 @@
-"track","title","startTime","endTime","description","speaker0","speaker1"
-"Execution","UXDX Introduction","2019-10-07T09:15:00Z","2019-10-07T09:50:00.000Z","<p>Overview of the UXDX model</p>",,
-"Vision","UXDX Introduction","2019-10-07T09:15:00Z","2019-10-07T09:50:00.000Z","<p>Overview of the UXDX model</p>",,
-"Vision","From Siloes to Systems: Using Design to Power Up Business Agility","2019-10-07T09:30:00Z","2019-10-07T10:05:00.000Z","<p>Most companies have decentralized business and product teams, which is usually good for autonomy and execution. But one decision made in isolation can seem right at the time, yet lead to a fractured user experience overall. How can companies optimise for responsiveness and reduce design entropy? This case study explains how we used design to implement system thinking into a 150-year-old bank.</p>","Morgane Peng",
-"Execution","The Secrets and Synthesis of Successful UX Research","2019-10-07T09:30:00Z","2019-10-07T10:05:00.000Z","<p>If UX Research&nbsp;is the ground floor of great product design, then talking to your customers is its foundation, essential to making sure you build something stable, that will last.&nbsp;</p>
-<p><br></p>
-<p>But good foundations don't come easy, they require excellent planning - before, after and during.&nbsp;What's the secret to a rock solid research plan? And how do guarantee&nbsp;we build the right thing?</p>","Gianni Clifford",
-"Vision","Choosing Metrics That Inspire Action ","2019-10-07T10:05:00Z","2019-10-07T10:40:00.000Z","<p>When organisations are structured around individual products then alignment is critical to avoid challenges. How do organisations communicate the business goals without being directive in terms of the features that teams need to build? How does a team identify and set KPIs that are aligned to the business strategy? And how to avoid vanity metrics along the way?</p>","Conor Walsh",
-"Execution","A/B Testing at Scale","2019-10-07T10:05:00Z","2019-10-07T10:40:00.000Z","<p>When teams move to outcomes they need to be able to confirm that their work has delivered on the expected benefits and not some external factor. As teams scale up their releases, managing the number of concurrent tests becomes more difficult.</p>
-<p><br></p>
-<p>This session will look at how to build and scale an experimentation culture that can run hundreds if not thousands of tests a year.</p>","Tatiana Tretyak",
-"Execution","Supporting the Product through Continuous Delivery","2019-10-07T10:40:00Z","2019-10-07T11:15:00.000Z","<p>In this session Frederic will look at how to manage feature-flipping and A/B Testing when shipping on multiple platforms. How to manage synchronization and coordination with product marketing and as part of it, explain how Dashlane are organized with a dual track approach to support feature team delivery and platform/production maintenance in parallel.</p>","Frederic Rivain",
-"Vision","Break","2019-10-07T10:40:00Z","2019-10-07T11:15:00.000Z","<p><br></p>",,
-"Execution","Break","2019-10-07T11:10:00Z","2019-10-07T11:45:00.000Z","<p><br></p>",,
-"Vision","How to Identify your Customer's needs ","2019-10-07T11:10:00Z","2019-10-07T11:45:00.000Z","<p>Companies have historically used a list of customer needs to describe what customers want. But is that the best way to describe what customers value in a product? Are there different types of value that consumers experience and desire? How do we discover, describe, and design for these different types of value? How can we use these insights to create growth for the business?</p>","Alan Klement",
-"Execution","Ideation and Prototyping: Think Bigger, Fail Quicker
-","2019-10-07T11:45:00Z","2019-10-07T12:20:00.000Z","<p>How can we be more courageous and confident in the way we build products?&nbsp; The answer lies in the way we ideate, design, test, and refine--before any code is written.&nbsp; You'll learn&nbsp;how to run successful ideation sessions with your working team,&nbsp;trying on novel ideas&nbsp;and taking logical leaps into the future. You'll also come away with practical methods for prototyping your best design ideas for quick user feedback.&nbsp; The result is building more innovative and useful products with less risk.</p>","Jackie Scherer",
-"Vision","Definition of Done ","2019-10-07T11:45:00Z","2019-10-07T12:20:00.000Z","<p>Done is very contentious in teams. The definition varies based on the authority of the team - done can be at test sign off or at deployment. As teams move away from functional silos towards outcomes how does the definition of Done change? And what impact does this have on the way of working?</p>","Paul Adams",
-"Execution","Aligning Organizational Stakeholders with User Story Mapping","2019-10-07T12:20:00Z","2019-10-07T12:55:00.000Z","<p>How do you achieve strategic alignment in your organization? In this session, I will go over how I use user story mapping as a way of aligning everyone from SMEs to engineers on what we're building, why we're building it and most importantly how we should prioritize work. By using this throughout the development process, companies can achieve strategic clarity, as well as better, and more successful products.</p>","Tobias Jensen",
-"Vision","Break","2019-10-07T12:20:00Z","2019-10-07T12:55:00.000Z","<p><br></p>",,
-"Execution","Break","2019-10-07T12:55:00Z","2019-10-07T13:30:00.000Z","<p><br></p>",,
-"Vision","Lunch & Networking","2019-10-07T12:55:00Z","2019-10-07T13:30:00.000Z","<p><br></p>",,
-"Vision","Accelerating development using UI Frameworks","2019-10-07T13:20:00Z","2019-10-07T13:55:00.000Z","<p>Patrick will talk about design systems and an example of how teams are positioned within a company to support other developers through the maintenance and development of a design system and UI framework.&nbsp;</p>","Patrick Mooney",
-"Execution","Lunch & Networking","2019-10-07T13:20:00Z","2019-10-07T13:55:00.000Z","<p><br></p>",,
-"Vision","Optimising your process for Responsiveness","2019-10-07T13:55:00Z","2019-10-07T14:30:00.000Z","<p><br></p>","Stephen McCarthy",
-"Execution","War Room Warrior: How to manage war room situations
-","2019-10-07T13:55:00Z","2019-10-07T14:30:00.000Z","<p>Site outages and incidents are par for the course for tech companies. Solving the root cause often involves tense conversations and high-pressure situations. The&nbsp;war room&nbsp;serves as a dedicated space where the most critical team members work through these issues, but what happens when everyone gets in the&nbsp;room?&nbsp;</p>
-<p>The goal is clear, restore site service as quickly as possible, but there can be many approaches to getting there. In this talk, Rashi Khurana will share best practices in leading teams to troubleshoot issues and navigate incident resolutions. She will address communication strategies, people management, process implementation and managing retroactive evaluations.&nbsp;</p>","Rashi Khurana",
-"Vision","Break","2019-10-07T14:30:00Z","2019-10-07T15:05:00.000Z","<p><br></p>",,
-"Execution","Infrastructure Refactoring: Transitioning from hero culture to automated infrastructure managed by teams","2019-10-07T14:30:00Z","2019-10-07T15:05:00.000Z","<p>When we started Distil Networks seven years ago, we embraced a get it done mentality so that our development and infrastructure could match our growth. Years later, we were almost crushed under the weight of the enormous technical debt we incurred and the ingrained hero culture we built while growing our business. This talk will explore the key things to consider for other companies that find themselves in a similar situation using our experience at Distil Networks as a case study.&nbsp;</p>","Engin Akyol",
-"Execution","Break","2019-10-07T15:00:00Z","2019-10-07T15:35:00.000Z","<p><br></p>",,
-"Vision","From Projects to Products","2019-10-07T15:00:00Z","2019-10-07T15:35:00.000Z","<p>Projects have been the dominant form of software delivery since software was seen as a necessary cost for many companies. As software becomes a differentiator and speed becomes critical the overheads of projects becomes a challenge. In addition to the long lead times, the temporary nature of projects leads to overheads in team formation as well as a lack of code ownership which leads to the inevitable clean up projects. <br>
-<br>
-How does the product structure solve these problems? How does that work from a governance and funding perspective? How do company wide changes take place in this structure?&nbsp;</p>","Marcel Putina",
-"Execution","Going Serverless","2019-10-07T15:35:00Z","2019-10-07T16:10:00.000Z","<p>Bakers don't farm the fields and mill the grain yet product teams are still worrying about the full stack of their solutions, right down to operating system patches and memory limits. <br>
-<br>
-This hands on session will look at how easy it is to incorporate cloud services and infrastructure as code into your applications and how to take advantage of existing services so you can focus on your business logic and differentiator.</p>","Sebastian Hesse","Nik Rahmel"
-"Vision","Adapting your Leadership Style  ","2019-10-07T15:35:00Z","2019-10-07T16:10:00.000Z","<p>Giving the team outcomes to achieve increases their ownership of the solution. However in order to be autonomous, the team needs alignment and competency. The business, customer and process steps enable alignment but teams will need support in order to become truly competent in all of the skills required to deliver. <br>
-<br>
-How do you balance upskilling people and giving direction with supporting them to become autonomous?</p>","Sonja  Radenkovic ",
-"Execution","Closing","2019-10-07T16:10:00Z","2019-10-07T16:45:00.000Z","<p><br></p>",,
-"Vision","Creating a Tangible Product Vision    ","2019-10-07T16:10:00Z","2019-10-07T16:45:00.000Z","<p>Product managers and design leads often get asked to define the vision for a product or service, but rarely does anyone agree on what that looks like.&nbsp;&nbsp; A vision should not only connect to business strategy, it should be stable enough to withstand new learnings and pivots across the product lifecycle.&nbsp; The hard part is in making it tangible enough to be actionable, without falling into the trap of big Design.&nbsp; This talk will uncover how a collaborative partnership between product, design, and tech can help shape a tangible vision, that can empower and inspire teams.</p>
-<p><br></p>","Cindy Chastain",
-"Vision","Opening remarks","2019-10-08T09:15:00Z","2019-10-08T09:50:00.000Z","<p><br></p>",,
-"Vision","Aligning Business and Customer Outcomes","2019-10-08T09:30:00Z","2019-10-08T10:05:00.000Z","<p>Successful products deliver on both the customer and the business needs, but aligning the two can be challenging. Maintaining alignment while the team deals with the complexities of implementation even more so.<br>
-<br>
-How can teams map their activities back to the business and customer KPIs?</p>","Sebastien  Fabre",
-"Vision","Design Systems","2019-10-08T10:00:00Z","2019-10-08T10:35:00.000Z","<p><br></p>","Tim Hudson",
-"Execution","Opening remarks","2019-10-08T10:00:00Z","2019-10-08T10:35:00.000Z","<p><br></p>",,
-"Execution","UX, DX, DSX: Developers and Data Scientists as Users","2019-10-08T10:05:00Z","2019-10-08T10:40:00.000Z","<p>More and more companies nowadays are investing heavily in building infrastructure for developers and data scientists. But often, building infrastructure products are treated as pure engineering practices and differentiated from feature products.</p>
-<p><br></p>
-<p>I would like to share my experience leading a team at BuzzFeed in building user-centric infrastructure products for our developers and data scientists, and how I integrate and adapt traditional PM techniques for technical products.</p>
-<p><br></p>
-<p>Building software for our peers is a double-edged sword. On one hand, our users are technologists themselves and have immense appreciation for well-designed infrastructure and tools. On the other hand, it is very tempting for us as developers to make assumptions about those folks with whom we work closely. When building tools for data scientists, it is especially crucial to keep in mind that they have their own distinct workflows and needs.</p>","Dot Gong",
-"Vision","","2019-10-08T10:05:00Z","2019-10-08T10:40:00.000Z","<p><br></p>",,
-"Vision","Break","2019-10-08T10:40:00Z","2019-10-08T11:15:00.000Z","<p><br></p>",,
-"Execution","How to empower developers to build a greater user experience","2019-10-08T10:40:00Z","2019-10-08T11:15:00.000Z","<p>From the very beginning of Algolia's journey, focusing on Developer Experience was key. More than 6 years later with four dedicated squads on that topic, it couldn't be even more true.</p>
-<p>In this talk we'll look at how giving developers the tools they'll love to use results in a massive impact in the experience of the end users. We'll dig into how the combination of key product enablers, available pre-packaged best practices and good documentation can contribute directly to it</p>","Marie-Laure  Thuret",
-"Execution","Break","2019-10-08T11:10:00Z","2019-10-08T11:45:00.000Z","<p><br></p>",,
-"Vision","Communicating your Customer's Needs","2019-10-08T11:10:00Z","2019-10-08T11:45:00.000Z","<p>How do you communicate the goals of your customers with your team and with the wider organisation? With customer journey maps, you can get a sense of your customers' motivations, their needs and pain points. But where do you start? How do you design effective maps that can push your team forward?</p>","Marja Ojala",
-"Execution","How long is a piece of string?: The key to solving the conundrum of software estimation","2019-10-08T11:45:00Z","2019-10-08T12:20:00.000Z","<p>We've probably all been asked to come up with a set of software estimates for a project with very little detail, very little time to do it and plenty of quizzical looks when it's given. Writing software is very rarely like painting a room, where a person can reasonably give an estimate to the nearest day.</p>
-<p>Between tech debt, lack of useful documentation and a new requirement never done before, it is very hard for a software team and the lead developer to come up with what the business often wants - an accurate estimate! (if such a thing were possible).</p>
-<p>So, what is the solution? Storypointing, MVPs, spikes and an iterative approach all help towards a goal of better software estimation and so success of a project, but the best, single most important element I have seen is the existence of trust between a software team and product owner.&nbsp; On the product owner that they wont make promises to the business based on estimates and on the software team that they will give an honest assessment of the work involved and not inflate estimates.</p>
-<p>When it works it is a powerful thing and is a million times more effective than the 'them' and 'us' attitudes that exist in some places and that do nobody any good.</p>","Jonathan Rigby",
-"Vision","Why User Centered Design doesn't work","2019-10-08T11:45:00Z","2019-10-08T12:20:00.000Z","<p><br></p>","Yolanda Martin",
-"Vision","Break","2019-10-08T12:20:00Z","2019-10-08T12:55:00.000Z","<p><br></p>",,
-"Execution","Dual track Agile","2019-10-08T12:20:00Z","2019-10-08T12:55:00.000Z","<p>In software there are two key types of work - discovery and delivery. However, that doesn't mean there are different people doing those jobs. If the whole team is responsible for product success, not just getting things built, then the whole team needs to understand and contribute to both kinds of work.<br>
-<br>
-Dual track agile and the UXDX model both convey the approach of design and development working together.&nbsp;</p>","John Schrag",
-"Execution","Break","2019-10-08T12:55:00Z","2019-10-08T13:30:00.000Z","<p><br></p>",,
-"Vision","Deciding on the Right Process","2019-10-08T13:20:00Z","2019-10-08T13:55:00.000Z","<p>There is no right process for every situation. Different circumstances require different approaches. So how should you decide on the right approach? What ways should you look at problems to determine the best path forward?</p>","Yvonne So",
-"Vision","Remote Team Management","2019-10-08T13:55:00Z","2019-10-08T14:30:00.000Z","<p><br></p>","Dana Lawson","Shane Nolan"
-"Execution","Architecture Debate","2019-10-08T13:55:00Z","2019-10-08T14:30:00.000Z","<p>In this debate our candidates will discuss:</p>
-<p>Enforcing Good Design</p>
-<p>Services Challenges</p>
-<p>Total Cost of Ownership</p>
-<p>Technical Debt</p>","Nik Crabtree","Richard Rodger"
-"Vision","Break","2019-10-08T14:30:00Z","2019-10-08T15:05:00.000Z","<p><br></p>",,
-"Execution","UAT Validation in Production","2019-10-08T14:30:00Z","2019-10-08T15:05:00.000Z","<p>UAT is challenging because you need a production-like server with production-like data. With the challenges of data protection as well as maintaining server consistency, wouldn't it be easier to use production?<br>
-<br>
-How do you ensure that users don't see bad code? What about database changes? Find out the answers to these questions and more</p>","Sarah Davies",
-"Execution","Team Ownership - Who Owns Production","2019-10-08T15:00:00Z","2019-10-08T15:35:00.000Z","<p>Developers are too valuable to have supporting production issues. But then again they might have caused the issues. Should developers have to triage the issues found? Is it productive to find issues in their code or unproductive dealing with other people's problems? In this talk you'll hear from a team who have taken end-to-end ownership and the rationale behind the decision.&nbsp;</p>","Christopher  Slowe",
-"Vision","Design for Pattern","2019-10-08T15:00:00Z","2019-10-08T15:35:00.000Z","<p>The future of Uber is far from determined, and the decisions and actions of Gough will help define it.""The core of design is empathy. That's the starting point no matter what. That will always be how you address any product challenge. The classic way products were developed was you solved functional needs, and then maybe business needs, and then you lean heavily into human needs over time. This arc, all of the [PR] challenges aside, is a natural arc. The next big step is to become a company that's really, really good at connecting with people and people's needs.""</p>","Michael  Gough",
-"Vision","Reimagining design systems at Spotify","2019-10-08T15:35:00Z","2019-10-08T16:10:00.000Z","<p><br></p>","Gerrit Kaiser",
-"Vision","Building a Strong Team for Strong Results - Measurement at Scale","2019-10-08T16:10:00Z","2019-10-08T16:45:00.000Z","<p>Teamwork remains the ultimate competitive advantage. However, teamwork is a soft skill which isn't being tracked in many organisations and they say ""What gets measured gets managed"". How can you measure teamwork? How can you improve teamwork in your organisations?&nbsp;Russ&nbsp;will discuss how this is achieved at scale with one of the largest UX teams in the world</p>","Russ Wilson",
+track,title,startTime,endTime,description,conference,speaker0,speaker1,speaker2,speaker3
+UXDX Berlin,Networking & Canape Reception,2019-03-28T16:00:00Z,2019-03-28T16:35:00.000Z,,uxdxberlin19,,,,
+UXDX Berlin,Opening Address,2019-03-28T16:20:00Z,2019-03-28T16:55:00.000Z,,uxdxberlin19,Rory Madden,,,
+UXDX Berlin,The Value of Ritual at the Crossroads of Innovation,2019-03-28T16:30:00Z,2019-03-28T17:05:00.000Z,,uxdxberlin19,Scott Weiss,,,
+UXDX Berlin,Value Proposition Hypothesis: A Framework for Taking New Products from Uncertainty to Market,2019-03-28T16:55:00Z,2019-03-28T17:30:00.000Z,,uxdxberlin19,Christian Gaillard,,,
+UXDX Berlin,Co-creation as a prototyping method,2019-03-28T17:20:00Z,2019-03-28T17:55:00.000Z,,uxdxberlin19,Camila Lombana,,,
+UXDX Berlin,Break,2019-03-28T17:45:00Z,2019-03-28T18:20:00.000Z,,uxdxberlin19,,,,
+UXDX Berlin,Managing Change,2019-03-28T18:00:00Z,2019-03-28T18:35:00.000Z,,uxdxberlin19,Rory Madden,,,
+UXDX Berlin,Integrating UX for Improved Product Development,2019-03-28T18:25:00Z,2019-03-28T19:00:00.000Z,,uxdxberlin19,Koos Looijesteijn,Alex Dapunt,Henning Fritzenwalder,Alessandro Sposato
+UXDX Berlin,The Importance of DesignOps in Successful Products ,2019-03-28T18:50:00Z,2019-03-28T19:25:00.000Z,,uxdxberlin19,Nanda Dias,,,
+UXDX Berlin,Short Wrap up ,2019-03-28T19:15:00Z,2019-03-28T19:50:00.000Z,,uxdxberlin19,Catherine Madden,,,
+UXDX Berlin,Drinks & Networking,2019-03-28T19:25:00Z,2019-03-28T20:00:00.000Z,,uxdxberlin19,,,,
+Agenda Dublin,Arrival & Networking,2019-04-23T12:30:00Z,2019-04-23T13:05:00.000Z,,uxdxdublin19,,,,
+Agenda Dublin,Opening Address,2019-04-23T12:50:00Z,2019-04-23T13:25:00.000Z,,uxdxdublin19,,,,
+Agenda Dublin,Designing for Unpredictable Content,2019-04-23T13:00:00Z,2019-04-23T13:35:00.000Z,,uxdxdublin19,Elisa Capitanio,,,
+Agenda Dublin,Team Culture,2019-04-23T13:25:00Z,2019-04-23T14:00:00.000Z,,uxdxdublin19,Aidan Cunnion,,,
+Agenda Dublin,Managing Change,2019-04-23T13:50:00Z,2019-04-23T14:25:00.000Z,,uxdxdublin19,Rory Madden,,,
+Agenda Dublin,Break,2019-04-23T14:15:00Z,2019-04-23T14:50:00.000Z,,uxdxdublin19,,,,
+Agenda Dublin,Research,2019-04-23T14:30:00Z,2019-04-23T15:05:00.000Z,"Gianni Clifford, Product Design Manager, Zendesk The Secret to Amazing UX Research Over the course of this talk Gianni will outline a detailed approach to doing UX research in an enterprise tech company, and what the key secret is to keep this research on track and making sure your organisation gets max value from it.",uxdxdublin19,Gianni Clifford,,,
+Agenda Dublin,  Accelerating development using UI Frameworks,2019-04-23T14:55:00Z,2019-04-23T15:30:00.000Z,Patrick will talk about design systems and an example of how teams are positioned within a company to support other developers through the maintenance and development of a design system and UI framework. ,uxdxdublin19,Patrick Mooney,,,
+Agenda Dublin,Food & Networking,2019-04-23T15:20:00Z,2019-04-23T15:55:00.000Z,,uxdxdublin19,,,,
+Agenda Dublin,,2019-04-23T15:35:00Z,2019-04-23T16:10:00.000Z,,uxdxdublin19,Macdara Butler,,,
+Agenda Dublin,Creating Better Products Together. UX and Engineering Working in Harmony,2019-04-23T15:35:00Z,2019-04-23T16:10:00.000Z,,uxdxdublin19,Nikola Nevin,,,
+Agenda Dublin,"Gathering Requirements, and Rapidly Building Proof of Concepts",2019-04-23T16:00:00Z,2019-04-23T16:35:00.000Z,,uxdxdublin19,Tom Jordan,,,
+Agenda Dublin,Close,2019-04-23T16:25:00Z,2019-04-23T17:00:00.000Z,,uxdxdublin19,,,,
+Agenda London,Arrival & Networking,2019-04-30T12:30:00Z,2019-04-30T13:05:00.000Z,,uxdxlondon19,,,,
+Agenda London,Opening Address,2019-04-30T12:50:00Z,2019-04-30T13:25:00.000Z,,uxdxlondon19,Rory Madden,,,
+Agenda London,Managing Change,2019-04-30T13:00:00Z,2019-04-30T13:35:00.000Z,,uxdxlondon19,Rory Madden,,,
+Agenda London,Getting a Good Product to Customers Quickly: How to be Agile and Move at Speed ,2019-04-30T13:25:00Z,2019-04-30T14:00:00.000Z,"
+  Problem to validation: Research to design 
+  Qualitative research into quantitative research 
+  Lancing lean tests: Hypothesis ""bets"" validation
+  Defining the roadmap iteratively as we go
+  Adapting the team as the product matures - business outcomes initially, to UX, then towards engineering goals
+",uxdxlondon19,Robert Cressy,,,
+Agenda London,Creating the right culture for you team,2019-04-30T13:50:00Z,2019-04-30T14:25:00.000Z,"In this session Jason will centre his talk around learnings, observations and opinions having grown design teams in a couple different industries. He will look at how the good and bad effects culture has on designers. ",uxdxlondon19,Jason Foo,,,
+Agenda London,Break,2019-04-30T14:15:00Z,2019-04-30T14:50:00.000Z,,uxdxlondon19,,,,
+Agenda London,Continuous research and hypothesis driven development,2019-04-30T14:30:00Z,2019-04-30T15:05:00.000Z,How to identify opportunities and problems - create hypotheses and validate these during product development,uxdxlondon19,Michael Si,,,
+Agenda London,Creating Minimal Measurable Value in Clinical Systems,2019-04-30T14:55:00Z,2019-04-30T15:30:00.000Z,Babylon Health's mission is to put accessible and affordable healthcare into the hands of every person on Earth. In this talk Ali and Jason discuss the incremental and lean approach to developing clinically safe and efficient products to deliver on this mission. The talk will provide a glimpse into how existing clinical systems can be innovated using lean methodologies and how technology can be used to provide value across the patient care cycle. We will focus on how to test and build for internal users who are servicing the larger Babylon member base.,uxdxlondon19,Ali Jiwani,Jason Bootle,,
+Agenda London,Microservices from Day One: A Startup Case Study in Emergent Design,2019-04-30T15:20:00Z,2019-04-30T15:55:00.000Z,,uxdxlondon19,Richard Rodger,,,
+Agenda London,Food & Networking,2019-04-30T15:45:00Z,2019-04-30T16:20:00.000Z,,uxdxlondon19,,,,
+Agenda London,Mobile Development without QAs at Starling Bank,2019-04-30T16:00:00Z,2019-04-30T16:35:00.000Z,,uxdxlondon19,Teresa Ng,,,
+Agenda London,Reducing Technical Debt: Balancing the Business and Customer,2019-04-30T16:25:00Z,2019-04-30T17:00:00.000Z,"In this session, Amy will discuss the easily forgotten aspects of building products and features. Handling and reducing tech debt, and how it can hinder ability to release code while also there's difficulties meeting customer expectations.
+
+  What are the indicators that you're not balancing it so well
+  How do you overcome confusion: Find clarity and confidence in working on your product
+",uxdxlondon19,Amy Phillips,,,
+Agenda London,"Discussing Serverless, Systems and Architecture Choices",2019-04-30T16:50:00Z,2019-04-30T17:25:00.000Z,,uxdxlondon19,Blanca Garcia Gil,,,
+Agenda London,Close,2019-04-30T17:10:00Z,2019-04-30T17:45:00.000Z,,uxdxlondon19,,,,
+Stockholm,"Networking & Canape Reception
+",2019-06-27T13:45:00Z,2019-06-27T14:20:00.000Z,,uxdxstockholm19,,,,
+Stockholm,"Managing Change
+",2019-06-27T14:15:00Z,2019-06-27T14:50:00.000Z,,uxdxstockholm19,Rory Madden,,,
+Stockholm,Designing for Delight,2019-06-27T14:40:00Z,2019-06-27T15:15:00.000Z,"As Tele2's Head of UX, Tem is responsible for leading Tele2, Comviq and Com Hem's UX teams. 15 years experience as a digital designer and a strong sense of vision gives him key tools as a design leader to coach designers and teams through complex design problems and product ideation. He likes details, enjoys mobile solutions, and loves simple and usable design.",uxdxstockholm19,Tem Aguerre,,,
+Stockholm,Hypothesis driven development,2019-06-27T15:05:00Z,2019-06-27T15:40:00.000Z,,uxdxstockholm19,Alexander Bertholds,,,
+Stockholm,"Break
+",2019-06-27T15:30:00Z,2019-06-27T16:05:00.000Z,,uxdxstockholm19,,,,
+Stockholm,Creating effective agile organizations through product management leadership,2019-06-27T15:45:00Z,2019-06-27T16:20:00.000Z,,uxdxstockholm19,Daria Kovacevic,,,
+Stockholm,Creating a development process that fits your organisation,2019-06-27T16:10:00Z,2019-06-27T16:45:00.000Z,"A development process is essentially a framework for how to work together in an engineering team and the way the team works together has great impact on how well it supports the product and the organisation. Ideally, the way that the process is outlined should be aligned with the business strategy. For example, if innovation is important for your business, you need a  process that supports innovation. If timely deliveries is more important, you need to adapt your process to that requirement. In this talk Bjorn will explain what the Loop54 development process looks like and give concrete examples of what effects it was designed to create and how that is manifested in the process.  ",uxdxstockholm19,Bjorn Sundman,,,
+Stockholm,Break,2019-06-27T16:35:00Z,2019-06-27T17:10:00.000Z,,uxdxstockholm19,,,,
+Stockholm,Building High Performing Teams,2019-06-27T16:40:00Z,2019-06-27T17:15:00.000Z,,uxdxstockholm19,Andrii Dzynia,,,
+Stockholm,"How teams integrate design, product & devops",2019-06-27T17:05:00Z,2019-06-27T17:40:00.000Z,,uxdxstockholm19,Ross McKinley,Anna  Sitnikova,Anna-Karin Fossum,
+Stockholm,Closing Remarks,2019-06-27T17:30:00Z,2019-06-27T18:05:00.000Z,,uxdxstockholm19,,,,
+Stockholm,"Food & Networking
+",2019-06-27T17:40:00Z,2019-06-27T18:15:00.000Z,,uxdxstockholm19,,,,
+Execution,UXDX Introduction,2019-10-07T09:15:00Z,2019-10-07T09:50:00.000Z,Overview of the UXDX model,uxdxeurope2019,,,,
+Vision,UXDX Introduction,2019-10-07T09:15:00Z,2019-10-07T09:50:00.000Z,Overview of the UXDX model,uxdxeurope2019,,,,
+Execution,Team Ownership - Who Owns Production,2019-10-07T09:30:00Z,2019-10-07T10:05:00.000Z,Developers are too valuable to have supporting production issues. But then again they might have caused the issues. Should developers have to triage the issues found? Is it productive to find issues in their code or unproductive dealing with other people's problems? In this talk you'll hear from a team who have taken end-to-end ownership and the rationale behind the decision. ,uxdxeurope2019,Christopher  Slowe,,,
+Vision,How to Identify your Customer's needs ,2019-10-07T09:30:00Z,2019-10-07T10:05:00.000Z,"Companies have historically used a list of customer needs to describe what customers want. But is that the best way to describe what customers value in a product? Are there different types of value that consumers experience and desire? How do we discover, describe, and design for these different types of value? How can we use these insights to create growth for the business?",uxdxeurope2019,Alan Klement,,,
+Execution,"War Room Warrior: How to manage war room situations
+",2019-10-07T10:05:00Z,2019-10-07T10:40:00.000Z,"Site outages and incidents are par for the course for tech companies. Solving the root cause often involves tense conversations and high-pressure situations. The war room serves as a dedicated space where the most critical team members work through these issues, but what happens when everyone gets in the room? 
+The goal is clear, restore site service as quickly as possible, but there can be many approaches to getting there. In this talk, Rashi Khurana will share best practices in leading teams to troubleshoot issues and navigate incident resolutions. She will address communication strategies, people management, process implementation and managing retroactive evaluations. ",uxdxeurope2019,Rashi Khurana,,,
+Vision,Definition of Done ,2019-10-07T10:05:00Z,2019-10-07T10:40:00.000Z,Done is very contentious in teams. The definition varies based on the authority of the team - done can be at test sign off or at deployment. As teams move away from functional silos towards outcomes how does the definition of Done change? And what impact does this have on the way of working?,uxdxeurope2019,Paul Adams,,,
+Execution,Architecture Debate,2019-10-07T10:40:00Z,2019-10-07T11:15:00.000Z,"In this debate our candidates will discuss:
+Enforcing Good Design
+Services Challenges
+Total Cost of Ownership
+Technical Debt",uxdxeurope2019,Nix Crabtree,Richard Rodger,,
+Vision,Break,2019-10-07T10:40:00Z,2019-10-07T11:15:00.000Z,,uxdxeurope2019,,,,
+Execution,Break,2019-10-07T11:10:00Z,2019-10-07T11:45:00.000Z,,uxdxeurope2019,,,,
+Vision,From Siloes to Systems: Using Design to Power Up Business Agility,2019-10-07T11:10:00Z,2019-10-07T11:45:00.000Z,"Most companies have decentralized business and product teams, which is usually good for autonomy and execution. But one decision made in isolation can seem right at the time, yet lead to a fractured user experience overall. How can companies optimise for responsiveness and reduce design entropy? This case study explains how we used design to implement system thinking into a 150-year-old bank.",uxdxeurope2019,Morgane Peng,,,
+Vision,"Lessons from a Cellist (or, what product people can learn from user research)",2019-10-07T11:45:00Z,2019-10-07T12:20:00.000Z,"This talk explores the journey of the Duolingo Stories product journey. With a team under pressure to produce results and an organizational culture that prizes rigorous AB testing, we'll explore how qualitative user research became part of our product development process, how it helped us build a product roadmap, and what we've learned along the way. ",uxdxeurope2019,Conor Walsh,,,
+Execution,The Secrets and Synthesis of Successful UX Research,2019-10-07T11:45:00Z,2019-10-07T12:20:00.000Z,"If UX Research is the ground floor of great product design, then talking to your customers is its foundation, essential to making sure you build something stable, that will last. 
+
+But good foundations don't come easy, they require excellent planning - before, after and during. What's the secret to a rock solid research plan? And how do guarantee we build the right thing?",uxdxeurope2019,Gianni Clifford,,,
+Execution,"Ideation and Prototyping: Think Bigger, Fail Quicker
+",2019-10-07T12:20:00Z,2019-10-07T12:55:00.000Z,"How can we be more courageous and confident in the way we build products?  The answer lies in the way we ideate, design, test, and refine--before any code is written.  You'll learn how to run successful ideation sessions with your working team, trying on novel ideas and taking logical leaps into the future. You'll also come away with practical methods for prototyping your best design ideas for quick user feedback.  The result is building more innovative and useful products with less risk.",uxdxeurope2019,Jackie Scherer,,,
+Vision,Break,2019-10-07T12:20:00Z,2019-10-07T12:55:00.000Z,,uxdxeurope2019,,,,
+Vision,The Road to Excellence,2019-10-07T13:20:00Z,2019-10-07T13:55:00.000Z,"As designers, we always set a high bar for ourselves and it can often feel like there's a gap between what we recognize as excellent and what we're able to produce in our own work. This talk will teach you three unconventional ideas that can help you close that gap and finally produce work you're happy with.",uxdxeurope2019,Kevin Clark,,,
+Execution,Lunch & Networking,2019-10-07T13:20:00Z,2019-10-07T13:55:00.000Z,,uxdxeurope2019,,,,
+Vision,Delivering user-centred products,2019-10-07T13:55:00Z,2019-10-07T14:30:00.000Z,,uxdxeurope2019,Stephen McCarthy,,,
+Execution,"UX, DX, DSX: Developers and Data Scientists as Users",2019-10-07T13:55:00Z,2019-10-07T14:30:00.000Z,"More and more companies nowadays are investing heavily in building infrastructure for developers and data scientists. But often, building infrastructure products are treated as pure engineering practices and differentiated from feature products.
+
+I would like to share my experience leading a team at BuzzFeed in building user-centric infrastructure products for our developers and data scientists, and how I integrate and adapt traditional PM techniques for technical products.
+
+Building software for our peers is a double-edged sword. On one hand, our users are technologists themselves and have immense appreciation for well-designed infrastructure and tools. On the other hand, it is very tempting for us as developers to make assumptions about those folks with whom we work closely. When building tools for data scientists, it is especially crucial to keep in mind that they have their own distinct workflows and needs.",uxdxeurope2019,Dot Gong,,,
+Vision,Break,2019-10-07T14:30:00Z,2019-10-07T15:05:00.000Z,,uxdxeurope2019,,,,
+Execution,Supporting the Product through Continuous Delivery,2019-10-07T14:30:00Z,2019-10-07T15:05:00.000Z,"In this session Frederic will look at how to manage feature-flipping and A/B Testing when shipping on multiple platforms. How to manage synchronization and coordination with product marketing and as part of it, explain how Dashlane are organized with a dual track approach to support feature team delivery and platform/production maintenance in parallel.",uxdxeurope2019,Frederic Rivain,,,
+Execution,Break,2019-10-07T15:00:00Z,2019-10-07T15:35:00.000Z,,uxdxeurope2019,,,,
+Vision,Building Autonomous Teams,2019-10-07T15:00:00Z,2019-10-07T15:35:00.000Z,,uxdxeurope2019,Marcel Putina,,,
+Execution,Going Serverless,2019-10-07T15:35:00Z,2019-10-07T16:10:00.000Z,"Bakers don't farm the fields and mill the grain yet product teams are still worrying about the full stack of their solutions, right down to operating system patches and memory limits. 
+
+This hands on session will look at how easy it is to incorporate cloud services and infrastructure as code into your applications and how to take advantage of existing services so you can focus on your business logic and differentiator.",uxdxeurope2019,Nik Rahmel,Laura Varga,Sebastian Hesse,Eddie O'Rourke
+Vision,Do you dare to care? - The future of Leadership in UX,2019-10-07T15:35:00Z,2019-10-07T16:10:00.000Z,"Success is the ability and willingness to change. Everything starts and ends with people, so show that you care. Your product team members need to feel and act like they are partners in crime. Dare to adapt your leadership style based on team needs and their maturity. Sometimes you will need to lead or guide them, and sometimes it will be better to just leave them alone. Organisational design is more important than you think. Choose the model that will allow you to deliver holistic user experience @ scale. Only by optimising for both value and delivery, you will be able to minimise the waste and deliver the RIGHT thing FAST.
+",uxdxeurope2019,Sonja  Radenkovic ,,,
+Vision,Creating a Tangible Product Vision    ,2019-10-07T16:10:00Z,2019-10-07T16:45:00.000Z,"Product managers and design leads often get asked to define the vision for a product or service, but rarely does anyone agree on what that looks like.   A vision should not only connect to business strategy, it should be stable enough to withstand new learnings and pivots across the product lifecycle.  The hard part is in making it tangible enough to be actionable, without falling into the trap of big Design.  This talk will uncover how a collaborative partnership between product, design, and tech can help shape a tangible vision, that can empower and inspire teams.
+",uxdxeurope2019,Cindy Chastain,,,
+Execution,Team Culture - how the little things enable great outcomes,2019-10-07T16:10:00Z,2019-10-07T16:45:00.000Z,"""None of us is as smart as all of us""
+Culture is one of those intangible things. We all recognise what a good team culture looks like - team members collaborating, sharing knowledge and supporting each other.
+ 
+Creating the conditions where a strong team culture can thrive is challenging. What approaches can we take to set up our teams for success and help instil and grow a culture of leadership at all levels?",uxdxeurope2019,Aidan Cunnion,,,
+Vision,Opening remarks,2019-10-08T09:15:00Z,2019-10-08T09:50:00.000Z,,uxdxeurope2019,,,,
+Vision,Leveraging Automation & Rituals to Fuel Growth,2019-10-08T09:25:00Z,2019-10-08T10:00:00.000Z,"Today's technology has made it easier than ever to simplify experiences. With the touch of a finger, you can do almost anything. Changing habits, however, is a different story. This conversation will dig into the different ways you can use the power of automation, not only change customers' behavior, but the process behind the scenes-how the development of squads can balance KPI and user centricity, as well as lifecycle and service focus, using transparency to fuel product and feature development cycles, OKRs and rituals.",uxdxeurope2019,Sudev Balakrishnan,,,
+Vision,Communicating your Customer's Needs,2019-10-08T10:00:00Z,2019-10-08T10:35:00.000Z,"How do you communicate the goals of your customers with your team and with the wider organisation? With customer journey maps, you can get a sense of your customers' motivations, their needs and pain points. But where do you start? How do you design effective maps that can push your team forward?",uxdxeurope2019,Marja Ojala,,,
+Execution,Dual track Agile,2019-10-08T10:00:00Z,2019-10-08T10:35:00.000Z,"In software there are two key types of work - discovery and delivery. However, that doesn't mean there are different people doing those jobs. If the whole team is responsible for product success, not just getting things built, then the whole team needs to understand and contribute to both kinds of work.
+
+Dual track agile and the UXDX model both convey the approach of design and development working together. ",uxdxeurope2019,John Schrag,,,
+Execution,How long is a piece of string?: The key to solving the conundrum of software estimation,2019-10-08T10:35:00Z,2019-10-08T11:10:00.000Z,"We've probably all been asked to come up with a set of software estimates for a project with very little detail, very little time to do it and plenty of quizzical looks when it's given. Writing software is very rarely like painting a room, where a person can reasonably give an estimate to the nearest day.
+Between tech debt, lack of useful documentation and a new requirement never done before, it is very hard for a software team and the lead developer to come up with what the business often wants - an accurate estimate! (if such a thing were possible).
+So, what is the solution? Storypointing, MVPs, spikes and an iterative approach all help towards a goal of better software estimation and so success of a project, but the best, single most important element I have seen is the existence of trust between a software team and product owner.  On the product owner that they wont make promises to the business based on estimates and on the software team that they will give an honest assessment of the work involved and not inflate estimates.
+When it works it is a powerful thing and is a million times more effective than the 'them' and 'us' attitudes that exist in some places and that do nobody any good.",uxdxeurope2019,Jonathan Rigby,,,
+Vision,Break,2019-10-08T10:35:00Z,2019-10-08T11:10:00.000Z,,uxdxeurope2019,,,,
+Execution,Break,2019-10-08T11:10:00Z,2019-10-08T11:45:00.000Z,,uxdxeurope2019,,,,
+Vision,Aligning Business and Customer Outcomes,2019-10-08T11:10:00Z,2019-10-08T11:45:00.000Z,"Successful products deliver on both the customer and the business needs, but aligning the two can be challenging. Maintaining alignment while the team deals with the complexities of implementation even more so.
+
+How can teams map their activities back to the business and customer KPIs?",uxdxeurope2019,Sebastien  Fabre,,,
+Execution,A/B Testing at Scale,2019-10-08T11:45:00Z,2019-10-08T12:20:00.000Z,"When teams move to outcomes they need to be able to confirm that their work has delivered on the expected benefits and not some external factor. As teams scale up their releases, managing the number of concurrent tests becomes more difficult.
+
+This session will look at how to build and scale an experimentation culture that can run hundreds if not thousands of tests a year.",uxdxeurope2019,Tatiana Tretyak,,,
+Vision,Remote Team Management,2019-10-08T11:45:00Z,2019-10-08T12:20:00.000Z,,uxdxeurope2019,Dana Lawson,Shane Nolan,Peter Coppinger,
+Execution,Aligning Organizational Stakeholders with User Story Mapping,2019-10-08T12:20:00Z,2019-10-08T12:55:00.000Z,"How do you achieve strategic alignment in your organization? In this session, I will go over how I use user story mapping as a way of aligning everyone from SMEs to engineers on what we're building, why we're building it and most importantly how we should prioritize work. By using this throughout the development process, companies can achieve strategic clarity, as well as better, and more successful products.",uxdxeurope2019,Tobias Jensen,,,
+Vision,Break,2019-10-08T12:20:00Z,2019-10-08T12:55:00.000Z,,uxdxeurope2019,,,,
+Execution,Break,2019-10-08T12:55:00Z,2019-10-08T13:30:00.000Z,,uxdxeurope2019,,,,
+Vision,Engineering a Design Culture ,2019-10-08T13:20:00Z,2019-10-08T13:55:00.000Z,"Are process and culture interdependent on each other? What do engineers do differently that non-engineers can benefit from? How can we ensure we maintain passion and creativity while working among larger teams and organizations? This session will dive into unique op-mechs and collaboration methods to foster team culture, increase engagement, improve productivity, and help create more empathy between designers and developers.
+",uxdxeurope2019,Yvonne So,,,
+Vision,Why User Centered Design doesn't work (anymore),2019-10-08T13:55:00Z,2019-10-08T14:30:00.000Z,"I am very aware that going against years of indoctrination on UCD is controversial, but hear me out.
+The world is going through a paradigm change. During decades as product designers all we were told to care about was to fulfil users needs and cater for their individualism. But that practice has created a few unexpected outcomes that go beyond the product itself. 
+What about if by solving a User Centred issue we created a huge systematic, environmental or socioeconomic problem?
+What can we do to design better products that are more harmonious to the planet and it habitants?",uxdxeurope2019,Yolanda Martin,,,
+Execution,How to empower developers to build a greater user experience,2019-10-08T13:55:00Z,2019-10-08T14:30:00.000Z,"From the very beginning of Algolia's journey, focusing on Developer Experience was key. More than 6 years later with four dedicated squads on that topic, it couldn't be even more true.
+In this talk we'll look at how giving developers the tools they'll love to use results in a massive impact in the experience of the end users. We'll dig into how the combination of key product enablers, available pre-packaged best practices and good documentation can contribute directly to it",uxdxeurope2019,Marie-Laure  Thuret,,,
+Vision,Break,2019-10-08T14:30:00Z,2019-10-08T15:05:00.000Z,,uxdxeurope2019,,,,
+Execution,UAT Validation in Production,2019-10-08T14:30:00Z,2019-10-08T15:05:00.000Z,"UAT is challenging because you need a production-like server with production-like data. With the challenges of data protection as well as maintaining server consistency, wouldn't it be easier to use production?
+
+How do you ensure that users don't see bad code? What about database changes? Find out the answers to these questions and more",uxdxeurope2019,Sarah Davies,,,
+Vision,Design for Pattern,2019-10-08T15:00:00Z,2019-10-08T15:35:00.000Z,"The future of Uber is far from determined, and the decisions and actions of Gough will help define it.""The core of design is empathy. That's the starting point no matter what. That will always be how you address any product challenge. The classic way products were developed was you solved functional needs, and then maybe business needs, and then you lean heavily into human needs over time. This arc, all of the [PR] challenges aside, is a natural arc. The next big step is to become a company that's really, really good at connecting with people and people's needs.""",uxdxeurope2019,Michael  Gough,,,
+Vision,Reimagining design systems at Spotify,2019-10-08T15:35:00Z,2019-10-08T16:10:00.000Z,"How do you build a design system which supports a fast-paced, autonomous squad culture and works on more than 45 different platforms? How do you govern such a system? How do you handle contributions? Spotify has been on a journey reimagining what a Design System looks like for us. We're still on our journey but have scaled a steep learning curve, made mistakes and occasionally, found great success and we're ready to share our newly acquired knowledge with the design community.
+",uxdxeurope2019,Gerrit Kaiser,,,
+ Agenda Amsterdam,Lunch and Networking,2019-03-20T12:30:00Z,2019-03-20T13:05:00.000Z,,uxdxamsterdam19,,,,
+ Agenda Amsterdam,Opening Address,2019-03-20T12:50:00Z,2019-03-20T13:25:00.000Z,,uxdxamsterdam19,Nadia Udalova,,,
+ Agenda Amsterdam,Managing Change,2019-03-20T13:00:00Z,2019-03-20T13:35:00.000Z,,uxdxamsterdam19,Rory Madden,,,
+ Agenda Amsterdam,Cross Department collaboration for Product Managers in a Scale Up,2019-03-20T13:25:00Z,2019-03-20T14:00:00.000Z,,uxdxamsterdam19,Abrar Akhtar,,,
+ Agenda Amsterdam,A formula for an experiment driven culture,2019-03-20T13:50:00Z,2019-03-20T14:25:00.000Z,,uxdxamsterdam19,Ruben de Boer,,,
+ Agenda Amsterdam,Break,2019-03-20T14:15:00Z,2019-03-20T14:50:00.000Z,,uxdxamsterdam19,,,,
+ Agenda Amsterdam,How to maintain userfocus in a metric-driven environment,2019-03-20T14:30:00Z,2019-03-20T15:05:00.000Z,,uxdxamsterdam19,Stijn Eversdijk,,,
+ Agenda Amsterdam,Prototyping at Booking.com: Lessons & Failures,2019-03-20T14:55:00Z,2019-03-20T15:30:00.000Z,,uxdxamsterdam19,Melody David,John Iseghohi,,
+ Agenda Amsterdam,You're not Netflix,2019-03-20T15:20:00Z,2019-03-20T15:55:00.000Z,,uxdxamsterdam19,Ronald van Rijn,,,
+ Agenda Amsterdam,Break,2019-03-20T15:45:00Z,2019-03-20T16:20:00.000Z,,uxdxamsterdam19,,,,
+ Agenda Amsterdam,Mozilla Firefox: How we make sh*t Work.,2019-03-20T16:00:00Z,2019-03-20T16:35:00.000Z,,uxdxamsterdam19,Mike De Boer,,,
+ Agenda Amsterdam,What happens after the product launch?,2019-03-20T16:25:00Z,2019-03-20T17:00:00.000Z,,uxdxamsterdam19,Marcel Putina,,,
+ Agenda Amsterdam,Holistic approach in product design,2019-03-20T16:50:00Z,2019-03-20T17:25:00.000Z,"Currently Olga is working at Adyen, one of the most innovative Fintech player, on a mission to disrupt the payment industry. Her work is based on holistic approach and design thinking. During her talk she will showcase parts of the projects that she worked on, giving a glance at the ""kitchen"" of the fintech giants and disruptors and exploring our ways of solving problems while keeping a balance between business and users needs.",uxdxamsterdam19,Olga Mishyna,,,
+ Agenda Amsterdam,Networking and Drinks,2019-03-20T17:15:00Z,2019-03-20T17:50:00.000Z,,uxdxamsterdam19,,,,
+Agenda Helsinki,Networking & Canape Reception,2019-03-26T12:30:00Z,2019-03-26T13:05:00.000Z,,uxdxhelsinki19,,,,
+Agenda Helsinki,Opening Address,2019-03-26T12:50:00Z,2019-03-26T13:25:00.000Z,,uxdxhelsinki19,,,,
+Agenda Helsinki,Managing Change,2019-03-26T13:00:00Z,2019-03-26T13:35:00.000Z,,uxdxhelsinki19,Rory Madden,,,
+Agenda Helsinki,Don't Touch my Data: Design drivers for data services in banking,2019-03-26T13:25:00Z,2019-03-26T14:00:00.000Z,,uxdxhelsinki19,Fabien Fedy,,,
+Agenda Helsinki,I'm tired of arguing over product development methodologies,2019-03-26T13:50:00Z,2019-03-26T14:25:00.000Z,,uxdxhelsinki19,Jussi Ahola,,,
+Agenda Helsinki,Break,2019-03-26T14:15:00Z,2019-03-26T14:50:00.000Z,,uxdxhelsinki19,,,,
+Agenda Helsinki,Designing social robots,2019-03-26T14:30:00Z,2019-03-26T15:05:00.000Z,,uxdxhelsinki19,Minja Axelsson,,,
+Agenda Helsinki,Prototyping at Finnair,2019-03-26T14:55:00Z,2019-03-26T15:30:00.000Z,,uxdxhelsinki19,Marja Ojala,,,
+Agenda Helsinki,Food & Networking,2019-03-26T15:20:00Z,2019-03-26T15:55:00.000Z,,uxdxhelsinki19,,,,
+Agenda Helsinki,Team Purpose vs Company Purpose,2019-03-26T15:35:00Z,2019-03-26T16:10:00.000Z,,uxdxhelsinki19,Jori Ahvonen,,,
+Agenda Helsinki,Integrating UX and DX ,2019-03-26T16:00:00Z,2019-03-26T16:35:00.000Z,,uxdxhelsinki19,Marko Klemetti,,,
+Agenda Helsinki,Close,2019-03-26T16:25:00Z,2019-03-26T17:00:00.000Z,,uxdxhelsinki19,,,,
+Agenda Oslo, Networking & Canape Reception,2019-06-20T13:30:00Z,2019-06-20T14:05:00.000Z,,uxdxoslo19,,,,
+Agenda Oslo,Managing Change,2019-06-20T14:00:00Z,2019-06-20T14:35:00.000Z,,uxdxoslo19,Rory Madden,,,
+Agenda Oslo,Team Roadmap and Planning,2019-06-20T14:25:00Z,2019-06-20T15:00:00.000Z,,uxdxoslo19,Elisabeth Barrie,,,
+Agenda Oslo,Hypothesis Driven Development ,2019-06-20T14:50:00Z,2019-06-20T15:25:00.000Z,,uxdxoslo19,Arnstein Teigene,,,
+Agenda Oslo,Break,2019-06-20T15:15:00Z,2019-06-20T15:50:00.000Z,,uxdxoslo19,,,,
+Agenda Oslo,Creating a Culture to Empower your Team,2019-06-20T15:30:00Z,2019-06-20T16:05:00.000Z,,uxdxoslo19,Erik Devetak,,,
+Agenda Oslo,Business Values of PWAs,2019-06-20T15:55:00Z,2019-06-20T16:30:00.000Z,,uxdxoslo19,Alan Semenov,,,
+Agenda Oslo,"Assumptions, Bets, Experiments: How to manage the opportunity tree",2019-06-20T16:20:00Z,2019-06-20T16:55:00.000Z,"You have a product and you want to figure out what to build next. The options are endless - how do you nail that minimum effort and maximum result ratio? In this talk Amna will zoom in on key documents including business requirements, market research, UX research, user analytics, user serveys and how do you test the results of these experiments.",uxdxoslo19,Amna Askari,,,
+Agenda Oslo,Close,2019-06-20T16:45:00Z,2019-06-20T17:20:00.000Z,,uxdxoslo19,,,,
+Agenda Oslo,Food & Networking,2019-06-20T17:00:00Z,2019-06-20T17:35:00.000Z,,uxdxoslo19,,,,

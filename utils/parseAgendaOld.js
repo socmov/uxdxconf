@@ -1,4 +1,4 @@
-let agendas = require('../_data/agendas.json')
+let agendas = require('../_data/agendaOld.json')
 const { parse } = require('json2csv')
 const fs = require('fs')
 
@@ -59,8 +59,8 @@ const parseAgenda = function (conference) {
   try {
     const speakersCsv = parse(parsedSpeakers, { speakerFields })
     const sessionsCsv = parse(parsedSessions, { sessionFields })
-    fs.writeFileSync('speakers.csv', speakersCsv)
-    fs.writeFileSync('sessions.csv', sessionsCsv)
+    fs.writeFileSync('speakersOld.csv', speakersCsv)
+    fs.writeFileSync('sessionsOld.csv', sessionsCsv)
   } catch (err) {
     console.error(err)
   }
