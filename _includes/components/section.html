@@ -233,6 +233,16 @@
     {% endfor %}
     {% endif %}
 
+    <!-- FAQa -->
+    {% if section.faqs.size > 0 %}
+    <div class="accordion faqs" id="faqs">
+      {% for faq in section.faqs %}
+      {% assign index = forloop.index %}
+      {% include components/faq.html faq=faq index=index %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
     <!-- BLOG LIST CONTENT -->
     {% if section.blog_list.size > 0 %} 
     {% for blog_list in section.blog_list %}

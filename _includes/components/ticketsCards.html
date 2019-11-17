@@ -1,99 +1,62 @@
+<!-- Add the script -->
+
 <script type="application/javascript">
 
   function getConfDetails() {
 
+    
     const today_date = Date.now()
-    const first200 = new Date(2019, 1, 15, 00, 00, 00)
-    const super_early = new Date(2019, 4, 31, 23, 59, 59)
-    const early = new Date(2019, 5, 14, 23, 59, 59)
-    const regular1 = new Date(2019, 5, 28, 23, 59, 59)
-    const regular2 = new Date(2019, 6, 12, 23, 59, 59)
-    const regular3 = new Date(2019, 6, 26, 23, 59, 59)
-    const regular4 = new Date(2019, 7, 9, 23, 59, 59)
-    const regular6 = new Date(2019, 8, 06, 23, 59, 59)
-    const regular7 = new Date(2019, 8, 20, 23, 59, 59)
-    const regular7_2 = new Date(2019, 8, 27, 23, 59, 59)
-    const regular8 = new Date(2019, 9, 4, 23, 59, 59)
-    const late = new Date(2019, 9, 9, 23, 59, 59)
-
+    const first200 = new Date(2020, 2, 1, 23, 59, 59)
+    const super_early = new Date(2020, 5, 6, 23, 59, 59)
+    const early = new Date(2020, 7, 4, 23, 59, 59)
+    const regular = new Date(2020, 7, 9, 23, 59, 59)
+    const regularLate = new Date(2020, 8, 5, 23, 59, 59)
+    const late = new Date(2020, 9, 7, 23, 59, 59)
+    const lastMinute = new Date(2020, 9, 9, 23, 59, 59)
+    
+    const confTickets = ['first200', 'super_early', 'early', 'regular', 'regularLate', 'late', 'lastMinute']
     const confDetails = {
       first200: {
-        confRelease: '8rwzkcjklyg',
-        confPrice: 450,
+        confRelease: 'leeqybhvwhy',
+        confPrice: 500,
         ticketTitle: "First release",
         ticketSubTitle: "Limited to 200 tickets",
       },
       super_early: {
-        confRelease: 'thhyf5i-azy',
-        confPrice: 540,
+        confRelease: 'q510lz79t4q',
+        confPrice: 600,
         ticketTitle: "Super Early",
         ticketSubTitle: "Get your tickets early before prices increase!",
       },
       early: {
-        confRelease: 'gdu4jqzgbsw',
-        confPrice: 595,
+        confRelease: 'kchd6kqhtha',
+        confPrice: 700,
         ticketTitle: "Early",
         ticketSubTitle: "Get your tickets early before prices increase!",
       },
-      regular1: {
-        confRelease: '4fbcwejjcgq',
-        confPrice: 650,
+      regular: {
+        confRelease: '5g-jx-fyrhk',
+        confPrice: 850,
         ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
+        ticketSubTitle: "UXDX conference and workshop access",
       },
-      regular2: {
-        confRelease: 'trzlkplnzio',
-        confPrice: 680,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
-      },
-      regular3: {
-        confRelease: 'jouwgqjsk6q',
-        confPrice: 695,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
-      },
-      regular4: {
-        confRelease: '8qwq-tizz-m',
-        confPrice: 750,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
-      },
-      // regular5: {
-      //   confRelease: 'whnmhgjnqhe',
-      //   confPrice: 765,
-      //   ticketTitle: "Regular",
-      //   ticketSubTitle: "UXDX conference and training access",
-      // },
-      regular6: {
-        confRelease: 'n70vu0ytsra',
-        confPrice: 765,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
-      },
-      regular7: {
-        confRelease: 'lly0r5e4sbm',
-        confPrice: 795,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
-      },
-      regular7_2: {
-        confRelease: 'u60z5ubthzg',
-        confPrice: 825,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
-      },
-      regular8: {
-        confRelease: '5e3k5s0euw0',
-        confPrice: 999,
-        ticketTitle: "Regular",
-        ticketSubTitle: "UXDX conference and training access",
+      regularLate: {
+        confRelease: 'lbmjy67nu8',
+        confPrice: 1000,
+        ticketTitle: "Regular - Late",
+        ticketSubTitle: "UXDX conference and workshop access",
       },
       late: {
-        confRelease: 'zeiish3hjoo',
-        confPrice: 1350,
+        confRelease: '6chismpqzoa',
+        confPrice: 1100,
         ticketTitle: "Late",
-        ticketSubTitle: "Last minute access to UXDX",
+        ticketSubTitle: "UXDX conference and workshop access",
+      },
+      lastMinute: {
+        confRelease: 'rihixk7knry',
+        confPrice: 1350,
+        ticketTitle: "Last Minute",
+        ticketSubTitle: "UXDX conference and workshop access",
       }
     }
 
@@ -101,53 +64,69 @@
     if (today_date < first200) { sale = "first200" }
     else if (today_date < super_early) { sale = "super_early" }
     else if (today_date < early) { sale = "early" }
-    else if (today_date < regular1) { sale = "regular1" }
-    else if (today_date < regular2) { sale = "regular2" }
-    else if (today_date < regular3) { sale = "regular3" }
-    else if (today_date < regular4) { sale = "regular4" }
-    // else if (today_date < regular5) { sale = "regular5" }
-    else if (today_date < regular6) { sale = "regular6" }
-    else if (today_date < regular7) { sale = "regular7" }
-    else if (today_date < regular7_2) { sale = "regular7_2" }
-    else if (today_date < regular8) { sale = "regular8" }
+    else if (today_date < regular) { sale = "regular" }
+    else if (today_date < regularLate) { sale = "regularLate" }
     else if (today_date < late) { sale = "late" }
+    else if (today_date < lastMinute) { sale = "lastMinute" }
     else expired = true
 
-    console.log(sale)
-    console.log(confDetails[sale])
+    // return confDetails[sale]
+    const position = confTickets.indexOf(sale)
+    const next = confTickets[position + 1]
+    let lateTicket = position < confTickets.indexOf('regular') ? 'regular': 'lastMinute'
+    if (lateTicket === next || lateTicket === sale) lateTicket = null
+    // if (next === sale) next = null
 
-    return confDetails[sale]
+
+    let details = {
+      current: confDetails[sale], 
+      next: confDetails[next],
+      late: confDetails[lateTicket]
+    }
+    // console.log(details)
+    return details
   }
 
 
   // get the expiry time
   let details = getConfDetails();
 
-  // window.onload = function () {
-
-  //   var conferencePrice = document.getElementById("conference-price");
-  //   conferencePrice.innerHTML = "€" + details.confPrice;
-
-  //   var conferenceRelease = document.getElementById("conference-release");
-  //   conferenceRelease.setAttribute("releases", details.confRelease);
-
-  //   var conferenceTrainingPrice = document.getElementById("conference-training-price");
-
-  //   var conferenceTrainingRelease = document.getElementById("conference-training-release");
-  // }
-
   document.addEventListener("DOMContentLoaded", function (event) {
     var conferencePrice = document.getElementById("conference-price");
-    conferencePrice.innerHTML = "€" + details.confPrice;
+    conferencePrice.innerHTML = "€" + details.current.confPrice;
+    var conferenceVATPrice = document.getElementById("conference-vat-price");
+    conferenceVATPrice.innerHTML = "€" + Math.round(details.current.confPrice/1.23, 2) + " ex VAT"
 
       
     var ticketTitle = document.getElementById("ticket-title");
-    ticketTitle.innerHTML = details.ticketTitle;
+    ticketTitle.innerHTML = details.current.ticketTitle;
     var ticketSubTitle = document.getElementById("ticket-sub-title");
-    ticketSubTitle.innerHTML = details.ticketSubTitle;
+    ticketSubTitle.innerHTML = details.current.ticketSubTitle;
 
-    var conferenceRelease = document.getElementById("book-now-conf");
-    conferenceRelease.setAttribute("href", "https://ti.to/initiate/uxdx-2019/with/" + details.confRelease);
+    if (details.late) {
+      var nextName = document.getElementById("ticket-next-name");
+      nextName.innerHTML = details.next.ticketTitle;
+      var nextPrice = document.getElementById("ticket-next-price");
+      nextPrice.innerHTML = "€" + details.next.confPrice;
+    } else {
+      var nextElement = document.getElementById("ticket-next");
+      elem.parentNode.removeChild(nextElement);
+    }
+
+    if (details.late) {
+      var lastName = document.getElementById("ticket-last-name");
+      lastName.innerHTML = details.late.ticketTitle;
+      var lastPrice = document.getElementById("ticket-last-price");
+      lastPrice.innerHTML = "€" + details.late.confPrice;
+    } else {
+      var lastElement = document.getElementById("ticket-last");
+      elem.parentNode.removeChild(lastElement);
+    }
+
+    var conferenceRelease = document.getElementById("conference-release");
+    conferenceRelease.setAttribute("releases", details.current.confRelease);
+
+
 
     // var loadWidgetWithFallback = function (e) {
     //   e.preventDefault()
@@ -162,14 +141,14 @@
     //   };
     // }
 
-    // Tito.instance('initiate/uxdx18', {
+    // Tito.instance('initiate/europe-2020', {
     //   releases: details.confRelease,
     //   success: function (widget) {
     //     document.getElementById('book-now-conf').onclick = loadWidgetWithFallback.bind(widget);
     //     return false;
     //   }
     // });
-    // Tito.instance('initiate/uxdx18', {
+    // Tito.instance('initiate/europe-2020', {
     //   success: function (widget) {
     //     document.getElementById('book-now-conf-training').onclick = loadWidgetWithFallback.bind(widget);
     //     return false;
@@ -183,6 +162,39 @@
   <div class="tab-pane active fade show d-flex justify-content-around flex-wrap" id="tickets-individual-freelance"
     aria-labelledby="tickets-individuals" role="tabpanel">
     <div class="card ticket-card">
+      <div class="card-header">
+        <h3 class="text-white">Freelance / Startup</h3>
+        <p class="small text-light">A helping hand for those starting up</p>
+
+      </div>
+      <div class="card-body">
+        <div class="text-center">
+          <!-- <h2 class="card-title">Sold Out</h2> -->
+          <h2 class="card-title">€200</h2>
+          <h6 class="card-subtitle text-muted font-weight-light">€162.60 ex VAT</h6>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-around ticket-details">
+          <span class="small text-muted">Special discounted rate for full time freelancers or for companies with less than 8 employees and less than 3 years old.</span>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item small">2 days / 40+ talks</li>
+          <li class="list-group-item small">UX / Dev / Product workshops</li>
+          <li class="list-group-item small">Network with 2,000 attendees </li>
+          <li class="list-group-item small">Lunch each day </li>
+          <li class="list-group-item small">Dublin walking tour </li>
+          <li class="list-group-item small">After party </li>
+          <li class="list-group-item small">Chat support </li>
+          <li class="list-group-item small">* See eligibility FAQ below </li>
+        </ul>
+
+      </div>
+      <!-- <a href="https://ti.to/initiate/europe-2020/with/freelancer-startup" class="btn tito-tickets-button" id="book-now-freelancer"
+        target="_blank" onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Freelancer Ticket Book Now'});">Book Now</a> -->
+      <!-- <button class="btn">Sold Out</button> -->
+      <tito-button event="initiate/europe-2020"  releases="freelancer-startup" onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Freelancer Ticket Book Now'});">Book Now</tito-button>
+    </div>
+    <div class="card ticket-card">
       <!-- <div class="most-popular-header">
         Most Popular
       </div> -->
@@ -194,24 +206,24 @@
       <div class="card-body">
         <div class="text-center">
           <h2 class="card-title" id="conference-price"></h2>
-          <h6 class="card-subtitle text-muted font-weight-light">Ex VAT at 23%</h6>
+          <h6 class="card-subtitle text-muted font-weight-light" id="conference-vat-price"></h6>
         </div>
         <hr>
         <div class="d-flex justify-content-around ticket-details">
-          <div>
-            <span class="small text-muted">Regular</span>
+          <div id="ticket-next">
+            <span class="small text-muted" id="ticket-next-name"></span>
             <br>
-            <h4 class="font-weight-light">€999</h4>
+            <h4 class="font-weight-light" id="ticket-next-price"></h4>
           </div>
-          <div>
-            <span class="small text-muted">Late</span>
+          <div id="ticket-last">
+            <span class="small text-muted" id="ticket-last-name"></span>
             <br>
-            <h4 class="font-weight-light">€1,350</h4>
+            <h4 class="font-weight-light" id="ticket-last-price"></h4>
           </div>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item small">2 days / 40+ talks</li>
-          <li class="list-group-item small">UX / Dev / Product training</li>
+          <li class="list-group-item small">UX / Dev / Product workshops</li>
           <li class="list-group-item small">Network with 2,000 attendees </li>
           <li class="list-group-item small">Lunch each day </li>
           <li class="list-group-item small">Dublin walking tour </li>
@@ -220,9 +232,14 @@
         </ul>
         
       </div>
-      <!-- <tito-button event="initiate/uxdx18" id="conference-release">Book Now</tito-button> -->
-      <a href="https://ti.to/initiate/uxdx-2019" class="btn tito-tickets-button" id="book-now-conf" target="_blank" 
-      onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Regular Ticket Book Now'});">Book Now</a>
+      <tito-button 
+        event="initiate/europe-2020" 
+        id="conference-release" 
+        onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Regular Ticket Book Now'});">
+          Book Now
+      </tito-button>
+      <!-- <a href="https://ti.to/initiate/europe-2020" class="btn tito-tickets-button" id="book-now-conf" target="_blank" 
+      onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Regular Ticket Book Now'});">Book Now</a> -->
     </div>
     <div class="card ticket-card">
       <div class="card-header">
@@ -232,17 +249,17 @@
       </div>
       <div class="card-body">
         <div class="text-center">
-          <h2 class="card-title">Sold Out</h2>
-          <!-- <h2 class="card-title">€2,495</h2>
-          <h6 class="card-subtitle text-muted font-weight-light">Ex VAT at 23%</h6> -->
+          <!-- <h2 class="card-title">Sold Out</h2> -->
+          <h2 class="card-title">€3,950</h2>
+          <h6 class="card-subtitle text-muted font-weight-light">€3,211.38 ex VAT</h6>
         </div>
         <hr>
         <div class="d-flex justify-content-around ticket-details">
-          <span class="small text-muted">Limited release, first come, first served</span>
+          <span class="small text-muted">Exclusive access to VIP events. Limited release</span>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item small">2 days / 40+ talks</li>
-          <li class="list-group-item small">UX / Dev / Product training</li>
+          <li class="list-group-item small">UX / Dev / Product workshops</li>
           <li class="list-group-item small">Network with 2,000 attendees </li>
           <li class="list-group-item small">Lunch each day </li>
           <li class="list-group-item small">Dublin walking tour </li>
@@ -253,9 +270,15 @@
         </ul>
 
       </div>
-      <a href="https://ti.to/initiate/uxdx-2019/with/g6valw-vdjs" class="btn tito-tickets-button" id="book-now-executive"
-        target="_blank" onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">Book Now</a>
+      <!-- <a href="https://ti.to/initiate/europe-2020/with/doh-f5v3uua" class="btn tito-tickets-button" id="book-now-executive"
+        target="_blank" onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">Book Now</a> -->
       <!-- <button class="btn">Sold Out</button> -->
+      <tito-button 
+        event="initiate/europe-2020" 
+        releases="doh-f5v3uua" 
+        onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">
+          Book Now
+      </tito-button>
     </div>
   </div>
 </div>

@@ -843,12 +843,13 @@ table {
     @extend .btn;
     @extend .btn-primary;
   }
-
+  
 }
 .ticket-card {
   width: 335px;
   margin-right: 2rem;
-  .tito-tickets-button {
+  
+  .tito-tickets-button, .tito-widget-button {
     @extend .btn;
     @extend .btn-primary;
     @extend .btn-block;
@@ -891,35 +892,35 @@ table {
   @extend .btn-light;
 }
 
-.button__widget {
-  tito-widget {
-  .tito-wrapper {
-    color: white;
-    .tito-ticket-vat {
-      color: white;
-    }
-    .tito-ticket-description {
-      color: white;
-    }
-  }
-}
-}
-tito-widget.regular {
-  .tito-ticket-name-wrapper {
-    text-align: left;
-  }
-  .tito-ticket-name {
-    font-size: 1.5rem;
-  }
-  .tito-degressive-price-desc {
-    font-size:small;
-  }
-}
-.tito-widget:not(.regular) {
-  .tito-wrapper {
-    max-width: 500px;
-  }
-}
+// .button__widget {
+//   tito-widget {
+//   .tito-wrapper {
+//     color: white;
+//     .tito-ticket-vat {
+//       color: white;
+//     }
+//     .tito-ticket-description {
+//       color: white;
+//     }
+//   }
+// }
+// }
+// tito-widget.regular {
+//   .tito-ticket-name-wrapper {
+//     text-align: left;
+//   }
+//   .tito-ticket-name {
+//     font-size: 1.5rem;
+//   }
+//   .tito-degressive-price-desc {
+//     font-size:small;
+//   }
+// }
+// .tito-widget:not(.regular) {
+//   .tito-wrapper {
+//     max-width: 500px;
+//   }
+// }
 
 
 
@@ -1104,7 +1105,19 @@ footer {
 
 }
 
-
+.accordion.faqs {
+  h2 {
+    margin-bottom: 0px !important;
+    text-align: left;
+  }
+  .card {
+    max-width: 100%;
+    img {
+      border: 1px solid black;
+      box-shadow: 3px 3px 7px #ccc;
+    }
+  }
+}
 
 
 
