@@ -5,55 +5,78 @@
 
     
     const today_date = Date.now()
-    const first200 = new Date(2020, 2, 1, 23, 59, 59)
-    const super_early = new Date(2020, 5, 6, 23, 59, 59)
-    const early = new Date(2020, 7, 4, 23, 59, 59)
-    const regular = new Date(2020, 7, 9, 23, 59, 59)
-    const regularLate = new Date(2020, 8, 5, 23, 59, 59)
+    const first200 = new Date(2020, 4, 2, 23, 59, 59)
+    const initialRelease = new Date(2020, 5, 6, 23, 59, 59)
+    const superEarly = new Date(2020, 6, 4, 23, 59, 59)
+    const early = new Date(2020, 6, 25, 23, 59, 59)
+    const mid = new Date(2020, 7, 15, 23, 59, 59)
+    const regular = new Date(2020, 8, 5, 23, 59, 59)
     const late = new Date(2020, 9, 7, 23, 59, 59)
     const lastMinute = new Date(2020, 9, 9, 23, 59, 59)
     
-    const confTickets = ['first200', 'super_early', 'early', 'regular', 'regularLate', 'late', 'lastMinute']
+    const confTickets = ['first200', 'initialRelease', 'superEarly', 'early', 'mid', 'regular', 'late', 'lastMinute']
     const confDetails = {
       first200: {
         confRelease: 'leeqybhvwhy',
-        confPrice: 500,
+        confPrice: 495,
+        execRelease: 'doh-f5v3uua',
+        execPrice: 2995,
         ticketTitle: "First release",
         ticketSubTitle: "Limited to 200 tickets",
       },
-      super_early: {
+      initialRelease: {
         confRelease: 'q510lz79t4q',
-        confPrice: 600,
+        confPrice: 595,
+        execRelease: 'executive-first-200-copy',
+        execPrice: 3095,
+        ticketTitle: "First release",
+        ticketSubTitle: "Get your tickets early before prices increase!",
+      },
+      superEarly: {
+        confRelease: 'kchd6kqhtha',
+        confPrice: 695,
+        execRelease: 'executive-initial-release-copy',
+        execPrice: 3195,
         ticketTitle: "Super Early",
         ticketSubTitle: "Get your tickets early before prices increase!",
       },
       early: {
-        confRelease: 'kchd6kqhtha',
-        confPrice: 700,
+        confRelease: '5g-jx-fyrhk',
+        confPrice: 795,
+        execRelease: 'executive-super-early-copy',
+        execPrice: 3295,
         ticketTitle: "Early",
         ticketSubTitle: "Get your tickets early before prices increase!",
       },
-      regular: {
-        confRelease: '5g-jx-fyrhk',
-        confPrice: 850,
-        ticketTitle: "Regular",
+      mid: {
+        confRelease: 'lbmjy67nu8',
+        confPrice: 895,
+        execRelease: 'executive-early-copy',
+        execPrice: 3395,
+        ticketTitle: "Mid",
         ticketSubTitle: "UXDX conference and workshop access",
       },
-      regularLate: {
-        confRelease: 'lbmjy67nu8',
-        confPrice: 1000,
-        ticketTitle: "Regular - Late",
+      regular: {
+        confRelease: 'mid-copy',
+        confPrice: 995,
+        execRelease: 'executive-mid-copy',
+        execPrice: 3495,
+        ticketTitle: "Regular",
         ticketSubTitle: "UXDX conference and workshop access",
       },
       late: {
         confRelease: '6chismpqzoa',
-        confPrice: 1100,
+        confPrice: 1095,
+        execRelease: 'executive-regular-copy',
+        execPrice: 3595,
         ticketTitle: "Late",
         ticketSubTitle: "UXDX conference and workshop access",
       },
       lastMinute: {
         confRelease: 'rihixk7knry',
-        confPrice: 1350,
+        confPrice: 1295,
+        execRelease: 'executive-late-copy',
+        execPrice: 3795,
         ticketTitle: "Last Minute",
         ticketSubTitle: "UXDX conference and workshop access",
       }
@@ -61,10 +84,11 @@
 
     let expired = false, sale
     if (today_date < first200) { sale = "first200" }
-    else if (today_date < super_early) { sale = "super_early" }
+    else if (today_date < initialRelease) { sale = "initialRelease" }
+    else if (today_date < superEarly) { sale = "superEarly" }
     else if (today_date < early) { sale = "early" }
+    else if (today_date < mid) { sale = "mid" }
     else if (today_date < regular) { sale = "regular" }
-    else if (today_date < regularLate) { sale = "regularLate" }
     else if (today_date < late) { sale = "late" }
     else if (today_date < lastMinute) { sale = "lastMinute" }
     else expired = true
@@ -91,39 +115,59 @@
   let details = getConfDetails();
 
   document.addEventListener("DOMContentLoaded", function (event) {
-    var conferencePrice = document.getElementById("conference-price");
-    conferencePrice.innerHTML = "€" + details.current.confPrice;
-    var conferenceVATPrice = document.getElementById("conference-vat-price");
-    conferenceVATPrice.innerHTML = "€" + Math.round(details.current.confPrice/1.23, 2) + " ex VAT"
-
-      
     var ticketTitle = document.getElementById("ticket-title");
     ticketTitle.innerHTML = details.current.ticketTitle;
     var ticketSubTitle = document.getElementById("ticket-sub-title");
     ticketSubTitle.innerHTML = details.current.ticketSubTitle;
+    
+    var conferencePrice = document.getElementById("conference-price");
+    conferencePrice.innerHTML = "€" + details.current.confPrice.toLocaleString();
+    var conferenceVATPrice = document.getElementById("conference-vat-price");
+    conferenceVATPrice.innerHTML = "€" + Math.round(details.current.confPrice/1.23, 2).toLocaleString() + " ex VAT"
+    
+    var execPrice = document.getElementById("exec-price");
+    execPrice.innerHTML = "€" + details.current.execPrice.toLocaleString();
+    var execVATPrice = document.getElementById("exec-vat-price");
+    execVATPrice.innerHTML = "€" + Math.round(details.current.execPrice/1.23, 2).toLocaleString() + " ex VAT"
 
+      
     if (details.late) {
       var nextName = document.getElementById("ticket-next-name");
       nextName.innerHTML = details.next.ticketTitle;
       var nextPrice = document.getElementById("ticket-next-price");
-      nextPrice.innerHTML = "€" + details.next.confPrice;
+      nextPrice.innerHTML = "€" + details.next.confPrice.toLocaleString();
+
+      var nextExecName = document.getElementById("ticket-next-exec-name");
+      nextExecName.innerHTML = details.next.ticketTitle;
+      var nextExecPrice = document.getElementById("ticket-next-exec-price");
+      nextExecPrice.innerHTML = "€" + details.next.execPrice.toLocaleString();
     } else {
       var nextElement = document.getElementById("ticket-next");
       elem.parentNode.removeChild(nextElement);
+      var nextExecElement = document.getElementById("ticket-next-exec");
+      elem.parentNode.removeChild(nextExecElement);
     }
 
     if (details.late) {
       var lastName = document.getElementById("ticket-last-name");
       lastName.innerHTML = details.late.ticketTitle;
       var lastPrice = document.getElementById("ticket-last-price");
-      lastPrice.innerHTML = "€" + details.late.confPrice;
+      lastPrice.innerHTML = "€" + details.late.confPrice.toLocaleString();
+
+      var lastExecName = document.getElementById("ticket-last-exec-name");
+      lastExecName.innerHTML = details.late.ticketTitle;
+      var lastExecPrice = document.getElementById("ticket-last-exec-price");
+      lastExecPrice.innerHTML = "€" + details.late.execPrice.toLocaleString();
     } else {
       var lastElement = document.getElementById("ticket-last");
       elem.parentNode.removeChild(lastElement);
     }
 
+    // TODO: fix this as it loads too late
     var conferenceRelease = document.getElementById("conference-release");
     conferenceRelease.setAttribute("releases", details.current.confRelease);
+    var execRelease = document.getElementById("exec-release");
+    execRelease.setAttribute("releases", details.current.execRelease);
 
   });
 
@@ -215,18 +259,27 @@
     <div class="card ticket-card">
       <div class="card-header">
         <h3 class="text-white">Executive</h3>
-        <p class="small text-light">Includes exclusive networking events</p>
+        <p class="small text-light">Exclusive access to VIP events</p>
 
       </div>
       <div class="card-body">
         <div class="text-center">
           <!-- <h2 class="card-title">Sold Out</h2> -->
-          <h2 class="card-title">€3,950</h2>
-          <h6 class="card-subtitle text-muted font-weight-light">€3,211.38 ex VAT</h6>
+          <h2 class="card-title" id="exec-price">€3,950</h2>
+          <h6 class="card-subtitle text-muted font-weight-light" id="exec-vat-price">€3,211.38 ex VAT</h6>
         </div>
         <hr>
         <div class="d-flex justify-content-around ticket-details">
-          <span class="small text-muted">Exclusive access to VIP events. Limited release</span>
+          <div id="ticket-next-exec">
+            <span class="small text-muted" id="ticket-next-exec-name"></span>
+            <br>
+            <h4 class="font-weight-light" id="ticket-next-exec-price"></h4>
+          </div>
+          <div id="ticket-last-exec">
+            <span class="small text-muted" id="ticket-last-exec-name"></span>
+            <br>
+            <h4 class="font-weight-light" id="ticket-last-exec-price"></h4>
+          </div>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item small">2 days / 40+ talks</li>
