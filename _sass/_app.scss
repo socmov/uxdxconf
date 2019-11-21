@@ -1106,23 +1106,63 @@ footer {
 }
 
 .accordion.faqs {
-  h2 {
-    margin-bottom: 0px !important;
-    padding-bottom: 0px !important;
-    text-align: left;
-    button {
-      font-size: 1.5rem;
-    }
+  a:hover, a:focus{
+    outline: none;
+    text-decoration: none;
   }
+  
   .card {
     max-width: 100%;
+    box-shadow: none;
+    border: none;
+    outline:none;
+    margin-bottom: 6px;
+    .card-header {
+      background-color:#fff;
+      padding:0;
+      h2 {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+        // text-align: left;
+        button {
+          text-transform:uppercase;
+          color: #fff;
+          transition:all 0.2s linear 0s;
+          font-size: 1.5rem;
+          width: 100%;
+          text-align: left;
+          background-color:$uxdx-blue;
+        }
+        button.collapsed{
+          background:transparent;
+          color:#333;
+        }
+        button.collapsed:hover{
+          color:$uxdx-blue;
+        }
+        button:after,
+        button.collapsed:after{
+          content: "▲";
+          font-weight: 900;
+          color: #fff;
+          font-size: 18px;
+          line-height: 35px;
+          position: absolute;
+          right:12px;
+        }
+        button.collapsed:after{
+          content: "▼";
+          color:#808080;
+        }
+      }
+    }
+    .card-body {
+      background: #f7f6f6;
+      box-shadow: 0px 5px 5px #eee
+    }
     img {
       border: 1px solid black;
       box-shadow: 3px 3px 7px #ccc;
     }
   }
 }
-
-
-
-
