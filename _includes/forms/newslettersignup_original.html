@@ -1,0 +1,56 @@
+{% if include.id %} {% assign id = include.id %} {% else %} {% assign id = 1 %} {% endif %}
+{% if include.name %} {% assign name = include.name %} {% else %} {% assign name = "newslettersignup" %} {% endif %}
+{% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
+
+<div id="mauticform_wrapper_newslettersignup" class="mauticform_wrapper">
+  <form role="form" method="post" action="https://mktg.sociallymotivated.com/form/submit?formId={{id}}"
+    id="mauticform_{{name}}" data-mautic-form="{{name}}" enctype="multipart/form-data"
+    class="form-inline">
+    <div class="mauticform-error" id="mauticform_{{name}}_error"></div>
+    <div class="mauticform-message" id="mauticform_{{name}}_message"></div>
+    <div class="mauticform-innerform header-form">
+      <div id="mauticform_{{name}}_first_name"
+        class="mauticform-row mauticform-text mauticform-field-1 form-group">
+        <label id="mauticform_label_{{name}}_first_name"
+          for="mauticform_input_{{name}}_first_name" class="mauticform-label" style="display: none;">First
+          Name</label>
+        <input id="mauticform_input_{{name}}_first_name" name="mauticform[first_name]" value=""
+          class="mauticform-input form-control form-control-lg" type="text" placeholder="First Name" />
+        <span class="mauticform-errormsg" style="display: none;"></span>
+      </div>
+  
+      <div id="mauticform_{{name}}_email"
+        class="mauticform-row mauticform-email mauticform-field-2 mauticform-required form-group" data-validate="email"
+        data-validation-type="email">
+        <label id="mauticform_label_{{name}}_email" for="mauticform_input_{{name}}_email"
+          class="mauticform-label" style="display: none;">Email</label>
+        <input id="mauticform_input_{{name}}_email" name="mauticform[email]" value=""
+          class="mauticform-input form-control form-control-lg" type="email" placeholder="Email" />
+        <span class="mauticform-errormsg" style="display: none;">Please enter a valid email</span>
+      </div>
+
+        
+      <div id="mauticform_{{name}}_email_21"
+        class="mauticform-row mauticform-email mauticform-field-2 mauticform-required form-group" style="display:none;">
+        <label id="mauticform_label_{{name}}_email_21" for="mauticform_input_{{name}}_email2"
+          class="mauticform-label" style="display: none;">Confirm Email</label>
+        <input id="mauticform_input_{{name}}_email_21" name="mauticform[email_21]" value=""
+          class="mauticform-input form-control form-control-lg" type="text" placeholder="Confirm Email" />
+        <span class="mauticform-errormsg" style="display: none;">Please enter a valid email</span>
+      </div>
+  
+      <div id="mauticform_{{name}}_submit"
+        class="mauticform-row mauticform-button-wrapper mauticform-field-3 form-group">
+        <button type="submit" name="mauticform[submit]" id="mauticform_input_{{name}}_submit"
+          name="mauticform[submit]" value="" class="mauticform-button btn btn-default btn-lg" value="1"
+          onClick="gtag('event', 'click', { event_category: 'engagement', event_action: 'click', event_label: '{{button_text}}'});">{{button_text}}</button>
+      </div>
+    </div>
+  
+    <input type="hidden" name="mauticform[formId]" id="mauticform_{{name}}_id" value="{{id}}" />
+    <input type="hidden" name="mauticform[return]" id="mauticform_{{name}}_return" value="" />
+    <input type="hidden" name="mauticform[source]" id="mauticform_{{name}}_return" value="{{page.url}}" />
+    <input type="hidden" name="mauticform[formName]" id="mauticform_{{name}}_name" value="{{name}}" />
+  
+  </form>
+</div>

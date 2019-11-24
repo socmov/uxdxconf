@@ -1,116 +1,171 @@
-{% if include.name %} {% assign name = include.name %} {% else %} {% assign name = "discount" %} {% endif %}
-{% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
-<div id="form_{{name}}_div">
-  <form role="form" method="post" action="https://9c863001.sibforms.com/serve/MUIEAPVpRk0wRZJTPfj01ZSquj3Rg4bAGlsBLHjluNLoAGgm0bm0AB1e0inEEXXSSxjFxI0PKFaiPlD7shmJfWl-Z1uZ0Q5rSTNr0zVVn-arq7KxK3rPLFXDU_0B6P3UsxKbHffD3GSi-GyZXSw3aAlOS9A-eG8982vnsACykwQoYgiNFK4Vc8_fLxV9vWJP4ob8cHHNeRTAqQqm" enctype="multipart/form-data" id="form_{{name}}">
-    <div class="alert alert-danger" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Whoops. Something went wrong. Can you please try again?</div>
-    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_message" style="display:none;">You're all subscribed - you'll receive a confirmation email shortly.'.</div>
-    <div class="form-content">
 
-      <div class="form-row">
-        <div id="uxdxform_{{name}}_first_name" class="form-group col-md-6" >
-          <label id="uxdxform_label_{{name}}_first_name" for="uxdxform_input_{{name}}_first_name" class="uxdxform-label" style="display: none;">First Name</label>
-          <input id="uxdxform_input_{{name}}_first_name" name="uxdxform[first_name]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="First Name" required/>
-          <span class="uxdxform-errormsg" style="display: none;"></span>
+<!-- START - We recommend to place the below code where you want the form in your website html  -->
+<div class="sib-form" style="text-align: center;
+         background-color: #EFF2F7;                                           ">
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
+      <form id="sib-form" method="POST" action="https://9c863001.sibforms.com/serve/MUIEAB3AViqiLyxDq27wrZx0F5Q7yORMmlo4dAK0LrKKPX1bFh05W8Vl-5wydNViQIUA7Rz3L91HZb3hFPlm24N9da-lVvi71zqEjIZsAeci3JHDSNdYb4h0Pu_n9ZqFKL9yZ69fc_UwP3V7de6HAKaV8M487E233jTy-m92mg-bLmjn1EKvIjGz3FuXzepywv3otKJ0fo-vs3iv">
+        <div style="padding: 16px 0;">
+          <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3C4858; background-color:transparent; border-width:px;">
+            <p>Save 50% on UXDX 2020</p>
+          </div>
         </div>
-
-        <div id="uxdxform_{{name}}_email" class="form-group col-md-6" data-validate="email"
-          data-validation-type="email">
-          <label id="uxdxform_label_{{name}}_email" for="uxdxform_input_{{name}}_email" class="uxdxform-label" style="display: none;">Email</label>
-          <input id="uxdxform_input_{{name}}_email" name="uxdxform[email]" value="" class="uxdxform-input form-control form-control-lg" type="email" placeholder="Email" required/>
+        <div style="padding: 16px 0;">
+          <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#3C4858; background-color:transparent; border-width:px;">
+            <div class="sib-text-form-block">
+              <p>Resiter for our pre-sale where you can get 50% off the regular ticket price. We'll notify you one week before the tickets go on general sale. You'll need to be quick as these tickets sell out fast!</p>
+            </div>
+          </div>
         </div>
-      </div>
+        <div style="padding: 16px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3c4858; border-width:px;" for="FIRSTNAME" data-required="*">
+                  Your first name
+                </label>
 
-          
-      <div id="uxdxform_{{name}}_email_2" class="form-group" style="display:none;">
-        <label id="uxdxform_label_{{name}}_email_2" for="uxdxform_input_{{name}}_email_2" class="uxdxform-label" style="display: none;">Confirm Email</label>
-        <input id="uxdxform_input_{{name}}_email_2" name="uxdxform[email_2]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="Confirm Email" />
-      </div>
+                <div class="entry__field">
+                  <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="First Name" data-required="true" required />
+                </div>
+              </div>
 
-      <div class="form-group">
-        <div id="uxdxform_{{name}}_gdpr" class="form-check">
-          <input id="uxdxform_input_{{name}}_gdpr" name="uxdxform[gdpr]" value="" class="uxdxform-input form-check-input" type="checkbox" required/>
-          <label id="uxdxform_label_{{name}}_gdpr" for="uxdxform_input_{{name}}_gdpr" class="form-check-label">
-            I agree to receive emails from UXDX, including upcoming promotions and discounted tickets, news about our conferences, and access to exclusive invite-only events.
-          </label>
-        </div>  
-      </div>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-width:px; border-color:#ff4949;">
+              </label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#8390A4; border-width:px;">
+                Customize this optional help text before publishing your form.
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 16px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3c4858; border-width:px;" for="EMAIL" data-required="*">
+                  Your email
+                </label>
 
-      <input type="text" name="email_address_check" value="" style="display:none;">
-      <input type="hidden" name="locale" value="en">
-      <input type="hidden" name="html_type" value="simple">
-      <input type="hidden" name="FIRSTNAME" id="FIRSTNAME" value="">
-      <input type="hidden" name="EMAIL" id="EMAIL" value="">
-      <input type="hidden" name="GDPR" id="GDPR" value="">
-      <input type="hidden" name="SOURCE" id="SOURCE" value="">
+                <div class="entry__field">
+                  <input class="input" maxlength="200" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Email" data-required="true" required />
+                </div>
+              </div>
 
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-width:px; border-color:#ff4949;">
+              </label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#8390A4; border-width:px;">
+                Provide your email address to subscribe. For e.g abc@xyz.com
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 16px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3c4858; border-width:px;" for="SOURCE" data-required="*">
+                  SOURCE
+                </label>
 
-      <div id="uxdxform_{{name}}_submit" class="form-group">
-        <button type="submit" name="uxdxform[submit]" id="uxdxform_input_{{name}}_submit"
-          name="uxdxform[submit]" value="" class="uxdxform-button btn btn-primary btn-lg" value="1"
-          onClick="gtag('event', 'click', { event_category: 'engagement', event_action: 'click', event_label: '{{button_text}}'});">{{button_text}}</button>
-      </div>
+                <div class="entry__field">
+                  <input class="input" maxlength="200" type="text" id="SOURCE" name="SOURCE" autocomplete="off" placeholder="SOURCE" data-required="true" required />
+                </div>
+              </div>
+
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-width:px; border-color:#ff4949;">
+              </label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#8390A4; border-width:px;">
+                Customize this optional help text before publishing your form.
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 16px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3c4858; border-width:px;" for="SUBSCRIBE__PAGE" data-required="*">
+                  Enter your SUBSCRIBE__PAGE
+                </label>
+
+                <div class="entry__field">
+                  <input class="input" maxlength="200" type="text" id="SUBSCRIBE__PAGE" name="SUBSCRIBE__PAGE" autocomplete="off" placeholder="SUBSCRIBE__PAGE" data-required="true" required />
+                </div>
+              </div>
+
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-width:px; border-color:#ff4949;">
+              </label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#8390A4; border-width:px;">
+                Customize this optional help text before publishing your form.
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 16px 0;">
+          <div class="sib-optin sib-form-block" data-required="true">
+            <div class="form__entry entry_mcq">
+              <div class="form__label-row ">
+                <label class="entry__label" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3c4858; border-width:px;" for="GDPR" data-required="*">
+                  Opt-in
+                </label>
+                <div class="entry__choice">
+                  <label>
+                    <input type="checkbox" class="input_replaced" value="1" id="GDPR" name="GDPR" required />
+                    <span class="checkbox checkbox_tick_positive"></span>I agree to receive email communications from UXDX, including upcoming promotions and discounted tickets, news about our conferences, and access to exclusive invite-only events.
+                  </label>
+                </div>
+              </div>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-width:px; border-color:#ff4949;">
+              </label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#8390A4; border-width:px;">
+                Customize this optional help text before publishing your form.
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 16px 0;">
+          <div class="sib-form-block" style="text-align: left">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px; border-width:0px;"
+              form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"
+                />
+              </svg>
+              SUBSCRIBE
+            </button>
+          </div>
+        </div>
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+      </form>
     </div>
-  </form>
+  </div>
 </div>
-
-
+<!-- END - We recommend to place the below code where you want the form in your website html  -->
+<!-- End Sendinblue Form -->
 
 <script type="text/javascript">
 
-let tempHardCodedAction = "https://9c863001.sibforms.com/serve/MUIEAPVpRk0wRZJTPfj01ZSquj3Rg4bAGlsBLHjluNLoAGgm0bm0AB1e0inEEXXSSxjFxI0PKFaiPlD7shmJfWl-Z1uZ0Q5rSTNr0zVVn-arq7KxK3rPLFXDU_0B6P3UsxKbHffD3GSi-GyZXSw3aAlOS9A-eG8982vnsACykwQoYgiNFK4Vc8_fLxV9vWJP4ob8cHHNeRTAqQqm"
-
-// const tempHardCodedAction = 'https://9c863001.sibforms.com/serve/MUIEAJHps_fz7RwuVw8mQixVZR5VAp6HD66WE-uQV413mWgRfQ8-5LCEhfQn7mkQ0_GkzRyTszAT_BUsb3ttRXtMwxA1ufvrSMCec5hGDJGoOqw_RjPFRpAtqTZuDnkf5OHrHWdYT9kGmrRFaghKQqWDD0WUuXNbPGaL8_snqmqjgv4qzK78AsIsbpFhM57fBthNk8LOrnMEuk3K'
-$(document).ready(function() {
-  // Submit form with id function.
-  $('#form_{{name}}').on('submit', function(e){
-
-    if ($('#form_{{name}}')[0].checkValidity()) {
+  $(document).ready(function() {
+    // Submit form with id function.
+    $('#sib-form').on('submit', function(e){
       e.preventDefault();
-      if($('#uxdxform_input_{{name}}_email_2').val()) {
-        $('#form_{{name}} .alert-danger').hide()
-        $('#form_{{name}} .alert-success').fadeIn()
-        $('#form_{{name}} .form-content').hide()
-      }
-      else {
-        var data = {
-          "FIRSTNAME": $('#uxdxform_input_{{name}}_first_name').val(), 
-          "EMAIL": $('#uxdxform_input_{{name}}_email').val(),
-          "GDPR": true,
-          "SOURCE": '{{name}}',
-          "PAGE": '{{page.url}}'
-        }
-        console.log(data)
-        $.ajax({
-          // url: '{{include.action}}',
-          url: tempHardCodedAction,
-          // headers: {
-          //   'Access-Control-Allow-Origin': 'http://localhost:4000'
-          // },
-          // dataType: 'json',
-          type: 'post',
-          // contentType: 'application/json',
-          contentType: false,
-          data: JSON.stringify(data), 
-          // data: data, 
-          processData: false,
-          success: function( data, textStatus, jQxhr ){
-            // Replace the form with a success message
-            $('#form_{{name}} .alert-danger').hide()
-            $('#form_{{name}} .alert-success').fadeIn();
-            $('#form_{{name}} .form-content').hide()
-          },
-          error: function( jqXhr, textStatus, errorThrown ){
-            console.log(errorThrown)
-            $('#form_{{name}} .alert-danger').fadeIn()
-            // $('#form_{{name}} .form-content').hide()
-          }
-        })
-      }
-    }
-    else {
-      $('#form_{{name}}')[0].reportValidity()
-    }
-  })
-})
+      var $theForm = $(this);
+      
+      let data = $theForm.serialize()
+      console.log(data)
 
+
+        // submit and see if it works
+      $.ajax({
+         type: $theForm.attr('method'),
+         url: $theForm.attr('action'),
+         data: $theForm.serialize(),
+         success: function(data) {
+             console.log('Yay! Form sent.');
+         }
+      })
+    })
+  })
 </script>

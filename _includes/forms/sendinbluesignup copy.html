@@ -1,0 +1,119 @@
+{% if include.name %} {% assign name = include.name %} {% else %} {% assign name = "discount" %} {% endif %}
+{% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
+<div id="form_{{name}}_div">
+  <form role="form" method="post" action="https://9c863001.sibforms.com/serve/MUIEAPVpRk0wRZJTPfj01ZSquj3Rg4bAGlsBLHjluNLoAGgm0bm0AB1e0inEEXXSSxjFxI0PKFaiPlD7shmJfWl-Z1uZ0Q5rSTNr0zVVn-arq7KxK3rPLFXDU_0B6P3UsxKbHffD3GSi-GyZXSw3aAlOS9A-eG8982vnsACykwQoYgiNFK4Vc8_fLxV9vWJP4ob8cHHNeRTAqQqm" enctype="multipart/form-data" id="form_{{name}}">
+    <div class="alert alert-danger" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Whoops. Something went wrong. Can you please try again?</div>
+    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_message" style="display:none;">You're all subscribed - you'll receive a confirmation email shortly.</div>
+    <div class="form-content">
+
+      <div class="form-row">
+        <div id="uxdxform_{{name}}_first_name" class="form-group col-md-6" >
+          <label id="uxdxform_label_{{name}}_first_name" for="uxdxform_input_{{name}}_first_name" class="uxdxform-label" style="display: none;">First Name</label>
+          <input id="uxdxform_input_{{name}}_first_name" name="uxdxform[first_name]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="First Name" required/>
+          <span class="uxdxform-errormsg" style="display: none;"></span>
+        </div>
+
+        <div id="uxdxform_{{name}}_email" class="form-group col-md-6" data-validate="email"
+          data-validation-type="email">
+          <label id="uxdxform_label_{{name}}_email" for="uxdxform_input_{{name}}_email" class="uxdxform-label" style="display: none;">Email</label>
+          <input id="uxdxform_input_{{name}}_email" name="uxdxform[email]" value="" class="uxdxform-input form-control form-control-lg" type="email" placeholder="Email" required/>
+        </div>
+      </div>
+
+          
+      <div id="uxdxform_{{name}}_email_2" class="form-group" style="display:none;">
+        <label id="uxdxform_label_{{name}}_email_2" for="uxdxform_input_{{name}}_email_2" class="uxdxform-label" style="display: none;">Confirm Email</label>
+        <input id="uxdxform_input_{{name}}_email_2" name="uxdxform[email_2]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="Confirm Email" />
+      </div>
+
+      <div class="form-group">
+        <div id="uxdxform_{{name}}_gdpr" class="form-check">
+          <input id="uxdxform_input_{{name}}_gdpr" name="uxdxform[gdpr]" value="1" class="uxdxform-input form-check-input" type="checkbox" required/>
+          <label id="uxdxform_label_{{name}}_gdpr" for="uxdxform_input_{{name}}_gdpr" class="form-check-label">
+            I agree to receive emails from UXDX, including upcoming promotions and discounted tickets, news about our conferences, and access to exclusive invite-only events.
+          </label>
+        </div>  
+      </div>
+
+      <input type="text" id="uxdxform_input_{{name}}_email_address_check" name="email_address_check" value="" style="display:none;">
+      <input type="hidden" id="uxdxform_input_{{name}}_locale" name="locale" value="en">
+      <input type="hidden" id="uxdxform_input_{{name}}_html_type" name="html_type" value="simple">
+
+
+      <div id="uxdxform_{{name}}_submit" class="form-group">
+        <button type="submit" name="uxdxform[submit]" id="uxdxform_input_{{name}}_submit"
+          name="uxdxform[submit]" value="" class="uxdxform-button btn btn-primary btn-lg" value="1"
+          onClick="gtag('event', 'click', { event_category: 'engagement', event_action: 'click', event_label: '{{button_text}}'});">{{button_text}}</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<script type="text/javascript">
+
+let tempHardCodedAction = "https://9c863001.sibforms.com/serve/MUIEAPVpRk0wRZJTPfj01ZSquj3Rg4bAGlsBLHjluNLoAGgm0bm0AB1e0inEEXXSSxjFxI0PKFaiPlD7shmJfWl-Z1uZ0Q5rSTNr0zVVn-arq7KxK3rPLFXDU_0B6P3UsxKbHffD3GSi-GyZXSw3aAlOS9A-eG8982vnsACykwQoYgiNFK4Vc8_fLxV9vWJP4ob8cHHNeRTAqQqm"
+
+// const tempHardCodedAction = 'https://9c863001.sibforms.com/serve/MUIEAJHps_fz7RwuVw8mQixVZR5VAp6HD66WE-uQV413mWgRfQ8-5LCEhfQn7mkQ0_GkzRyTszAT_BUsb3ttRXtMwxA1ufvrSMCec5hGDJGoOqw_RjPFRpAtqTZuDnkf5OHrHWdYT9kGmrRFaghKQqWDD0WUuXNbPGaL8_snqmqjgv4qzK78AsIsbpFhM57fBthNk8LOrnMEuk3K'
+$(document).ready(function() {
+  // Submit form with id function.
+  $('#form_{{name}}').on('submit', function(e){
+
+    if ($('#form_{{name}}')[0].checkValidity()) {
+      e.preventDefault();
+      
+      console.log('serialised', $(this).serialize())
+
+      if($('#uxdxform_input_{{name}}_email_2').val()) {
+        $('#form_{{name}} .alert-danger').hide()
+        $('#form_{{name}} .alert-success').fadeIn()
+        $('#form_{{name}} .form-content').hide()
+      }
+      else {
+        var data = {
+          "FIRSTNAME": $('#uxdxform_input_{{name}}_first_name').val(), 
+          "EMAIL": $('#uxdxform_input_{{name}}_email').val(),
+          "GDPR": 1,
+          "SOURCE": '{{name}}',
+          "SUBSCRIBE__PAGE": '{{page.url}}',
+          "email_address_check": $('#uxdxform_input_{{name}}_email_address_check').val(), 
+          "locale": $('#uxdxform_input_{{name}}_locale').val(), 
+          "html_type": $('#uxdxform_input_{{name}}_html_type').val()
+        }
+        let stringData = encodeURIComponent(JSON.stringify(data).replace("{", "").replace("}", "")).replace(/%22/g, "").replace(/%3A/g, "=").replace(/%2C/g, "&")
+        console.log(stringData)
+        $.ajax({
+          // url: '{{include.action}}',
+          url: tempHardCodedAction,
+          // headers: {
+          //   'Access-Control-Allow-Origin': 'http://localhost:4000'
+          // },
+          // dataType: 'json',
+          type: 'post',
+          // contentType: 'application/json',
+          contentType: false,
+          data: stringData, 
+          // data: data, 
+          processData: false,
+          success: function( data, textStatus, jQxhr ){
+            // Replace the form with a success message
+            $('#form_{{name}} .alert-danger').hide()
+            $('#form_{{name}} .alert-success').fadeIn();
+            $('#form_{{name}} .form-content').hide()
+          },
+          error: function( jqXhr, textStatus, errorThrown ){
+            console.log(errorThrown)
+            $('#form_{{name}} .alert-danger').fadeIn()
+            // $('#form_{{name}} .form-content').hide()
+          }
+        })
+      }
+    }
+    else {
+      $('#form_{{name}}')[0].reportValidity()
+    }
+  })
+})
+
+</script>

@@ -1,0 +1,51 @@
+{% if include.name %} {% assign name = include.name %} {% else %} {% assign name = "discount" %} {% endif %}
+{% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
+<div id="form_{{name}}_div">
+  <form role="form" method="post" action="https://9c863001.sibforms.com/serve/MUIEAPVpRk0wRZJTPfj01ZSquj3Rg4bAGlsBLHjluNLoAGgm0bm0AB1e0inEEXXSSxjFxI0PKFaiPlD7shmJfWl-Z1uZ0Q5rSTNr0zVVn-arq7KxK3rPLFXDU_0B6P3UsxKbHffD3GSi-GyZXSw3aAlOS9A-eG8982vnsACykwQoYgiNFK4Vc8_fLxV9vWJP4ob8cHHNeRTAqQqm" enctype="multipart/form-data" id="form_{{name}}">
+    <div class="alert alert-danger" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Whoops. Something went wrong. Can you please try again?</div>
+    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_message" style="display:none;">You're all subscribed - you'll receive a confirmation email shortly.</div>
+    <div class="form-content">
+
+      <div class="form-row">
+        <div id="uxdxform_{{name}}_first_name" class="form-group col-md-6" >
+          <label id="uxdxform_label_{{name}}_first_name" for="uxdxform_input_{{name}}_first_name" class="uxdxform-label" style="display: none;">First Name</label>
+          <input class="form-control form-control-lg" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="First Name" data-required="true" required />
+          <span class="uxdxform-errormsg" style="display: none;"></span>
+        </div>
+
+        <div id="uxdxform_{{name}}_email" class="form-group col-md-6" data-validate="email"
+          data-validation-type="email">
+          <label id="uxdxform_label_{{name}}_email" for="EMAIL" class="uxdxform-label" style="display: none;">Email</label>
+          <input class="form-control form-control-lg" maxlength="200" type="email" id="EMAIL" name="EMAIL" placeholder="Email" data-required="true" required />
+        </div>
+      </div>
+
+          
+      <div id="uxdxform_{{name}}_email_2" class="form-group" style="display:none;">
+        <label id="uxdxform_label_{{name}}_email_2" for="uxdxform_input_{{name}}_email_2" class="uxdxform-label" style="display: none;">Confirm Email</label>
+        <input id="uxdxform_input_{{name}}_email_2" name="uxdxform[email_2]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="Confirm Email" />
+      </div>
+
+      <div class="form-group">
+        <div id="uxdxform_{{name}}_gdpr" class="form-check">
+          <input type="checkbox" class="form-check-input" value="1" id="GDPR" name="GDPR" required />
+          <label id="uxdxform_label_{{name}}_gdpr" for="GDPR" class="form-check-label">
+            I agree to receive emails from UXDX, including upcoming promotions and discounted tickets, news about our conferences, and access to exclusive invite-only events.
+          </label>
+        </div>  
+      </div>
+
+      <input type="text" name="email_address_check" value="" style="display:none;">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+      <input class="input" maxlength="200" type="text" id="SOURCE" name="SOURCE" autocomplete="off" placeholder="SOURCE" data-required="true" required value ="{{name}}" style="display:none;"/>
+
+
+      <div id="uxdxform_{{name}}_submit" class="form-group">
+        <button type="submit" name="uxdxform[submit]" id="uxdxform_input_{{name}}_submit"
+          name="uxdxform[submit]" value="" class="uxdxform-button btn btn-primary btn-lg" value="1"
+          onClick="gtag('event', 'click', { event_category: 'engagement', event_action: 'click', event_label: '{{button_text}}'});">{{button_text}}</button>
+      </div>
+    </div>
+  </form>
+</div>
