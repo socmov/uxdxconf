@@ -192,17 +192,17 @@
       <div class="collapse navbar-collapse" id="uxdxNav">
         <ul class="navbar-nav ml-auto">
           {% for page in conference.primary_menu[0].pages___buttons %}
+            {% if page.menu_title.size > 0 %}
+              {% assign title = page.menu_title %}
+            {% else %}
+              {% assign title = page.url_slug | capitalize %}
+            {% endif %}
           <li class="nav-item">
-            {% if page.url_slug == 'tickets' %} 
-              <a class="btn btn-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{page.url_slug | capitalize}}</a>
+            {% if page.url_slug == 'tickets' or page.url_slug == 'pre-sale' %} 
+              <a class="btn btn-light" href="{{ site.baseurl }}/{{page.url_slug}}">{{title}}</a>
             {% elsif page.url_link contains "https://ti.to/" %}
               <a class="btn btn-light" href="{{page.url_link}}">{{page.button_text}}</a>
             {% elsif page.url_slug %}
-              {% if page.menu_title.size > 0 %}
-                {% assign title = page.menu_title %}
-              {% else %}
-               {% assign title = page.url_slug | capitalize %}
-              {% endif %}
               <a class="nav-link" href="{{ site.baseurl }}/{{page.url_slug}}">{{title}}</a>
             {% elsif page.tito_release.size > 1 %}
               <tito-button event="{{conference.tito_event}}" releases="{{page.tito_release}}">{{page.button_text}}</tito-button>
