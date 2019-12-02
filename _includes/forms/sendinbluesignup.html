@@ -55,8 +55,6 @@ $(document).ready(function() {
       e.preventDefault();
       var $theForm = $(this);
       
-      console.log('serialised', $(this).serialize())
-
       if($('#uxdxform_input_{{name}}_email_2').val()) {
         $('#form_{{name}} .alert-danger').hide()
         $('#form_{{name}} .alert-success').fadeIn()
@@ -74,13 +72,11 @@ $(document).ready(function() {
           "html_type": $('#uxdxform_input_{{name}}_html_type').val()
         }
         let stringData = encodeURIComponent(JSON.stringify(data).replace("{", "").replace("}", "")).replace(/%22/g, "").replace(/%3A/g, "=").replace(/%2C/g, "&")
-        console.log(stringData)
         $.ajax({
           type: $theForm.attr('method'),
           url: $theForm.attr('action'),
           data: stringData,
           success: function( data, textStatus, jQxhr ){
-            console.log('success')
             // Replace the form with a success message
             $('#form_{{name}} .alert-danger').hide()
             $('#form_{{name}} .alert-success').fadeIn();
