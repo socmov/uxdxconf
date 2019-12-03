@@ -2,7 +2,7 @@
 {% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
 <div id="form_{{name}}_div">
   <form role="form" method="post" action="https://9c863001.sibforms.com/serve/MUIEAB3AViqiLyxDq27wrZx0F5Q7yORMmlo4dAK0LrKKPX1bFh05W8Vl-5wydNViQIUA7Rz3L91HZb3hFPlm24N9da-lVvi71zqEjIZsAeci3JHDSNdYb4h0Pu_n9ZqFKL9yZ69fc_UwP3V7de6HAKaV8M487E233jTy-m92mg-bLmjn1EKvIjGz3FuXzepywv3otKJ0fo-vs3iv" id="form_{{name}}">
-    <div class="alert alert-danger" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Whoops. Something went wrong. Can you please try again?</div>
+    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Looks like you're already subscribed - I like your eagerness to learn :) <p class="small">If this seems wrong could you let us know in the chat in the bottom right and we'll investigate</p></div>
     <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_message" style="display:none;">You're all subscribed - you'll receive a confirmation email shortly.</div>
     <div class="form-content">
 
@@ -54,43 +54,39 @@ $(document).ready(function() {
     if ($('#form_{{name}}')[0].checkValidity()) {
       e.preventDefault();
       var $theForm = $(this);
+      // change the submit button
+      $('#uxdxform_input_{{name}}_submit').val('Sending...');
+      $('#uxdxform_input_{{name}}_submit').attr('disabled', 'disabled');
       
-      if($('#uxdxform_input_{{name}}_email_2').val()) {
-        $('#form_{{name}} .alert-danger').hide()
-        $('#form_{{name}} .alert-success').fadeIn()
-        $('#form_{{name}} .form-content').hide()
+      var data = {
+        "FIRSTNAME": $('#uxdxform_input_{{name}}_first_name').val(), 
+        "EMAIL": $('#uxdxform_input_{{name}}_email').val(),
+        "SOURCE": '{{name}}',
+        "SUBSCRIBE__PAGE": '{{page.url}}',
+        "GDPR": 1,
+        "email_address_check": $('#uxdxform_input_{{name}}_email_address_check').val(), 
+        "locale": $('#uxdxform_input_{{name}}_locale').val(), 
+        "html_type": $('#uxdxform_input_{{name}}_html_type').val()
       }
-      else {
-        var data = {
-          "FIRSTNAME": $('#uxdxform_input_{{name}}_first_name').val(), 
-          "EMAIL": $('#uxdxform_input_{{name}}_email').val(),
-          "SOURCE": '{{name}}',
-          "SUBSCRIBE__PAGE": '{{page.url}}',
-          "GDPR": 1,
-          "email_address_check": $('#uxdxform_input_{{name}}_email_address_check').val(), 
-          "locale": $('#uxdxform_input_{{name}}_locale').val(), 
-          "html_type": $('#uxdxform_input_{{name}}_html_type').val()
+      let stringData = encodeURIComponent(JSON.stringify(data).replace("{", "").replace("}", "")).replace(/%22/g, "").replace(/%3A/g, "=").replace(/%2C/g, "&")
+      $.ajax({
+        type: $theForm.attr('method'),
+        url: $theForm.attr('action'),
+        data: stringData,
+        success: function( data, textStatus, jQxhr ){
+          // Replace the form with a success message
+          $('#uxdxform_{{name}}_error').hide()
+          $('uxdxform_{{name}}_message').fadeIn();
+          $('#form_{{name}} .form-content').hide()
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+          $('#uxdxform_input_{{name}}_submit').val('{{button_text}}');
+          $('#uxdxform_input_{{name}}_submit').removeAttr('disabled');
+          $('#uxdxform_{{name}}_error').fadeIn()
+          // $('#form_{{name}} .form-content').hide()
         }
-        let stringData = encodeURIComponent(JSON.stringify(data).replace("{", "").replace("}", "")).replace(/%22/g, "").replace(/%3A/g, "=").replace(/%2C/g, "&")
-        $.ajax({
-          type: $theForm.attr('method'),
-          url: $theForm.attr('action'),
-          data: stringData,
-          success: function( data, textStatus, jQxhr ){
-            // Replace the form with a success message
-            $('#form_{{name}} .alert-danger').hide()
-            $('#form_{{name}} .alert-success').fadeIn();
-            $('#form_{{name}} .form-content').hide()
-          },
-          error: function( jqXhr, textStatus, errorThrown ){
-            console.log(errorThrown)
-            $('#form_{{name}} .alert-danger').fadeIn()
-            // $('#form_{{name}} .form-content').hide()
-          }
-        })
-      }
-    }
-    else {
+      })
+    } else {
       $('#form_{{name}}')[0].reportValidity()
     }
   })
