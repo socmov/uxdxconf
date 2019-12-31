@@ -82,7 +82,7 @@ $(document).ready(function() {
         success: function( data, textStatus, jQxhr ){
           // Replace the form with a success message
           $('#uxdxform_{{name}}_error').hide()
-          $('uxdxform_{{name}}_message').fadeIn();
+          $('#uxdxform_{{name}}_message').fadeIn();
           $('#form_{{name}} .form-content').hide()
         },
         error: function( jqXhr, textStatus, errorThrown ){
