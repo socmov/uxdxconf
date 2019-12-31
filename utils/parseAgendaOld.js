@@ -1,4 +1,4 @@
-let agendas = require('../_data/agendaOld.json')
+let agendas = require('./oldAgenda.json')
 const { parse } = require('json2csv')
 const fs = require('fs')
 

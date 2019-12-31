@@ -7,13 +7,18 @@
     <div class="form-content">
 
       <div class="form-row">
-        <div id="uxdxform_{{name}}_first_name" class="form-group col-md-6" >
+        <div id="uxdxform_{{name}}_first_name" class="form-group col-md-4" >
           <label id="uxdxform_label_{{name}}_first_name" for="uxdxform_input_{{name}}_first_name" class="uxdxform-label" style="display: none;">First Name</label>
           <input id="uxdxform_input_{{name}}_first_name" name="uxdxform[first_name]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="First Name" required/>
           <span class="uxdxform-errormsg" style="display: none;"></span>
         </div>
+        <div id="uxdxform_{{name}}_last_name" class="form-group col-md-4" >
+          <label id="uxdxform_label_{{name}}_last_name" for="uxdxform_input_{{name}}_last_name" class="uxdxform-label" style="display: none;">Last Name</label>
+          <input id="uxdxform_input_{{name}}_last_name" name="uxdxform[last_name]" value="" class="uxdxform-input form-control form-control-lg" type="text" placeholder="Last Name" required/>
+          <span class="uxdxform-errormsg" style="display: none;"></span>
+        </div>
 
-        <div id="uxdxform_{{name}}_email" class="form-group col-md-6" data-validate="email"
+        <div id="uxdxform_{{name}}_email" class="form-group col-md-4" data-validate="email"
           data-validation-type="email">
           <label id="uxdxform_label_{{name}}_email" for="uxdxform_input_{{name}}_email" class="uxdxform-label" style="display: none;">Email</label>
           <input id="uxdxform_input_{{name}}_email" name="uxdxform[email]" value="" class="uxdxform-input form-control form-control-lg" type="email" placeholder="Email" required/>
@@ -60,6 +65,7 @@ $(document).ready(function() {
       
       var data = {
         "FIRSTNAME": $('#uxdxform_input_{{name}}_first_name').val(), 
+        "LASTNAME": $('#uxdxform_input_{{name}}_last_name').val(), 
         "EMAIL": $('#uxdxform_input_{{name}}_email').val(),
         "SOURCE": '{{name}}',
         "SUBSCRIBE__PAGE": '{{page.url}}',
