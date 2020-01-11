@@ -53,6 +53,11 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+  var ip
+  $.getJSON('http://jsonip.com/?callback=?', function(r){ 
+    // console.log(r.ip);
+    ip = r.ip
+  });
   // Submit form with id function.
   $('#form_{{name}}').on('submit', function(e){
 
@@ -72,7 +77,8 @@ $(document).ready(function() {
         "GDPR": 1,
         "email_address_check": $('#uxdxform_input_{{name}}_email_address_check').val(), 
         "locale": $('#uxdxform_input_{{name}}_locale').val(), 
-        "html_type": $('#uxdxform_input_{{name}}_html_type').val()
+        "html_type": $('#uxdxform_input_{{name}}_html_type').val(),
+        "IP_ADDRESS": ip
       }
       let stringData = encodeURIComponent(JSON.stringify(data).replace("{", "").replace("}", "")).replace(/%22/g, "").replace(/%3A/g, "=").replace(/%2C/g, "&")
       $.ajax({
