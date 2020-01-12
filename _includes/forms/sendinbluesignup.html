@@ -2,8 +2,8 @@
 {% if include.button_text %} {% assign button_text = include.button_text %} {% else %} {% assign button_text = "Join the Community" %} {% endif %}
 <div id="form_{{name}}_div">
   <form role="form" method="post" action="https://9c863001.sibforms.com/serve/MUIEAB3AViqiLyxDq27wrZx0F5Q7yORMmlo4dAK0LrKKPX1bFh05W8Vl-5wydNViQIUA7Rz3L91HZb3hFPlm24N9da-lVvi71zqEjIZsAeci3JHDSNdYb4h0Pu_n9ZqFKL9yZ69fc_UwP3V7de6HAKaV8M487E233jTy-m92mg-bLmjn1EKvIjGz3FuXzepywv3otKJ0fo-vs3iv" id="form_{{name}}">
-    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Looks like you're already subscribed - I like your eagerness to learn :) <p class="small">If this seems wrong could you let us know in the chat in the bottom right and we'll investigate</p></div>
-    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_message" style="display:none;">You're all subscribed - you'll receive a confirmation email shortly.</div>
+    <div class="alert alert-warning" role="alert" id="uxdxform_{{name}}_error" style="display:none;">Something went wrong!<p class="small">If this keeps happening could you let us know in the chat in the bottom right and we'll investigate</p></div>
+    <div class="alert alert-success" role="alert" id="uxdxform_{{name}}_message" style="display:none;">Sent! You'll receive a confirmation email shortly - please confirm your email to complete the subscription.</div>
     <div class="form-content">
 
       <div class="form-row">
