@@ -2,14 +2,15 @@
 {% assign future = nowunix | plus: 1209600 %}
 {% assign past = nowunix | minus: 1209600 %}
 
+{% if page.url == "/agenda" %}
 <div class="alert alert-info agenda-alert" role="alert">
   <h2>You can set the agenda for UXDX 2020</h2>
   <p>We shape the agenda around what you want to know.</p> 
   <p>Let us know what companies are doing great work and what you want to hear about.</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6ynLt9ORGTSEA9mUt71zxqCI-xfHJhWk2twifRNNKTurZlQ/viewform?usp=sf_link" class="btn btn-primary btn-lg">Share Your Thoughts</a>
     <a href="https://uxdxconf.com/speak" class="btn btn-outline-dark btn-lg">Apply to Speak</a>
-  
 </div>
+{% endif %}
 
 <div class="uxdx_agenda">
 
