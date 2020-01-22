@@ -182,11 +182,6 @@
       {% include {{form}} name=form_name button_text=button_text %}
     {% endif %}
 
-    <!-- MAPS -->
-    {% if section.map.size > 0 %} 
-      {% assign map = section.map[0] %} 
-      {% include components/map.html map=map %}
-    {% endif %}
     
     <!-- AGENDA -->
     {% if section.agenda.size > 0 %}
@@ -249,6 +244,13 @@
       {% include components/blog-list.html item=blog_list %}
     {% endfor %}
     {% endif %} 
+
+    
+    <!-- MAPS -->
+    {% if section.map.size > 0 %} 
+      {% assign map = section.map[0] %} 
+      {% include components/map.html map=map %}
+    {% endif %}
 
     {% if section.image_rows.size == 0 %}
     </div>
