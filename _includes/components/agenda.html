@@ -93,7 +93,7 @@
                   <div class="schedule__grid__event__meta">
                     <div class="d-flex justify-content-between flex-wrap">
                       <div class="meta-details">
-                        {% if session.location and session.session[0].type != "Break" %}
+                        {% if session.location and session.session[0].type != "Break" and session.location != "Agenda" %}
                         <span class="badge {{session.location}}">{{session.location}}</span>
                         {{session.stream[0].name}} {% endif %}
                       </div>

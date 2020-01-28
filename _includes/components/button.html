@@ -9,4 +9,10 @@
   <div class="button_link_div">
     <a href="{{link}}" class="btn {{button.class}}">{{button.button_text}}</a>
   </div>
+{% elsif button.tito_release.size > 3 %}
+  <!-- Could do widget or button? -->
+  {% assign conference = site.data.conferences | where: "id", page.conference %} 
+  {% assign conference = conference[0] %}
+  <tito-widget event="{{conference.tito_event}}" releases="{{button.tito_release}}" class="{{widget.classname}}"></tito-widget>
+  <!-- <tito-button event="{{conference.tito_event}}" releases="{{button.tito_release}}">{{button.button_text}}</tito-button> -->
 {% endif %}
