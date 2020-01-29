@@ -97,6 +97,9 @@
                         <span class="badge {{session.location}}">{{session.location}}</span>
                         {{session.stream[0].name}} {% endif %}
                       </div>
+                      {% if session.session[0].speakers.size == 0 %}
+                        {{session.session[0].description | truncatewords: 30}}
+                      {% endif %}
                       {% if session.session[0].description.size > 50 %}
                       <div class="display-controllers collapsed" data-toggle="collapse" data-target="#{{session.codename}}" aria-expanded="false"
                       aria-controls="{{session.codename}}">
