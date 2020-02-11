@@ -4,44 +4,88 @@
 <script type="application/javascript">
 
   const today_date = Date.now()
-  const first200 = new Date(2019, 1, 1, 00, 00, 00)
-  const super_early = new Date(2019, 4, 31, 23, 59, 59)
-  const early = new Date(2019, 5, 14, 23, 59, 59)
-  const regular1 = new Date(2019, 5, 28, 23, 59, 59)
-  const regular2 = new Date(2019, 6, 12, 23, 59, 59)
-  const regular3 = new Date(2019, 6, 26, 23, 59, 59)
-  const regular4 = new Date(2019, 7, 9, 23, 59, 59)
-  // const regular5 = new Date(2019, 7, 23, 23, 59, 59)
 
-  const flashsalestart = new Date(2019, 7, 13, 23, 59, 59)
-  const flashsaleend = new Date(2019, 7, 16, 23, 59, 59)
+  const dates = {
+    februaryLaunchStart: {
+      date: new Date(2020, 1, 14, 06, 00, 00),
+      pre: '<div class="alert alert-warning" role="alert">Get <b>50% off your UXDX 2020 ticket</b>. The one-day sale starts in ',
+      post: '- <strong><a href="{{ site.baseurl }}/pre-sale">register for the pre-sale now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    februaryLaunchEnd: {
+      date: new Date(2020, 1, 15, 23, 59, 59),
+      pre: '<div class="alert alert-danger" role="alert">Get <b>50% off your UXDX 2020 ticket</b>. Sale ends in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    
+    marchLaunchStart: {
+      date: new Date(2020, 2, 13, 06, 00, 00),
+      pre: '<div class="alert alert-warning" role="alert">Get <b>50% off your UXDX 2020 ticket</b>. The one-day sale starts in ',
+      post: '- <strong><a href="{{ site.baseurl }}/pre-sale">register for the pre-sale now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    marchLaunchEnd: {
+      date: new Date(2020, 2, 14, 23, 59, 59),
+      pre: '<div class="alert alert-danger" role="alert">Get <b>50% off your UXDX 2020 ticket</b>. Sale ends in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    
+    aprilLaunchStart: {
+      date: new Date(2020, 3, 17, 06, 00, 00),
+      pre: '<div class="alert alert-warning" role="alert">Get <b>50% off your UXDX 2020 ticket</b>. The one-day sale starts in ',
+      post: '- <strong><a href="{{ site.baseurl }}/pre-sale">register for the pre-sale now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    aprilLaunchEnd: {
+      date: new Date(2020, 3, 18, 23, 59, 59),
+      pre: '<div class="alert alert-danger" role="alert">Get <b>50% off your UXDX 2020 ticket</b>. Sale ends in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
 
-  const regular6 = new Date(2019, 8, 06, 23, 59, 59)
-  const regular7 = new Date(2019, 8, 20, 23, 59, 59)
-  const regular7_2 = new Date(2019, 8, 27, 23, 59, 59)
-  const regular8 = new Date(2019, 9, 4, 23, 59, 59)
-  const late = new Date(2019, 9, 9, 23, 59, 59)
+    initial: {
+      date: new Date(2020, 4, 3, 00, 00, 00),
+      pre: '<div class="alert alert-info" role="alert">Initial tickets go on sale in ',
+      post: '- <strong><a href="{{ site.baseurl }}/pre-sale">register for the pre-sale now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    super_early: {
+      date: new Date(2020, 5, 6, 23, 59, 59),
+      pre: '<div class="alert alert-info" role="alert">Prices increase in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    early: {
+      date: new Date(2020, 6, 4, 23, 59, 59),
+      pre: '<div class="alert alert-info" role="alert">Prices increase in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    mid: {
+      date: new Date(2020, 7, 1, 23, 59, 59),
+      pre: '<div class="alert alert-info" role="alert">Prices increase in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    regular: {
+      date: new Date(2020, 8, 5, 23, 59, 59),
+      pre: '<div class="alert alert-info" role="alert">Prices increase in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    },
+    late: {
+      date: new Date(2020, 9, 9, 15, 59, 59),
+      pre: '<div class="alert alert-info" role="alert">Prices increase in ',
+      post: '- <strong><a href="https://ti.to/initiate/europe-2020/with/february-launch">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+    }
+  } 
 
   function getExpiryDate() {
     let expiry
-    let expired = false
-    if(today_date < first200) expiry = first200
-    else if(today_date < super_early) expiry = super_early
-    else if (today_date < early) expiry = early
-    else if (today_date < regular1) expiry = regular1
-    else if (today_date < regular2) expiry = regular2
-    else if (today_date < regular3) expiry = regular3
-    else if (today_date < regular4) expiry = regular4
-    else if (today_date < flashsalestart) expiry = flashsalestart
-    else if (today_date < flashsaleend) expiry = flashsaleend
-    else if (today_date < regular6) expiry = regular6
-    else if (today_date < regular7) expiry = regular7
-    else if (today_date < regular7_2) expiry = regular7_2
-    else if (today_date < regular8) expiry = regular8
-    else if (today_date < late) expiry = late
-    else expired = true
-    
+    let tickets = Object.keys(dates)
+    for (let i = 0; i < tickets.length; i++) {
+      if (today_date < dates[tickets[i]].date) expiry = dates[tickets[i]]
+      if (expiry) break;
+    }
     return expiry
+  }
+
+  function getDayDifference (firstDate, secondDate) {
+    const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    const diff = Math.floor(Math.abs((firstDate - secondDate) / oneDay));
+    // console.log('DIFFERENCE', firstDate, secondDate, diff)
+    return diff < 14 ? true : false
   }
 
   // Update the count down every 1 second
@@ -52,17 +96,19 @@
 
     // get the expiry time
     let expiryDate = getExpiryDate()
-    if (expiryDate) {
-      let expiry = expiryDate.getTime();
-      // manually setting the end date
-      // expiry = new Date(2019,09,07, 09,00).getTime();
-      // console.log(expiry)
+    let expiry = expiryDate.date.getTime();
+
+    // console.log('expiryDate', expiryDate)
+    // console.log('now', now)
+
+    // if the expiry is within two weeks
+    if (expiryDate && getDayDifference(expiryDate.date, now)) {
 
       var leftTime = expiry - now; //Now i am passing the left time from controller itself which handles timezone stuff (UTC), just to simply question i used harcoded values.
       var duration = moment.duration(leftTime);
   
       // get the value to show
-      var value = "{{include.text.pre}} "
+      var value = ''
       var dayWord = duration.days() != 1 ? 'days' : 'day'
       var hourWord = duration.hours() != 1 ? 'hours' : 'hour'
       var minuteWord = duration.minutes() != 1 ? 'minutes' : 'minute'
@@ -81,33 +127,34 @@
       }
   
       // trim if first char = '.'
-      let post = "{{include.text.post}}"
-      // console.log(post.length)
-      if (post.length === 0 || post.charAt(1) === '.') {
-        value += post
-      }
-      else {
-        value += " "  + post
-      }
+      // let post = "{{include.text.post}}"
+      // // console.log(post.length)
+      // if (post.length === 0 || post.charAt(1) === '.') {
+      //   value += post
+      // }
+      // else {
+      //   value += " "  + post
+      // }
   
-      let text = ''
-      if (expiry && expiry !== flashsalestart.getTime()) {
-        // text = '<div class="alert alert-danger" role="alert">'
-        if (expiry === flashsaleend.getTime()) {
-          text += '<div class="alert alert-danger" role="alert"><b>50% OFF</b> with discount code <b>UXDX5019</b>. Sale ends in ' + value
-        } else {
-          text += '<div class="alert alert-info" role="alert">Prices increase in ' + value
-        }
-        text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
-      }
-      else if (expiry === flashsalestart.getTime()) {
-        text = '<div class="alert alert-danger" role="alert">'
-        text += 'Our <b>50%</b> sale starts in ' + value + '. Leave your email below to avoid missing out on Europe\'s largest product event.</div>'
-      }
+      let text = expiryDate.pre + value + expiryDate.post
+      // let text = ''
+      // if (expiry && expiry !== flashsalestart.getTime()) {
+      //   // text = '<div class="alert alert-danger" role="alert">'
+      //   if (expiry === flashsaleend.getTime()) {
+      //     text += '<div class="alert alert-danger" role="alert">Sign up to get 50% off your UXDX 2020 ticket. Sale starts in ' + value
+      //   } else {
+      //     text += '<div class="alert alert-info" role="alert">Prices increase in ' + value
+      //   }
+      //   text += ' - <strong><a href="{{ site.baseurl }}/tickets">book now</a></strong> to avoid missing out on Europe\'s largest Product event.</div>'
+      // }
+      // else if (expiry === flashsalestart.getTime()) {
+      //   text = '<div class="alert alert-danger" role="alert">'
+      //   text += 'Our <b>50%</b> sale starts in ' + value + '. Leave your email below to avoid missing out on Europe\'s largest product event.</div>'
+      // }
       
       // put the text into the header
   
-      if (expiry !== late.getTime()) {
+      if (expiry !== dates.late.date.getTime()) {
         var elementArray = document.getElementsByClassName("countdown-timer");
         for (var i = 0; i < elementArray.length; i++) {
           elementArray[i].innerHTML = text
