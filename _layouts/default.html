@@ -154,7 +154,9 @@
 
     
     {% if pageContent[0].conference[0].codename == "uxdx_2018" or pageContent[0].conference[0].codename == "uxdx_2019_93fa926" or pageContent[0].conference[0].codename == "uxdx_2019_0a0c6fc" %}
-      {% include components/countdown.html %}
+      {% if page.url != "/tickets" and page.url != "/pre-sale" %}
+        {% include components/countdown.html %}
+      {% endif %}
     {% endif %}
     
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
