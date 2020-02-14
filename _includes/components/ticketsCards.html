@@ -2,8 +2,6 @@
 <script type="application/javascript">
 
   function getConfDetails() {
-
-    
     const today_date = Date.now()
     const first200 = new Date(2020, 4, 2, 23, 59, 59)
     const initialRelease = new Date(2020, 5, 6, 23, 59, 59)
@@ -17,16 +15,16 @@
     const confTickets = ['first200', 'initialRelease', 'superEarly', 'early', 'mid', 'regular', 'late', 'lastMinute']
     const confDetails = {
       first200: {
-        confRelease: 'leeqybhvwhy',
+        confRelease: 'february-launch',
         confPrice: 495,
         execRelease: 'doh-f5v3uua',
         execPrice: 2995,
-        ticketTitle: "First 200",
-        ticketSubTitle: "Limited to 200 tickets",
+        ticketTitle: "February Launch",
+        ticketSubTitle: "14th February Only",
       },
       initialRelease: {
         confRelease: 'q510lz79t4q',
-        confPrice: 595,
+        confPrice: 995,
         execRelease: 'executive-first-200-copy',
         execPrice: 3095,
         ticketTitle: "Initial Release",
@@ -106,7 +104,7 @@
       next: confDetails[next],
       late: confDetails[lateTicket]
     }
-    // console.log(details)
+    console.log(details)
     return details
   }
 
@@ -133,22 +131,22 @@
     execVATPrice.innerHTML = "€" + Math.round(details.current.execPrice * 1.23, 2).toLocaleString() + " inc VAT"
 
       
-    if (details.late) {
-      var nextName = document.getElementById("ticket-next-name");
-      nextName.innerHTML = details.next.ticketTitle;
-      var nextPrice = document.getElementById("ticket-next-price");
-      nextPrice.innerHTML = "€" + details.next.confPrice.toLocaleString();
+    // if (details.late) {
+    //   var nextName = document.getElementById("ticket-next-name");
+    //   nextName.innerHTML = details.next.ticketTitle;
+    //   var nextPrice = document.getElementById("ticket-next-price");
+    //   nextPrice.innerHTML = "€" + details.next.confPrice.toLocaleString();
 
-      var nextExecName = document.getElementById("ticket-next-exec-name");
-      nextExecName.innerHTML = details.next.ticketTitle;
-      var nextExecPrice = document.getElementById("ticket-next-exec-price");
-      nextExecPrice.innerHTML = "€" + details.next.execPrice.toLocaleString();
-    } else {
-      var nextElement = document.getElementById("ticket-next");
-      elem.parentNode.removeChild(nextElement);
-      var nextExecElement = document.getElementById("ticket-next-exec");
-      elem.parentNode.removeChild(nextExecElement);
-    }
+    //   var nextExecName = document.getElementById("ticket-next-exec-name");
+    //   nextExecName.innerHTML = details.next.ticketTitle;
+    //   var nextExecPrice = document.getElementById("ticket-next-exec-price");
+    //   nextExecPrice.innerHTML = "€" + details.next.execPrice.toLocaleString();
+    // } else {
+    //   var nextElement = document.getElementById("ticket-next");
+    //   elem.parentNode.removeChild(nextElement);
+    //   var nextExecElement = document.getElementById("ticket-next-exec");
+    //   elem.parentNode.removeChild(nextExecElement);
+    // }
 
     if (details.late) {
       var lastName = document.getElementById("ticket-last-name");
@@ -227,11 +225,11 @@
         </div>
         <hr>
         <div class="d-flex justify-content-around ticket-details">
-          <div id="ticket-next">
+          <!-- <div id="ticket-next">
             <span class="small text-muted" id="ticket-next-name"></span>
             <br>
             <h4 class="font-weight-light" id="ticket-next-price"></h4>
-          </div>
+          </div> -->
           <div id="ticket-last">
             <span class="small text-muted" id="ticket-last-name"></span>
             <br>
@@ -267,16 +265,16 @@
       <div class="card-body">
         <div class="text-center">
           <!-- <h2 class="card-title">Sold Out</h2> -->
-          <h2 class="card-title" id="exec-price">€3,950</h2>
-          <h6 class="card-subtitle text-muted font-weight-light" id="exec-vat-price">€3,211.38 ex VAT</h6>
+          <h2 class="card-title" id="exec-price"></h2>
+          <h6 class="card-subtitle text-muted font-weight-light" id="exec-vat-price"></h6>
         </div>
         <hr>
         <div class="d-flex justify-content-around ticket-details">
-          <div id="ticket-next-exec">
+          <!-- <div id="ticket-next-exec">
             <span class="small text-muted" id="ticket-next-exec-name"></span>
             <br>
             <h4 class="font-weight-light" id="ticket-next-exec-price"></h4>
-          </div>
+          </div> -->
           <div id="ticket-last-exec">
             <span class="small text-muted" id="ticket-last-exec-name"></span>
             <br>
