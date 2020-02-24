@@ -177,6 +177,8 @@
 
 </script>
 
+{% capture now %}{{'now' | date: '%s' | plus: 0 %}}{% endcapture %}
+
 <div class="tab-content clearfix">
   <div class="tab-pane active fade show d-flex justify-content-around flex-wrap" id="tickets-individual-freelance"
     aria-labelledby="tickets-individuals" role="tabpanel">
@@ -251,13 +253,22 @@
         </ul>
         
       </div>
-      <tito-button 
-        event="initiate/europe-2020" 
-        id="conference-release" 
-        onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Regular Ticket Book Now'});">
-          Book Now
-      </tito-button>
-      <button class="btn btn-primary register-button" onclick="document.getElementById('uxdxform_input_sendinbluesignup_first_name').focus();">On Sale 20th March - Register Below</button>
+
+      {% if now < '1584662400000' %}
+        <button class="btn btn-primary register-button" onclick="document.getElementById('uxdxform_input_sendinbluesignup_first_name').focus();">On Sale 20th March - Register Below</button>
+      {% endif %} 
+      {% if now > '1584662400000' %} 
+        {% if now < '1584921600000' %} 
+          <tito-button 
+            event="initiate/europe-2020" 
+            id="conference-release" 
+            onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Regular Ticket Book Now'});">
+              Book Now
+          </tito-button>
+        {% else %}
+          <button class="btn btn-primary register-button" onclick="document.getElementById('uxdxform_input_sendinbluesignup_first_name').focus();">On Sale 20th March - Register Below</button>
+        {% endif %} 
+      {% endif %} 
       <!-- <a href="https://ti.to/initiate/europe-2020" class="btn tito-tickets-button" id="book-now-conf" target="_blank" 
       onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Regular Ticket Book Now'});">Book Now</a> -->
     </div>
@@ -302,14 +313,21 @@
       <!-- <a href="https://ti.to/initiate/europe-2020/with/doh-f5v3uua" class="btn tito-tickets-button" id="book-now-executive"
         target="_blank" onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">Book Now</a> -->
       <!-- <button class="btn">Sold Out</button> -->
-      <!-- releases="doh-f5v3uua"  -->
-      <tito-button 
-        event="initiate/europe-2020" 
-        id="exec-release"
-        onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">
-          Book Now
-      </tito-button>
-      <button class="btn btn-primary register-button" onclick="document.getElementById('uxdxform_input_sendinbluesignup_first_name').focus();">On Sale 20th March - Register Below</button>
+        {% if now < '1584662400000' %}
+          <button class="btn btn-primary register-button" onclick="document.getElementById('uxdxform_input_sendinbluesignup_first_name').focus();">On Sale 20th March - Register Below</button>
+        {% endif %} 
+        {% if now > '1584662400000' %} 
+          {% if now < '1584921600000' %} 
+            <tito-button 
+              event="initiate/europe-2020" 
+              id="exec-release"
+              onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">
+                Book Now
+            </tito-button>
+          {% else %}
+            <button class="btn btn-primary register-button" onclick="document.getElementById('uxdxform_input_sendinbluesignup_first_name').focus();">On Sale 20th March - Register Below</button>
+  	      {% endif %} 
+  	    {% endif %} 
     </div>
   </div>
 </div>
