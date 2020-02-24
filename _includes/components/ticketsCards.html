@@ -1,5 +1,7 @@
-
 <script type="application/javascript">
+  window.titoWidgetCallback = function(){
+    TitoWidget.build_widgets = false
+  }
 
   function getConfDetails() {
     const today_date = Date.now()
@@ -169,6 +171,8 @@
     var execRelease = document.getElementById("exec-release");
     execRelease.setAttribute("releases", details.current.execRelease);
 
+    TitoWidget.buildWidgets()
+
   });
 
 </script>
@@ -298,9 +302,10 @@
       <!-- <a href="https://ti.to/initiate/europe-2020/with/doh-f5v3uua" class="btn tito-tickets-button" id="book-now-executive"
         target="_blank" onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">Book Now</a> -->
       <!-- <button class="btn">Sold Out</button> -->
+      <!-- releases="doh-f5v3uua"  -->
       <tito-button 
         event="initiate/europe-2020" 
-        releases="doh-f5v3uua" 
+        id="exec-release"
         onClick="gtag('event', 'click', { event_category: 'ecommerce', event_action: 'click', event_label: 'Executive Ticket Book Now'});">
           Book Now
       </tito-button>
