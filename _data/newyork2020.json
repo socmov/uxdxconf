@@ -1,0 +1,996 @@
+{
+  "arrival___drinks" : {
+    "feedback" : {
+      "-M0yguc_MQ5MuUvNazx2" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673668185
+      },
+      "-M0ygwvttnjBIrI4s_mQ" : {
+        "comment" : "Very nice intro",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673677670
+      },
+      "-M0yiTsFVhsA_asxf0zO" : {
+        "comment" : "The UXDX staff were friendly and welcoming and the networking was unstructured but the name cards helped. It is too warm in here and the refreshments were warm and ran out quickly ",
+        "content" : "1",
+        "speaker" : "5",
+        "timeStamp" : 1582674078873
+      }
+    }
+  },
+  "break_4e0a6e2" : {
+    "feedback" : {
+      "-M0z27aDqUUG82sr7N6j" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679492736
+      },
+      "-M0z7-G8YFaNRn7Kj8GP" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680769331
+      },
+      "-M0z7-dQgpmrnvvsrXSI" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680770845
+      }
+    }
+  },
+  "build___architect" : {
+    "feedback" : {
+      "-M0z5aIFXLYDOKQxn_PH" : {
+        "comment" : "A very detailed talk. I’d rather seeing more visuals and slides than text/talk!\n(Yes I am a designer:))",
+        "content" : "0",
+        "speaker" : "0",
+        "timeStamp" : 1582680400776
+      },
+      "-M0z5xYC9jKD7LNctfmu" : {
+        "comment" : "Good idea for talk. Be careful with word choices so doesn’t sound preaching but instead open conversation. Be careful about repeating same info especially when talking to a tech crowd! With some tweaks can be very useful speech. ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680496016
+      },
+      "-M0z6c4l6QqhFa-4LIIO" : {
+        "comment" : "Obvious. No data provided.",
+        "content" : "2",
+        "speaker" : "3",
+        "timeStamp" : 1582680670246
+      },
+      "-M0z6pyFOlXlde1Aujye" : {
+        "comment" : "So much value though this presentation. I loved hearing from engineers perspective! Very articulate speaker. Thanks ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680727256
+      },
+      "-M0z6sKXLgdLpS5H-eFR" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582680736843
+      },
+      "-M0z6sgBZmOHuZvy_ysL" : {
+        "comment" : "Nice job! Engineering empathy is very important in product development. Glad you took on the topic! ",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582680738281
+      },
+      "-M0z728v1J48ThErlecY" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680779778
+      },
+      "-M0z73IpS4CB6yigm1UN" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680785852
+      }
+    }
+  },
+  "building_features_without_breaking_speed" : {
+    "feedback" : {
+      "-M0z05hYqU2m04qDvbuO" : {
+        "comment" : "Very nice use case and well spoken",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582678960686
+      },
+      "-M0z0pGhAoZQ3vBLuv4K" : {
+        "comment" : "A very engaging presentation, thank you!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679151570
+      },
+      "-M0z12kFv1DFhP4D1orD" : {
+        "comment" : "Expert speaker= case study to keep relevant, spoke slowly, slides simple, interactive questions. Best so far.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679210736
+      },
+      "-M0z19q58nofMXO4cBIh" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679239519
+      },
+      "-M0z28ad69tgH_e2gebo" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679496846
+      },
+      "-M0z2GNMhlmAcgy3VF_v" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679528772
+      },
+      "-M0z33rHLv3nagRMneue" : {
+        "comment" : "Really liked your topic. Was looking more into learn about how you guys did the user research! For example in Elon Musk’s slide...\nThank you",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679739507
+      },
+      "-M0z3aiXSPIi5S8tRPYf" : {
+        "comment" : "Fabulous ideas and examples! Excellent, clear, engaging speaker! Absolutely bringing the hackathon concept back to my company, along with Catherine’s guidance on how to be successful! ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582679878189
+      },
+      "-M0z44YsCO-pOcpgO9c2" : {
+        "comment" : "Great pace, content kept me captivated, you spoke with personality. Thanks for your time! 10/10",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680004534
+      },
+      "-M0z6rHZN9b1k9TTkonv" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582680732524
+      },
+      "-M0z6sG2SsnL9kZsmtyN" : {
+        "comment" : "Great speaker, great topic to share hAck ideas ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680736530
+      },
+      "-M0z70sZLSMjWctBr9OG" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680775915
+      },
+      "-M0z71TeNyzD7jfG28bN" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582680778317
+      },
+      "-M0zD1eXR_CnFfyrGKP1" : {
+        "comment" : "Really clear presentation! Hope to see this speaker in Dublin!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582682352093
+      },
+      "-M0zDCEOzyOr7R23xkAc" : {
+        "comment" : "Really loved this talk. REALLY hope I can see her at the Dublin conference for new hackathon updates",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582682395395
+      },
+      "-M0zDGUfPZBImXYOdCmG" : {
+        "comment" : "Amazing presentation! Gave a lot of insight into the problem building process at Stash! ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582682412844
+      }
+    }
+  },
+  "customer_centricity__product_direction_" : {
+    "feedback" : {
+      "-M0yi1VtSrM6SoW43bMO" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582673962726
+      },
+      "-M0ylpLyXgmALq0gyea-" : {
+        "comment" : "- Very interesting topic!\n- An easy to absorb presentation  ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582674957502
+      },
+      "-M0ylqfBx3xR6nMnKBiT" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582674962911
+      },
+      "-M0ym1ZFIYgbIYFVY22v" : {
+        "comment" : "Really broke the information down in a way that helped me understand not just what he was saying, but why it was important ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582675011704
+      },
+      "-M0ym1uerfjyQynBnVyU" : {
+        "comment" : "Interesting approach segmenting the emotional vs. functional needs.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582675013058
+      },
+      "-M0ymIpvD0FOXCjFEsxq" : {
+        "comment" : "Define what you mean by “ Tools “ for determining needs",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582675082300
+      },
+      "-M0ymsdV_ui3a4upF-jw" : {
+        "comment" : "He covered the topic too low (like as if speaking with beginner) yet almost all are in the digital space. This means that can start and maintain a presentation at a higher level that will Be enjoyed by everyone. \n\n\n\n",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582675232942
+      },
+      "-M0yn4G_58osWJ_njG1X" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582675284735
+      },
+      "-M0yn9cTeB4tEcca3oHS" : {
+        "comment" : "Great speaking tone and terrific content",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582675306715
+      },
+      "-M0ynFzGXbrqBjjEtlRd" : {
+        "comment" : "Great content! ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582675332875
+      },
+      "-M0ynLY1ndbkcvICcPIP" : {
+        "comment" : "Loved the pyramid of Maslow reference thank you",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582675355780
+      },
+      "-M0ynhEgjqD6EwB1aR0Y" : {
+        "comment" : "Overall very good, a little bit too much of telling me what you're going to say.  Once you got to it, it was very good",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582675448218
+      },
+      "-M0ypA6VbVZjsX3GWFm4" : {
+        "comment" : "Great talk! Specially being an engineer it's good to reask.to ask what do the Customers need and what's the balance between functional and emotional needs ",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582675832925
+      },
+      "-M0ysOzoLLW8H-6ZWhK_" : {
+        "comment" : "Nice job! ",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1582676680398
+      },
+      "-M0yt8xAFDkyCrp-KNbj" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582676876839
+      },
+      "-M0z1Ax5z6nVx9P6f2qw" : {
+        "comment" : "Really interesting take! Would have liked to learn more about the measurability of emotional needs. ",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582679243647
+      },
+      "-M0z5EKEU01YKQInNN0d" : {
+        "comment" : "Spoke too quickly to understand",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582680306782
+      },
+      "-M0z6oX_Hi7ZSIAcdK-R" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582680721282
+      },
+      "-M0z6xSJglpzFVkql6Tb" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582680757730
+      },
+      "-M0z74Nq1pFmXQOY5JnK" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680790269
+      },
+      "-M0zYZhGFxO5sgSKChNu" : {
+        "comment" : "The examples were really useful",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582687995843
+      }
+    }
+  },
+  "opening_address_3afb94b" : {
+    "feedback" : {
+      "-M0ygtjm32r4aWqqC7vZ" : {
+        "comment" : "Awesome guy",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673664746
+      },
+      "-M0yguINSmSb0THYetaG" : {
+        "comment" : "Nice into!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673666961
+      },
+      "-M0ygxjJuD98gjVfbuq6" : {
+        "comment" : "A very cool speaker",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673680951
+      },
+      "-M0ygyqvD5hqvUbe5dFI" : {
+        "comment" : "With all do respect, your jokes are nerdy! ",
+        "content" : "3",
+        "speaker" : "2",
+        "timeStamp" : 1582673685568
+      },
+      "-M0yh0BFiaC91IxuTlz2" : {
+        "comment" : "Great outline and presentation.  Very clear",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673695262
+      },
+      "-M0yh0IsFjwUrDAlttjF" : {
+        "comment" : "Very articulate! Makes audience very comfortable. Thank you!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582673695752
+      },
+      "-M0yh9eThN3rfckDfoP8" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582673733986
+      },
+      "-M0yltjZQI6u0Vwq8Hj6" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582674975468
+      },
+      "-M0yn1U8AQmYXis_z7ix" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582675273125
+      },
+      "-M0z5GT5VmwR6i_tvUyw" : {
+        "comment" : "-It was a really good event!  \n-All the event coordinators very super friendly and nice.\n-The speakers were great.\n- loved your Idea of forcing people to network \n -Thank you very much for hosting this event and looking forward to more ",
+        "content" : "0",
+        "speaker" : "0",
+        "timeStamp" : 1582680315439
+      },
+      "-M0z6n-MCS4zcUIjj7bN" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680714943
+      },
+      "-M0z75g4dPY--1soEHq_" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680795595
+      },
+      "-M0zYLIfCJ8uI2O_QkfY" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582687936609
+      }
+    }
+  },
+  "outcome_driven_ideation" : {
+    "feedback" : {
+      "-M0yp47G9rH8NDZuTUv_" : {
+        "comment" : "You speak tooo fast that makes the audience feel anxious! Like you’re in a meeting and running out of time  ⌛️ ",
+        "content" : "3",
+        "speaker" : "4",
+        "timeStamp" : 1582675808367
+      },
+      "-M0ypFA5XWi1AtXqS6Ck" : {
+        "comment" : "You speak TOO FAST, did not understand a word! ",
+        "content" : "3",
+        "speaker" : "1",
+        "timeStamp" : 1582675853865
+      },
+      "-M0yptmTStOJGnDx9DZq" : {
+        "comment" : "Good job, especially since the speaker said he doesn't talk much with mic ",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582676024203
+      },
+      "-M0yqx4CkdoS0_dMxJhc" : {
+        "comment" : "Terrific content. I speak very quickly like you do and I’ve very recently learned that taking a pause, “the power of the pause, is powerful”. It allows the listener to catch up and gives you a second to breathe. Great content but slow down a bit and you’ll be perfect ",
+        "content" : "5",
+        "speaker" : "3",
+        "timeStamp" : 1582676299869
+      },
+      "-M0yrBWDs7Gb3suvZuQv" : {
+        "comment" : "Really liked the projects that you talked about. And the details about research, survey, and the results were great.\n\nMy only feedback is that you had a lot of material to talk about and it felt like you were in a rush! :)",
+        "content" : "0",
+        "speaker" : "0",
+        "timeStamp" : 1582676362784
+      },
+      "-M0ys78DxOIyKnnCQ7eD" : {
+        "comment" : "Great amount of content and nice walkthrough of process.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582676607276
+      },
+      "-M0ys7Ig0U5zkaVAHTc-" : {
+        "comment" : "The slide deck was great, however, only bc I was sitting in the back, it was difficult to understand the slides with screenshots of the website! Perhaps make them bigger and have markers or indicators to tell the audience where to look.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582676608078
+      },
+      "-M0ysA5PRjO2Uyol1_KR" : {
+        "comment" : "Really interesting presentation and engagingly presented!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582676619472
+      },
+      "-M0ysXeW76sER_upUFBx" : {
+        "comment" : "Fast but good content!",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1582676715870
+      },
+      "-M0ysjXxvz5c_IpqdRyJ" : {
+        "comment" : "Loved the case studies, easier to understand concepts talking about. Super fast and ALOT of info. Cut slides by half, perhaps only 1 case study. When people listen it’s tiring, when speak fast we have to use twice energy to understand. So less content, talk slower, aim for 1 key lesson unless doing an all day workshop. Breathe! 😁 Good job",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582676767798
+      },
+      "-M0yt83rpTlaREAugPCH" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582676872970
+      },
+      "-M0yt9fImFnWPhD2gp05" : {
+        "comment" : "Great comparison between project and product. It was amazing to see the benefits of product teams. \nMaybe cutting the amount of slides would have been better and easier to go through",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582676879916
+      },
+      "-M0ytAZhZGkHkierfS8v" : {
+        "comment" : "Loved the ebthusiasm of the speaker ",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582676883455
+      },
+      "-M0ytTYPhmolsaPYHvSL" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582676961113
+      },
+      "-M0z14B7CJEOsCVp3J44" : {
+        "comment" : "Loved the energy in the talk! ",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582679215710
+      },
+      "-M0z25DH52lImh6mkNCS" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582679482955
+      },
+      "-M0z5MDojZhslXo2mmZA" : {
+        "comment" : "great for first time speaker but I didn’t get his thesis was suppose to be",
+        "content" : "3",
+        "speaker" : "4",
+        "timeStamp" : 1582680339183
+      },
+      "-M0z6pd7RP12Ak7RzG6Y" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582680725784
+      },
+      "-M0z6z2q9aBDSh03Wzce" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1582680764364
+      },
+      "-M0z6zmAEcD7dNvqiG5U" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582680767213
+      },
+      "-M0z9e2TtowA4tsaktZf" : {
+        "comment" : "Great job presenting! I really enjoyed hearing about your team’s product design process and seeing all the screens involved in the ideation and testing phases. Thanks for putting all the information together in a thoughtful and informative way!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582681464485
+      }
+    }
+  },
+  "untitled_content_item_0ad198b" : {
+    "feedback" : {
+      "-M0_7qwGfhutzkikDuDQ" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582244784599
+      }
+    }
+  },
+  "untitled_content_item_2a6f78b" : {
+    "feedback" : {
+      "-M0_3VlMRS61B_D2sSIf" : {
+        "comment" : "There was a part where there was like a giant explanation of this circular arrow thing and I was like holy cow I have no idea what He’s saying. Maybe if it could be broken up into parts somehow it’d be more clear. It really disincentivized me from continuing to listen.",
+        "content" : "5",
+        "speaker" : "3",
+        "timeStamp" : 1582243646019
+      },
+      "-M0_7HiQYY2hAYTDJIGu" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582244636196
+      },
+      "-M0_axKYxrIP7LIysQIU" : {
+        "comment" : "Good intro to UXDX, but conclusion fell a little short... Wanted better closure...",
+        "content" : "3",
+        "speaker" : "4",
+        "timeStamp" : 1582252676061
+      }
+    }
+  },
+  "untitled_content_item_4960061" : {
+    "feedback" : {
+      "-M0Zyy8lJmMEOfboBpfh" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "0",
+        "timeStamp" : 1582242192812
+      }
+    }
+  },
+  "untitled_content_item_8df7aa3" : {
+    "feedback" : {
+      "-M0Zja51EKW06bKT6OM8" : {
+        "comment" : "Not enough water. No need for sparkling water or juices. Snacks are very limited",
+        "content" : "3",
+        "speaker" : "0",
+        "timeStamp" : 1582238161766
+      }
+    }
+  },
+  "untitled_content_item_95a84e4" : {
+    "feedback" : {
+      "-M0_aYn5f9gKl8gcSfEC" : {
+        "comment" : "",
+        "content" : "2",
+        "speaker" : "2",
+        "timeStamp" : 1582252569749
+      }
+    }
+  },
+  "untitled_content_item_9d82d8c" : {
+    "feedback" : {
+      "-M0ZslkjJyRrsKY1FFIm" : {
+        "comment" : "Illustrating ideas via prototype testing.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582240569487
+      },
+      "-M0ZuK-8kqTCE_JQxA5U" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582240974201
+      },
+      "-M0ZucNyTMe0aSx15gOZ" : {
+        "comment" : "I’m not sure that knowing about one companies interview process is something helpful for me - but I did enjoy the speakers personality and candor about reddit. I’m glad he expanded content outside if the interview process. ",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582241055534
+      },
+      "-M0Zuwv3UN0LYY-xSOP5" : {
+        "comment" : "Really enjoyable talk.  Great content.  ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582241139096
+      },
+      "-M0Zv6Vhu998V8SSPNu0" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582241183340
+      },
+      "-M0ZvDijuoyP6jnfrkLL" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582241212880
+      },
+      "-M0Zvm6DE9Dk7KH7_GjG" : {
+        "comment" : "Excellent presentation and presenter. The most inspiring talk of the day",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582241357875
+      },
+      "-M0ZyFelXrcXqOZim2t0" : {
+        "comment" : "More time for questions would have been good.",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582242007271
+      },
+      "-M0Zyph_SjaaSKCAyXrE" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582242158001
+      },
+      "-M0_-uEJV4XRw1GdFrTz" : {
+        "comment" : "A couple of good new points, but the rest I have come across already at other conferences or meet ups",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582242702105
+      },
+      "-M0_a7xwFfL_SN3qYFUE" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582252459610
+      },
+      "-M0alZevcC5qi9rgZHwD" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582272235643
+      }
+    }
+  },
+  "untitled_content_item_9decc30" : {
+    "feedback" : {
+      "-M0ZRYOXRcWlCeepIP1b" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582233171273
+      },
+      "-M0ZRkYhuyRRQYPGQLN4" : {
+        "comment" : "Good food but no water 🥺",
+        "content" : "4",
+        "speaker" : "0",
+        "timeStamp" : 1582233223574
+      },
+      "-M0ZYHX9a-Qe2wpc4VBk" : {
+        "comment" : "Excellent discussion of improving an existing application or process",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1582234937302
+      },
+      "-M0ZcdZdR3u9XOQmz3NH" : {
+        "comment" : "Very good introduction to UXDX via storIes and statistics.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582236342307
+      },
+      "-M0ZenMn7uBdh6hdMP2S" : {
+        "comment" : "Overall event space is dreary- would not host here again. Seek out a space with natural light. \n\nAlso the sound system was very difficult to hear- would consider speakers with more crisp sound. ",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582236906790
+      }
+    }
+  },
+  "untitled_content_item_a0239da" : {
+    "feedback" : {
+      "-M0ZnRQLQyk62yXSK1ZE" : {
+        "comment" : "Love: for every complex problem, there is an answer that is clear, simple, and wrong.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582239171379
+      },
+      "-M0ZoLGlwcHhgiK465Gw" : {
+        "comment" : "It felt like there was 15+ Of intro to the presentation. It was hard to follow. The complex graph was not helpful being far away, I just saw a bunch of colors on the screen. \n\nSpeakers focused on explaining the finance domain- but should abstract learnings to relate to people from any domain. \n\nSlides 16 onwards was the most helpful- this should be expanded for most of the presentation. \n\nNo real tangible take aways. ",
+        "content" : "1",
+        "speaker" : "2",
+        "timeStamp" : 1582239409075
+      },
+      "-M0ZoO1BKS5FP8HEM6bF" : {
+        "comment" : "Was really looking forward to this one (as I work on an exceedingly complex data science platform) but the presenters spent almost 20 mins introducing themselves and their product. That was not what I was interested in hearing about. The ensuing presentation was mostly about product design in general, but not really in the nitty gritty of methods that could be used to work around and through a complex system. ",
+        "content" : "1",
+        "speaker" : "3",
+        "timeStamp" : 1582239420307
+      },
+      "-M0ZozkpQoCxLeEEH863" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582239577489
+      },
+      "-M0Zp4iUokm1RqhRuqm7" : {
+        "comment" : "A little disjointed and scattered all over",
+        "content" : "2",
+        "speaker" : "2",
+        "timeStamp" : 1582239603417
+      },
+      "-M0ZpKFyb5R2oJdQs281" : {
+        "comment" : "Great content.  The presentation would have really benefited from a clear purpose statement upfront.  Would have helped me follow the talk better.  But really great slides! ",
+        "content" : "4",
+        "speaker" : "3",
+        "timeStamp" : 1582239664843
+      },
+      "-M0_0SF-UKf99Xuo_iii" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582242844553
+      },
+      "-M0_aI-Svqa1pixlRZnh" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582252500986
+      }
+    }
+  },
+  "untitled_content_item_afe7c97" : {
+    "feedback" : {
+      "-M0_-idaCgjeAUG3sutR" : {
+        "comment" : "Not as engaging as other speakers. May want to try not to read off the script from the laptop",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582242653511
+      },
+      "-M0_0iCRE0bYXkEVT3CZ" : {
+        "comment" : "Sounds like a recruiting pitch for engineers....",
+        "content" : "1",
+        "speaker" : "1",
+        "timeStamp" : 1582242914949
+      },
+      "-M0_0kpK8qsBqhsxXt_M" : {
+        "comment" : "Not much difference from what other speakers have already covered earlier in the afternoon",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1582242924701
+      },
+      "-M0_12owQiZvq1AfTK59" : {
+        "comment" : "I wasn’t into learning about the features they have in Postmates. It wasn’t engaging for me. \n\nOne of the speakers sounded like she memorized everything which is harder to listen to. I’d suggest learning an outline instead of a full script. ",
+        "content" : "2",
+        "speaker" : "3",
+        "timeStamp" : 1582243003523
+      },
+      "-M0_aCvTAWAf-tHhRMnU" : {
+        "comment" : "",
+        "content" : "1",
+        "speaker" : "1",
+        "timeStamp" : 1582252480147
+      }
+    }
+  },
+  "untitled_content_item_c5de5e5" : {
+    "feedback" : {
+      "-M0ZbMnVhXe0QdpMCLgS" : {
+        "comment" : "Like emphasis on building corporate culture globally.",
+        "content" : "0",
+        "speaker" : "0",
+        "timeStamp" : 1582236006691
+      },
+      "-M0ZbwwwNSdYEFc3SyzL" : {
+        "comment" : "Making allowances for remote work keeps employees engaged in the big goals.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582236158861
+      },
+      "-M0Ze6fhcCfeIxw6HhPe" : {
+        "comment" : "Pursuing diversity helps build fulfilling big goals.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582236727175
+      },
+      "-M0ZiVhz9OnzHAm0ilZN" : {
+        "comment" : "Great session.  I wish they shared more practical tips to maintain work life balance while working with global teams.  ",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582237876259
+      },
+      "-M0ZkFZBB4GyG58S8xYy" : {
+        "comment" : "It would be great to hear from people who collaborate remotely as part of their everyday work instead of just the high level collaboration.",
+        "content" : "3",
+        "speaker" : "4",
+        "timeStamp" : 1582238336714
+      },
+      "-M0Zkq8SE75kk5uCFTKu" : {
+        "comment" : "Good to hear patterns of problems and solutions that I have seen/experienced",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582238491024
+      },
+      "-M0Znm0RJOKHb2-qAMbD" : {
+        "comment" : "Did not find this particularly engaging due to the fact that I am not a changemaker/business leader who would make calls about adding or reshaping a remote team. ",
+        "content" : "2",
+        "speaker" : "3",
+        "timeStamp" : 1582239260535
+      },
+      "-M0_0G_UN9wUEyK1LCKf" : {
+        "comment" : "Good moderator, asking all the good questions. Panelists are complimentary. They present a good enough differences in their approaches and yet their conclusions are still the same. Good info.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582242796679
+      }
+    }
+  },
+  "untitled_content_item_edca0a7" : {
+    "feedback" : {
+      "-M0Ii7sVx6ZhMI0Adfc0" : {
+        "comment" : "test",
+        "content" : "3",
+        "speaker" : "5",
+        "timeStamp" : 1581952567531
+      },
+      "-M0ZRdO3F8RjQCgbrLHA" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582233195551
+      },
+      "-M0ZRnEEEHhkAE-QxJh4" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582233234688
+      },
+      "-M0ZRnlCpecgfdXXutF3" : {
+        "comment" : "Speaker was sweet and happy but hard to hear his voice and I feel like he jumped around topics. I couldn’t follow. Maybe an agenda or some context before jumping in would help ",
+        "content" : "3",
+        "speaker" : "4",
+        "timeStamp" : 1582233238412
+      },
+      "-M0ZS9UAZzGFJ42OXE1J" : {
+        "comment" : "66% is a wild number! ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582233331478
+      }
+    }
+  },
+  "untitled_content_item_fe2e2b0" : {
+    "feedback" : {
+      "-M0ZWGiqvsxMFa61fkfl" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234409721
+      },
+      "-M0ZWlvKz1g6Yu4pOE3d" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234540004
+      },
+      "-M0ZY1PfEbkj0kPfOam3" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582234871224
+      },
+      "-M0ZY3gR6PctUKEwGV4r" : {
+        "comment" : "Very clear and great recommendations ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234880595
+      },
+      "-M0ZY42whmFA__sr8ovz" : {
+        "comment" : "Great content, clear, concise, and actionable",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234880835
+      },
+      "-M0ZY8-jcR3Xg3Xj844P" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582234897572
+      },
+      "-M0ZYATo_0wkzQsJOYzQ" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1582234907995
+      },
+      "-M0ZYBmRoq_9rRc20BHK" : {
+        "comment" : "Great story, thanks for sharing your insights.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234912603
+      },
+      "-M0ZYFrwxikdH_eYePaL" : {
+        "comment" : "Storytelling was engaging very clear. Mapped it out well problem solution was engaging. Concise and well presented. Thank you!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234930414
+      },
+      "-M0ZYKvL-1KQVBGFvHbo" : {
+        "comment" : "As someone who is barely getting into product design it was still really helpful to hear how to evolve an existing product really enjoyed the talk",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234950691
+      },
+      "-M0ZYPDwA57PawVYrH0e" : {
+        "comment" : "Really interesting product revamp story to learn from how to work with cross functional teams and achieve the goal. ",
+        "content" : "0",
+        "speaker" : "4",
+        "timeStamp" : 1582234968701
+      },
+      "-M0ZYQyAGuoIiqhNRRXd" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582234975229
+      },
+      "-M0ZYRTUMy9nS-HftbDv" : {
+        "comment" : "Congrats on encouraging all of us to think outside the box.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582234977386
+      },
+      "-M0ZYgvB9_DZo5WuvoJW" : {
+        "comment" : "Thank you for sharing interesting product revamp story to learn about how to work with cross functional teams and achieve the goals.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1582235045337
+      },
+      "-M0ZYw9a0HCCAHyrJUv3" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582235107428
+      },
+      "-M0Zc2SfE_DA15V-xdRc" : {
+        "comment" : "Loved the reminder to start by thinking big",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582236185460
+      },
+      "-M0Zd4ofoI1F2-fx1VhJ" : {
+        "comment" : "Lots of good quotes and analogies to make a point, e.g., delivering a new product is like giving birth, but evolving a product is like adopting a teenager, with their personality and baggage 😁",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1582236458085
+      },
+      "-M0ZicEsxkj_8uzQi_cF" : {
+        "comment" : "Loved the talk.  Easy to relate to. ",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1582237908831
+      }
+    }
+  }
+}

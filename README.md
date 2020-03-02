@@ -10,3 +10,7 @@ Todo:
  - Automate cloud function so that it auto parses data
  - Automate page cretion via cloud function
  - Download images
+
+
+If issues search for this character:
+
