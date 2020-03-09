@@ -157,6 +157,8 @@
       {% if page.url != "/tickets" and page.url != "/pre-sale" %}
         {% include components/countdown.html %}
       {% endif %}
+    {% elsif page.url == "/stockholm" or page.url == "/copenhagen" or page.url == "/helsinki" or page.url == "/oslo" %}
+      {% include components/alert.html %}
     {% endif %}
     
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
