@@ -2,4 +2,6 @@
 {% assign widget = include.widget[0] %} 
 {% assign conference = site.data.conferences | where: "id", page.conference %} 
 {% assign conference = conference[0] %}
+<a name="register_now">
 <tito-widget event="{{conference.tito_event}}" releases="{{widget.release}}" class="{{widget.classname}}"></tito-widget>
+</a>
