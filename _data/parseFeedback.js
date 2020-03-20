@@ -1,4 +1,4 @@
-const feedback = require('./newyork2020.json')
+const feedback = require('./online.json')
 const agendas = require('./agendas.json')
 const fs = require('fs')
 const json2csv = require('json2csv').parse

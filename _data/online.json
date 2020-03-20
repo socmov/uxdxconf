@@ -1,4 +1,32 @@
 {
+  "architect___build_d5e5c6a" : {
+    "feedback" : {
+      "-M2cK_eqMDwOpuCJ8MLY" : {
+        "comment" : "- Very good slides and interesting background story, thanks for sharing.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584445938581
+      },
+      "-M2cKfPDcV8K8hRDyaO7" : {
+        "comment" : "Interesting work setup. Especially the holacracy, would be interesting to know more about how that works. Thanks!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584445962970
+      },
+      "-M2cKuB_NwE42PRpuFmR" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584446023190
+      },
+      "-M2cULqhod2fRDFdERzB" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1584448498307
+      }
+    }
+  },
   "arrival___drinks" : {
     "feedback" : {
       "-M0yguc_MQ5MuUvNazx2" : {
@@ -18,6 +46,16 @@
         "content" : "1",
         "speaker" : "5",
         "timeStamp" : 1582674078873
+      }
+    }
+  },
+  "arrival___networking" : {
+    "feedback" : {
+      "-M2hLoLpCczHfXolu2Eq" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584530147982
       }
     }
   },
@@ -195,6 +233,156 @@
       }
     }
   },
+  "continuous_delivery_at_scale__sara_bergman__micros" : {
+    "feedback" : {
+      "-M2iEvwLo6lM2JWR-Scs" : {
+        "comment" : "There are many ways to relate to her experience",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584545119569
+      },
+      "-M2iEyvNAeO-H8uMyAID" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "4",
+        "timeStamp" : 1584545132146
+      }
+    }
+  },
+  "continuous_delivery_ebc2429" : {
+    "feedback" : {
+      "-M2chSpCSuxT73MYNqDZ" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584452197965
+      },
+      "-M2chVGfxIllWk0-hE7K" : {
+        "comment" : "Super interesting! thanks!",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584452207161
+      },
+      "-M2ciFfD_UMc_BdQOouk" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584452404965
+      },
+      "-M2cjuwXVYsduZEZ_opP" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584452841164
+      },
+      "-M2clVzXpXcKHjBHIPCZ" : {
+        "comment" : "Very nicely wrapped a story to concrete actions done.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584453258516
+      }
+    }
+  },
+  "continuous_product_release___golnaz_nozari___bruno" : {
+    "feedback" : {
+      "-M2i8O_CnjTV2HMmEK3r" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584543407968
+      }
+    }
+  },
+  "continuous_research_023b4e6" : {
+    "feedback" : {
+      "-M2d-wgTxdOLPWXJyYgv" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1584457304134
+      },
+      "-M2d8EM6UtfN1z-MZxHM" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "0",
+        "timeStamp" : 1584459478319
+      }
+    }
+  },
+  "customer_centricity_3e6ddc2" : {
+    "feedback" : {
+      "-M2hx0dhriAilyVh1u-M" : {
+        "comment" : "Not my field directly but easy to follow and interesting",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1584540162339
+      },
+      "-M2hxi5LqWFxaKaw_stp" : {
+        "comment" : "Just not really my area of interest. A bit to technical. ",
+        "content" : "2",
+        "speaker" : "2",
+        "timeStamp" : 1584540344093
+      },
+      "-M2i3TD93YB9Yj5OM2B7" : {
+        "comment" : "A bit too technical for my taste but it's good there's a balance.",
+        "content" : "2",
+        "speaker" : "4",
+        "timeStamp" : 1584542113716
+      },
+      "-M2i7Tye28bsURDnNQSf" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584543168302
+      },
+      "-M2iEwlqAwQi_ZErWX3d" : {
+        "comment" : "",
+        "content" : "2",
+        "speaker" : "3",
+        "timeStamp" : 1584545123362
+      }
+    }
+  },
+  "customer_centricity_83a1be7" : {
+    "feedback" : {
+      "-M2caUAER0yWfarK5_Ay" : {
+        "comment" : "Excellent presentation! Thank you",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584450368626
+      },
+      "-M2cactmqPyyOPgz604N" : {
+        "comment" : "A little bit too deep on the café ideology on my opinion",
+        "content" : "2",
+        "speaker" : "3",
+        "timeStamp" : 1584450407831
+      },
+      "-M2cafzsjT2M2d8W_dsY" : {
+        "comment" : "Thank you for the story. I will definitely share your main points in our company and loved \"Decisions as a service\" - answer",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584450420970
+      },
+      "-M2cau2DwV7kTZ47PBz7" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584450478131
+      },
+      "-M2cjrOkuPkF3iRGc_OQ" : {
+        "comment" : "",
+        "content" : "2",
+        "speaker" : "3",
+        "timeStamp" : 1584452826105
+      },
+      "-M2cmIkvkYT940gO2Bx4" : {
+        "comment" : "Interesting concept, long intro was slightly confusing.",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584453466471
+      }
+    }
+  },
   "customer_centricity__product_direction_" : {
     "feedback" : {
       "-M0yi1VtSrM6SoW43bMO" : {
@@ -325,6 +513,156 @@
       }
     }
   },
+  "designing_for_chaos___erik_ferrier__tidal" : {
+    "feedback" : {
+      "-M2hTMukzNhPA7ZogIpi" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584532129041
+      },
+      "-M2hTPLrDnN7uw_qpnp7" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584532135894
+      },
+      "-M2hxKBbIXmcFab-r39j" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584540242150
+      },
+      "-M2i3g42dx8Yc7EiqPuE" : {
+        "comment" : "Really liked to hear about the stage as inspiration for the design system",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584542173029
+      },
+      "-M2iEo_AaD_Bu-cbtYNm" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "3",
+        "timeStamp" : 1584545089364
+      }
+    }
+  },
+  "enabling_the_team" : {
+    "feedback" : {
+      "-M2cQFvnj-SAqVcOUgzO" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1584447425818
+      },
+      "-M2cUPK5NIJq0_3vx06w" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1584448513236
+      },
+      "-M2cW1YIYIRhmU_fwHqu" : {
+        "comment" : "Very interesting speak, thank you! ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584448941352
+      },
+      "-M2caT3lXoISBEoBQlXh" : {
+        "comment" : "Excellent !",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584450363173
+      },
+      "-M2caqgdNy4B4XoZKJ0c" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584450463589
+      }
+    }
+  },
+  "from_project_to_product_146e315" : {
+    "feedback" : {
+      "-M2d8FxA11q9CPBdKwx_" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "0",
+        "timeStamp" : 1584459484857
+      }
+    }
+  },
+  "ideate__validate___design" : {
+    "feedback" : {
+      "-M2ctr3qcX8pJBVbL809" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584455446379
+      },
+      "-M2cu-X0FB9DZeHnJGeD" : {
+        "comment" : "Very informative and more technical talk which was refreshing. ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584455484894
+      },
+      "-M2d8Cv8-DWZ0pXQ-UFw" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584459471751
+      }
+    }
+  },
+  "lunch___networking_a70d641" : {
+    "feedback" : {
+      "-M2d8eJqlNyc9C56U_DA" : {
+        "comment" : "As an overall feedback for this event; within a week's timeframe I have experienced my worst and best online conferences. Worst was last week, best was today. Everything in this conference went smoothly and without technical issues, the host was professional as well as the speakers. Thank you so much! ",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584459588394
+      }
+    }
+  },
+  "opening_address_140b19e" : {
+    "feedback" : {
+      "-M2bpUA0xQjHVZ3hrRBK" : {
+        "comment" : "Test",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584437521970
+      },
+      "-M2cEd5WjG3GGBTLJ7BW" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584444379094
+      },
+      "-M2cEfIdPAGHDxk6CN3o" : {
+        "comment" : "Requires a lot of understanding of the project model problem to grasp the concept of this solution.",
+        "content" : "4",
+        "speaker" : "5",
+        "timeStamp" : 1584444387992
+      },
+      "-M2cKm-1lBFu_TWhGeSF" : {
+        "comment" : "Liked the interactivity with the poll also, thanks.",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584445990288
+      },
+      "-M2cKrVqwSEcTveNX_G9" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584446011839
+      },
+      "-M2cUNRGBFIvxFZ8VBWZ" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584448505505
+      }
+    }
+  },
   "opening_address_3afb94b" : {
     "feedback" : {
       "-M0ygtjm32r4aWqqC7vZ" : {
@@ -404,6 +742,22 @@
         "content" : "5",
         "speaker" : "5",
         "timeStamp" : 1582687936609
+      }
+    }
+  },
+  "opening_address_4bc767e" : {
+    "feedback" : {
+      "-M2hTJg1DkzwqAAsUM7h" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584532115486
+      },
+      "-M2i78T0HKxbQr5mFNKd" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584543079829
       }
     }
   },
@@ -534,6 +888,124 @@
         "content" : "5",
         "speaker" : "5",
         "timeStamp" : 1582681464485
+      }
+    }
+  },
+  "paving_the_way_for_a_mature_customer_centric_cultu" : {
+    "feedback" : {
+      "-M2he5OOmitq9CGfoRZT" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584535200504
+      },
+      "-M2heoX0Hl6ZvUHkVc09" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584535390246
+      },
+      "-M2hfHqftrh9YokY-n90" : {
+        "comment" : "Brilliant example of organizing and enabling UX processes at a big company",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584535514559
+      },
+      "-M2i7QkgvCDOkDu3kpJ6" : {
+        "comment" : "Good talk, but personally not so relevant content",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584543155117
+      },
+      "-M2iErYh7qU6tUUovl34" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "4",
+        "timeStamp" : 1584545101952
+      }
+    }
+  },
+  "strength_of_design___fabiola_rodriguez__voi" : {
+    "feedback" : {
+      "-M2h_GgDydKYkiSfELi8" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584533935415
+      },
+      "-M2h_JaCjGMUQilkzExn" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584533948366
+      },
+      "-M2helOxz8aebDRb4jCt" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584535376853
+      },
+      "-M2hf2lK8UXvOS2s3krX" : {
+        "comment" : "Uninteresting and quite banal. No visuals",
+        "content" : "1",
+        "speaker" : "2",
+        "timeStamp" : 1584535452409
+      },
+      "-M2i7Cmtgm0qgIhdgdJf" : {
+        "comment" : "",
+        "content" : "1",
+        "speaker" : "1",
+        "timeStamp" : 1584543097913
+      },
+      "-M2iEq0hLnyQehTDlsnN" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1584545095697
+      }
+    }
+  },
+  "superfast_product_development__marthe_prestegaard_" : {
+    "feedback" : {
+      "-M2htHJxzOQMZJMRYZdS" : {
+        "comment" : "Interesting and inspiring",
+        "content" : "4",
+        "speaker" : "4",
+        "timeStamp" : 1584539182039
+      },
+      "-M2htMb-Ch_UiU9ZWFQY" : {
+        "comment" : "",
+        "content" : "5",
+        "speaker" : "5",
+        "timeStamp" : 1584539202798
+      },
+      "-M2htR0Mwnib4TDYINFY" : {
+        "comment" : "The content seems too familiar and didn't provide much new information.",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1584539221871
+      },
+      "-M2hxO4MGafMH95BP2BB" : {
+        "comment" : "",
+        "content" : "4",
+        "speaker" : "3",
+        "timeStamp" : 1584540258561
+      },
+      "-M2iEuPq5TNe_aYHFZn-" : {
+        "comment" : "",
+        "content" : "3",
+        "speaker" : "3",
+        "timeStamp" : 1584545113695
+      }
+    }
+  },
+  "turning_motivation_into_action__rory_madden__uxdx" : {
+    "feedback" : {
+      "-M2iNSArLHmnV9mxyYzu" : {
+        "comment" : "good, but liked the intro much better!",
+        "content" : "3",
+        "speaker" : "5",
+        "timeStamp" : 1584547354750
       }
     }
   },
