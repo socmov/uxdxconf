@@ -155,7 +155,7 @@
     
     {% if pageContent[0].conference[0].codename == "uxdx_2018" or pageContent[0].conference[0].codename == "uxdx_2019_93fa926" or pageContent[0].conference[0].codename == "uxdx_2019_0a0c6fc" %}
       {% if page.url != "/tickets" and page.url != "/pre-sale" %}
-        {% include components/countdown.html %}
+        <!-- {% include components/countdown.html %} -->
       {% endif %}
     {% elsif page.url == "/stockholm" or page.url == "/copenhagen" or page.url == "/helsinki" or page.url == "/oslo" %}
       {% include components/alert.html %}
