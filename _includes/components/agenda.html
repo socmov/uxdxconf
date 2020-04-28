@@ -126,7 +126,7 @@
                     {% capture sessiontime %} {{startTime | date: '%s'}} {% endcapture %} 
                     {% assign sessiontime = sessiontime | plus: 0 %}
                     
-                    {% if sessiontime < future and sessiontime > past and page.url == '/feedback' %}
+                    {% if page.url == '/feedback' %}
                       <div>
                         <button data-target="#feedbackDialog" data-toggle="modal" class="btn btn-secondary openFeedbackDialog" data-session-id="{{session.session[0].codename}}" data-session-name="{{session.session[0].name}}">Give Feedback</button>
                       </div>
